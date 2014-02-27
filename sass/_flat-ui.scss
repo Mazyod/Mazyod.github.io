@@ -199,7 +199,7 @@ a {
 h1 {
   color: $primary-color;
   font-size: 32px;
-  font-weight: 300; 
+  font-weight: 300;
   font-family: "Open Sans"; }
   .date-time{
     font-size: 15px;
@@ -341,7 +341,7 @@ h6 {
 
 .demo-logo {
   font-size: 90px;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: -2px;
   line-height: 100px; }
   .demo-logo .logo {
@@ -1983,7 +1983,7 @@ body.vjs-full-window {
   bottom: 4em;
   left: 1em;
   right: 1em;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;}
 .video-js .vjs-text-track {
   display: none;
   color: white;
@@ -2199,7 +2199,7 @@ body.vjs-full-window {
   height: 20px;
   width: 50px;
   top: 16px;
-  font: 300 13px "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;}
 
 .vjs-current-time {
   right: 128px;
