@@ -1,0 +1,3 @@
+[submodule ".themes/octoflat"]
+	path = .themes/octoflat
+        url=git@github.com:Mazyod/octoflat.git
