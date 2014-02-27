@@ -1,13 +1,13 @@
 .highlight, html .gist .gist-file .gist-syntax .gist-highlight {
   table td.code { width: 100%; }
-  @include border-bottom-radius(9px);
+  @include border-bottom-radius(12px);
 }
 .highlight:first-child, html .gist .gist-file .gist-syntax .gist-highlight {
-  @include border-top-radius(9px);
+  @include border-top-radius(12px);
 }
 .highlight .line-numbers, html .gist .gist-file .gist-syntax .highlight .line_numbers {
   text-align: right;
-  font-size: 13px;
+  font-size: 16px;
   word-break: normal;
   @if $solarized == light {
     background: lighten($base03, 1) $noise-bg !important;
@@ -77,10 +77,15 @@ html .gist .gist-file {
   }
 }
 
+code {
+  font-size: 16px;
+}
+
 pre {
   @include border-radius(.4em);
   @extend .mono;
-  font-size: 13px;
+  font-size: 16px;
+  line-height: 22px;
   margin-bottom: 2.1em;
   padding: .8em 1em;
   color: $pre-color;
@@ -97,14 +102,13 @@ p, li {
     display: inline-block;
     white-space: no-wrap;
     background: $code-bg-color !important;
-    font-size: .8em;
     color: $base1 !important;
     border: none;
     @include border-radius(.4em);
     padding: 0 .3em;
     margin: -1px 0;
   }
-  pre code { font-size: 1em !important; background: none; border: none; }
+  pre code { background: none; border: none; }
 }
 
 .pre-code {
@@ -227,7 +231,7 @@ figure.code {
 
 .code-title {
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
   text-shadow: #cbcccc 0 1px 0;
   color: #474747;
   font-weight: normal;
@@ -242,7 +246,7 @@ figure.code {
   @include hover-link;
   color: #666 !important;
   z-index: 1;
-  font-size: 13px;
+  font-size: 16px;
   text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
 }
