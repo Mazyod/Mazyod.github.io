@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,400,600,800|Press+Start+2P);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600,700,800);
 @font-face {
   font-family: "Flat-UI-Icons-16";
@@ -179,7 +180,7 @@
 body {
   color: $text-color;
   background: $bg-color;
-  font: 18px/1.831 "Open Sans", sans-serif; }
+  font: 18px/1.831 "Dosis", sans-serif; }
 
 p {
   font-weight: 300; }
@@ -200,7 +201,7 @@ h1 {
   color: $primary-color;
   font-size: 32px;
   font-weight: 300;
-  font-family: "Open Sans"; }
+  font-family: "Dosis"; }
   .date-time{
     font-size: 15px;
     color: $accent-color2;
@@ -215,14 +216,14 @@ h2 {
   color: $primary-color;
   font-size: 26px;
   font-weight: 400;
-  font-family: "Open Sans";
+  font-family: "Dosis";
   margin-bottom: 2px; }
 
 h3 {
   color: $accent-color2;
   font-size: 24px;
   font-weight: 600;
-  font-family: "Open Sans";
+  font-family: "Dosis";
   margin-bottom: 4px;
   margin-top: 2px; }
   .tagline
@@ -234,7 +235,7 @@ h4 {
   color: $accent-color2;
   font-size: 18px;
   font-weight: 700;
-  font-family: "Open Sans";
+  font-family: "Dosis";
   line-height: 18px;
   margin-top: 4px; }
 
@@ -242,7 +243,7 @@ h5 {
   color: $accent-color2;
   font-size: 16px;
   font-weight: 700;
-  font-family: "Open Sans";
+  font-family: "Dosis";
   text-transform: none; }
   .date{
     margin-top: 26px;
@@ -252,7 +253,7 @@ h6 {
   color: $accent-color2;
   font-size: 13px;
   font-weight: 800;
-  font-family: "Open Sans";
+  font-family: "Dosis";
   text-transform: none; }
 
 .btn {
@@ -849,7 +850,7 @@ input[type="color"],
 .uneditable-input {
   border: 2px solid #dce4ec;
   color: $bg-color;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Dosis", sans-serif;
   font-size: 14px;
   padding: 8px 0 9px 10px;
   text-indent: 1px;
@@ -1311,7 +1312,7 @@ textarea,
     background: transparent;
     border: none;
     color: $bg-color;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Dosis", sans-serif;
     font-size: 14px;
     margin: 0px;
     padding: 0 0 0 5px;
@@ -1983,7 +1984,7 @@ body.vjs-full-window {
   bottom: 4em;
   left: 1em;
   right: 1em;
-  font-family: "Open Sans", sans-serif;}
+  font-family: "Dosis", sans-serif;}
 .video-js .vjs-text-track {
   display: none;
   color: white;
@@ -2199,7 +2200,7 @@ body.vjs-full-window {
   height: 20px;
   width: 50px;
   top: 16px;
-  font-family: "Open Sans", sans-serif;}
+  font-family: "Dosis", sans-serif;}
 
 .vjs-current-time {
   right: 128px;
@@ -2579,7 +2580,7 @@ body.vjs-full-window {
 .jumbotron {
   font-size: 60px;
   line-height: 70px;
-  font-family: "Open Sans";
+  font-family: "Dosis";
   font-weight: 300;
   position: relative;
   padding: 70px 0;
