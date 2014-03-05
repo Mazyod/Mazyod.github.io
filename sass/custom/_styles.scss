@@ -2,7 +2,7 @@
 
 /* The blog header - MAZYOD DEVDIARY */
 .maz-blog-header {
-  font-size: 70px;
+  font-size: 58px;
   text-align: center;
   line-height: 76px;
 
@@ -14,20 +14,37 @@
     /* Since dev and diary are two separate elements,
      we group them using inline-block */
     display: inline-block;
-    margin-left: 23px;
+    margin-left: 8px;
   }
 
   /* The dev word in the header */
   .maz-blog-header-dev {
     display: inline-block;
-    
+
     margin-top: 5px;
     margin-right: -7px;
     vertical-align: top;
 
     font-size: 0.82em;
     font-family: "Press Start 2P";
+
+    color: #a6e22e;
   }
+}
+
+@media only screen and (min-width: 748px) {
+  /* Reduce size of some fonts on smaller screens */
+  .maz-blog-header {
+    font-size: 70px;
+  }
+}
+
+html {
+    height:100%;
+}
+
+.maz-blog-header {
+    min-height:100%;
 }
 
 /* Blog subtitle - Blabbering on, and on, and on... */
