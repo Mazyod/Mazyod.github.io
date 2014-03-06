@@ -2598,12 +2598,13 @@ body.vjs-full-window {
 
 .badge {
   display: inline-block;
-  padding: 4px 4px;
+  margin: 5px 3px;
+  padding: 8px 8px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
   color: $accent-color3;
-  white-space: nowrap;
+  white-space: normal;
   vertical-align: center;
   background-color: $secondary-color;
 }
