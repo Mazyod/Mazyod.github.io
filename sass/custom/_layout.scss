@@ -1,1 +1,20 @@
 
+.nav>li>a:hover {
+  background-color: transparent;
+}
+
+.social-container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.social-navbar {
+  display: inline-block;
+}
+
+.social-list-item {
+  float: left;
+  margin: 0px 20px;
+
+  font-size: 60px;
+}

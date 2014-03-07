@@ -1,15 +1,48 @@
-<div class="jumbotron">
-    <div class="container">
+
+<div>
+    <div class="jumbotron">
         <h1 class="maz-blog-header">
             <span class="maz-blog-header-first">MAZYOD'S</span>
             <div class="maz-blog-header-second" ><span class="maz-blog-header-dev">DEV</span><span>DIARY</span></div>
         </h1>
         <h3 class="maz-blog-subheader">
             {% if site.subtitle %}
-                {{ site.subtitle }}
+            {{ site.subtitle }}
             {% else %}
-                Here are some thoughts of mine.
+            Here are some thoughts of mine.
             {% endif %}
         </h3>
     </div>
+    <div class="social-container">
+        <div class="social-navbar">
+            <ul class="nav">
+                {% if site.github_user %}
+                <li class="social-list-item"><a href="http://github.com/{{ site.github_user }}" title="Github Profile"><i class="icon-github-sign"></i></a></li>
+                {% endif %}
+                {% if site.bitbucket_user %}
+                <li class="social-list-item"><a href="http://bitbucket.org/{{ site.bitbucket_user }}" title="BitBucket Profile"><i class="icon-bitbucket-sign"></i></a></li>
+                {% endif %}
+                {% if site.linkedin_user %}
+                <li class="social-list-item"><a href="http://linkedin.com/in/{{ site.linkedin_user }}" title="Linkedin Profile"><i class="icon-linkedin-sign"></i></a></li>
+                {% endif %}
+                {% if site.twitter_user %}
+                <li class="social-list-item"><a href="http://twitter.com/{{ site.twitter_user }}" title="Twitter Profile"><i class="icon-twitter-sign"></i></a></li>
+                {% endif %}
+                {% if site.googleplus_user %}
+                <li class="social-list-item"><a href="http://plus.google.com/{{ site.googleplus_user }}" title="Google+ Profile"><i class="icon-google-plus-sign"></i></a></li>
+                {% endif %}
+                {% if site.facebook_user %}
+                <li class="social-list-item"><a href="http://facebook.com/{{ site.facebook_user }}" title="Facebook Profile"><i class="icon-facebook-sign"></i></a></li>
+                {% endif %}
+                {% if site.flickr_user %}
+                <li class="social-list-item"><a href="http://flickr.com/photos/{{ site.flickr_user }}" title="Flickr Profile"><i class="icon-flickr"></i></a></li>
+                {% endif %}
+                {% if site.email %}
+                <li class="social-list-item"><a href="mailto:{{ site.email }}" title="Email"><i class="icon-envelope"></i></a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
 </div>
+
+
