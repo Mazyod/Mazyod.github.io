@@ -21,6 +21,17 @@ subscribe_email:
 # RSS feeds can list your email address if you like
 email:
 
+# define the navigation structure, to be built in navigation.html
+navigation:
+- text: HOME
+  url: /index.html
+- text: CATEGORIES
+  url: /categories
+- text: EVERYTHING
+  url: /everything
+- text: ABOUT
+  url: /about
+
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #

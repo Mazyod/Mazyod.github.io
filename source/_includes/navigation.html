@@ -1,6 +1,13 @@
 {% include custom/navigation.html %}
-<ul class="nav">
-    {% for link in site.navigation %}
-    <li {% if page.url == link.url %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.text }}</a></li>
-    {% endfor %}
-</ul>
+<!-- navigation.html -->
+<div class="navbar-outer">
+    <div class="navbar-outline">
+    </div>
+    <div class="navbar-inner">
+    <ul class="nav">
+        {% for link in site.navigation %}
+        <li class="navbar-list-item{% if page.url == link.url %}-active{% endif %}"><a href="{{ link.url }}">{{ link.text }}</a></li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>

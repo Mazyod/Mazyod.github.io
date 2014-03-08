@@ -1,4 +1,45 @@
 
+.maz-list-item {
+  float: left;
+}
+
+.navbar-outer {
+  text-align: center;
+  display: inherit;
+}
+
+.navbar-outline {
+  background-color: $secondary-color;
+  height: 5px;
+}
+
+.navbar-list-item {
+  @extend .maz-list-item;
+
+  background-color: transparent;
+  width: 150px;
+  font-size: 18pt;
+  margin-top: 20px;
+}
+
+.navbar-list-item-active {
+  @extend .navbar-list-item;
+
+  a {
+    color: #ffffff;
+  }
+}
+
+.navbar-inner {
+  display: inline-block;
+  background: none;
+  border: none;
+  min-height: 0px;
+
+  @include single-box-shadow(none);
+}
+
+/* Social sharing annoying white background removal */
 .nav>li>a:hover {
   background-color: transparent;
 }
@@ -13,8 +54,8 @@
 }
 
 .social-list-item {
-  float: left;
-  margin: 0px 20px;
+  @extend .maz-list-item;
 
+  margin: 0px 20px;
   font-size: 60px;
 }
