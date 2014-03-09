@@ -6,7 +6,12 @@
     <div class="navbar-inner">
     <ul class="nav">
         {% for link in site.navigation %}
-        <li class="navbar-list-item{% if page.url == link.url %}-active{% endif %}"><a href="{{ link.url }}">{{ link.text }}</a></li>
+        <li class="navbar-list-item{% if page.url == link.url %}-active{% endif %}">
+            {% if page.url == link.url %}
+            <div class="navbar-list-item-active-outline"></div>
+            {% endif %}
+            <a href="{{ link.url }}">{{ link.text }}</a>
+        </li>
         {% endfor %}
     </ul>
     </div>

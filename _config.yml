@@ -24,7 +24,7 @@ email:
 # define the navigation structure, to be built in navigation.html
 navigation:
 - text: HOME
-  url: /index.html
+  url: /
 - text: CATEGORIES
   url: /categories
 - text: EVERYTHING

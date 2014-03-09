@@ -1,4 +1,6 @@
 
+$outline-height: 5px;
+
 .maz-list-item {
   float: left;
 }
@@ -10,7 +12,7 @@
 
 .navbar-outline {
   background-color: $secondary-color;
-  height: 5px;
+  height: $outline-height;
 }
 
 .navbar-list-item {
@@ -26,8 +28,17 @@
   @extend .navbar-list-item;
 
   a {
-    color: #ffffff;
+    color: $tertiary-color;
   }
+}
+
+.navbar-list-item-active-outline {
+  @extend .navbar-outline;
+
+  background-color: $tertiary-color;
+
+  margin-top: -25px;
+  margin-bottom: 20px;
 }
 
 .navbar-inner {

@@ -68,7 +68,7 @@ html {
   .hll { background-color: #ffffcc !important }
   .c { color: #5F5A60 !important; font-style: italic !important } /* Comment */
   .err { border:#B22518; } /* Error */
-  .k  { color: #F92672 !important } /* Keyword */
+  .k  { color: #F92672 !important; font-weight: bold !important; } /* Keyword */
   .cm { color: #5F5A60 !important; font-style: italic !important } /* Comment.Multiline */
   .cp { color: #5F5A60 !important } /* Comment.Preproc */
   .c1 { color: #5F5A60 !important; font-style: italic !important } /* Comment.Single */
@@ -90,7 +90,7 @@ html {
   .kr {  } /* Keyword.Reserved */
   .kt {  } /* Keyword.Type */
   .m  { } /* Literal.Number */
-  .s  { color: #e9e422 !important } /* Literal.String */
+  .s  { color: #FFD940 !important } /* Literal.String */
   .n  { color: #F8F8F8 !important } /* Name */
   .na { color: #F9EE98 !important } /* Name.Attribute */
   .nb { color: #A6E22E !important } /* Name.Builtin */
@@ -109,16 +109,16 @@ html {
   .mh { color: #CF6A4C !important } /* Literal.Number.Hex */
   .mi { color: #CF6A4C !important } /* Literal.Number.Integer */
   .mo { color: #CF6A4C !important } /* Literal.Number.Oct */
-  .sb { color: #e9e422 !important } /* Literal.String.Backtick */
-  .sc { color: #e9e422 !important } /* Literal.String.Char */
+  .sb { color: #FFD940 !important } /* Literal.String.Backtick */
+  .sc { color: #FFD940 !important } /* Literal.String.Char */
   .sd { color: #5F5A60 !important; font-style: italic !important; } /* Literal.String.Doc */
-  .s2 { color: #e9e422 !important } /* Literal.String.Double */
+  .s2 { color: #FFD940 !important } /* Literal.String.Double */
   .se { color: #F9EE98 !important; font-weight: bold !important; } /* Literal.String.Escape */
-  .sh { color: #e9e422 !important } /* Literal.String.Heredoc */
+  .sh { color: #FFD940 !important } /* Literal.String.Heredoc */
   .si { color: #DAEFA3 !important; font-weight: bold !important; } /* Literal.String.Interpol */
-  .sx { color: #ffe400 !important } /* Literal.String.Other */
+  .sx { color: #FFD940 !important } /* Literal.String.Other */
   .sr { color: #E9C062 !important } /* Literal.String.Regex */
-  .s1 { color: #e9e422 !important } /* Literal.String.Single */
+  .s1 { color: #FFD940 !important } /* Literal.String.Single */
   .ss { color: #CF6A4C !important } /* Literal.String.Symbol */
   .bp { color: #00aaaa !important } /* Name.Builtin.Pseudo */
   .vc { color: #7587A6 !important } /* Name.Variable.Class */
