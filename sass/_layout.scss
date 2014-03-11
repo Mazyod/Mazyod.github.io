@@ -1,0 +1,72 @@
+
+$outline-height: 5px;
+
+.maz-list-item {
+  float: left;
+}
+
+.navbar-outer {
+  text-align: center;
+  display: inherit;
+}
+
+.navbar-outline {
+  background-color: $secondary-color;
+  height: $outline-height;
+}
+
+.navbar-list-item {
+  @extend .maz-list-item;
+
+  background-color: transparent;
+  width: 150px;
+  font-size: 18pt;
+  margin-top: 20px;
+}
+
+.navbar-list-item-active {
+  @extend .navbar-list-item;
+
+  a {
+    color: $tertiary-color;
+  }
+}
+
+.navbar-list-item-active-outline {
+  @extend .navbar-outline;
+
+  background-color: $tertiary-color;
+
+  margin-top: -25px;
+  margin-bottom: 20px;
+}
+
+.navbar-inner {
+  display: inline-block;
+  background: none;
+  border: none;
+  min-height: 0px;
+
+  @include single-box-shadow(none);
+}
+
+/* Social sharing annoying white background removal */
+.nav>li>a:hover {
+  background-color: transparent;
+}
+
+.social-container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.social-navbar {
+  display: inline-block;
+}
+
+.social-list-item {
+  @extend .maz-list-item;
+
+  margin: 0px 20px;
+  font-size: 60px;
+}
