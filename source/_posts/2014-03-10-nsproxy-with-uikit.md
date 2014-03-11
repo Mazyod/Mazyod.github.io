@@ -27,8 +27,41 @@ Thanks to [Apple's AutoLayout system](https://developer.apple.com/library/ios/do
 
 {% img center caption /images/segmented-en.png "" "LTR segmented control" %} {% img center caption /images/segmented-ar.png "" "RTL segmented control" %}
 
-In the middle of the bordom than encompasses the localization process, I found this particularly interesting problem which immediately got all my attention... 
+As you can see, this is the problem:
 
-## The Proxy Design Pattern
+{% codeblock lang:objc SegmenedControl %}
+// We need to set the first word at the left for LTR, and right for RTL:
+NSString *title = NSLocalizedString(@"First", @"");
+// LTR languages
+[segmentControl setTitle:title atIndex:0];
+// RTL languages
+[segmentControl setTitle:title atIndex:lastIndex];
+{% endcodeblock %}
+
+But doing this manually is error prone, and gets tedious really quickly... So, that needed to be solved.
+
+## The Solution
+
+The first thing that crossed my mind was to wrap the object with a proxy that would flip all the segment indexes coming in and out of the control:
+
+{% img center caption http://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUHJveHkgU29sdXRpb24gTG9naWMgRmxvdwoKT3V0c2lkZXItPgAgBTogc2VsZWN0ZWRTZWdtZW50SW5kZXgoKQoAPgUtPgAPB2VkQ29udHJvbAAXGQAZEC0AWAlyZXN1bHQKbm90ZSByaWdodCBvZgCBHAY6IENoZWNrIHRoZSB1c2VyJ3MgbGFuZ3VhZ2UKYWx0IEwABgcgTFRSAIEKBy0-AIE5CABQCWVsc2UAIQpSVEwAGBNzAIFXBkNvdW50IC0AgQwHIC0gMQplbmQ&s=napkin "" "This is a simple example. You can imagine how it would be for all the cases, right?" %}
+
+That seemed like to much work, so I went ahead and implemented a simple category that the developer has to call in order to get the proper result, [available on github](https://github.com/Mazyod/RTLSegmentedControl). The way it works is simple: Replace all your calls that are related to the segment index with the methods found in the category, and it will check if the user's language is RTL, and flip accordingly:
+
+{% codeblock lang:objc SegmenedControl %}
+// Old code
+[control insertSegmentWithTitle:title atIndex:segment animated:animated];
+[control insertSegmentWithImage:image  atIndex:segment animated:animated];
+[control removeSegmentAtIndex:segment animated:animated];
+
+// New code
+[control insertSegmentWithTitle:title atLocalizedIndex:segment animated:animated];
+[control insertSegmentWithImage:image  atLocalizedIndex:segment animated:animated];
+[control removeSegmentAtLocalizedIndex:segment animated:animated];
+{% endcodeblock %}
+
+**Is that it?** No way. I came here today *mainly* to discuss my findings realted to marrying `NSProxy` to `UIKit`, so let's move to that.
+
+## The Real Cheese
 
 
