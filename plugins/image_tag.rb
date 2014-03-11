@@ -1,7 +1,8 @@
-# Title: Simple Image tag for Jekyll
+# Title: Image tag with captions for Jekyll
 # Authors: Brandon Mathis http://brandonmathis.com
 #          Felix Schäfer, Frederic Hemberger
 # Description: Easily output images with optional class names, width, height, title and alt attributes
+#                     Use optional caption attribute to display title/alt text as caption
 #
 # Syntax {% img [class name(s)] [http[s]:/]/path/to/image [width [height]] [title text | "title text" ["alt text"]] %}
 #
@@ -14,8 +15,8 @@
 # <img src="/images/ninja.png">
 # <img class="left half" src="http://site.com/images/ninja.png" title="Ninja Attack!" alt="Ninja Attack!">
 # <img class="left half" src="http://site.com/images/ninja.png" width="150" height="150" title="Ninja Attack!" alt="Ninja in attack posture">
-#
 
+require 'fastimage'
 module Jekyll
 
   class ImageTag < Liquid::Tag
@@ -38,10 +39,28 @@ module Jekyll
     end
 
     def render(context)
+      output = super
       if @img
-        "<img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")}>"
+        @img['src'] =~ /https?:\/\/[\S]+/ ? @imgsrc = @img['src'] : @imgsrc = "source" + @img['src']
+        if @img['class'].include?("caption")
+          if @img.has_key?("width")
+            @imgwidth = @img['width']
+          else
+            @imgsize = FastImage.size(@imgsrc)
+            @imgwidth = @imgsize[0] unless @imgsize.nil?
+          end
+          @imgclass = @img['class']
+          @imgclass.slice!("caption")
+          @img.delete("class")
+          "<span class=\"#{('caption-wrapper ' + @imgclass).rstrip}\" style=\"width: #{@imgwidth}px\">" +
+            "<img class=\"caption\" #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")}>" +
+            "<span class=\"caption-text\">#{@img['alt']}</span>" +
+          "</span>"
+        else
+            "<img #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")}>"
+        end
       else
-        "Error processing input, expected syntax: {% img [class name(s)] [http[s]:/]/path/to/image [width [height]] [title text | \"title text\" [\"alt text\"]] %}"
+        "Error processing input, expected syntax: {% img [class name(s)] /url/to/image [width height] [title text] %}"
       end
     end
   end

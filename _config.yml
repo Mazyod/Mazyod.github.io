@@ -26,11 +26,11 @@ navigation:
 - text: HOME
   url: /
 - text: CATEGORIES
-  url: /categories
+  url: /categories/
 - text: EVERYTHING
-  url: /everything
+  url: /everything/
 - text: ABOUT
-  url: /about
+  url: /about/
 
 # ----------------------- #
 #    Jekyll & Plugins     #

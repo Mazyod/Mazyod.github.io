@@ -1,0 +1,30 @@
+// Image caption
+@import "compass/css3";
+
+$corner-radius: 15px;
+
+.caption {
+    @include border-radius($corner-radius);
+}
+
+.center.caption-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.caption-wrapper {
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background: #000;
+
+    @include border-radius($corner-radius);
+
+    .caption-text {
+      text-align: center;
+      font-size: 0.9em;
+      color: #AAA;
+      display: block;
+    }
+}

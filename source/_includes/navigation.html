@@ -5,9 +5,10 @@
     </div>
     <div class="navbar-inner">
     <ul class="nav">
+        {% capture url %}{{ page.url | remove:'index.html' }}{% endcapture %}
         {% for link in site.navigation %}
-        <li class="navbar-list-item{% if page.url == link.url %}-active{% endif %}">
-            {% if page.url == link.url %}
+        <li class="navbar-list-item{% if url == link.url %}-active{% endif %}">
+            {% if url == link.url %}
             <div class="navbar-list-item-active-outline"></div>
             {% endif %}
             <a href="{{ link.url }}">{{ link.text }}</a>
