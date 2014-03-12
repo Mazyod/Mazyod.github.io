@@ -13,7 +13,7 @@ tags:
 - UIWebview
 ---
 
-Obviously enough .. I have failed to be the frequent poster I dreamt of being. (Why is dreamt not a word? Someone please contact the association responsible and force them to add it). Well, I WAS out of the country for more than a week. And I WAS bombarded with 2 projects and 2 midterms that I had to prepare within a week. Fortunate enough for me, I finished the projects and both midterms got postponed :D.
+Obviously enough .. I have failed to be the frequent poster I dreamt of being. (Why is dreamt not a word? Someone please contact the association responsible and force them to add it). Well, I **was** out of the country for more than a week. And I **was** bombarded with 2 projects and 2 midterms that I had to prepare within a week. Fortunate enough for me, I finished the projects and both midterms got postponed :D.
 
 Well, I doubt anyone finds that interesting, so going to something that might actually be useful and interesting. Dama chat!
 
@@ -23,21 +23,13 @@ Let us first see how much the chatView evolved since the last time we spoke:
 
 [![](http://mazyod.files.wordpress.com/2011/11/screen-shot-2011-11-18-at-8-48-05-pm2.png)](http://mazyod.files.wordpress.com/2011/11/screen-shot-2011-11-18-at-8-48-05-pm2.png)
 
-
-###### It says (null) as the name because am calling [[GKLocalPlayer localPlayer] alias],
-and it is returning nil. Why? Because this is currently implemented in the single
-player mode for testing!
-
-
-
+*It says (null) as the name because am calling [[GKLocalPlayer localPlayer] alias], and it is returning nil. Why? Because this is currently implemented in the single player mode for testing!*
 
 Looks good enough. Might be improved .. The point, always focus on the point!! So, the cool SMS application-like keyboard and text have been taken from HPGrowingTextView code from GitHub. It is really something. As for the way the text is being appended to the gray webview, here is some code:
 
-
-
-[sourcecode language="objc" wraplines="false"]
-- (void)appendToChatViewName:(NSString*)name dialog:(NSString*)text isLocal:(BOOL)local {
-
+```objc
+- (void)appendToChatViewName:(NSString*)name dialog:(NSString*)text isLocal:(BOOL)local 
+{
     NSString* jsName    = [NSString stringWithFormat:@"'%@:'", name];
     NSString* jsDialog  = [NSString stringWithFormat:@"'%@'", text];
     NSString* jsLocal   = (local? @"1" : @"0");
@@ -51,7 +43,7 @@ Looks good enough. Might be improved .. The point, always focus on the point!! S
     //BRUTE FORCE: 90,000 :P
     string = [chatView stringByEvaluatingJavaScriptFromString:@"scroll(0, 90000)"];
 }
-[/sourcecode]
+```
 
 Now, we can finally talk about the problem that I mention, the one that made me want to post. The above code has a problem, care to guess?
 
@@ -61,9 +53,7 @@ Ok, if you guessed that 90000 is too big, then congratulations! You guessed wron
 
 The problem is that if the user sends some text including the line break character '\n'. The JS will end up crashing and doing absolutely nothing... Ok, for the solution? Exactly, it's as simple as:
 
-[sourcecode language="objc" wraplines="false"]
-
+```objc
     //remove all \n and replace them with HTML break character.. <br />!!
     jsDialog = [jsDialog stringByReplacingOccurrencesOfString:@"\n" withString:@"<br />"];
-
-[/sourcecode]
+```

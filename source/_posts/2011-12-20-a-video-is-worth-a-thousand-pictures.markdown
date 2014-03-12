@@ -7,7 +7,11 @@ slug: a-video-is-worth-a-thousand-pictures
 title: A Video is Worth a Thousand Pictures
 wordpress_id: 163
 tags:
-- www youtube
+- youtube
+- SSD
+- performance
+- mac
+- tech
 ---
 
 Or, whatever they are worth.. Here:

@@ -38,11 +38,7 @@ _In previous posts, we covered 11 behavioral design patterns. For now, we will s
 
 
 
-
-
 In life, when something doesn't work out, I have the tendency to view it as an advantage. This is actually one of the first lessons I learned in the Kuwait Fund training I went through. It may sound cheesy and simple, but you might be astonished how worked up and stressed we get sometimes over the smallest things that we can take to our advantage. Stuck in traffic? Listen to a useful audio book. Cancelled a trip to the Maldives? Do so more coding :D. And so on...
-
-
 
 
 
@@ -66,7 +62,7 @@ With that weird introduction out of the way, let's dive into a real intro. What 
 
 
 ##### Use case: ★★★★  
-Elegance: ★★★★★
+##### Elegance: ★★★★★
 
 
   
@@ -115,7 +111,7 @@ Another good reason to use this pattern is when the protected object is actually
 
 
 ##### Use case: ★★★  
-Elegance: ★
+##### Elegance: ★
 
 
   
@@ -170,7 +166,7 @@ Another cool example would be if you have a class that can format text, but you 
 
 
 ##### Use case: ★★  
-Elegance: ★★★
+##### Elegance: ★★★
 
 
   
@@ -213,7 +209,7 @@ Let us imagine ... Wait, before we imagine, I am a game developer, and most of m
 
 
 ##### Use case: ★★★  
-Elegance: ★★★
+##### Elegance: ★★★
 
 
   
@@ -257,7 +253,7 @@ So, let's say you have a Sound class that plays a sound. You want to apply diffe
 
 
 ##### Use case: ★★★  
-Elegance: ★★★
+##### Elegance: ★★★
 
 
   
@@ -301,7 +297,7 @@ You have downloaded this shiny new SDK for this new technology you have, and you
 
 
 ##### Use case: ★  
-Elegance: ★★★★
+##### Elegance: ★★★★
 
 
   

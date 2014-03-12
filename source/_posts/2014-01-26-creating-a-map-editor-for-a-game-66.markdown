@@ -42,19 +42,19 @@ _This is the sixth part of a series highlighting the development of a Map Editor
 
 
 
-Scripting languages are so freakin' useful. I just had take that out of my chest. There were tons of times where I really wanted to write a small program that would make my life a little easier, but the pain of writing it would exceed its usefulness. I remember that one time when I wanted to know when a webpage on a very old site is updated, and wrote a full fledged MacOS Cocoa status bar app just to monitor the status... It was a pain, and certainly not worth the time. However, now that I learned python over the course of the last few months, this task would take at most 1 minute to code, and would definitely be worth it! from introduction import end.
+Scripting languages are so freakin' useful. I just had take that out of my chest. There were tons of times where I really wanted to write a small program that would make my life a little easier, but the pain of writing it would exceed its usefulness. I remember that one time when I wanted to know when a webpage on a very old site is updated, and wrote a full fledged MacOS Cocoa status bar app just to monitor the status... It was a pain, and certainly not worth the time. However, now that I learned python over the course of the last few months, this task would take at most 1 minute to code, and would definitely be worth it! `from introduction import end`.
 
 
 
 
 
-If I were to ask any programmer on the face of the earth what he would expect the entity classes for this Map Editor app would be, they would definitely say "MapMeta" class, "MapAction" class, ... etc. It makes sense to assume that, since these are the basic entities of the map, right? Well, it would be correct if this was your typical software that you write everyday, but it isn't. We explained that this map editor should have these entities defined in a plist, and controlled from there, hence being data-driven. So, writing any code that is tailored to those entities is a no no. So, what to do?!
+If I were to ask any programmer on the face of the earth what he would expect the entity classes for this Map Editor app would be, they would definitely say `MapMeta` class, `MapAction` class, ... etc. It makes sense to assume that, since these are the basic entities of the map, right? Well, it would be correct if this was your typical software that you write everyday, but it isn't. We explained that this map editor should have these entities defined in a plist, and controlled from there, hence being data-driven. So, writing any code that is tailored to those entities is a no no. So, what to do?!
 
 
 
 
 
-I will go ahead and say that, initially, I loaded those plist files into NSDictionaries and NSArrays, and the app worked fine. With the power of [Key-Value Coding (KVC)](http://mazyod.com/2012/08/12/kvc-kvo-replacing-pillars-with-magic/), which is behind Cocoa bindings, I was able to implement a very generic data model without a single subclass. That is almost impossible to do without making the code horrible unreadable, but fortunately, I utilized ObjC's categories to work around that! So, no subclasses, just categories :D.
+I will go ahead and say that, initially, I loaded those plist files into `NSDictionaries` and `NSArrays`, and the app worked fine. With the power of [Key-Value Coding (KVC)](http://mazyod.com/2012/08/12/kvc-kvo-replacing-pillars-with-magic/), which is behind Cocoa bindings, I was able to implement a very generic data model without a single subclass. That is almost impossible to do without making the code horrible unreadable, but fortunately, I utilized ObjC's categories to work around that! So, no subclasses, just categories :D.
 
 
 

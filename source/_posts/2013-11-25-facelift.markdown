@@ -8,8 +8,4 @@ title: Facelift
 wordpress_id: 318
 ---
 
-With the new design rolled out and finalized, I thought I'd put a poll out here and see what you people think about it!
-
-[polldaddy poll=7594498]
-
 The real blog posts should be coming.. soon!

@@ -1,4 +1,8 @@
 
+strong {
+  font-weight: 600;
+}
+
 /* pseudo Monokai code blocks */
 .pre-code {
   overflow: scroll;
@@ -6,7 +10,6 @@
   display: block;
   padding: .8em;
   overflow-x: auto;
-  line-height: 1.45em;
   background: #181818 !important;
   color: #F8F8F8 !important;
   span { color: #F8F8F8 !important; }

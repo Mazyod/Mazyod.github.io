@@ -22,7 +22,7 @@ First, we have to be clear that what I bought is not a Hard Disk Drive (otherwis
 
 (I have been waiting to write this sentence)
 
-**The HDD has long been the bottleneck of computers for many years. Compared to the other fast components that operate in the nano-to-millisecond realm, this crappy tech has operation time that is measured in seconds (x1000 times slower)!!**
+> The HDD has long been the bottleneck of computers for many years. Compared to the other fast components that operate in the nano-to-millisecond realm, this crappy tech has operation time that is measured in seconds (x1000 times slower)!!
 
 (End of sentence I've been dying to write)
 

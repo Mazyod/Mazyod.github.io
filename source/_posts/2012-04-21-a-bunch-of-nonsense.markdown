@@ -40,8 +40,6 @@ So, this post should cover:
   3. Some personal stuff, that I advise you skip
 
 
-<br />
-
 
 
 * * *
@@ -65,14 +63,17 @@ The settings journey was a mess. It was like you would head out of your home, wi
 
 _**Example:**_ We have a group of settings to change the sounds associated with the alerts that the application shows. So, by changing a group of sounds in the settings, the user Innocently invokes a method call on the settings manager that could be something like:
 
-**- (void)settingsChangedAlert1Sound:(NSString*)newSound1 alert2Sound:(NSString*)newSound2** ... and so on, and so forth.
+```objc
+- (void)settingsChangedAlert1Sound:(NSString*)newSound1 alert2Sound:(NSString*)newSound2 
+// ... and so on, and so forth.
+```
 
-Then, inside the settings manager, and specifically inside the invoked method, we do something like: **
+Then, inside the settings manager, and specifically inside the invoked method, we do something like: 
 
-for (id<soundSettingsDelegate> delegate in self.soundSettingsDelegate) [delegate settingsChangedAlert1Sound:newSound1 alert2Sound:newSound2 ...]
-
-
-**
+```objc
+for (id<soundSettingsDelegate> delegate in self.soundSettingsDelegate) 
+    [delegate settingsChangedAlert1Sound:newSound1 alert2Sound:newSound2 ...]
+```
 
 	
   2.  Add a Singleton Settings manager. Inside, implement methods to change a group of settings as necessary. Nothing new up until now.. Then, send a notification using NSNotificationCenter that the settings have been changed. This is awesome, that we don't have to worry about who is listening to the settings changed ..
@@ -94,13 +95,7 @@ Anyways, this is where the hybrid mode came into existence! The hybrid mode says
 .. but how?? Well, you make a new class for each and every group of settings!! For the sound example we have, you would post an NSNotification with the object as a new (SoundSettings*) object. This class is specially added to contain the parameters! Then, in the observer, we would use: SoundSettings* settings = [notification object]; .. And life is good!!
 
 
-
-
-
 * * *
-
-
-
 
 
 ## "Cocos2d awesomeness"
@@ -117,22 +112,19 @@ Now, why isn't this epic? Because it can't be ported as easily to Android :(.
 
 
 
-
 * * *
-
-
 
 
 
 ## "What 45 Days Mean"
 
 
-45 Days = Freedom.
-45 Days = Full time programming.
-45 Days = An eng. prefix.
-45 Days = AppStore Domination.
-45 Days = Chilli's Molten cake + candle.
-45 Days = Travel.
++ 45 Days = Freedom.
++ 45 Days = Full time programming.
++ 45 Days = An eng. prefix.
++ 45 Days = AppStore Domination.
++ 45 Days = Chilli's Molten cake + candle.
++ 45 Days = Travel.
 
 ...
 

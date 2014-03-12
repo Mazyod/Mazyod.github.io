@@ -42,30 +42,22 @@ The first day will be from 12:30pm - 10:00pm, while the second day will be from 
 
 
 
-**Location:**
-
-
-Marina Hotel, Salwa Al-Sabah Hall.
+**Location:** Marina Hotel, Salwa Al-Sabah Hall.
 
 
 
 
 
 
-**Date:**
-
-
-6 & 7 June.
+**Date:** 6 & 7 June.
 
 
 
 
 
 
-**Time:**
-
-
-Day1: 12:30pm - 10:00pm
+**Time:** <br />
+Day1: 12:30pm - 10:00pm <br />
 Day2: 9:00am - 8:00pm
 
 

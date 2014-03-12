@@ -27,44 +27,21 @@ Onto the release changes!!
 
 ## #1: Text Chat!
 
-
-
-
-### "Done the right way"
-
-
 Finally, you can chat with your opponent over game center!! It took so long because, as I explained in previous posts, I had to implement the whole thing in my code, without relaying on any game center capabilities.
 
 [![](http://mazyod.files.wordpress.com/2012/01/img_1203.png)](http://mazyod.files.wordpress.com/2012/01/img_1203.png)
 
 
-
-* * *
-
-
-
 [![](http://mazyod.files.wordpress.com/2012/01/img_1204.png)](http://mazyod.files.wordpress.com/2012/01/img_1204.png)
 
 
-
-* * *
-
-
-
 [![](http://mazyod.files.wordpress.com/2012/01/img_1205.png)](http://mazyod.files.wordpress.com/2012/01/img_1205.png)
-
-
-
-* * *
-
 
 
 [![](http://mazyod.files.wordpress.com/2012/01/img_0001.png)](http://mazyod.files.wordpress.com/2012/01/img_0001.png)
 
 
 ## #2: Exit Button!
-
-
 
 
 ### Allows you to chat after the game ends

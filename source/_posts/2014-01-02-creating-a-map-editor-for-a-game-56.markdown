@@ -81,7 +81,7 @@ First, I would like to shed some light on the views of the application. We will 
 
 [![meta](http://mazyod.files.wordpress.com/2014/01/meta-e1388638813598.png?w=240)](http://mazyod.files.wordpress.com/2014/01/meta-e1388638813598.png)
 
-Before we see the code for this component, let me try and explain it at a relatively abstract level. This component is referred to as [NSOutlineView](https://developer.apple.com/library/mac/documentation/cocoa/reference/applicationkit/classes/NSOutlineView_Class/Reference/Reference.html). You can provide it with a tree of objects, and it will properly show the objects in a hierarchal fashion. So, when an object has children, it will show the expand triangle to indicate that children exist. That is all there is to it, really. Remember, the UI is not concerned with the implementation details and logic, it is just representing the data for the user.
+Before we see the code for this component, let me try and explain it at a relatively abstract level. This component is referred to as [`NSOutlineView`](https://developer.apple.com/library/mac/documentation/cocoa/reference/applicationkit/classes/NSOutlineView_Class/Reference/Reference.html). You can provide it with a tree of objects, and it will properly show the objects in a hierarchal fashion. So, when an object has children, it will show the expand triangle to indicate that children exist. That is all there is to it, really. Remember, the UI is not concerned with the implementation details and logic, it is just representing the data for the user.
 
 
 
@@ -94,7 +94,7 @@ There are a few things I want to talk about here: How are we supplying the objec
 
 
 
-To answer the first question, we are using an [NSTreeController](https://developer.apple.com/library/mac/documentation/cocoa/reference/applicationkit/Classes/NSTreeController_Class/Reference/Reference.html). This class is just another object controller that can handle a tree of objects. You can think of object controllers as predefined controllers (from the MVC pattern) that can automagically connect a model to a view without writing the controller code yourself. Other examples include an array controller, which you can bind to a table view, and BAM! The table view displays the objects that are inside an array.
+To answer the first question, we are using an [`NSTreeController`](https://developer.apple.com/library/mac/documentation/cocoa/reference/applicationkit/Classes/NSTreeController_Class/Reference/Reference.html). This class is just another object controller that can handle a tree of objects. You can think of object controllers as predefined controllers (from the MVC pattern) that can automagically connect a model to a view without writing the controller code yourself. Other examples include an array controller, which you can bind to a table view, and BAM! The table view displays the objects that are inside an array.
 
 
 
@@ -112,39 +112,36 @@ What was said previously begs the question: But where does this label come from?
 
 
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span>  1 </span></td><td><div><span style="color:#66D9EF;">@</span><span style="color:#66D9EF;">interface</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">ECObject</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">:</span><span style="color:#F8F8F2;"> </span><span style="color:#A6E22E;">NSObject</span>
-    </div></td></tr><tr><td><span>  2 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span>  3 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> Label is set by the user and displayed with the object in the renderer </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span>  4 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F92672;">@</span><span style="color:#F92672;">property</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F92672;">copy</span><span style="color:#F8F8F2;">)</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">NSString</span><span style="color:#F8F8F2;"> *label; </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> DATA </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span>  5 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> The fixed class_id or prefab_id this object was instantiated from </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span>  6 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F92672;">@</span><span style="color:#F92672;">property</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F92672;">copy</span><span style="color:#F8F8F2;">)</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">NSString</span><span style="color:#F8F8F2;"> *class_id; </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> LINK </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span>  7 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> The parameters of the prefab </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span>  8 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F92672;">@</span><span style="color:#F92672;">property</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F92672;">copy</span><span style="color:#F8F8F2;">)</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">NSArray</span><span style="color:#F8F8F2;"> *parameters; </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> INDEPENDENT </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span>  9 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> The child prefabs that this instance can instantiate </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 10 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F92672;">@</span><span style="color:#F92672;">property</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F92672;">copy</span><span style="color:#F8F8F2;">)</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">NSArray</span><span style="color:#F8F8F2;"> *prefabs; </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> CONFIG </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 11 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> The children container </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 12 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F92672;">@</span><span style="color:#F92672;">property</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">strong</span><span style="color:#F8F8F2;">)</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">NSMutableArray</span><span style="color:#F8F8F2;"> *children; </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> DATA </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 13 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> The links between subjects and observers. Retained for a reason </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 14 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F92672;">@</span><span style="color:#F92672;">property</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">strong</span><span style="color:#F8F8F2;">)</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">NSArray</span><span style="color:#F8F8F2;"> *links; </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> CONFIG </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 15 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 16 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> COCOA BINDINGS HELPERS </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 17 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> Is this value fixed or can be changed by the user? </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 18 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F92672;">@</span><span style="color:#F92672;">property</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F92672;">getter</span><span style="color:#F8F8F2;">=isFixed</span><span style="color:#F8F8F2;">)</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">BOOL</span><span style="color:#F8F8F2;"> fixed; </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> CONFIG </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 19 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> Can the user delete this instance in the GUI? </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 20 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F92672;">@</span><span style="color:#F92672;">property</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F92672;">getter</span><span style="color:#F8F8F2;">=isDeletable</span><span style="color:#F8F8F2;">)</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">BOOL</span><span style="color:#F8F8F2;"> deletable; </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> CONFIG </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 21 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 22 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> selection </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 23 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F92672;">@</span><span style="color:#F92672;">property</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F92672;">getter</span><span style="color:#F8F8F2;">=isSelected</span><span style="color:#F8F8F2;">)</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">BOOL</span><span style="color:#F8F8F2;"> selected;</span>
-    </div></td></tr></table>
-
+```objc
+@interface ECObject : NSObject    
+     
+/* Label is set by the user and displayed with the object in the renderer */    
+@property (copy) NSString *label; /* DATA */    
+/* The fixed class_id or prefab_id this object was instantiated from */    
+@property (copy) NSString *class_id; /* LINK */    
+/* The parameters of the prefab */    
+@property (copy) NSArray *parameters; /* INDEPENDENT */    
+/* The child prefabs that this instance can instantiate */    
+@property (copy) NSArray *prefabs; /* CONFIG */    
+/* The children container */    
+@property (strong) NSMutableArray *children; /* DATA */    
+/* The links between subjects and observers. Retained for a reason */    
+@property (strong) NSArray *links; /* CONFIG */    
+     
+/* COCOA BINDINGS HELPERS */    
+/* Is this value fixed or can be changed by the user? */    
+@property (getter=isFixed) BOOL fixed; /* CONFIG */    
+/* Can the user delete this instance in the GUI? */    
+@property (getter=isDeletable) BOOL deletable; /* CONFIG */    
+     
+/* selection */    
+@property (getter=isSelected) BOOL selected;
+```
 
 
 
 
 [![Screenshot 2014-01-01 21.53.32](http://mazyod.files.wordpress.com/2014/01/screenshot-2014-01-01-21-53-32.png?w=300)](http://mazyod.files.wordpress.com/2014/01/screenshot-2014-01-01-21-53-32.png)Now, regarding how the outline view knows the object has children, this comes for free when we bound it to the tree controller. The tree controller has to be set up with the property that refers to the children in the ECObject. I also set the object type of the tree controller content to ECObject. Note, the image on the left has been photoshoped for brevity sake.
-
-
 
 
 
@@ -172,83 +169,80 @@ Similar to how we used the ECObject class to represent an object in the componen
 
 
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span>  1 </span></td><td><div><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">NSControl</span><span style="color:#F8F8F2;"> *)_morphToSwitchCell</span>
-    </div></td></tr><tr><td><span>  2 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span>  3 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSButton</span><span style="color:#F8F8F2;"> *button = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSButton</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">alloc</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">initWithFrame</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;">.bounds</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span>  4 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">button </span><span style="color:#66D9EF;">setButtonType</span><span style="color:#66D9EF;">:</span><span style="color:#66D9EF;">NSSwitchButton</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span>  5 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">button </span><span style="color:#66D9EF;">setTitle</span><span style="color:#66D9EF;">:</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span>  6 </span></td><td><div><span style="color:#F8F8F2;">    </span>
-    </div></td></tr><tr><td><span>  7 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">return</span><span style="color:#F8F8F2;"> button;</span>
-    </div></td></tr><tr><td><span>  8 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr><tr><td><span>  9 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 10 </span></td><td><div><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">NSControl</span><span style="color:#F8F8F2;"> *)_morphToTextFieldCell</span>
-    </div></td></tr><tr><td><span> 11 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 12 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSTextField</span><span style="color:#F8F8F2;"> *field = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSTextField</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">alloc</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">init</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 13 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">return</span><span style="color:#F8F8F2;"> field;</span>
-    </div></td></tr><tr><td><span> 14 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr><tr><td><span> 15 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 16 </span></td><td><div><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">NSControl</span><span style="color:#F8F8F2;"> *)_morphToNumberInputCell</span>
-    </div></td></tr><tr><td><span> 17 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 18 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSNumberFormatter</span><span style="color:#F8F8F2;"> *formatter = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSNumberFormatter</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">alloc</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">init</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 19 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">formatter </span><span style="color:#66D9EF;">setNumberStyle</span><span style="color:#66D9EF;">:</span><span style="color:#66D9EF;">NSNumberFormatterDecimalStyle</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 20 </span></td><td><div><span style="color:#F8F8F2;">    </span>
-    </div></td></tr><tr><td><span> 21 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSTextField</span><span style="color:#F8F8F2;"> *field = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSTextField</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">alloc</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">init</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 22 </span></td><td><div><span style="color:#F8F8F2;">    field</span><span style="color:#F8F8F2;">.formatter</span><span style="color:#F8F8F2;"> = formatter;</span>
-    </div></td></tr><tr><td><span> 23 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">return</span><span style="color:#F8F8F2;"> field;</span>
-    </div></td></tr><tr><td><span> 24 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr><tr><td><span> 25 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 26 </span></td><td><div><span style="color:#F8F8F2;">...</span>
-    </div></td></tr><tr><td><span> 27 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 28 </span></td><td><div><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">NSControl</span><span style="color:#F8F8F2;"> *)_resolveParameter:(ECParameter *)param</span>
-    </div></td></tr><tr><td><span> 29 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 30 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">id </span><span style="color:#F8F8F2;">value = param</span><span style="color:#F8F8F2;">.value</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 31 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSString</span><span style="color:#F8F8F2;"> *content = param</span><span style="color:#F8F8F2;">.content</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 32 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSString</span><span style="color:#F8F8F2;"> *enums = param</span><span style="color:#F8F8F2;">.enumRef</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 33 </span></td><td><div><span style="color:#F8F8F2;">    </span>
-    </div></td></tr><tr><td><span> 34 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">if</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">content || enums)</span>
-    </div></td></tr><tr><td><span> 35 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 36 </span></td><td><div><span style="color:#F8F8F2;">        ...</span>
-    </div></td></tr><tr><td><span> 37 </span></td><td><div><span style="color:#F8F8F2;">    }</span>
-    </div></td></tr><tr><td><span> 38 </span></td><td><div><span style="color:#F8F8F2;">    </span>
-    </div></td></tr><tr><td><span> 39 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">else</span><span style="color:#F8F8F2;"> </span><span style="color:#F92672;">if</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">value </span><span style="color:#66D9EF;">isKindOfClass</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSString</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">class</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">)</span>
-    </div></td></tr><tr><td><span> 40 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 41 </span></td><td><div><span style="color:#F8F8F2;">        self</span><span style="color:#F8F8F2;">.type</span><span style="color:#F8F8F2;"> = eMorphingCellTypeText;</span>
-    </div></td></tr><tr><td><span> 42 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F92672;">return</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">_morphToTextFieldCell</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 43 </span></td><td><div><span style="color:#F8F8F2;">    }</span>
-    </div></td></tr><tr><td><span> 44 </span></td><td><div><span style="color:#F8F8F2;">    </span>
-    </div></td></tr><tr><td><span> 45 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">else</span><span style="color:#F8F8F2;"> </span><span style="color:#F92672;">if</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">value </span><span style="color:#66D9EF;">isKindOfClass</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSNumber</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">class</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">)</span>
-    </div></td></tr><tr><td><span> 46 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 47 </span></td><td><div><span style="color:#F8F8F2;">        CFNumberType numberType =</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">CFNumberGetType</span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">(CFNumberRef)value);</span>
-    </div></td></tr><tr><td><span> 48 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F92672;">switch</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">numberType)</span>
-    </div></td></tr><tr><td><span> 49 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 50 </span></td><td><div><span style="color:#F8F8F2;">            </span><span style="color:#F92672;">case</span><span style="color:#F8F8F2;"> </span><span style="color:#AE81FF;">kCFNumberCharType</span><span style="color:#F8F8F2;">:</span>
-    </div></td></tr><tr><td><span> 51 </span></td><td><div><span style="color:#F8F8F2;">                self</span><span style="color:#F8F8F2;">.type</span><span style="color:#F8F8F2;"> = eMorphingCellTypeSwitch;</span>
-    </div></td></tr><tr><td><span> 52 </span></td><td><div><span style="color:#F8F8F2;">                </span><span style="color:#F92672;">return</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">_morphToSwitchCell</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 53 </span></td><td><div><span style="color:#F8F8F2;">                </span>
-    </div></td></tr><tr><td><span> 54 </span></td><td><div><span style="color:#F8F8F2;">            </span><span style="color:#F92672;">default</span><span style="color:#F8F8F2;">:</span>
-    </div></td></tr><tr><td><span> 55 </span></td><td><div><span style="color:#F8F8F2;">                self</span><span style="color:#F8F8F2;">.type</span><span style="color:#F8F8F2;"> = eMorphingCellTypeNumber;</span>
-    </div></td></tr><tr><td><span> 56 </span></td><td><div><span style="color:#F8F8F2;">                </span><span style="color:#F92672;">return</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">_morphToNumberInputCell</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 57 </span></td><td><div><span style="color:#F8F8F2;">        }</span>
-    </div></td></tr><tr><td><span> 58 </span></td><td><div><span style="color:#F8F8F2;">    }</span>
-    </div></td></tr><tr><td><span> 59 </span></td><td><div><span style="color:#F8F8F2;">    </span>
-    </div></td></tr><tr><td><span> 60 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">if</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">value)</span>
-    </div></td></tr><tr><td><span> 61 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 62 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">        </span><span style="color:#66D9EF;">NSLog</span><span style="color:#F8F8F2;">(</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">Warning: unresolved object type: %@</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">, value);</span>
-    </div></td></tr><tr><td><span> 63 </span></td><td><div><span style="color:#F8F8F2;">    }</span>
-    </div></td></tr><tr><td><span> 64 </span></td><td><div><span style="color:#F8F8F2;">    </span>
-    </div></td></tr><tr><td><span> 65 </span></td><td><div><span style="color:#F8F8F2;">    self</span><span style="color:#F8F8F2;">.type</span><span style="color:#F8F8F2;"> = eMorphingCellTypeNone;</span>
-    </div></td></tr><tr><td><span> 66 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">return</span><span style="color:#F8F8F2;"> </span><span style="color:#AE81FF;">nil</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 67 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr></table>
-
+```objc
+- (NSControl *)_morphToSwitchCell    
+{    
+    NSButton *button = [[NSButton alloc] initWithFrame:self.bounds];    
+    [button setButtonType:NSSwitchButton];    
+    [button setTitle:@""];    
+        
+    return button;    
+}    
+     
+- (NSControl *)_morphToTextFieldCell    
+{    
+    NSTextField *field = [[NSTextField alloc] init];    
+    return field;    
+}    
+     
+- (NSControl *)_morphToNumberInputCell    
+{    
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];    
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];    
+        
+    NSTextField *field = [[NSTextField alloc] init];    
+    field.formatter = formatter;    
+    return field;    
+}    
+     
+...    
+     
+- (NSControl *)_resolveParameter:(ECParameter *)param    
+{    
+    id value = param.value;    
+    NSString *content = param.content;    
+    NSString *enums = param.enumRef;    
+        
+    if (content || enums)    
+    {    
+        ...    
+    }    
+        
+    else if ([value isKindOfClass:[NSString class]])    
+    {    
+        self.type = eMorphingCellTypeText;    
+        return [self _morphToTextFieldCell];    
+    }    
+        
+    else if ([value isKindOfClass:[NSNumber class]])    
+    {    
+        CFNumberType numberType = CFNumberGetType((CFNumberRef)value);    
+        switch (numberType)    
+        {    
+            case kCFNumberCharType:    
+                self.type = eMorphingCellTypeSwitch;    
+                return [self _morphToSwitchCell];    
+                    
+            default:    
+                self.type = eMorphingCellTypeNumber;    
+                return [self _morphToNumberInputCell];    
+        }    
+    }    
+        
+    if (value)    
+    {    
+        NSLog(@"Warning: unresolved object type: %@", value);    
+    }    
+        
+    self.type = eMorphingCellTypeNone;    
+    return nil;    
+}
+```
 
 
 
 
 I will only mention that this is all pretty straight forward, except the **enum and options** type. When the type of a ECParameter is an enum, we need to show a combo box with the available enums. Similarly, if the type is a list of options (strings). This is a bit more involved, were we query the "Model Manager" for these options, and assign them to a combo box so the user can see his options.
-
-
 
 
 
@@ -267,55 +261,51 @@ Anyways, all I have left is the rendering view, which renders all the entities a
 [![prefab](http://mazyod.files.wordpress.com/2014/01/prefab-e1388670561213.png?w=300)](http://mazyod.files.wordpress.com/2014/01/prefab.png) The basic idea behind this is: I subclassed NSView and overrided drawRect: in order to render the Model. Inside the view, I dispatch a timer that calls setNeedsDisplay 2 times per second, so I don't have to worry about the model changing at all. This is a less efficient polling approach, but works really well, so meh. Then, within drawRect:, I get the model, and do some quartz drawing! I'll post some code so you can get the main idea:
 
 
-
-
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span>  1 </span></td><td><div><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">void</span><span style="color:#F8F8F2;">)drawRect:(</span><span style="color:#66D9EF;">CGRect</span><span style="color:#F8F8F2;">)r</span>
-    </div></td></tr><tr><td><span>  2 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span>  3 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> Get all the data model </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span>  4 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSArray</span><span style="color:#F8F8F2;"> *meta = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">ECDataBank </span><span style="color:#66D9EF;">sharedBank</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">mapMeta</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span>  5 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSArray</span><span style="color:#F8F8F2;"> *objs = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">ECDataBank </span><span style="color:#66D9EF;">sharedBank</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">mapObjects</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span>  6 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSArray</span><span style="color:#F8F8F2;"> *zones = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">ECDataBank </span><span style="color:#66D9EF;">sharedBank</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">mapZones</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span>  7 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSArray</span><span style="color:#F8F8F2;"> *spawns = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">ECDataBank </span><span style="color:#66D9EF;">sharedBank</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">mapSpawnAreas</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span>  8 </span></td><td><div><span style="color:#F8F8F2;">    </span>
-    </div></td></tr><tr><td><span>  9 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">int</span><span style="color:#F8F8F2;"> padding = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">meta</span><span style="color:#F8F8F2;">[</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">padding</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">[</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">value</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">intValue</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 10 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSArray</span><span style="color:#F8F8F2;"> *size = meta</span><span style="color:#F8F8F2;">[</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">map_size</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">[</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">children</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 11 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">CGSize</span><span style="color:#F8F8F2;"> mapSize =</span>
-    </div></td></tr><tr><td><span> 12 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 13 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#AE81FF;">2</span><span style="color:#F8F8F2;">*padding + </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">size</span><span style="color:#F8F8F2;">[</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">width</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">[</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">value</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">doubleValue</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">,</span>
-    </div></td></tr><tr><td><span> 14 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#AE81FF;">2</span><span style="color:#F8F8F2;">*padding + </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">size</span><span style="color:#F8F8F2;">[</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">height</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">[</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">value</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">doubleValue</span><span style="color:#F8F8F2;">]</span>
-    </div></td></tr><tr><td><span> 15 </span></td><td><div><span style="color:#F8F8F2;">    }</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 16 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> map size is used to compute the transform </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 17 </span></td><td><div><span style="color:#F8F8F2;">    self</span><span style="color:#F8F8F2;">.mapSize</span><span style="color:#F8F8F2;"> = mapSize;</span>
-    </div></td></tr><tr><td><span> 18 </span></td><td><div><span style="color:#F8F8F2;">    </span>
-    </div></td></tr><tr><td><span> 19 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">id </span><span style="color:#F8F8F2;">selection = </span><span style="color:#AE81FF;">nil</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 20 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> render the objects as a box on the tilemap </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 21 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">for</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#66D9EF;">NSArray</span><span style="color:#F8F8F2;"> *obj in objs)</span>
-    </div></td></tr><tr><td><span> 22 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 23 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F92672;">if</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">obj</span><span style="color:#F8F8F2;">[</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">isSelected</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">boolValue</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">)</span>
-    </div></td></tr><tr><td><span> 24 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 25 </span></td><td><div><span style="color:#F8F8F2;">            selection = obj;</span>
-    </div></td></tr><tr><td><span> 26 </span></td><td><div><span style="color:#F8F8F2;">        }</span>
-    </div></td></tr><tr><td><span> 27 </span></td><td><div><span style="color:#F8F8F2;">        </span>
-    </div></td></tr><tr><td><span> 28 </span></td><td><div><span style="color:#F8F8F2;">        rect = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">_rectFromObject</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">obj</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 29 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">rects </span><span style="color:#66D9EF;">addObject</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSValue</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">valueWithRect</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">rect</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 30 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 31 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSColor</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">colorWithCalibratedWhite</span><span style="color:#66D9EF;">:</span><span style="color:#AE81FF;">0.6</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">alpha</span><span style="color:#66D9EF;">:</span><span style="color:#AE81FF;">1.0</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">set</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 32 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSColor</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">blackColor</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">setStroke</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 33 </span></td><td><div><span style="color:#F8F8F2;">        </span>
-    </div></td></tr><tr><td><span> 34 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">        </span><span style="color:#66D9EF;">CGContextAddRect</span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">ctx, rect);</span>
-    </div></td></tr><tr><td><span> 35 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">        </span><span style="color:#66D9EF;">CGContextDrawPath</span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">ctx, </span><span style="color:#AE81FF;">kCGPathFillStroke</span><span style="color:#F8F8F2;">);</span>
-    </div></td></tr><tr><td><span> 36 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#75715E;">/*</span><span style="color:#75715E;"> render the name of the object on the top left </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span> 37 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">        </span><span style="color:#66D9EF;">CGContextConcatCTM</span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">ctx, </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">_textTransfromForRect</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">rect</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">);</span>
-    </div></td></tr><tr><td><span> 38 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">obj</span><span style="color:#F8F8F2;">[</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">name</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">drawInRect</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">rect </span><span style="color:#66D9EF;">withAttributes</span><span style="color:#66D9EF;">:</span><span style="color:#AE81FF;">nil</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 39 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">        </span><span style="color:#66D9EF;">CGContextConcatCTM</span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">ctx,</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">CGAffineTransformInvert</span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">_textTransfromForRect</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">rect</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">));</span>
-    </div></td></tr><tr><td><span> 40 </span></td><td><div><span style="color:#F8F8F2;">    }</span>
-    </div></td></tr><tr><td><span> 41 </span></td><td><div><span style="color:#F8F8F2;">    </span>
-    </div></td></tr><tr><td><span> 42 </span></td><td><div><span style="color:#F8F8F2;">    ...</span>
-    </div></td></tr><tr><td><span> 43 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr></table>
-
-
+```objc
+- (void)drawRect:(CGRect)r    
+{    
+    /* Get all the data model */    
+    NSArray *meta = [[ECDataBank sharedBank] mapMeta];    
+    NSArray *objs = [[ECDataBank sharedBank] mapObjects];    
+    NSArray *zones = [[ECDataBank sharedBank] mapZones];    
+    NSArray *spawns = [[ECDataBank sharedBank] mapSpawnAreas];    
+        
+    int padding = [meta[@"padding"][@"value"] intValue];    
+    NSArray *size = meta[@"map_size"][@"children"];    
+    CGSize mapSize =    
+    {    
+        2*padding + [size[@"width"][@"value"] doubleValue],    
+        2*padding + [size[@"height"][@"value"] doubleValue]    
+    };    
+    /* map size is used to compute the transform */    
+    self.mapSize = mapSize;    
+        
+    id selection = nil;    
+    /* render the objects as a box on the tilemap */    
+    for (NSArray *obj in objs)    
+    {    
+        if ([obj[@"isSelected"] boolValue])    
+        {    
+            selection = obj;    
+        }    
+            
+        rect = [self _rectFromObject:obj];    
+        [rects addObject:[NSValue valueWithRect:rect]];    
+     
+        [[NSColor colorWithCalibratedWhite:0.6 alpha:1.0] set];    
+        [[NSColor blackColor] setStroke];    
+            
+        CGContextAddRect(ctx, rect);    
+        CGContextDrawPath(ctx, kCGPathFillStroke);    
+        /* render the name of the object on the top left */    
+        CGContextConcatCTM(ctx, [self _textTransfromForRect:rect]);    
+        [obj[@"name"] drawInRect:rect withAttributes:nil];    
+        CGContextConcatCTM(ctx, CGAffineTransformInvert([self _textTransfromForRect:rect]));    
+    }    
+        
+    ...    
+}
+```
 
 
 
@@ -323,11 +313,7 @@ Actually, there is one really cool and super complicated part in this: **The ISO
 
 
 
-
-
 ## Conclusion:
-
-
 
 
 

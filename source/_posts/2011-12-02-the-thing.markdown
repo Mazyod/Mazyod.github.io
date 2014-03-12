@@ -18,4 +18,4 @@ But! Now, I decided to try a new thing that should be really awesome. Gonna post
 
 Lots of nonsense, eh? :) It is intended.
 
-HINT: It is kind of a cocos2d mutation :P
+**HINT**: It is kind of a cocos2d mutation :P

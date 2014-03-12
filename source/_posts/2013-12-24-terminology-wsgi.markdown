@@ -32,11 +32,7 @@ _This is part of the [Terminology series](http://mazyod.com/2013/12/23/terminolo
 
 
 
-
-
 **Wikipedia:** [http://en.wikipedia.org/wiki/Web_Server_Gateway_Interface](http://en.wikipedia.org/wiki/Web_Server_Gateway_Interface)
-
-
 
 
 

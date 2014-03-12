@@ -57,42 +57,39 @@ As you might have deduced from the boring tale above, KVC does two main things:
 
 ... OK, so what's so cool about that? Well, the way we set and get the values is what's cool. To put it clear and simple, "**KVC allows us to get and set the variables of an object as though it was a dictionary**" (That's not 100% accurate, but leave it like this for now). Consider the following example:
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span> 1 </span></td><td><div><span style="color:#66D9EF;">@</span><span style="color:#66D9EF;">interface</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">Foo</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">:</span><span style="color:#F8F8F2;"> </span><span style="color:#A6E22E;">NSObject</span><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 2 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 3 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">id </span><span style="color:#F8F8F2;">var1;</span>
-    </div></td></tr><tr><td><span> 4 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">id </span><span style="color:#F8F8F2;">var2;</span>
-    </div></td></tr><tr><td><span> 5 </span></td><td><div><span style="color:#F8F8F2;">    ...</span>
-    </div></td></tr><tr><td><span> 6 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">id </span><span style="color:#F8F8F2;">varN;</span>
-    </div></td></tr><tr><td><span> 7 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr></table>
-
+```objc
+@interface Foo : NSObject  
+{ 
+    id var1; 
+    id var2; 
+    ... 
+    id varN; 
+}
+```
 
 Now, with this class having all theses [iVars](en.wikipedia.org/wiki/Instance_variable), it would be a pain to do something like:
 
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span> 1 </span></td><td><div><span style="color:#F8F8F2;">Foo* foo = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">Foo </span><span style="color:#66D9EF;">alloc</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">init</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 2 </span></td><td><div><span style="color:#F8F8F2;">foo.var1 = ...;</span>
-    </div></td></tr><tr><td><span> 3 </span></td><td><div><span style="color:#F8F8F2;">foo.var2 = ...;</span>
-    </div></td></tr><tr><td><span> 4 </span></td><td><div><span style="color:#F8F8F2;">...</span>
-    </div></td></tr></table>
-
+```objc
+Foo* foo = [[Foo alloc] init]; 
+foo.var1 = ...; 
+foo.var2 = ...; 
+...
+```
 
 
 What's the alternative? KVC! Here is how it works:
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span> 1 </span></td><td><div><span style="color:#F92672;">for</span><span style="color:#F8F8F2;"> (</span><span style="color:#66D9EF;">int</span><span style="color:#F8F8F2;"> i = </span><span style="color:#AE81FF;">1</span><span style="color:#F8F8F2;"> ; i<=N ; i++) </span>
-    </div></td></tr><tr><td><span> 2 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 3 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">NSString</span><span style="color:#F8F8F2;">* varName = </span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSString</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">stringWithFormat</span><span style="color:#66D9EF;">:</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">var%d</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">, i</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 4 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">foo </span><span style="color:#66D9EF;">setValue</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">[</span><span style="color:#66D9EF;">NSNumber</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">numberWithInt</span><span style="color:#66D9EF;">:</span><span style="color:#AE81FF;">22</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">forKey</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">varName</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 5 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr><tr><td><span> 6 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 7 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">//</span><span style="color:#75715E;"> And inorder to read the vars in a similar fashion:</span>
-    </div></td></tr><tr><td><span> 8 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#66D9EF;">int</span><span style="color:#F8F8F2;"> var1 = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">foo </span><span style="color:#66D9EF;">valueForKey</span><span style="color:#66D9EF;">:</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">var1</span><span style="color:#E6DB74;">"</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">intValue</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr></table>
-
+```objc
+for (int i = 1 ; i<=N ; i++)  
+{ 
+    NSString* varName = [NSString stringWithFormat:@"var%d", i]; 
+    [foo setValue:[NSNumber numberWithInt:22] forKey:varName]; 
+} 
+  
+// And inorder to read the vars in a similar fashion: 
+int var1 = [[foo valueForKey:@"var1"] intValue];
+```
 
 Notice two things:
 
@@ -116,92 +113,89 @@ Regarding the first note, it's fine. KVC is smart enough to send the NSNumber as
 
 Remember what was KVO's job? Observe. Thus, it is quite simply useful to observe any changes on the instance variable that we have. This is a useful alternative for delegates in simple cases, where defining a protocol and setting up a delegate is just an overkill. Imagine a game with a gun. No, not a game holding a gun, but rather a game that contains a gun that the player can fire. Now, imagine that this gun cannot fire two simultaneous shots. Now, here are some approaches that are available:
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span>  1 </span></td><td><div><span style="color:#75715E;">/*</span><span style="color:#75715E;"> Polling approach. Yuck! </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span>  2 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span>  3 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">//</span><span style="color:#75715E;"> Inside the gun class:</span>
-    </div></td></tr><tr><td><span>  4 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">void</span><span style="color:#F8F8F2;">)fireBullet </span>
-    </div></td></tr><tr><td><span>  5 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span>  6 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">//</span><span style="color:#75715E;"> check if bullet exited the screen</span>
-    </div></td></tr><tr><td><span>  7 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">if</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">bullet</span><span style="color:#F8F8F2;">.ready</span><span style="color:#F8F8F2;"> || bullet</span><span style="color:#F8F8F2;">.position.x</span><span style="color:#F8F8F2;"> &gt; </span><span style="color:#AE81FF;">400</span><span style="color:#F8F8F2;">) </span>
-    </div></td></tr><tr><td><span>  8 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span>  9 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">reloadBullet</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">bullet</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 10 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">bullet </span><span style="color:#66D9EF;">fireWithAngle</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">zelta</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 11 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">bullet </span><span style="color:#66D9EF;">setReady</span><span style="color:#66D9EF;">:</span><span style="color:#AE81FF;">NO</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 12 </span></td><td><div><span style="color:#F8F8F2;">    }</span>
-    </div></td></tr><tr><td><span> 13 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr></table>
-
+```objc
+/* Polling approach. Yuck! */    
+     
+// Inside the gun class:    
+- (void)fireBullet     
+{    
+    // check if bullet exited the screen    
+    if (bullet.ready || bullet.position.x &gt; 400)     
+    {    
+        [self reloadBullet:bullet];    
+        [bullet fireWithAngle:zelta];    
+        [bullet setReady:NO];    
+    }    
+}
+```
 
 Some of us might started thinking, what's wrong with that? Nice, simple and it works! Well, not exactly. What if the player fires a shot and stops? The bullet would eventually go off screen and continue moving with no reason at all!! Even more, what if we wanted to show the user whether he has a bullet reloaded? It won't be possible without a delegate:
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span>  1 </span></td><td><div><span style="color:#75715E;">/*</span><span style="color:#75715E;"> Polling approach, with delegate. Gross! </span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span>  2 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span>  3 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">//</span><span style="color:#75715E;"> Inside bullet class:</span>
-    </div></td></tr><tr><td><span>  4 </span></td><td><div><span style="color:#75715E;"> </span>
-    </div></td></tr><tr><td><span>  5 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">//</span><span style="color:#75715E;"> this method updates the bullet position each frame</span>
-    </div></td></tr><tr><td><span>  6 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#75715E;">//</span><span style="color:#75715E;"> thus we see an animation of the bullet moving:</span>
-    </div></td></tr><tr><td><span>  7 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">void</span><span style="color:#F8F8F2;">)update </span>
-    </div></td></tr><tr><td><span>  8 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span>  9 </span></td><td><div><span style="color:#F8F8F2;">    self</span><span style="color:#F8F8F2;">.position.x</span><span style="color:#F8F8F2;"> += </span><span style="color:#AE81FF;">1</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 10 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">if</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;">.position.x</span><span style="color:#F8F8F2;"> &gt; </span><span style="color:#AE81FF;">400</span><span style="color:#F8F8F2;">) </span>
-    </div></td></tr><tr><td><span> 11 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 12 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">delegate </span><span style="color:#66D9EF;">bulletDidExitScreen</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 13 </span></td><td><div><span style="color:#F8F8F2;">    }</span>
-    </div></td></tr><tr><td><span> 14 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr><tr><td><span> 15 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 16 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">//</span><span style="color:#75715E;"> Inside the gun class:</span>
-    </div></td></tr><tr><td><span> 17 </span></td><td><div><span style="color:#75715E;"> </span>
-    </div></td></tr><tr><td><span> 18 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#75715E;">//</span><span style="color:#75715E;"> handle delegate method:</span>
-    </div></td></tr><tr><td><span> 19 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">void</span><span style="color:#F8F8F2;">)bulletDidExitScreen:(Bullet *)bullet </span>
-    </div></td></tr><tr><td><span> 20 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 21 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">showBulletAvailable</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 22 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">bullet </span><span style="color:#66D9EF;">setReady</span><span style="color:#66D9EF;">:</span><span style="color:#AE81FF;">YES</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 23 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr><tr><td><span> 24 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 25 </span></td><td><div><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">void</span><span style="color:#F8F8F2;">)fireBullet </span>
-    </div></td></tr><tr><td><span> 26 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 27 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">//</span><span style="color:#75715E;"> No longer need to check if bullet exited the screen</span>
-    </div></td></tr><tr><td><span> 28 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">if</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">bullet</span><span style="color:#F8F8F2;">.read</span><span style="color:#F8F8F2;">) </span>
-    </div></td></tr><tr><td><span> 29 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 30 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">reloadBullet</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">bullet</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 31 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">bullet </span><span style="color:#66D9EF;">fireWithAngle</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">zelta</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 32 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">showBulletUnavailable</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 33 </span></td><td><div><span style="color:#F8F8F2;">    }</span>
-    </div></td></tr><tr><td><span> 34 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr></table>
-
+```objc
+/* Polling approach, with delegate. Gross! */    
+     
+// Inside bullet class:    
+     
+// this method updates the bullet position each frame    
+// thus we see an animation of the bullet moving:    
+- (void)update     
+{    
+    self.position.x += 1;    
+    if (self.position.x &gt; 400)     
+    {    
+        [delegate bulletDidExitScreen:self];    
+    }    
+}    
+     
+// Inside the gun class:    
+     
+// handle delegate method:    
+- (void)bulletDidExitScreen:(Bullet *)bullet     
+{    
+    [self showBulletAvailable];    
+    [bullet setReady:YES];    
+}    
+     
+- (void)fireBullet     
+{    
+    // No longer need to check if bullet exited the screen    
+    if (bullet.read)     
+    {    
+        [self reloadBullet:bullet];    
+        [bullet fireWithAngle:zelta];    
+        [self showBulletUnavailable];    
+    }    
+}
+```
 
 OK, with that crap out of the way, let's see how KVO does it:
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span>  1 </span></td><td><div><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">void</span><span style="color:#F8F8F2;">)fireBullet </span>
-    </div></td></tr><tr><td><span>  2 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span>  3 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">//</span><span style="color:#75715E;"> check if bullet exited the screen</span>
-    </div></td></tr><tr><td><span>  4 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    </span><span style="color:#F92672;">if</span><span style="color:#F8F8F2;"> </span><span style="color:#F8F8F2;">(</span><span style="color:#F8F8F2;">bullet</span><span style="color:#F8F8F2;">.ready</span><span style="color:#F8F8F2;">) </span>
-    </div></td></tr><tr><td><span>  5 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span>  6 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">reloadBullet</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">bullet</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span>  7 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">bullet </span><span style="color:#66D9EF;">fireWithAngle</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">zelta</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span>  8 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">self</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">showBulletUnavailable</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span>  9 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 10 </span></td><td><div><span style="color:#F8F8F2;">        </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">bullet </span><span style="color:#66D9EF;">addObserver</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">self</span>
-    </div></td></tr><tr><td><span> 11 </span></td><td><div><span style="color:#F8F8F2;">                 </span><span style="color:#66D9EF;">forKeyPath</span><span style="color:#66D9EF;">:</span><span style="color:#E6DB74;">@"</span><span style="color:#E6DB74;">position.x</span><span style="color:#E6DB74;">"</span>
-    </div></td></tr><tr><td><span> 12 </span></td><td><div><span style="color:#F8F8F2;">                    </span><span style="color:#66D9EF;">options</span><span style="color:#66D9EF;">:</span><span style="color:#66D9EF;">NSKeyValueObservingOptionNew</span>
-    </div></td></tr><tr><td><span> 13 </span></td><td><div><span style="color:#F8F8F2;">                    </span><span style="color:#66D9EF;">context</span><span style="color:#66D9EF;">:</span><span style="color:#AE81FF;">NULL</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 14 </span></td><td><div><span style="color:#F8F8F2;">    }</span>
-    </div></td></tr><tr><td><span> 15 </span></td><td><div><span style="color:#F8F8F2;">}</span>
-    </div></td></tr><tr><td><span> 16 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 17 </span></td><td><div><span style="color:#F8F8F2;">- (</span><span style="color:#66D9EF;">void</span><span style="color:#F8F8F2;">)observeValueForKeyPath:(</span><span style="color:#66D9EF;">NSString</span><span style="color:#F8F8F2;"> *)keyPath</span>
-    </div></td></tr><tr><td><span> 18 </span></td><td><div><span style="color:#F8F8F2;">                      ofObject:(</span><span style="color:#66D9EF;">id</span><span style="color:#F8F8F2;">)object</span>
-    </div></td></tr><tr><td><span> 19 </span></td><td><div><span style="color:#F8F8F2;">                        change:(</span><span style="color:#66D9EF;">NSDictionary</span><span style="color:#F8F8F2;"> *)change</span>
-    </div></td></tr><tr><td><span> 20 </span></td><td><div><span style="color:#F8F8F2;">                       context:(</span><span style="color:#66D9EF;">void</span><span style="color:#F8F8F2;"> *)context </span>
-    </div></td></tr><tr><td><span> 21 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span> 22 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#66D9EF;">float</span><span style="color:#F8F8F2;"> newX = </span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">[</span><span style="color:#F8F8F2;">change </span><span style="color:#66D9EF;">objectForKey</span><span style="color:#66D9EF;">:</span><span style="color:#F8F8F2;">NSKeyValueChangeNewKey</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">floatValue</span><span style="color:#F8F8F2;">]</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 23 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">//</span><span style="color:#75715E;"> do stuff...</span>
-    </div></td></tr><tr><td><span> 24 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">}</span>
-    </div></td></tr></table>
-
+```objc
+- (void)fireBullet     
+{    
+    // check if bullet exited the screen    
+    if (bullet.ready)     
+    {    
+        [self reloadBullet:bullet];    
+        [bullet fireWithAngle:zelta];    
+        [self showBulletUnavailable];    
+     
+        [bullet addObserver:self    
+                 forKeyPath:@"position.x"    
+                    options:NSKeyValueObservingOptionNew    
+                    context:NULL];    
+    }    
+}    
+     
+- (void)observeValueForKeyPath:(NSString *)keyPath    
+                      ofObject:(id)object    
+                        change:(NSDictionary *)change    
+                       context:(void *)context     
+{    
+    float newX = [[change objectForKey:NSKeyValueChangeNewKey] floatValue];    
+    // do stuff...    
+}
+```
 
 Just awesome :) I won't say more.
 

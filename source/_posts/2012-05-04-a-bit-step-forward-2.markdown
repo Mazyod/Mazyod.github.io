@@ -25,7 +25,7 @@ tags:
 - technology
 ---
 
-**** WARNING: This post is not intended for the faint heart and is also not intended for people who hate blabbers .. I am in a mood that tells me I am about blabber a LOT ****
+**WARNING: This post is not intended for the faint heart and is also not intended for people who hate blabbers .. I am in a mood that tells me I am about blabber a LOT**
 
 That warning reminded of the green screen warning you see before a movie trailer .. anyways, going on to the post!
 
@@ -39,13 +39,6 @@ If you are not jumping up and down on the chair, gritting your teeth, while pull
 
 
 ## Introduction
-
-
-
-
-
-* * *
-
 
 
 While coding the project that I have been talking about in some of the previous posts, yes the one I am yet to disclose, a very annoying problem popped up. Interestingly, it also has to do with the settings, which implies the settings journey wasn't over after all!
@@ -65,51 +58,41 @@ Now imagine we have to pass these values all around the application. On top of t
 
 
 
-
-
-* * *
-
-
-
 So here comes the awesome Bit! (For the record, the code has been changed for brevity sake, and partial closure of the idea :P)
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span>  1 </span></td><td><div><span style="color:#75715E;">/*</span>
-    </div></td></tr><tr><td><span>  2 </span></td><td><div><span style="color:#75715E;">    The binary awesomeness:</span>
-    </div></td></tr><tr><td><span>  3 </span></td><td><div><span style="color:#75715E;">    1-bit: Icon</span>
-    </div></td></tr><tr><td><span>  4 </span></td><td><div><span style="color:#75715E;">    1-bit: Name</span>
-    </div></td></tr><tr><td><span>  5 </span></td><td><div><span style="color:#75715E;">    2-bit: Extras</span>
-    </div></td></tr><tr><td><span>  6 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#75715E;">*/</span>
-    </div></td></tr><tr><td><span>  7 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#66D9EF;">typedef</span><span style="color:#F8F8F2;"> </span><span style="color:#66D9EF;">enum</span><span style="color:#F8F8F2;"> EStatusItemType </span>
-    </div></td></tr><tr><td><span>  8 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F8F8F2;">{</span>
-    </div></td></tr><tr><td><span>  9 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">//</span><span style="color:#75715E;">Masking awesomeness</span>
-    </div></td></tr><tr><td><span> 10 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    EStatusItemOff             = </span><span style="color:#AE81FF;">0</span><span style="color:#F8F8F2;">,</span>
-    </div></td></tr><tr><td><span> 11 </span></td><td><div><span style="color:#F8F8F2;">    EStatusItemIcon            = </span><span style="color:#AE81FF;">1</span><span style="color:#F8F8F2;"> << </span><span style="color:#AE81FF;">0</span><span style="color:#F8F8F2;">, </span><span style="color:#75715E;">//</span><span style="color:#75715E;">xxx1</span>
-    </div></td></tr><tr><td><span> 12 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    EStatusItemName            = </span><span style="color:#AE81FF;">1</span><span style="color:#F8F8F2;"> << </span><span style="color:#AE81FF;">1</span><span style="color:#F8F8F2;">, </span><span style="color:#75715E;">//</span><span style="color:#75715E;">xx1x</span>
-    </div></td></tr><tr><td><span> 13 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">//</span><span style="color:#75715E;">Just a start point, the rest are not masks</span>
-    </div></td></tr><tr><td><span> 14 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    EStatusItemExtrasNone      = </span><span style="color:#AE81FF;">0</span><span style="color:#F8F8F2;"> << </span><span style="color:#AE81FF;">2</span><span style="color:#F8F8F2;">, </span><span style="color:#75715E;">//</span><span style="color:#75715E;">00xx</span>
-    </div></td></tr><tr><td><span> 15 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    EStatusItemExtrasRemaining = </span><span style="color:#AE81FF;">1</span><span style="color:#F8F8F2;"> << </span><span style="color:#AE81FF;">2</span><span style="color:#F8F8F2;">, </span><span style="color:#75715E;">//</span><span style="color:#75715E;">01xx</span>
-    </div></td></tr><tr><td><span> 16 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    EStatusItemExtrasTimeLeft  = </span><span style="color:#AE81FF;">2</span><span style="color:#F8F8F2;"> << </span><span style="color:#AE81FF;">2</span><span style="color:#F8F8F2;">, </span><span style="color:#75715E;">//</span><span style="color:#75715E;">10xx</span>
-    </div></td></tr><tr><td><span> 17 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    EStatusItemExtrasTimeRem   = </span><span style="color:#AE81FF;">3</span><span style="color:#F8F8F2;"> << </span><span style="color:#AE81FF;">2</span><span style="color:#F8F8F2;">, </span><span style="color:#75715E;">//</span><span style="color:#75715E;">11xx</span>
-    </div></td></tr><tr><td><span> 18 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">//</span><span style="color:#75715E;">Their awesome mask:</span>
-    </div></td></tr><tr><td><span> 19 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    EStatusItemExtrasMask      = </span><span style="color:#AE81FF;">3</span><span style="color:#F8F8F2;"> << </span><span style="color:#AE81FF;">2</span><span style="color:#F8F8F2;">, </span><span style="color:#75715E;">//</span><span style="color:#75715E;">11xx</span>
-    </div></td></tr><tr><td><span> 20 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">    EStatusItemFontMask        = </span><span style="color:#AE81FF;">7</span><span style="color:#F8F8F2;"> << </span><span style="color:#AE81FF;">1</span><span style="color:#F8F8F2;">  </span><span style="color:#75715E;">//</span><span style="color:#75715E;">111x</span>
-    </div></td></tr><tr><td><span> 21 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">}</span><span style="color:#F8F8F2;"> EStatusItemType;</span>
-    </div></td></tr></table>
-
+```objc
+/*    
+    The binary awesomeness:    
+    1-bit: Icon    
+    1-bit: Name    
+    2-bit: Extras    
+*/    
+typedef enum EStatusItemType     
+{    
+    //Masking awesomeness    
+    EStatusItemOff             = 0,    
+    EStatusItemIcon            = 1 << 0, //xxx1    
+    EStatusItemName            = 1 << 1, //xx1x    
+    //Just a start point, the rest are not masks    
+    EStatusItemExtrasNone      = 0 << 2, //00xx    
+    EStatusItemExtrasRemaining = 1 << 2, //01xx    
+    EStatusItemExtrasTimeLeft  = 2 << 2, //10xx    
+    EStatusItemExtrasTimeRem   = 3 << 2, //11xx    
+    //Their awesome mask:    
+    EStatusItemExtrasMask      = 3 << 2, //11xx    
+    EStatusItemFontMask        = 7 << 1  //111x    
+} EStatusItemType;
+```
 
 
 Wth... ? Well, erm, let me try to explain :). We shall save the setting in a single robust, reliable variable! YES, it is possible! :)
 
 From what I figured, enums have two useful useness:
-
-
-
 	
   1. What we are all aware of. Save a number of things as names instead of indicies. Then, we can use a switch statement or for loop to enumerate.
+
 **Example:** enum Days { Sunday, Monday, ...}
 **Note:** Notice how the enums are mutually exclusive. You can't have a day that is both saturday and sunday (that would be the best day ever, though).
-
 	
   2. Save a bunch of stuff that are not necessarily mutually exclusive!
 **Example:** The settings view we have!
@@ -119,25 +102,23 @@ Now, in the second case, it is most likely we cannot enumerate the enums, but ch
 
 We divide the enums in a binary string such that each each substring has some significance .. Let's look at our enum:
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span> 1 </span></td><td><div><span style="color:#75715E;">//</span><span style="color:#75715E;">Shift the 1 to the left by 0, making it take the first bit</span>
-    </div></td></tr><tr><td><span> 2 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">EStatusItemIcon            = </span><span style="color:#AE81FF;">1</span><span style="color:#F8F8F2;"> << </span><span style="color:#AE81FF;">0</span><span style="color:#F8F8F2;">, </span><span style="color:#75715E;">//</span><span style="color:#75715E;">xxxx1</span>
-    </div></td></tr><tr><td><span> 3 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#75715E;">//</span><span style="color:#75715E;">Shift the 1 to the left by 1, making it take the second bit</span>
-    </div></td></tr><tr><td><span> 4 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">EStatusItemName            = </span><span style="color:#AE81FF;">1</span><span style="color:#F8F8F2;"> << </span><span style="color:#AE81FF;">1</span><span style="color:#F8F8F2;">, </span><span style="color:#75715E;">//</span><span style="color:#75715E;">xxx1x</span>
-    </div></td></tr></table>
-
+```objc
+//Shift the 1 to the left by 0, making it take the first bit 
+EStatusItemIcon            = 1 << 0, //xxxx1 
+//Shift the 1 to the left by 1, making it take the second bit 
+EStatusItemName            = 1 << 1, //xxx1x
+```
 
 So, that is basically how you reserve a bit for your setting option. Now, what if the setting option for the icon was selected and we wanted to save that? Easy!
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span> 1 </span></td><td><div><span style="color:#75715E;">//</span><span style="color:#75715E;"> Start with a fresh type. It looks like '0000'</span>
-    </div></td></tr><tr><td><span> 2 </span></td><td><div><span style="color:#75715E;"></span><span style="color:#F8F8F2;">EStatusItemType type = </span><span style="color:#AE81FF;">0</span><span style="color:#F8F8F2;">;</span>
-    </div></td></tr><tr><td><span> 3 </span></td><td><div><span style="color:#F8F8F2;"> </span>
-    </div></td></tr><tr><td><span> 4 </span></td><td><div><span style="color:#F8F8F2;"></span><span style="color:#F92672;">if</span><span style="color:#F8F8F2;"> ( iconIsSelected )</span>
-    </div></td></tr><tr><td><span> 5 </span></td><td><div><span style="color:#F8F8F2;">    type = type | EStatusItemIcon;</span>
-    </div></td></tr><tr><td><span> 6 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">//</span><span style="color:#75715E;"> That's it!</span>
-    </div></td></tr></table>
-
+```objc
+// Start with a fresh type. It looks like '0000' 
+EStatusItemType type = 0; 
+  
+if ( iconIsSelected ) 
+    type = type | EStatusItemIcon; 
+    // That's it!
+```
 
 Nifty ! That's the bit-wise OR operator. By using this operator, we effectively stored that the checkbox is checked in the type variable. This also applies to the Name checkbox, too!
 
@@ -147,11 +128,10 @@ Of course, I do not want to bother calculating how much is 0000, 0100, 1000, 110
 
 Now, onto the idea of how to use this new technique. Unlike the OR operator, we have to do things a bit (small case b) differently.
 
-    
-    <table cellpadding="0" cellspacing="0" class="code_page"><tr><td><span> 1 </span></td><td><div><span style="color:#F8F8F2;">    type = type | (selectedIndex << </span><span style="color:#AE81FF;">2</span><span style="color:#F8F8F2;">);</span>
-    </div></td></tr><tr><td><span> 2 </span></td><td><div><span style="color:#F8F8F2;">    </span><span style="color:#75715E;">//</span><span style="color:#75715E;">That's it!!! xD</span>
-    </div></td></tr></table>
-
+```objc
+    type = type | (selectedIndex << 2); 
+    //That's it!!! xD
+```
 
 Notice how simple it is!! Of course, we just have to map the indices to the enum counterparts, but that's all!
 

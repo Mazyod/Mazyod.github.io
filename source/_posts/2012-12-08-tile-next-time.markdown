@@ -6,6 +6,11 @@ layout: post
 slug: tile-next-time
 title: Tile Next Time
 wordpress_id: 291
+tags:
+- tutorial
+- photoshop
+- tiles
+- seamless
 ---
 
 Hurray! A video tutorial! And a short one! How luck you are :p

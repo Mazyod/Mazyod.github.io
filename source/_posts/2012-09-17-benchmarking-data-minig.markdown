@@ -30,10 +30,6 @@ I am not really gonna "data mine", that's too much for a small project like this
 First, let us see our candidates, or basically the AI players that shall be benchmarked.
 
 
-## 
-
-
-
 
 ## Test Candidate #1
 

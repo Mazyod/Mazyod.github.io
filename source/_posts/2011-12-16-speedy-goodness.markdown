@@ -15,9 +15,7 @@ I am really sorry, guys. I have "jumped the gun" about the SSD, and based on th
 
 The SSD isn't awesome. It is "pure awesomeness". I know what you're saying, "Take it easy romeo". Well, what I'll say is:
 
-
-## "Do yourself a favor and grab an SSD ASAP if you haven't done so already"
-
+> Do yourself a favor and grab an SSD ASAP if you haven't done so already
 
 **NOTE:** I'll use the word "post-SSD" to indicate that this is "after I installed the new SSD". (analogous to post-operation :P).
 

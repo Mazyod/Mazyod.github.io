@@ -37,7 +37,7 @@ So, here are they!
 
 
 
-# #1 Genetic Algorthims
+## #1 Genetic Algorthims
 
 
 
@@ -63,7 +63,7 @@ That's all about genetic algorithms... Onto the next.
 
 
 
-# #2 Implementing an SRC
+## #2 Implementing an SRC
 
 
 
@@ -85,7 +85,7 @@ So, if interested, look up designing a SRC using Quartus, at least that's what w
 
 
 
-# #3 Developing an E-Commerce Website
+## #3 Developing an E-Commerce Website
 
 
 

@@ -10,15 +10,11 @@ wordpress_id: 21
 
 So, the title says it all!! Actually, it is rather awkward and misleading ...
 
-
 It's just that I wanted to write this post somewhere, which lead me to actually start posting on my WP blog (I've had it for a while now .. It was suppose to be an interface between ArabianDevs and the public).
-
 
 Wiz out furzer a-do ...
 
-
 I got a tweet earlier today requesting the chat feature in the [Dama](http://itunes.apple.com/us/app/id442570707?ls=1&mt=8) game, and for some reason, I decided it is time to take this request seriously!! I mean, I did some of it before (graphics and some UITableView to display the chat dialogs), but this time, it gotta finish!! .. That's it for the introduction.
-
 
 So ... I opened the code from**_ long ago_**, and saw that I had implemented the the text chatting dialogs as follows:
 
@@ -56,8 +52,7 @@ Where is this leading? It's leading to awesomeness... No, really. After seeing w
 
 Time for some coding action?
 
-[sourcecode language="objc" wraplines="false"]
-
+```objc
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -69,11 +64,10 @@ Time for some coding action?
     [webView release];
 
     //Load some random HTML things
-    [webView loadHTMLString:@"</pre>
-<h1>Hello World!!</h1>
-<pre>
-Testing" baseURL:nil];
-
+    [webView loadHTMLString:@"<pre>
+    <h1>Hello World!!</h1>
+    </pre>
+    Testing" baseURL:nil];
 }
 
 - (IBAction)buttonPressed {
@@ -83,14 +77,10 @@ Testing" baseURL:nil];
      par.innerHTML = 'This is awesomeness!! xD'; \
      document.body.appendChild(par);"];
 }
-
-[/sourcecode]
+```
 
 You get:
 
-
-
-[
-](http://mazyod.files.wordpress.com/2011/10/screen-shot-2011-10-30-at-11-33-07-pm.png)[gallery link="file" columns="2" orderby="title"]
-[
-](http://mazyod.files.wordpress.com/2011/10/screen-shot-2011-10-30-at-11-33-34-pm.png)
+![s](http://mazyod.files.wordpress.com/2011/10/screen-shot-2011-10-30-at-10-30-25-pm2.png?w=640)
+![s](http://mazyod.files.wordpress.com/2011/10/webview1.png?w=1000&h=)
+![s](http://mazyod.files.wordpress.com/2011/10/webview2.png?w=1000&h=)
