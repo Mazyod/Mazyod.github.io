@@ -30,31 +30,32 @@
   .gs { font-weight: bold !important } /* Generic.Strong */
   .gu { color: #800080 !important; font-weight: bold !important } /* Generic.Subheading */
   .gt {  } /* Generic.Traceback */
-  .kc {  } /* Keyword.Constant */
+  .kc { color: #800080 !important; font-weight: bold !important } /* Keyword.Constant */
   .kd { color: #e9df8f !important;  } /* Keyword.Declaration */
   .kn {  } /* Keyword.Namespace */
   .kp { color: #CF6A4C !important } /* Keyword.Pseudo */
-  .kr {  } /* Keyword.Reserved */
-  .kt {  } /* Keyword.Type */
-  .m  { } /* Literal.Number */
+  .kr { color: #F92672 !important; font-weight: bold !important; } /* Keyword.Reserved */
+  .kt { color: #F92672 !important; font-weight: bold !important; } /* Keyword.Type */
+  .m  { color: #64d1e5 !important } /* Literal.Number */
   .s  { color: #FFD940 !important } /* Literal.String */
   .n  { color: #F8F8F8 !important } /* Name */
   .na { color: #F9EE98 !important } /* Name.Attribute */
   .nb { color: #A6E22E !important } /* Name.Builtin */
   .nc { color: #A6E22E !important; font-weight: normal !important } /* Name.Class */
+  .nl { color: #A6E22E !important; }
   .no { color: #7587A6 !important } /* Name.Constant */
   .nd { color: #7587A6 !important } /* Name.Decorator */
   .ni { color: #CF6A4C !important; font-weight: bold !important } /* Name.Entity */
   .nf { color: #A6E22E !important; font-weight: normal !important } /* Name.Function */
   .nn { color: #9B703F !important; font-weight: bold !important } /* Name.Namespace */
   .nt { color: #CDA869 !important; font-weight: bold !important } /* Name.Tag */
-  .nv { color: #7587A6 !important } /* Name.Variable */
+  .nv { color: #f08c1d !important } /* Name.Variable */
   .o  { color: #F8F8F8 !important } /* Operator */
   .ow { color: #F92672 !important; font-weight: bold !important } /* Operator.Word */
   .w  { color: #141414 !important } /* Text.Whitespace */
   .mf { color: #CF6A4C !important } /* Literal.Number.Float */
   .mh { color: #CF6A4C !important } /* Literal.Number.Hex */
-  .mi { color: #CF6A4C !important } /* Literal.Number.Integer */
+  .mi { color: #64d1e5 !important } /* Literal.Number.Integer */
   .mo { color: #CF6A4C !important } /* Literal.Number.Oct */
   .sb { color: #FFD940 !important } /* Literal.String.Backtick */
   .sc { color: #FFD940 !important } /* Literal.String.Char */
