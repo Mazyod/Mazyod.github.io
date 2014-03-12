@@ -1,0 +1,18 @@
+---
+author: mazyod
+comments: true
+date: 2011-11-25 12:18:36+00:00
+layout: post
+published: false
+slug: rush-2
+title: Rush
+wordpress_id: 69
+---
+
+Right after coming back from "9alaat il yim3a", and right before going to my grandma's house ... I implemented the Voice Chat capability ..! Yes! It takes no more than 10 minutes for an average programmer to implement voice chat over their Game Center enabled game. It is just awesome. All what I needed was apple's documentation about how to add Voice Chat to the game. That's it. No Googling for tutorials and such.
+
+The real question here is .. Why the rush?
+
+Well, I do have a midterm tomorrow, and a flight to Lebanon in the evening, and two homework submissions the day after I come back, oh, and did I mention the GRE exam and Organization and Intelligent algorithms midterms the week after?
+
+... >___________> College **SUCKS**.

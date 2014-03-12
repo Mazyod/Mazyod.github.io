@@ -1,0 +1,19 @@
+---
+author: mazyod
+comments: true
+date: 2012-04-28 22:04:01+00:00
+layout: post
+slug: the-hopes
+title: The Hopes
+wordpress_id: 223
+---
+
+The blog posts queue just keeps getting bigger.. I mean, the things I'd like to share. With very little time available to do so, all I can do is delay ... or, write them down so I get motivated to do them later!
+
+So, I should blog a bit about conquering GitHub. It's nothing special, because GitHub has a very noob-proof tutorial on how to use their site. However, I want to share my experience anyways.
+
+Another post should be about Cocos2d-X, after I explore the endless possibilities it provides. This post should include many other interesting topics that beat around the bush, like OpenGL drawing and Cocos3d. I'd say this is the most exciting.
+
+Let's not forget the post about Cocoa development (Mac OS X). It has a lot of differences compared to Cocoa Touch Development (iOS). This post should be a start up for peeps looking to port their iOS apps to Mac OS.
+
+That should be all, I really hope I am not missing anything ... Or, I actually don't care a lot if I missed something .. Does it matter? Hmm.. this has become an interesting topic itself. Does missing something really matter? ... >_> I need to sleep.

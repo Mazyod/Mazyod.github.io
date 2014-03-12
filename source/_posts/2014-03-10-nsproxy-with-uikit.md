@@ -78,6 +78,7 @@ That seemed like to much work, so I went ahead and implemented a simple category
 
 Let's first debrief the reader (hey, that would be you!) about the `NSProxy` class.
 
+<a name="Enter-the-NSProxy-Class"></a>
 ### Enter the NSProxy Class
 
 The `NSProxy` class is one the *very* special classes, since it **does not** inherit from `NSObject`. It is also an "abstract" class. I add the quotes since the compiler doesn't stop you from instantiating an object, as you might see in other languages. It is, however, useless without a subclass.
@@ -247,4 +248,4 @@ Here is when I noticed that stealing is bad. I only handled the CALayer's case, 
 
 In any case, that's where I decided to leave it at, and that's that as far as this thing goes!!
 
-*P.S: The complete code can be found in the `RTLSegmentedControl` directory, [under the proxy-pattern branch](https://github.com/Mazyod/RTLSegmentedControl/tree/proxy-pattern).*
+*P.S: The complete code can be found in the `RTLSegmentedControl` repository, [under the proxy-pattern branch](https://github.com/Mazyod/RTLSegmentedControl/tree/proxy-pattern).*

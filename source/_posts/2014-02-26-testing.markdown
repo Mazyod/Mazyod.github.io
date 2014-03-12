@@ -1,0 +1,298 @@
+---
+author: mazyod
+comments: true
+date: 2014-02-26 18:16:36+00:00
+layout: post
+published: false
+slug: testing
+title: testing
+wordpress_id: 615
+tags:
+- python
+- testing
+- doctest
+- py.Test
+- Nose
+- unittest
+---
+
+# Python Testing
+
+## Doctests
+
+The most basic way to test in python is by using doctests. This can be achieved by embedding the tests in the docstring:
+
+
+
+
+    
+    <code><span class="kwd">def</span><span class="pln"> multiply</span><span class="pun">(</span><span class="pln">a</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">):</span><span class="pln">
+        </span><span class="str">"""
+        >>> multiply(4, 3)
+        12
+        >>> multiply('a', 3)
+        'aaa'
+        """</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> a </span><span class="pun">*</span><span class="pln"> b</span></code>
+
+
+
+
+
+Then, in order to run the tests, we do:
+
+
+
+
+    
+    <code><span class="pln">python </span><span class="pun">-</span><span class="pln">m doctest </span><span class="pun">-</span><span class="pln">v </span><span class="str"><file></span></code>
+
+
+
+
+
+**CAVEAT:** We probably want to avoid this, since it has a lost of unpredictable behavior. Not to mention the fact that the tests must be written in files and classes that might not exist yet!! _(Test Driven Development)_
+
+
+
+
+
+* * *
+
+
+
+
+
+## Unittest
+
+
+
+
+
+This is the most basic test framework provided with Python’s standard libraries that can actually be considered a testing framework. 
+
+
+
+
+
+**STEPS:**   
+
+1. Create a python module   
+
+2. Ceate “Test Classes” that inherit from `unittest.TestCase`.    
+
+3. Within the classes, define methods that start with **test**.   
+
+4. _Optional:_ Override the `setUp` and `tearDown` fixture methods.   
+
+5. You run the tests by placing `unittest.main()` in your file.   
+
+6. _OR:_ You can try to let python discover and run the tests using `python -m unittest discover simple_example`.
+
+
+
+
+
+**EXAMPLE:**
+
+
+
+
+    
+    <code><span class="kwd">from</span><span class="pln"> unnecessary_math </span><span class="kwd">import</span><span class="pln"> multiply
+    
+    </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">TestUM</span><span class="pun">(</span><span class="pln">unittest</span><span class="pun">.</span><span class="typ">TestCase</span><span class="pun">):</span><span class="pln">
+    
+        </span><span class="kwd">def</span><span class="pln"> setUp</span><span class="pun">(</span><span class="kwd">self</span><span class="pun">):</span><span class="pln">
+            </span><span class="kwd">pass</span><span class="pln">
+    
+        </span><span class="kwd">def</span><span class="pln"> test_numbers_3_4</span><span class="pun">(</span><span class="kwd">self</span><span class="pun">):</span><span class="pln">
+            </span><span class="kwd">self</span><span class="pun">.</span><span class="pln">assertEqual</span><span class="pun">(</span><span class="pln"> multiply</span><span class="pun">(</span><span class="lit">3</span><span class="pun">,</span><span class="lit">4</span><span class="pun">),</span><span class="pln"> </span><span class="lit">12</span><span class="pun">)</span><span class="pln">
+    
+        </span><span class="kwd">def</span><span class="pln"> test_strings_a_3</span><span class="pun">(</span><span class="kwd">self</span><span class="pun">):</span><span class="pln">
+            </span><span class="kwd">self</span><span class="pun">.</span><span class="pln">assertEqual</span><span class="pun">(</span><span class="pln"> multiply</span><span class="pun">(</span><span class="str">'a'</span><span class="pun">,</span><span class="lit">3</span><span class="pun">),</span><span class="pln"> </span><span class="str">'aaa'</span><span class="pun">)</span><span class="pln">
+    
+    </span><span class="kwd">if</span><span class="pln"> __name__ </span><span class="pun">==</span><span class="pln"> </span><span class="str">'__main__'</span><span class="pun">:</span><span class="pln">
+        unittest</span><span class="pun">.</span><span class="pln">main</span><span class="pun">()</span></code>
+
+
+
+
+
+**CAVEAT:** In python world, what I presented is considered “Too much boiler plate code!”. Other frameworks can be used on top of unittest to simplify the process.
+
+
+
+
+
+* * *
+
+
+
+
+
+## Nose
+
+
+
+
+
+“Nose extends unittest to make testing easier”. You can get started by creating a file and dumping test functions that start with `test`. That’s it. You can use the default `assert` statements that come with python for the assertions.
+
+
+
+
+
+**Fixtures:** They are a bit weird. The only useful thing to remember is the use of `setup_module` and `teardown_module` functions, for module level fixtures.
+
+
+
+
+
+**EXAMPLE:**
+
+
+
+
+    
+    <code><span class="kwd">from</span><span class="pln"> unnecessary_math </span><span class="kwd">import</span><span class="pln"> multiply
+     
+    </span><span class="kwd">def</span><span class="pln"> setup_module</span><span class="pun">(</span><span class="kwd">module</span><span class="pun">):</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"setup_module before anything in this file"</span><span class="pun">)</span><span class="pln">
+     
+    </span><span class="kwd">def</span><span class="pln"> teardown_module</span><span class="pun">(</span><span class="kwd">module</span><span class="pun">):</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"teardown_module after everything in this file"</span><span class="pun">)</span><span class="pln">
+     
+    </span><span class="kwd">def</span><span class="pln"> test_numbers_3_4</span><span class="pun">():</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pln"> </span><span class="str">'test_numbers_3_4  <==== actual test code'</span><span class="pln">
+        </span><span class="kwd">assert</span><span class="pln"> multiply</span><span class="pun">(</span><span class="lit">3</span><span class="pun">,</span><span class="lit">4</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">12</span><span class="pln">
+     
+    </span><span class="kwd">def</span><span class="pln"> test_strings_a_3</span><span class="pun">():</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pln"> </span><span class="str">'test_strings_a_3  <==== actual test code'</span><span class="pln">
+        </span><span class="kwd">assert</span><span class="pln"> multiply</span><span class="pun">(</span><span class="str">'a'</span><span class="pun">,</span><span class="lit">3</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="str">'aaa'</span></code>
+
+
+
+
+
+Running nose:
+
+
+
+
+    
+    <code><span class="pln">nosetests </span><span class="pun">-</span><span class="pln">v test_um_unittest</span><span class="pun">.</span><span class="pln">py</span></code>
+
+
+
+
+
+**CAVEAT:** The biggest caveat, IMHO, is the **lack of ‘memorable structure’**. I can’t remember half the syntax nose imposes! Not to mention that it is an **external library** that I had to download.
+
+
+
+
+
+* * *
+
+
+
+
+
+## Py.Test
+
+
+
+
+
+If you ever want to be structured and portable, just go with `unittest`. If that’s not the case, which is more often than not, then `Py.Test` **FTW**.
+
+
+
+
+
+It is almost identical to `nose`, minus the unecessary clutter. Hence, presenting some examples shall suffice.
+
+
+
+
+
+**RUNNING PY.TEST:**
+
+
+
+
+    
+    <code><span class="pln">py</span><span class="pun">.</span><span class="pln">test test_um_pytest</span><span class="pun">.</span><span class="pln">py</span></code>
+
+
+
+
+
+**EXAMPLES:**
+
+
+
+
+    
+    <code><span class="kwd">from</span><span class="pln"> unnecessary_math </span><span class="kwd">import</span><span class="pln"> multiply
+    
+    </span><span class="com"># module functions</span><span class="pln">
+    </span><span class="kwd">def</span><span class="pln"> setup_module</span><span class="pun">(</span><span class="kwd">module</span><span class="pun">):</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"setup_module"</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">def</span><span class="pln"> teardown_module</span><span class="pun">(</span><span class="kwd">module</span><span class="pun">):</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"teardown_module"</span><span class="pun">)</span><span class="pln">
+    
+    </span><span class="com"># Before/After each function</span><span class="pln">
+    </span><span class="kwd">def</span><span class="pln"> setup_function</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">):</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"setup_function"</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">def</span><span class="pln"> teardown_function</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">):</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"teardown_function"</span><span class="pun">)</span><span class="pln">
+    
+    </span><span class="com"># Sample test functions</span><span class="pln">
+    </span><span class="kwd">def</span><span class="pln"> test_numbers_3_4</span><span class="pun">():</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pln"> </span><span class="str">'actual test code'</span><span class="pln">
+        </span><span class="kwd">assert</span><span class="pln"> multiply</span><span class="pun">(</span><span class="lit">3</span><span class="pun">,</span><span class="lit">4</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">12</span><span class="pln"> 
+    </span><span class="kwd">def</span><span class="pln"> test_strings_a_3</span><span class="pun">():</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pln"> </span><span class="str">'actual test code'</span><span class="pln">
+        </span><span class="kwd">assert</span><span class="pln"> multiply</span><span class="pun">(</span><span class="str">'a'</span><span class="pun">,</span><span class="lit">3</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="str">'aaa'</span><span class="pln"> 
+    
+    </span><span class="com"># Very simple class</span><span class="pln">
+    </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">TestUM</span><span class="pun">:</span><span class="pln">
+        </span><span class="com"># Class fixtures</span><span class="pln">
+        </span><span class="kwd">def</span><span class="pln"> setup_class</span><span class="pun">(</span><span class="pln">cls</span><span class="pun">):</span><span class="pln">
+            </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"setup_class"</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">def</span><span class="pln"> teardown_class</span><span class="pun">(</span><span class="pln">cls</span><span class="pun">):</span><span class="pln">
+            </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"teardown_class"</span><span class="pun">)</span><span class="pln">
+    
+        </span><span class="com"># Method fixtures</span><span class="pln">
+        </span><span class="kwd">def</span><span class="pln"> setup_method</span><span class="pun">(</span><span class="kwd">self</span><span class="pun">,</span><span class="pln"> method</span><span class="pun">):</span><span class="pln">
+            </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"setup_method"</span><span class="pun">)</span><span class="pln">
+        </span><span class="kwd">def</span><span class="pln"> teardown_method</span><span class="pun">(</span><span class="kwd">self</span><span class="pun">,</span><span class="pln"> method</span><span class="pun">):</span><span class="pln">
+            </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"teardown_method"</span><span class="pun">)</span><span class="pln">
+    
+        </span><span class="com"># Actual test methods</span><span class="pln">
+        </span><span class="kwd">def</span><span class="pln"> test_numbers_5_6</span><span class="pun">(</span><span class="kwd">self</span><span class="pun">):</span><span class="pln">
+            </span><span class="kwd">print</span><span class="pln"> </span><span class="str">'actual test code'</span><span class="pln">
+            </span><span class="kwd">assert</span><span class="pln"> multiply</span><span class="pun">(</span><span class="lit">5</span><span class="pun">,</span><span class="lit">6</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">30</span><span class="pln"> 
+        </span><span class="kwd">def</span><span class="pln"> test_strings_b_2</span><span class="pun">(</span><span class="kwd">self</span><span class="pun">):</span><span class="pln">
+            </span><span class="kwd">print</span><span class="pln"> </span><span class="str">'actual test code'</span><span class="pln">
+            </span><span class="kwd">assert</span><span class="pln"> multiply</span><span class="pun">(</span><span class="str">'b'</span><span class="pun">,</span><span class="lit">2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="str">'bb'</span></code>
+
+
+
+
+
+* * *
+
+
+
+
+
+# Conclusion:
+
+
+
+
+
+I have been convinced by this exercise to use TDD as much as possible, and probably in all future projects! Well, honestly, I still think using it for an iOS app taking it a bit too far, but hey! We can definitely use it for backend development, which is what matters the most now.
