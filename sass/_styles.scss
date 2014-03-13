@@ -77,6 +77,15 @@ h6 {
   }
 }
 
+/* CUSTOM CLASSES */
+
+.no-invert img {
+
+  filter: none !important;
+  @include filter(none !important);
+}
+
+
 /* pseudo Monokai code blocks */
 .pre-code {
   overflow: scroll;
