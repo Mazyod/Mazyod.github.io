@@ -1,4 +1,8 @@
 
+/* GLOBALS */
+
+
+
 strong {
   font-weight: 600;
 }
@@ -44,6 +48,10 @@ h6 {
   margin-top: 0.4em;
 }
 
+ol, ul {
+  margin: 1em 0 1em 1.5em;
+}
+
 @media (max-width: 979px) {
   body {
     font-size: 26px;
@@ -80,11 +88,9 @@ h6 {
 /* CUSTOM CLASSES */
 
 .no-invert img {
-
   filter: none !important;
   @include filter(none !important);
 }
-
 
 /* pseudo Monokai code blocks */
 .pre-code {

@@ -107,6 +107,7 @@ p, li {
     @include border-radius(.4em);
     padding: 0 .3em;
     margin: -1px 0;
+    font-size: 0.75em;
   }
   pre code { background: none; border: none; }
 }
