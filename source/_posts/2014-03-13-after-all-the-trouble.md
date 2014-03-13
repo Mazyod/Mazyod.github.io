@@ -31,10 +31,10 @@ I am seeing the old IP address!! I got sick of waiting and trying every now and 
 ...     output, something = process.communicate()
 ...     
 ...     if IP not in output:
-...             print 'YAAAY'
-...             break
+...         print 'YAAAY'
+...         break
 ...     else:
-...             print 'no.. '+output
+...         print 'no.. '+output
 ... 
 ```
 
