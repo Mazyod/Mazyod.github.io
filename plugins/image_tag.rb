@@ -52,7 +52,7 @@ module Jekyll
           @imgclass = @img['class']
           @imgclass.slice!("caption")
           @img.delete("class")
-          "<span class=\"#{('caption-wrapper ' + @imgclass).rstrip}\" style=\"width: #{@imgwidth}px\">" +
+          "<span class=\"#{('caption-wrapper ' + @imgclass).rstrip}\">" +
             "<img class=\"caption\" #{@img.collect {|k,v| "#{k}=\"#{v}\"" if v}.join(" ")}>" +
             "<span class=\"caption-text\">#{@img['alt']}</span>" +
           "</span>"

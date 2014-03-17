@@ -19,7 +19,7 @@ Another post worth writing is how to deal with code snippets and cheatsheets. Th
 
 {% img center caption no-invert http://cdn.shopify.com/s/files/1/0149/3544/products/linux-cheat_shirt_4_1024x1024.jpg?v=1385978991 "" "Courtesy of xkcd store" %}
 
-Not only were they ridiculuosly distrubuted, but also they were written in plain text... YUCK!! The new way I roll with combines two awesome projects into an epic cheatsheet storage!
+Not only were they ridiculously distributed, but also they were written in plain text... YUCK!! The new way I roll with combines two awesome projects into an epic cheatsheet storage!
 
 #### Then Some More...
 
