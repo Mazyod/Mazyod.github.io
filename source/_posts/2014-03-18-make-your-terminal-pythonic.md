@@ -40,7 +40,7 @@ Let's add some python scripts to the slightly better way, and see how the pipeli
 First, we will put all the scripts in a folder, as explained above. In my case, this folder is ~/.pyscripts:
 
 ```bash
-$ ~/.pyscripts $ ls
+$ ls ~/.pyscripts
 blog.py     driver.py  imageutils.py   kptutils.py ...
 ```
 
@@ -146,7 +146,7 @@ Let's recap here...
 
 1. Add scripts to `.pyscripts` directory. (`blog.py`, `imageutils.py`, ...)
 2. When terminal launches, call `gen_cmds.py` to generate the `alias`s.
-3. Include the file `gen_cmds.py` generates using `source` command.
+3. Include the file that `gen_cmds.py` generates, by using `source` command.
 4. When a script is executed, it's passed with the arguments to `driver.py`
 5. `driver.py` will fetch the function, pass it the arguments, and voila!
 
