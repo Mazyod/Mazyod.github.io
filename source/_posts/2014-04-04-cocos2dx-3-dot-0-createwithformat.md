@@ -4,7 +4,7 @@ title: "Cocos2dx 3.0 createWithFormat"
 date: 2014-04-04 22:09:09 +0400
 comments: true
 categories: 
-- cococs2dx
+- cocos2dx
 - ccstring
 - string
 - createwithformat
