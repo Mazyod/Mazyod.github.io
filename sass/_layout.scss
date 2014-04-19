@@ -6,9 +6,15 @@ $outline-height: 5px;
   float: left;
 }
 
+.nav {
+  display: inline-block;
+  margin-top: 5px;
+}
+
 .navbar-outer {
   text-align: center;
   display: inherit;
+  margin: 0 -20px;
 }
 
 .navbar-outline {
@@ -19,10 +25,9 @@ $outline-height: 5px;
 .navbar-list-item {
   @extend .maz-list-item;
 
-  background-color: transparent;
   width: 150px;
-  font-size: 18pt;
-  margin-top: 20px;
+  background-color: transparent;
+  font-size: 30pt;
 }
 
 .navbar-list-item-active {
@@ -37,9 +42,7 @@ $outline-height: 5px;
   @extend .navbar-outline;
 
   background-color: $tertiary-color;
-
-  margin-top: -25px;
-  margin-bottom: 20px;
+  margin-top: -10px;
 }
 
 .navbar-inner {
@@ -68,6 +71,28 @@ $outline-height: 5px;
 .social-list-item {
   @extend .maz-list-item;
 
-  margin: 0px 20px;
-  font-size: 60px;
+  margin: 0 0.4em;
+  font-size: 2em;
+}
+
+
+@media (max-width: 979px) {
+  .navbar-list-item {
+    // width: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-list-item {
+    width: 120px;
+    font-size: 24pt;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .navbar-list-item {
+    width: 90px;
+    font-size: 20pt;
+  }
 }

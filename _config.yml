@@ -23,13 +23,11 @@ email:
 
 # define the navigation structure, to be built in navigation.html
 navigation:
-- text: HOME
+- text: '<i class="icon-home"></i>'
   url: /
-- text: CATEGORIES
+- text: '<i class="icon-list"></i>'
   url: /categories/
-- text: EVERYTHING
-  url: /everything/
-- text: ABOUT
+- text: <i class="icon-user"></i>
   url: /about/
 
 # ----------------------- #
