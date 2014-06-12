@@ -18,7 +18,7 @@ A special post is happening this time, and it is a video! We will explore the ne
 
 Without further ado:
 
-<iframe width="240" height="180" src="http://www.youtube.com/embed/TyP0CZWED0M" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+{% embedly http://www.youtube.com/watch?v=TyP0CZWED0M %}
 
 Here are some relevent code snippets:
 

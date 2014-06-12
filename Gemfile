@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 group :development do
+  gem 'embedly', '~> 1.9.1'
   gem 'rake', '~> 0.9.6'
   gem 'jekyll', '~> 0.12'
   gem 'rdiscount', '~> 2.0.7'
