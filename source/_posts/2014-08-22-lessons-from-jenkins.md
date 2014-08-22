@@ -44,15 +44,17 @@ In any case, I prefer and ultimately used [Shenzhen](https://github.com/nomad/sh
 
 So painless, so simple, so awesome.
 
-    # Unlock the keychain
-    security unlock-keychain -p PASSWORD
+```bash
+# Unlock the keychain
+security unlock-keychain -p PASSWORD
 
-    # Increment the build number
-    agvtool next-version -all
-    # build the IPA
-    ipa build --scheme TellyApp-On-Commit --configuration Ad-Hoc
-    # distribute through hockey app
-    ipa distribute:hockeyapp -m "Jenkins build" --token
+# Increment the build number
+agvtool next-version -all
+# build the IPA
+ipa build --scheme TellyApp-On-Commit --configuration Ad-Hoc
+# distribute through hockey app
+ipa distribute:hockeyapp -m "Jenkins build" --token
+```
 
 The few lines of script above replaces two Jenkins plugins, the Xcode one and the HockeyApp distributor one.
 
