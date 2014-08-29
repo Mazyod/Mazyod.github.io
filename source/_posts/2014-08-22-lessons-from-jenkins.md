@@ -18,7 +18,7 @@ categories:
 
 Recently, I was privileged with the task of configuring a mac mini server with Jenkins to automate our build process, and distribute new versions OTA using HockeyApp.
 
-![](https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png?version=1&modificationDate=1302753947000)
+{%img center caption no-invert https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png?version=1&modificationDate=1302753947000 %}
 
 The task was anything but smooth. I did not expect Jenkins to have so many bugs!! Well, less Jenkins, and more the plugins that are around it. Anyways, let's dive right into it.
 
@@ -63,6 +63,10 @@ The few lines of script above replaces two Jenkins plugins, the Xcode one and th
 Github uses a concept called "Webhooks" to do a very convenient thing for us. Once a push has been made to master, or a pull request is submitted, we can tell github, through webhooks, to submit a POST request to our server informing it about the change. This rids us of polling the SCM for changes, and even get instant results!
 
 Those webhooks were a nightmare, though. Throughout the guides I read, there was nothing specifying that you should choose the `urlencoded` content type instead of the `application/json`, but you have to do that. Another issue is that Github sends a `ping` notification first, which fails... I tried to make it work, but ultimately found out that it's not supported by the Jenkins Github plugin. It is destined to fail, I guess :( ... 
+
+## Thank You, Knowledge Sharing People
+
+This is a very detailed and organized [article on integrating Jenkins with Xcode](http://orangejuiceliberationfront.com/setting-up-jenkins-for-github-and-xcode-with-nightlies/). Another important resource was [this simple set of steps](http://blog.denivip.ru/index.php/2014/01/how-to-configure-jenkins-ci-on-mac-os-x-to-build-android-and-ios-phonegapcordova-apps-and-deliver-them-to-testflighthockeyapp/?lang=en) that helped me debug a few issues.
 
 ## Goodbye, Everyone
 
