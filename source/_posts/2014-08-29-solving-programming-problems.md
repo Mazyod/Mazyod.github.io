@@ -22,7 +22,7 @@ I thought that was cool, but didn't quite do it myself because I work on my own 
 
 Here is an example of a problem I am trying to solve:
 
-{%img center caption no-invert http://mazyod.com/images/Screenshot_2014-08-28_21.46.48.png "" "" %}
+{%img center caption no-invert http://mazyod.com/images/Screenshot_2014-08-29_12.50.02.png "" "" %}
 
 As you can probably tell, this is the matchmaking process in the game, and using [yEd](http://www.yworks.com/en/products_yed_about.html), I can easily draw this FSM and make sure I account for all situations.
 
@@ -32,9 +32,9 @@ Sounds simple, although it isn't with the constraints I have. I can either have 
 
 So, this "magical" way of invalidating the match... I can think of two ways of doing this:
 
-One approach is to add a timestamp variable to the session, and each time the user polls the status, we have some logic in the backend checking the timestamp to determine if the match should be invalidated. This approach actually sounds perfect, and I think I'll use it.
+One approach is to add a timestamp variable to the session, and each time the user polls the status, we have some logic in the backend checking the timestamp to determine if the match should be invalidated. The problem is that we don't know exactly when the match state has switched from "looking for opponent" to "waiting for confirmation" (aka accept). We have to store the previous state and all that crap.
 
-Another approach is to associate the timestamp with the match object, and check the timestamp from the match itself. The issues with this is how to clean that variable when we are done with it... Also, having a timestamp in the Match object just to calculate the window the users should accept the match seems ugly.
+Another approach is to associate the timestamp with the match object, and check the timestamp from the match itself. This is easy to implement and the logic actually fits. Once we change the match state to `WAITING_CONFIRMATION`, we can set the timestamp then.
 
 ## Conclusion
 
