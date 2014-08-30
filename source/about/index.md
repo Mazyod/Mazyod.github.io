@@ -2,7 +2,7 @@
 layout: page
 title: "about"
 date: 2014-08-25 03:41
-comments: true
+comments: false
 sharing: true
 footer: true
 ---
@@ -63,7 +63,7 @@ The eager intern brought up the idea of contributing to the game, just as a thou
 technical lead, and it all started from there.
 
 As the technical lead worked on designing a network component, he was also thinking about the best way to implement this
-design. With me in the picture, using Game Center was now a viable and quick way to prototype the design and get
+design. With our intern in the picture, using Game Center was now a viable and quick way to prototype the design and get
 something up and running in very little time. That's how the domino effect started.
 
 From implementing the Game Center functionality, the intern passed the test in the proving grounds. This increased his
