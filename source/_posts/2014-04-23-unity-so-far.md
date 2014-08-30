@@ -37,7 +37,7 @@ Animation transitions created are atomic by default, i.e. they cannot be interru
 
 Since the "Any State approach" requires you to reset the condition after transitioning, what I did was simply:
 
-```c#
+{% highlight c# %}
 void Update()
 {
     // update animator (Stupid transition from any state includes current state -_-")
@@ -53,7 +53,8 @@ void Update()
         anim.SetInteger("direction", -heading);
     }
 }
-```
+
+{% endhighlight %}
 
 Looks good to me. Set the integer, and on next update clear it, and so on... Not so fast there, buddy. Remember that talk about atomicity? Well, even if you freakin turn it off, the transition still cannot be interrupted `>__<`. That is to say, if you do "transition to x, transition to y, stop" fast enough, the transition to y will never happen!
 

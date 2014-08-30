@@ -22,7 +22,7 @@ Well, what's with this programming frenzy? It's a Packet's Life.
 
 Initially, before thinking about implementing the chat, all the packets I sent through Game Center to play the game online were structs. Here is an example:
 
-```objc
+{% highlight objc %}
 #pragma mark -
 #pragma mark Network Packets
 
@@ -38,7 +38,8 @@ struct MovePacket {
     Block eaten[16];
 };
 typedef struct MovePacket MovePacket;
-```
+
+{% endhighlight %}
 
 Why structs? They are lightweight, they can be used without memory management hassle, and best of all, it can be sent through the network as raw data. To send a struct packet, all you had to do is initialize it, then send it's memory content (&packet) with it's length (sizeof(packet)) .. Something like that. (Please request the specifics if you are interested). On the other hand, objects must implement the NSCoding protocol and then are encoded/decoded using the NSKeyedArchiver/Unarchiver.
 
@@ -48,7 +49,7 @@ This step REALLY helped me organize my code A LOT better. The class that was res
 
 So, how about now? Well, Mr. MMPacket just refuses to be handled by other than his own dedicated handler. How cheap! :P This introduced the following classes:
 
-```objc
+{% highlight objc %}
 id<GKHGameInitDelegate> delegateInit;     
 id<GKHGameMoveDelegate> delegateMove;     
 id<GKHGameChatDelegate> delegateChat;     
@@ -98,7 +99,8 @@ id<GKHGameRematchDelegate> delegateRematch;
     {     
         //ignore packet =/
     }
- ```
+ 
+{% endhighlight %}
 
 
 

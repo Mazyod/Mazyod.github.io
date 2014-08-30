@@ -25,15 +25,16 @@ I first tried to use [beautifulsoup](http://www.crummy.com/software/BeautifulSou
 
 In any case, I then just wrote my own regex, and wished I had just done that in the first place:
 
-```python
+{% highlight python %}
 regex = re.compile(r"<div class=\"date\">\s*(\w+), (\d+)", flags=(re.DOTALL))
-```
+
+{% endhighlight %}
 
 ###### STEP 3: THE BASE DATE
 
 Unfortunately, my app doesn't query the date from the backend (silly me), it queries the offset instead (/facepalm). Hence, I need to know what the base date is in order to calculate the offset! The base date is calculated in the app from a library I compiled (called `MCEngine`). So, all I had to do is write a command line wrapper around it to give me the date:
 
-```objc
+{% highlight objc %}
 int main(int argc, const char * argv[])
 {
     @autoreleasepool
@@ -45,17 +46,19 @@ int main(int argc, const char * argv[])
     }
     return 0;
 }
-```
+
+{% endhighlight %}
 
 ###### STEP 4: THE GLITCH
 
 As with most software, there is this awkward edge case that you have to take care of. Since I am querying the date from the website above, I may (for example) query it on Monday, when they are displaying the date for Tuesday! So, that's why in the code above I am printing the weekday (`stringifyWeekday`). Then, using some simple rules, I can find the "circular distance" from two indexes with the following:
 
-```python
+{% highlight python %}
 weekday_diff = min(
     abs(objc_index - actual_index),
     abs(len(en_weekdays) - objc_index - actual_index))
-```
+
+{% endhighlight %}
 
 ## Conclusion
 

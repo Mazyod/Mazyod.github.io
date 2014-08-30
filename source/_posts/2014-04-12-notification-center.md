@@ -20,18 +20,20 @@ Apparently, the `NotificationCenter` was deprecated in favor of the new `EventDi
 
 So, the new way to do notification thingies is:
 
-```c++
+{% highlight c++ %}
 Director::getInstance()
   ->getEventDispatcher()
   ->dispatchCustomEvent("This is an event!");
-```
+
+{% endhighlight %}
 
 Of course, this is a bit ridiculous to type all over the place, so we `#define` it:
 
-```c++
+{% highlight c++ %}
 #define gEventDispatcher Director::getInstance()->getEventDispatcher()
 
 // Much better:
 gEventDispatcher->dispatchCustomEvent("This is an event!");
-```
+
+{% endhighlight %}
 

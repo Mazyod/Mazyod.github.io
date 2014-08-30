@@ -17,17 +17,19 @@ As silly as it may sound, but there doesn't seem to be a way for the HockeyApp u
 
 With just a tiny bit of knowledge about how the Foundation framework offers app the ability to save preferences, I realized I can probably delete the preferences file:
 
-```bash
+{% highlight bash %}
 $ defaults find hockey
 [... huge lump of text, and somewhere in the middle:]
 Found 19 keys in domain 'com.hockeyapp.mac': {
 [...]
-```
+
+{% endhighlight %}
 
 With the domain of the app figured out (maybe I could've just checked the app bundle's info.plist?), it was as simple as:
 
-```bash
+{% highlight bash %}
 $ defaults delete com.hockeyapp.mac
-```
+
+{% endhighlight %}
 
 And now, I have been signed out!

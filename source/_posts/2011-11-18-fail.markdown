@@ -26,22 +26,25 @@ I'll just fix this character problem (replace `'` with `\'` .. should work, righ
 
 That was quick, I know.. So, what I did was:
 
-```objc
+{% highlight objc %}
 jsDialog = [jsDialog stringByReplacingOccurrencesOfString:@"'" withString:@"\'"];
-```
+
+{% endhighlight %}
 
 That didn't work ... Wasn't obvious to me that the NSString already took the `\'` as a single character. So, the correct way of doing this is:
  
-```objc
+{% highlight objc %}
 jsDialog = [jsDialog stringByReplacingOccurrencesOfString:@"'" withString:@"\\'"];
-```
+
+{% endhighlight %}
 
 And, for further clarification, I decided to fix the `\` character, as it is as troublesome as the others:
 
-```
+{% highlight objc %}
 //Note how each \\ is interpreted as a single \ in the end
 jsDialog = [jsDialog stringByReplacingOccurrencesOfString:@"\\" withString:@"\\\\"];
-```
+
+{% endhighlight %}
 
 ### UPDATE:
 

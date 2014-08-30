@@ -27,7 +27,7 @@ Let us first see how much the chatView evolved since the last time we spoke:
 
 Looks good enough. Might be improved .. The point, always focus on the point!! So, the cool SMS application-like keyboard and text have been taken from HPGrowingTextView code from GitHub. It is really something. As for the way the text is being appended to the gray webview, here is some code:
 
-```objc
+{% highlight objc %}
 - (void)appendToChatViewName:(NSString*)name dialog:(NSString*)text isLocal:(BOOL)local 
 {
     NSString* jsName    = [NSString stringWithFormat:@"'%@:'", name];
@@ -43,7 +43,8 @@ Looks good enough. Might be improved .. The point, always focus on the point!! S
     //BRUTE FORCE: 90,000 :P
     string = [chatView stringByEvaluatingJavaScriptFromString:@"scroll(0, 90000)"];
 }
-```
+
+{% endhighlight %}
 
 Now, we can finally talk about the problem that I mention, the one that made me want to post. The above code has a problem, care to guess?
 
@@ -53,7 +54,8 @@ Ok, if you guessed that 90000 is too big, then congratulations! You guessed wron
 
 The problem is that if the user sends some text including the line break character '\n'. The JS will end up crashing and doing absolutely nothing... Ok, for the solution? Exactly, it's as simple as:
 
-```objc
-    //remove all \n and replace them with HTML break character.. <br />!!
+{% highlight objc %}
+//remove all \n and replace them with HTML break character.. <br />!!
     jsDialog = [jsDialog stringByReplacingOccurrencesOfString:@"\n" withString:@"<br />"];
-```
+
+{% endhighlight %}

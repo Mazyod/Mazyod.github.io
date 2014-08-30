@@ -57,7 +57,7 @@ As you might have deduced from the boring tale above, KVC does two main things:
 
 ... OK, so what's so cool about that? Well, the way we set and get the values is what's cool. To put it clear and simple, "**KVC allows us to get and set the variables of an object as though it was a dictionary**" (That's not 100% accurate, but leave it like this for now). Consider the following example:
 
-```objc
+{% highlight objc %}
 @interface Foo : NSObject  
 { 
     id var1; 
@@ -65,22 +65,24 @@ As you might have deduced from the boring tale above, KVC does two main things:
     ... 
     id varN; 
 }
-```
+
+{% endhighlight %}
 
 Now, with this class having all theses [iVars](en.wikipedia.org/wiki/Instance_variable), it would be a pain to do something like:
 
 
-```objc
+{% highlight objc %}
 Foo* foo = [[Foo alloc] init]; 
 foo.var1 = ...; 
 foo.var2 = ...; 
 ...
-```
+
+{% endhighlight %}
 
 
 What's the alternative? KVC! Here is how it works:
 
-```objc
+{% highlight objc %}
 for (int i = 1 ; i<=N ; i++)  
 { 
     NSString* varName = [NSString stringWithFormat:@"var%d", i]; 
@@ -89,7 +91,8 @@ for (int i = 1 ; i<=N ; i++)
   
 // And inorder to read the vars in a similar fashion: 
 int var1 = [[foo valueForKey:@"var1"] intValue];
-```
+
+{% endhighlight %}
 
 Notice two things:
 
@@ -113,7 +116,7 @@ Regarding the first note, it's fine. KVC is smart enough to send the NSNumber as
 
 Remember what was KVO's job? Observe. Thus, it is quite simply useful to observe any changes on the instance variable that we have. This is a useful alternative for delegates in simple cases, where defining a protocol and setting up a delegate is just an overkill. Imagine a game with a gun. No, not a game holding a gun, but rather a game that contains a gun that the player can fire. Now, imagine that this gun cannot fire two simultaneous shots. Now, here are some approaches that are available:
 
-```objc
+{% highlight objc %}
 /* Polling approach. Yuck! */    
      
 // Inside the gun class:    
@@ -127,11 +130,12 @@ Remember what was KVO's job? Observe. Thus, it is quite simply useful to observe
         [bullet setReady:NO];    
     }    
 }
-```
+
+{% endhighlight %}
 
 Some of us might started thinking, what's wrong with that? Nice, simple and it works! Well, not exactly. What if the player fires a shot and stops? The bullet would eventually go off screen and continue moving with no reason at all!! Even more, what if we wanted to show the user whether he has a bullet reloaded? It won't be possible without a delegate:
 
-```objc
+{% highlight objc %}
 /* Polling approach, with delegate. Gross! */    
      
 // Inside bullet class:    
@@ -166,11 +170,12 @@ Some of us might started thinking, what's wrong with that? Nice, simple and it w
         [self showBulletUnavailable];    
     }    
 }
-```
+
+{% endhighlight %}
 
 OK, with that crap out of the way, let's see how KVO does it:
 
-```objc
+{% highlight objc %}
 - (void)fireBullet     
 {    
     // check if bullet exited the screen    
@@ -195,7 +200,8 @@ OK, with that crap out of the way, let's see how KVO does it:
     float newX = [[change objectForKey:NSKeyValueChangeNewKey] floatValue];    
     // do stuff...    
 }
-```
+
+{% endhighlight %}
 
 Just awesome :) I won't say more.
 

@@ -20,7 +20,7 @@ There is just no freaking way such a simple programming task takes so much time!
 
 I have no idea how many days is the default for each lunar month!! It could be either 29 or 30. That should also ideally be given from the `MCEngine` side... Hence, throw everything on ObjC instead of python:
 
-```objc
+{% highlight objc %}
 // fetch the website...
 NSURL *url = [NSURL URLWithString:@"http://www.alriyadh.com/en"];
 NSString *newspaper = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
@@ -84,7 +84,8 @@ if (labs(offset) > 2)
     abort();
 // spit it out
 printf("%ld", offset);
-```
+
+{% endhighlight %}
 
 I will leave the details for the reader to figure out as an exercise!
 
@@ -92,7 +93,7 @@ I will leave the details for the reader to figure out as an exercise!
 
 Then, we use python to get the offset, and access the server through FTP and update the things:
 
-```python
+{% highlight python %}
 # coding=utf-8
 
 import subprocess as sp
@@ -137,16 +138,18 @@ if process.returncode == 0:
 else:
     print "Error with the freaking website :/", process.returncode, output
 
-```
+
+{% endhighlight %}
 
 ###### STEP 3: THE SHORTCUT
 
 Finally, of course, we have the shortcut! Remember the post about [how my blog pipeline is setup](http://mazyod.com/blog/2014/03/16/blogging-with-octopress/)? Remember those convenient commands? Well, one coming up for the kpt update script!
 
-```bash
+{% highlight bash %}
 $ kpt_update_hijri 
 updated offset: 1
-```
+
+{% endhighlight %}
 
 Yaaaaaay!
 

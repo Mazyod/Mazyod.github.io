@@ -26,17 +26,18 @@ Obviously it's gonna be python...
 
 Instead of defining a function that taken a path pointing to a file, I should make it take a string, so I can easily test it when I am done!
 
-```python
+{% highlight python %}
 def clean_imports(file_contents):
     # stuff
-```
+
+{% endhighlight %}
 
 **5:24 pm:**
 
 I am slow... And I wish I used PyCharm for this, not sublime.
 Anyways, v0.0.0.1 is working!
 
-```python
+{% highlight python %}
 import os
 import re
 
@@ -53,13 +54,14 @@ def clean_imports(file_contents):
     print repr(all_classes)
 
 clean_imports('#import "thisisatest.h" akdjsf a;ksldfj')
-```
+
+{% endhighlight %}
 
 **5:33 pm**
 
 I think it is done, and ready to be hooked with a "crawler".
 
-```python
+{% highlight python %}
 import os
 import re
 
@@ -85,13 +87,14 @@ def clean_imports(file_contents):
     print file_contents
 
 clean_imports('#import "thisisatest.h" akdjsf a;ksldfj thisisatest ')
-```
+
+{% endhighlight %}
 
 **5:37 pm**
 
 Time to test!!
 
-```python
+{% highlight python %}
 import os
 import re
 
@@ -130,7 +133,8 @@ if __name__ == "__main__":
             with open(filepath, "w+") as f:
                 contents.write(new_contents)
 
-```
+
+{% endhighlight %}
 
 **5:43 pm**
 

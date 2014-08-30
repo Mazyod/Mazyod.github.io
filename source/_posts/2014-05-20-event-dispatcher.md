@@ -22,7 +22,8 @@ Without further ado:
 
 Here are some relevent code snippets:
 
-```c++
+{% highlight c++ %}
 #define gEventDispatcher Director::getInstance()->getEventDispatcher()
 #define NC_ADD(target, notif, handler) gEventDispatcher->addEventListenerWithSceneGraphPriority(EventListenerCustom::create(notif, handler), target);
-```
+
+{% endhighlight %}

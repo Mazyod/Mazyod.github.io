@@ -16,7 +16,7 @@ I have spent a considerable amount of time due mainly to my lack of C++ knowledg
 
 In C++, there is a concept known as sending an object by value, as a whole. We don't see that in Objective-C nor Java, let alone scripting or higher level languages. That object you pass around by value gets copied implicitly, sometimes:
 
-```c++
+{% highlight c++ %}
 class Car
 {
     std::string model;
@@ -34,7 +34,8 @@ int main()
 
     return 0;
 }
-```
+
+{% endhighlight %}
 
 A very basic entry level C++ example (that I hope I didn't mess up). Sending `Car` this way will **implicitly** invoke the copy constructor, since:
 
@@ -47,16 +48,17 @@ In [rapidjson](https://code.google.com/p/rapidjson/wiki/UserGuide), the develope
 
 Fine, just change it? Well, that's easy to say after I figured out the freaking problem!! The error was so absurdly vague, it made me grow a few white hairs. The error was so bad because, for one, it was a linker error, and second, it was something like:
 
-```text
+{% highlight text %}
 Undefined symbols for architecture i386:
 rapidjson::GenericValue<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator> >::GenericValue(rapidjson::GenericValue<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator> > const&)
-```
+
+{% endhighlight %}
 
 If you haven't realize it , the second line is a single type... `ლ(ಠ益ಠლ)`. It's equivalent, in a sense, to `int` or `std::string`. Yeah, that is totally ambiguous.
 
 Let's break it down:
 
-```c++
+{% highlight c++ %}
 rapidjson::GenericValue
 <
     rapidjson::UTF8<char>, 
@@ -72,7 +74,8 @@ rapidjson::GenericValue
         rapidjson::CrtAllocator
     > 
 > const&)
-```
+
+{% endhighlight %}
 
 **I REPEAT... THAT IS A SINGLE TYPE!!!!!**
 

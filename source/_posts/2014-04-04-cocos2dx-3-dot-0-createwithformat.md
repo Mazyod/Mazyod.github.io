@@ -20,7 +20,8 @@ In any case, `CCString` is gone... and so is the awesome `createWithFormat` meth
 
 Fret not! There is actually a replacement for that in the new API:
 
-```c++
+{% highlight c++ %}
 std::string string = StringUtils::format("Yaaay!! %s %s %s", "This", "is", "Aweeeesome!!")
-```
+
+{% endhighlight %}
 

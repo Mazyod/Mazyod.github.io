@@ -16,7 +16,7 @@ This was ... The most annoying this about migrating a project from cocos2dx 2.x 
 
 Have a look here:
 
-```c++
+{% highlight c++ %}
 void setThingie(const std::vector<type>& other)
 {
     _thingie = other;
@@ -27,7 +27,8 @@ void setThingie(const std::vector<type>& other)
 std::vector<type> other;
 setThingie(other);
 other.push_back(something);
-```
+
+{% endhighlight %}
 
 Do you see a problem above?
 
@@ -45,7 +46,7 @@ Of course, I would have done that... The issue is that the parent has four conta
 
 In any case, with the issue above, the wife- I mean, the parent container was being mutated, but the child didn't know! For example, the wife had a baby, so this child should know he has a brother.
 
-```c++
+{% highlight c++ %}
 // old code:
 parent.containers = CCArray::create(4);
 child.parentContainer = parent.containers[0];
@@ -59,7 +60,8 @@ child.parentContainer = parent.containers[0];
 parent.containers = std::vector<Vector<Obj *>>(4);
 // child.parentContainer is const Vector<Obj *>*
 child.parentContainer = &parent.containers[0];
-```
+
+{% endhighlight %}
 
 This isn't all diamonds and roses, it's a very fragile design, unfortunately. By assigning a pointer, we risk having a dangling pointer when the parent goes away before the child, so we must make sure that never happens.
 

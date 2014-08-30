@@ -65,19 +65,21 @@ In order to get an idea of how map editors work, we took out the [Starcraft 2 Ma
 
 The first thing we loved was the generic nature of the editor. Basically, you can achieve virtually _anything_ by just building an expression. Some examples:
 
-```text
+{% highlight text %}
 if [unit] [enters] [zone] apply [action]
 if [unit.property] [less_than] [value] apply [action]
 if [any_unit] [attaks] [unit] apply [action]
-```
+
+{% endhighlight %}
 
 Some actions:
 
-```text
+{% highlight text %}
 **[affected_unit] kill**
 **[affected_unit] set attack +%50**
 **[player_inventory] add [item_id]**
-```
+
+{% endhighlight %}
 
 We can break the above examples into 5 different entities:
 

@@ -27,9 +27,10 @@ What I mean by restrict is to disable any behavior that external code might impo
 
 Let's say you have a singleton class. In most languages that have sane constructors, you can easily declare the constructor as private and you are all set. External code can't instantiate the singleton, and can only access the shared instance. We can't do that in objective-c, but here is what we can do:
 
-```objc
+{% highlight objc %}
 - (id)init __attribute__((unavailable));
-```
+
+{% endhighlight %}
 
 This marks the init method with an unavailable attribute so external classes cannot instantiate an instance. I would take this a step further, and mark the `+[NSObject new]` method as unavailable, as well.
 

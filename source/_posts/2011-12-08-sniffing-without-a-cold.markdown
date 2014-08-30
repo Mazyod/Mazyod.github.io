@@ -19,12 +19,13 @@ People usually sniff when they have a common cold, flu or other runny nose disea
 
 The story began when [JiMMaR](http://jimmaru.wordpress.com/), whose name has been popping up in many posts, told me about a whatsapp deficiency:
 
-```text
+{% highlight text %}
 4:13:59 PM Jimmar:   whatsapp sends everything in plain text
 4:14:02 PM Jimmar:  [link](http://eva-quirinius.blogspot.com/2011/05/whatsapp-sends-contact-info-en-messages.html?m=1)
 4:14:38 PM Mazyod:   happy sniffing then
 4:14:53 PM Jimmar:   >:D
-```
+
+{% endhighlight %}
 
 Even though I wished him happy sniffing, he did not attempt to sniff. Then, the day came when I discovered that my design course doctor has posted an assignment about dissecting a software program, finding problems with it and suggest a solution. The assignment title was "Reverse Engineering", but I believe reverse engineering is a much more evil field :). Anyways, I also found out that our Wireless and Mobile Networks doctor wants us to do a presentation about topics related to the course, **ON THE SAME DAY**.
 

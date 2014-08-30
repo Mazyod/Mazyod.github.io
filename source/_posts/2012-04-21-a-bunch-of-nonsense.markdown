@@ -63,17 +63,19 @@ The settings journey was a mess. It was like you would head out of your home, wi
 
 _**Example:**_ We have a group of settings to change the sounds associated with the alerts that the application shows. So, by changing a group of sounds in the settings, the user Innocently invokes a method call on the settings manager that could be something like:
 
-```objc
+{% highlight objc %}
 - (void)settingsChangedAlert1Sound:(NSString*)newSound1 alert2Sound:(NSString*)newSound2 
 // ... and so on, and so forth.
-```
+
+{% endhighlight %}
 
 Then, inside the settings manager, and specifically inside the invoked method, we do something like: 
 
-```objc
+{% highlight objc %}
 for (id<soundSettingsDelegate> delegate in self.soundSettingsDelegate) 
     [delegate settingsChangedAlert1Sound:newSound1 alert2Sound:newSound2 ...]
-```
+
+{% endhighlight %}
 
 	
   2.  Add a Singleton Settings manager. Inside, implement methods to change a group of settings as necessary. Nothing new up until now.. Then, send a notification using NSNotificationCenter that the settings have been changed. This is awesome, that we don't have to worry about who is listening to the settings changed ..

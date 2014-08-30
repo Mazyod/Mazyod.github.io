@@ -52,7 +52,7 @@ Where is this leading? It's leading to awesomeness... No, really. After seeing w
 
 Time for some coding action?
 
-```objc
+{% highlight objc %}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -77,7 +77,8 @@ Time for some coding action?
      par.innerHTML = 'This is awesomeness!! xD'; \
      document.body.appendChild(par);"];
 }
-```
+
+{% endhighlight %}
 
 You get:
 

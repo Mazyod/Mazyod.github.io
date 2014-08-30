@@ -22,7 +22,7 @@ As we all (should) know, in order to use a slightly dynamic table view in iOS, w
 
 Here is what we are typically looking at:
 
-```objc
+{% highlight objc %}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -44,7 +44,8 @@ Here is what we are typically looking at:
     
     return cell;
 }
-```
+
+{% endhighlight %}
 
 Now, the ALL_CAPS_WORDS in the code are just placeholders to indicate what we should fill them in with something reasonable.
 
@@ -54,7 +55,7 @@ Sometimes, the developer doesn't even have sections to display, hence they don't
 
 Our use case is gonna be a static table that is just gonna be defined in the code for maximum simplicity. Let's just look at the solution:
 
-```objc
+{% highlight objc %}
 typedef NS_ENUM(NSInteger, KITableViewSections)
 {
     KITableViewSectionOne,
@@ -69,7 +70,8 @@ typedef NS_ENUM(NSInteger, KITableViewSections)
 {
     return KITableViewSectionCount;
 }
-```
+
+{% endhighlight %}
 
 The advantages of using the above setup are really awesome:
 

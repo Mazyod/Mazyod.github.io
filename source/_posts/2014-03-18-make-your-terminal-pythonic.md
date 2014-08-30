@@ -22,10 +22,11 @@ After writing bash commands for a year or so, and realizing that I hate it so ba
 
 The way I did it initially was:
 
-```bash
+{% highlight bash %}
 $ python
 >>> # Python code goes here
-```
+
+{% endhighlight %}
 
 Quickly, I realized I am typing things again and again... Not to mention the inability to define and edit functions easily. The lack of autoComplete and accessible documentation was another thing, but some might argue it's solvable by ipython, which never worked well for me.
 
@@ -39,16 +40,17 @@ Let's add some python scripts to the slightly better way, and see how the pipeli
 
 First, we will put all the scripts in a folder, as explained above. In my case, this folder is ~/.pyscripts:
 
-```bash
+{% highlight bash %}
 $ ls ~/.pyscripts
 blog.py     driver.py  imageutils.py   kptutils.py ...
-```
+
+{% endhighlight %}
 
 In my case, `blog.py` contains scripts that help me manage my blog, `imageutils.py`, if you haven't guessed, manipulates images, ... etc.
 
 Each script file would have at least one method defined with a `cmd_` prefix. For example, here is part of the `blog.py` file:
 
-```python
+{% highlight python %}
 ...
 
 def cmd_blog_add_images(*image_paths):
@@ -61,23 +63,25 @@ def cmd_blog_add_images(*image_paths):
         shutil.copyfile(path, destination)
 
 ...
-```
+
+{% endhighlight %}
 
 OK... So, we have these script files with `cmd_X` functions defined, then what?
 
 In `.bash_profile`, which is executed each time terminal is loaded, we add this code:
 
-```bash
+{% highlight bash %}
 # generate and add the python commands
 python "$HOME/.pyscripts/gen_cmds.py"
 source "$HOME/.pycmds"
-```
+
+{% endhighlight %}
 
 Needless to say, the first line executes the `gen_cmds.py` script. This script generates things (we'll see in a bit) that are written to the `.pycmds` file. The second line above "copies" all the contents of `.pycmds` into `.bash_profile`. Think of it as a `#include ".pycmds"` type of thing.
 
 Here is where the fun begins. Look at the `gen_cmds.py` file:
 
-```python
+{% highlight python %}
 if __name__ == "__main__":
     # 1 - get the source file list
     all_sources = _listdir_with_path(SCRIPTS_PATH, suffix_filter=".py")
@@ -97,11 +101,12 @@ if __name__ == "__main__":
 
     with open(DOTFILE_PATH, "w") as f:
         f.write(pyscripts)
-```
+
+{% endhighlight %}
 
 What this simply does is, it iterates all the script files for the `cmd_` functions, and write them, with their docs, to the `.pycmds` file! Here is how the `.pycmds` looks like:
 
-```bash
+{% highlight bash %}
 echo -e "
 ~~~ blog.py commands ~~~
 "
@@ -112,13 +117,14 @@ echo "- blog_add_images image_paths: strings
 alias blog_add_images='python /Users/mazyod/.pyscripts/driver.py --module blog --function cmd_blog_add_images --arguments'
 
 ...
-```
+
+{% endhighlight %}
 
 Can you see what's going on here? Other than the `echo` commands, that simply display the commands in the beginning, it generates an alias with the command's name that passes the function's name to a `driver.py` script, which in turn executes the script! The real beauty lies in the fact that the alias ends just after `--arguments`. This is what allows us to pass as many parameters as we want to the script!
 
 Let's look at the driver script, and then we'll do a quick recap:
 
-```python
+{% highlight python %}
 import argparse
 
 if __name__ == "__main__":
@@ -136,7 +142,8 @@ if __name__ == "__main__":
         getattr(module, args.function[0])(*args.arguments)
     except IndexError:
         print("An argument was not provided!!")
-```
+
+{% endhighlight %}
 
 Amazing, if I do say so myself! The script adds an `argparse`, which allows it to take input from terminal. The input is `module`, `function`, and `arguments`. So, it imports the module, uses `getattr` to fetch the function, and BAM, calls the function with the arguments!
 

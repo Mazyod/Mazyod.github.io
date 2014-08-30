@@ -13,9 +13,10 @@ categories:
 
 Here is the way I have my blogging pipeline setup. First, I launch terminal and type:
 
-```bash
+{% highlight bash %}
 $ blog_new_post "blogging-with-octopress"
-```
+
+{% endhighlight %}
 
 Then, sublime opens up, and I am ready to start writing things!
 
@@ -23,19 +24,21 @@ Then, sublime opens up, and I am ready to start writing things!
 
 And, the way I add images like the one above is, after taking the screenshot, I would call this:
 
-```bash
+{% highlight bash %}
 $ blog_add_images ~/Desktop/sublime-markdown.png 
 # for multiple images, just do this
 $ blog_add_images ~/Desktop/*.png
 # or...
 $ blog_add_images imagepath1 imagepath2 ...
-```
+
+{% endhighlight %}
 
 BAM! And now that I am done, I'll run the final command:
 
-```bash
+{% highlight bash %}
 $ blog_deploy
-```
+
+{% endhighlight %}
 
 ... And the post is live!
 

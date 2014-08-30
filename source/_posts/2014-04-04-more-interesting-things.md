@@ -16,7 +16,7 @@ categories:
 
 Another seemingly interesting change is to callbacks. Previously, relied on ugly macros and weird syntax to pass a callback method to an instance:
 
-```c++
+{% highlight c++ %}
 FiniteTimeAction* callback = CCCallFuncO::create(
     this, 
     callfuncO_selector(
@@ -24,14 +24,16 @@ FiniteTimeAction* callback = CCCallFuncO::create(
     ), 
     screenLayer
 );
-```
+
+{% endhighlight %}
 
 However, they now migrated to one of the new awesome features of C++11, which is `std::bind`.
 
-```c++
+{% highlight c++ %}
 FiniteTimeAction* callback = CallFuncN::create(
     std::bind(&KDContentLayer::_switchLayer, this, screenLayer)
 );
-```
+
+{% endhighlight %}
 
 

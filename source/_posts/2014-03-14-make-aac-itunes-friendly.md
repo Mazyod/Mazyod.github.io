@@ -19,10 +19,11 @@ So, without **any** quality loss, [this answer on stackOverflow](http://stackove
 
 The scriptness!! (If there wasn't any coding involved, I wouldn't post about that, now would I?)
 
-```bash
+{% highlight bash %}
 $ for file in *.aac 
 > do 
 > ffmpeg -i "$file" -codec: copy ${file:0:${#file}-3}.m4a
 > done
-```
+
+{% endhighlight %}
 

@@ -26,7 +26,7 @@ When the user has a multiple screen setup, the application may not show up prope
 
 I had a silly code that was something like:
 
-```objc
+{% highlight objc %}
 // BAD BAD BAD
 // get rect from the first screen you find
 CGRect frame = [[NSApp screens][0] visibleFrame];
@@ -34,7 +34,8 @@ CGRect frame = [[NSApp screens][0] visibleFrame];
 // GOOD GOOD GOOD
 // get the rect from the screen the event originated from
 NSRect frame = [[[[NSApp currentEvent] window] screen] visibleFrame];
-```
+
+{% endhighlight %}
 
 ### Double Trouble
 

@@ -28,11 +28,12 @@ Thankfully, `NSAttributedString` knew how to render custom Arabic fonts without 
 
 As you can see, some of the text is cut off :(. Fret not! `NSParagraphStyle` to the rescue!
 
-```objc
+{% highlight objc %}
 NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
 style.lineHeightMultiple = 1.2;
 style.alignment = self.textAlignment;
-```
+
+{% endhighlight %}
 
 And the results!!
 

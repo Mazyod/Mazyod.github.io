@@ -11,7 +11,8 @@ This is the first post on my Octopress blog! This should be a lot easier to publ
 
 > Stay hungry, stay foolish.
 
-```python Just a showcase function
+{% highlight python %}
+Just a showcase function
 def my_awesome_snippet(params):
     """This is a showcase function"""
 
@@ -19,4 +20,5 @@ def my_awesome_snippet(params):
     upper_case = [x.upper() for x in my_list]
     # Let's how the user the result
     print repr(upper_case)
-```
+
+{% endhighlight %}

@@ -70,7 +70,7 @@ To answer the first question, we are using an [`NSTreeController`](https://devel
 
 What was said previously begs the question: But where does this label come from? Excellent question, Bob. I have been talking about object hierarchy and structure, but I never really talked about the object itself. The objects in the hierarchy are actually instances of a custom class called: ECObject. By looking at the structure of this class, you can easily realize that the properties defined are what we bind to the outline view and tree controller.
 
-```objc
+{% highlight objc %}
 @interface ECObject : NSObject
 
 /* Label is set by the user and displayed with the object in the renderer */
@@ -94,7 +94,8 @@ What was said previously begs the question: But where does this label come from?
 
 /* selection */
 @property (getter=isSelected) BOOL selected;
-```
+
+{% endhighlight %}
 
 {%img center caption no-invert http://mazyod.files.wordpress.com/2014/01/screenshot-2014-01-01-21-53-32.png?w=300 "" "" %}
 
@@ -108,7 +109,7 @@ I think this covers the components outline view pretty well (this is what I refe
 
 Similar to how we used the ECObject class to represent an object in the components outline view, we use ECParameter class here to represent the objects in the parameters outline view. Since it is pretty much the same procedure, I won't bother explain it again. However, one interesting part is how the parameters outline view _morphs_ based on the parameter type! I'll just paste the code that does that. It is located in an NSTableCellView subclass, called ECMorphingCell.
 
-```objc
+{% highlight objc %}
 - (NSControl *)_morphToSwitchCell    
 {    
     NSButton *button = [[NSButton alloc] initWithFrame:self.bounds];    
@@ -176,7 +177,8 @@ Similar to how we used the ECObject class to represent an object in the componen
     self.type = eMorphingCellTypeNone;    
     return nil;    
 }
-```
+
+{% endhighlight %}
 
 I will only mention that this is all pretty straight forward, except the **enum and options** type. When the type of a ECParameter is an enum, we need to show a combo box with the available enums. Similarly, if the type is a list of options (strings). This is a bit more involved, were we query the "Model Manager" for these options, and assign them to a combo box so the user can see his options.
 
@@ -186,7 +188,7 @@ Anyways, all I have left is the rendering view, which renders all the entities a
 
 [![prefab](http://mazyod.files.wordpress.com/2014/01/prefab-e1388670561213.png?w=300)](http://mazyod.files.wordpress.com/2014/01/prefab.png) The basic idea behind this is: I subclassed NSView and overrided drawRect: in order to render the Model. Inside the view, I dispatch a timer that calls setNeedsDisplay 2 times per second, so I don't have to worry about the model changing at all. This is a less efficient polling approach, but works really well, so meh. Then, within drawRect:, I get the model, and do some quartz drawing! I'll post some code so you can get the main idea:
 
-```objc
+{% highlight objc %}
 - (void)drawRect:(CGRect)r    
 {    
     /* Get all the data model */    
@@ -230,7 +232,8 @@ Anyways, all I have left is the rendering view, which renders all the entities a
         
     ...    
 }
-```
+
+{% endhighlight %}
 
 Actually, there is one really cool and super complicated part in this: **The ISO Transform!** I am sure you noticed, the map is skewed and rotated. The (0,0) point in the map is the top middle block, which is not the same as the regular cocoa coordinate system, where (0,0) is in the bottom left. We achieve that by transforming the renderer to achieve that ISO look. The biggest challenge is not that, though. It is mapping the mouse events to the transformed coordinates! So, we know that our custom NSView has (0,0) at the bottom left, but we want the mouse to give us (0,0) when we click at the top of the map! We achieve that through affine transforms, which I won't bother explaining! :D
 

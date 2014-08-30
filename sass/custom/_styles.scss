@@ -49,6 +49,11 @@ html {
     height:100%;
 }
 
+/* Make code block overflow */
+.highlight pre {
+  display: inline-block;
+}
+
 .maz-blog-header {
     min-height:100%;
 }

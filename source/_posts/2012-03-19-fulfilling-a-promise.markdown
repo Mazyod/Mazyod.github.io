@@ -47,7 +47,7 @@ First, you have to set up your in-app purchases in iTunes Connect. Very straight
 
 Then, dive into your code! ... Or before that, link the StoreKit framework. We'll need it.
 
-```objc
+{% highlight objc %}
 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];  
 BOOL didPurchaseSolutions = [defaults objectForKey:@"SolutionsKey"] boolValue];  
 if (didPurchaseSolutions)   
@@ -58,7 +58,8 @@ else
 {  
     //purchasing code goes here!!
 }
-```
+
+{% endhighlight %}
 
 Ok, I think it is pretty straight forward? Somewhere in your app, you want to restrict the access of the user if he didn't purchase the IAP. That's basically how you check that. call NSUserDefaults and check the key!
 
@@ -68,10 +69,11 @@ What I do first is explain to the user that if he deleted and reinstalled the ap
 
 Now, to contact the IAP servers: I have the following code:
 
-```objc
+{% highlight objc %}
 [[PurchaseHelper sharedHelper] setDelegate:self];  
 [[PurchaseHelper sharedHelper] requestInAppPurchase];
-```
+
+{% endhighlight %}
 
 
 That's a singleton class that handles IAP's. Reason it is a singleton? Reusabliity! I can just drop it in any project and access the class from anywhere. So, Let's start dissecting the PurchaseHelper:
@@ -81,7 +83,7 @@ That's a singleton class that handles IAP's. Reason it is a singleton? Reusablii
 
 
 
-```objc
+{% highlight objc %}
 //Here is where the StoreKit framework comes into play!  
 #import <StoreKit/StoreKit.h>;  
 //Protocol designed, keeping in mind that we have a single non-consumable IAP  
@@ -90,14 +92,15 @@ That's a singleton class that handles IAP's. Reason it is a singleton? Reusablii
 - (void)purchaseCompletedSuccessfully;  
 - (void)purchaseFailedWithError:(NSString *)error;  
 @end
-```
+
+{% endhighlight %}
 
 Straight forward protocol that informs the delegate about the IAP result.
 
 
 ### Second: Public mehods
 
-```objc
+{% highlight objc %}
 // We have a set of public methods that control the IAP process at a high level:     
 #pragma mark -     
 #pragma mark Instance Methods     
@@ -127,7 +130,8 @@ Straight forward protocol that informs the delegate about the IAP result.
     [productsRequest release];     
     productsRequest = nil;     
 }
-```
+
+{% endhighlight %}
 
 We already saw where we call requestInAppPurchase, and the cancel method is called when the user decides to cancel while we are displaying the activity indicator..Obviously enough. Now, the requestInAppPurchase method:
 
@@ -138,13 +142,14 @@ First, we wrap our only IAP ID into a set. The ID can be obtained from iTunesCon
 
 
 Now, we have to implement the delegate methods we troubled ourselves with. Those are for:
-```text
+{% highlight text %}
 <SKPaymentTransactionObserver, SKProductsRequestDelegate>
-```
+
+{% endhighlight %}
 
 And.. the functions:
     
-```objc
+{% highlight objc %}
 #pragma mark -
 #pragma mark SKRequest Delegate Methods
 
@@ -233,7 +238,8 @@ restoreCompletedTransactionsFailedWithError:(NSError *)error {
 - (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue {
     CCLOG(@"Transactions Restoration Completed: %@", queue);
 }
-```
+
+{% endhighlight %}
 
 So, what do we need to take note of here??
 

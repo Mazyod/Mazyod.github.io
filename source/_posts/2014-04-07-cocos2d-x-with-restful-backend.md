@@ -26,7 +26,7 @@ There are already attempts to make RESTful APIs for streaming, and that's what t
 
 In cocos2d-x, I wrote a very simple wrapper around the `HttpClient` class that defined my RESTful API:
 
-```c++
+{% highlight c++ %}
 namespace KDAPI
 {
     /* API callbacks */
@@ -47,7 +47,8 @@ namespace KDAPI
 
     ...
 }
-```
+
+{% endhighlight %}
 
 The callbacks are in the form of C++11 lambda functions, and the API calls are simply C++ functions, not even included in a class or nothin.
 

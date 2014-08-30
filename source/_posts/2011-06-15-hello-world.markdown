@@ -16,9 +16,10 @@ Good question, yet it has a simple answer. It's much cleaner, simpler and easier
 
 Either ways, time to end this introductory topic.. Not because I am done blabbering, but I can't wait to write my first entry xD.
 
-```objc
+{% highlight objc %}
 // Testing sourcecode tag thing
 - (void)thisIsAwesome {
     NSLog(@"Special thanks to JiMMaR ..");
 }
-```
+
+{% endhighlight %}

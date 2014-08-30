@@ -92,7 +92,7 @@ This is where the script's entry point is. We execute the code below and pass in
 
 
 
-```python
+{% highlight python %}
 import argparse    
 from codegen_cpp import writeStructs    
      
@@ -107,7 +107,8 @@ parser.add_argument('--source', metavar='sourceFile', type=str, nargs=1, help='T
 args = parser.parse_args()    
      
 writeStructs(args.plist, args.include, args.header, args.source)
-```
+
+{% endhighlight %}
 
 
 
@@ -142,7 +143,7 @@ Getting excited to see the actual thing that does the conversion? Well, we still
 
 
 
-```python
+{% highlight python %}
 # this method can only take one plist file   
 def writeStructs(plistFiles, includes, outputHeaders, outputSources) :   
     # make sure everything is in place   
@@ -171,7 +172,8 @@ def writeStructs(plistFiles, includes, outputHeaders, outputSources) :
     
     if (outputSources != None) :   
         writeSource(sourceContents, outputSources[0], header)   
-```
+
+{% endhighlight %}
 
 Starting from the top, we want to make sure we are getting what we expect. The argparse library actually generates a list of items for each argument, even if the argument is specified as a single item. For example, we specified before that [--header] is an argument with nargs [number of args] as 1. Even with that, argparse will send a list with one item in it, which is the header file. Let's take a quick detour and see an example:
 
@@ -179,12 +181,13 @@ Starting from the top, we want to make sure we are getting what we expect. The a
 
 
     
-```bash
+{% highlight bash %}
 $ python codegen_struct.py --plists p1.plist p2.plist --header header.h
 # the code above will make argparse return: 
 # args.plists = ['p1.plist', 'p2.plist']
 # args.header = ['header.h']
-```
+
+{% endhighlight %}
 
 
 
@@ -202,7 +205,7 @@ I explained the previous block of code in one shot and quickly because there isn
 In the following code, we will see exactly how the code is generated. Without further ado, let's dive right into it:
 
 
-```python
+{% highlight python %}
 typeMapper = {    
     "int" : "int",    
     "str" : "std::string",    
@@ -236,7 +239,8 @@ def generateStructHeader(structName, superStruct, parameters, userContent) :
             ivarLine += " "+name+";\n"    
      
         content += ivarLine    
-```
+
+{% endhighlight %}
 
 
 From the top, we define a global dictionary that can map the Python type to the C++ type. We will see how it is used in a bit. So, in the generateStructHeader, we loop over the parameters, such as each parameter is suppose to be an instance variable. We use Python's get(key, default) to access the dictionary, which helps us get a default value if the key we are trying to access isn't part of the dictionary. If the cpp_ignore key is defined, then this parameter should not be exported, so we continue. Else if the value is not None, we use the previously mentioned type dictionary to get the C++ type for that value, and then append the name of the ivar. Finally, if it is a custom type, we trust that this custom type will be defined somewhere, so we declare the variable as the custom type value, and append the name. You can clearly see the custom_type value in the previous post about plists, where custom_value = "MapPoint". So, it will be declared as "MapPoint position;"
@@ -245,7 +249,7 @@ From the top, we define a global dictionary that can map the Python type to the 
 
 This wasn't the end of the function, there is more. After we built the code for our ivars above, we will now see how we create the whole struct:
 
-```python
+{% highlight python %}
 # load the template file   
 structTemplateFile = open("struct_template.txt", "r")   
 structTemplateFmt = structTemplateFile.read()   
@@ -265,7 +269,8 @@ structDef = structTemplateFmt.format(
     userContent=userContent)   
 
 return structDef   
-```
+
+{% endhighlight %}
 
 
 Simpler than you thought? YES! We have a template file for how a C++ struct should look like, we load that, and plug in the data. Take note, though, at line 92 we are adding a **VERY SIMPLE** constructor that takes a single argument, "const Json::Value&". This is awesome because one would initially assume that we will create a constructor that takes arguments for **all** the ivars, but we don't. We will see why we do that later, and I can assure you, it's quite awesome.
@@ -277,7 +282,7 @@ Let's take a quick look at the template file:
 
 {% raw %}
 
-```text
+{% highlight text %}
 struct {structName}{superStruct} 
 {{ 
 {structVars} 
@@ -285,7 +290,8 @@ struct {structName}{superStruct}
 {userContent} 
 #pragma END-{structName}-USERCODE 
 }};
-```
+
+{% endhighlight %}
 
 
 So, we simply plug in the structName, assume superStruct is empty, structVars is the ivars and constructor we generated above, and that's it! Don't worry about the #pragma stuff, and userContent. Note, though, how we are using double braces `{{`, `}}` to escape the actual braces, because a single brace {} is a python format specifier. 

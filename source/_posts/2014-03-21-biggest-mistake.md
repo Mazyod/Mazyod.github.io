@@ -23,11 +23,12 @@ Let's quickly go over what exactly is `NSKeyedArchiver`.
 
 In the most basic form ever of `NSKeyedArchiver`, it is a class that sends the object to be archived an `encoder` object (let's call that object `car`). You can think of the encoder object as a shitsuji, err, I mean a butler. Within the `car` implementation, you would have something like:
 
-```objc
+{% highlight objc %}
 [encoder encodeBool:self.available forKey:@"available"];
 [encoder encodeInteger:self.model forKey:@"model"];
 ...
-```
+
+{% endhighlight %}
 
 What we are doing is saying, "Please, butler, take `self.model`, label it as `@"model"`, and put it in a box". We do that for all the properties we want to serialize. Finally, the `NSKeyedArchiver` returns as this "box" as `NSData`, which is essentially a [black box](http://en.wikipedia.org/wiki/Black_box) that only `NSKeyedUnArchiver` can make use of.
 
@@ -39,26 +40,28 @@ I'll tell you what's wrong. Unfortunately, what this approach implies is that yo
 
 Here is a very simple example:
 
-```
+{% highlight objc %}
 // remember this? We switched "model" to a string now!!
 // if it is data saved by the old version, we have to do this
 self.model = [decoder decodeIntegerForKey:@"model"];
 // if it is the new version, we have to do this
 self.model = [decode decodeObjectForKey:@"model"];
-```
+
+{% endhighlight %}
 
 ### The Solution
 
 But how can we find out which one to use?! Answer: you can't :/ You have to do something like this:
 
-```objc
+{% highlight objc %}
 // archive the new model variable of type string with a different key:
 [encoder setObject:self.model forKey:@"modelAsString"];
-```
+
+{% endhighlight %}
 
 ... And when you load from disk, you do this:
 
-```objc
+{% highlight objc %}
 // check if the new model is saved:
 NSString *modelString = [decoder decodeObjectForKey:@"modelAsString"];
 if (!modelAsString)
@@ -69,7 +72,8 @@ if (!modelAsString)
 }
 
 self.model = modelAsString;
-```
+
+{% endhighlight %}
 
 Such a pain, and as versions increase, it won't get any simpler... The biggest mistake I made by far, though, is not even hooking up analytics, so I can't even see what my user base looks like.
 

@@ -29,14 +29,16 @@ Thanks to [Apple's AutoLayout system](https://developer.apple.com/library/ios/do
 
 As you can see, this is the problem:
 
-```objc SegmenedControl
+{% highlight objc %}
+SegmenedControl
 // We need to set the first word at the left for LTR, and right for RTL:
 NSString *title = NSLocalizedString(@"First", @"");
 // LTR languages
 [segmentControl setTitle:title atIndex:0];
 // RTL languages
 [segmentControl setTitle:title atIndex:lastIndex];
-```
+
+{% endhighlight %}
 
 Doing this manually everywhere is error prone, and gets tedious really quickly... So, that needed to be solved.
 
@@ -44,13 +46,15 @@ Doing this manually everywhere is error prone, and gets tedious really quickly..
 
 If you are thinking about sub-classing; just forget it. Using a subclass solution requires knowledge or control over the instance storage, especially when the guys who wrote those classes work at Apple. Let's look at this simple reversed back-trace to see how sub-classing can easily break:
 
-```objc SegmenedControl Possible Backtrace
+{% highlight objc %}
+SegmenedControl Possible Backtrace
 - [SegmentControlOwner drawViews]
 - [UISegmentedControl drawRect:]
 /* will the drawing logic use the accessor... */
 - [CustomSegmentedControl selectedSegmentIndex] 
  /* ...or directly read the _selectedSegment ivar? */
-```
+
+{% endhighlight %}
 
 As you can see, the superclass may query the selected segment's index either through direct instance variable access or by using the `selectedSegmentIndex` accessor. Since these two approaches yield different results, we might leave the object at an inconsistent state. "How about we disable localization logic when the calls are coming from the object itself?". [Not possible, at least not in ObjC](https://www.google.ae/webhp?gfe_rd=cr&ei=zdMeU6CuOuLW8genmYHIDQ#q=objc+check+method+caller).
 
@@ -60,7 +64,8 @@ The first thing that crossed my mind was to wrap the object with a proxy that wo
 
 That seemed like to much work, so I went ahead and implemented a simple category that the developer has to call in order to get the proper result [(available on github)](https://github.com/Mazyod/RTLSegmentedControl). The way it works is simple: Replace all your calls that are related to the segment index with the methods found in the category, and it will check if the user's language is RTL, and flip accordingly:
 
-```objc SegmenedControl
+{% highlight objc %}
+SegmenedControl
 // Old code
 [control insertSegmentWithTitle:title atIndex:segment animated:animated];
 [control insertSegmentWithImage:image  atIndex:segment animated:animated];
@@ -70,7 +75,8 @@ That seemed like to much work, so I went ahead and implemented a simple category
 [control insertSegmentWithTitle:title atLocalizedIndex:segment animated:animated];
 [control insertSegmentWithImage:image  atLocalizedIndex:segment animated:animated];
 [control removeSegmentAtLocalizedIndex:segment animated:animated];
-```
+
+{% endhighlight %}
 
 **Is that it?** No way. I summoned the motivation necessary to try out the proxy design, and I came here today *mainly* to discuss my findings.
 
@@ -87,15 +93,18 @@ Remember, a proxy is like a middle-man between an object and the outside (or ins
 
 So, the method we are interested in is:
 
-```objc NSProxy Forwarding Method
+{% highlight objc %}
+NSProxy Forwarding Method
 - (void)forwardInvocation:(NSInvocation *)invocation;
-```
+
+{% endhighlight %}
 
 Whenever a method is called on the proxy object (e.g. `selectedSegmentIndex` shown in the example above), you probably don't want to implement that method in the `NSProxy` subclass! Before raising an exception, the [Objective-C runtime](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtForwarding.html) will attempt to forward you the **invocation** that occurred to the target, and give it another chance to respond. *(An invocation is simply a structure that defines a target and a selector)(The example found in Apple's docs is awesome. Link above)*.
 
 Code speaks louder than words:
 
-```objc forwardInvocation: example PART 1
+{% highlight objc %}
+forwardInvocation: example PART 1
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
     NSString *selString = NSStringFromSelector(invocation.selector);
@@ -122,15 +131,18 @@ Code speaks louder than words:
         [invocation invokeWithTarget:self.target];
     }
 }
-```
+
+{% endhighlight %}
 
 The above means...
 
-```objc forwardInvocation: example PART 2
+{% highlight objc %}
+forwardInvocation: example PART 2
 id returns = [daProxy someMethodName];
 /* Yay! We handled the method, and even returned a value! */
 NSAssert(returns == [NSNull null], @"Must succeed");
-```
+
+{% endhighlight %}
 
 OK, that about sums it up as far as the `NSProxy` introduction goes.
 
@@ -148,14 +160,16 @@ The first fail was 100% my fault. I jumped headfirst into the implementation and
 
 After fixing the issue above, I got a really strange error from `initWithCoder:`, which is called, since the object is instantiated from a nib.
 
-```text
+{% highlight text %}
 *** Terminating app due to uncaught exception 'NSGenericException', reason:
 'This coder requires that replaced objects be returned from initWithCoder:'
-```
+
+{% endhighlight %}
 
 What's that suppose to mean? After thinking about it for a bit, I realized that `initWithCoder:` returns `self`, which is the internal protected object! (The segmentedControl in our case). BAD! Let's fix that. So, here is what I did:
 
-```objc Protecting the Proxied Object
+{% highlight objc %}
+Protecting the Proxied Object
 [invocation invokeWithTarget:self.target];
 /* if returnValue is the target, substitute with self */
 /* NOTE: returnValue is a convenience method from a category */
@@ -166,7 +180,8 @@ if (self.target == [returnValue pointerValue])
     void *newValue = (__bridge void *)(self);
     [invocation setReturnValue:&newValue];
 }
-```
+
+{% endhighlight %}
 
 That should be easy to grasp, right? Rule #1 in the proxy design pattern, don't talk about the proxy design pattern. No, really, rule #1 is to **never** expose the internal object. That's why whenever we catch an invocation in `forwardInvocation:`, we have to check if the invocation's method returns the internal object. If it does, replace it with the proxy.
 
@@ -174,9 +189,11 @@ That should be easy to grasp, right? Rule #1 in the proxy design pattern, don't 
 
 This is when I reached the real roadblock. [This is where developers from StackOverflow stopped, as well](http://stackoverflow.com/questions/5061223/anybody-successful-with-nsproxy-of-uiview-e-g-uilabel). We got a strange error:
 
-```text The Crash
+{% highlight text %}
+The Crash
 -[RTLSegmentedControl superlayer]: unrecognized selector
-```
+
+{% endhighlight %}
 
 The most important question that we should be asking ourselves here is, how in the name of- did someone access the RTLSegmentedControl without our knowledge! I made a dump of all the messages passed to the proxy (which itself passes them to the internal object), and `superLayer` was **not** one of them! This is when you use your knowledge from lower level languages!! By observing the `UIView` headers, I noticed that:
 
@@ -186,11 +203,13 @@ The most important question that we should be asking ourselves here is, how in t
 
 **Interesting!** We obviously have a situation of direct pointer access here, for optimization maybe? What apple is doing in their framework is something like:
 
-```objc Direct Pointer Access
+{% highlight objc %}
+Direct Pointer Access
 /* Somehow, instantiate a view */
 UIView *theView = ... /* Remember, here we pass the proxy! */;
 [theView->_layer superlayer];
-```
+
+{% endhighlight %}
 
 To quickly test this out, I added a property above the target property in the proxy subclass, and it got me a bit further down the chain! Didn't quite work, mind you, just proved that this is issue.
 
@@ -204,7 +223,8 @@ To solve this problem I thought of two solutions, an awful one, and a crappy one
 
 The first solution I implemented was to *transform* the proxy object. *What does that mean?* Exactly what it sounds like! Temporarily change the proxy object to the internal object! *Uh, is that even possible?* You bet it is, and here is how it's done:
 
-```objc NSObject+Voodoo
+{% highlight objc %}
+NSObject+Voodoo
 @implementation NSObject (Voodoo)
 
 + (void)hotSeat:(id *)original :(id *)replacement
@@ -219,7 +239,8 @@ The first solution I implemented was to *transform* the proxy object. *What does
 
 /* So, what we are doing ultimately is... */
 self = target; // THIS!
-```
+
+{% endhighlight %}
 
 We simply reassign self to something else! The only reason I went through the trouble of implementing a Voodoo category, and passed pointers around is because direct self assignment is disabled in ARC. So, yes, the category has ARC disabled.
 
@@ -229,12 +250,14 @@ Did that work? No, it was the worst idea of all time. It wasn't easy to revert b
 
 Instead of the above, I thought about stealing instead... Let's not transform the proxy object, but rather, have it *steal* the pointers from the protected segmentedControl object! What I mean is this:
 
-```objc Stealing Like a Pro
+{% highlight objc %}
+Stealing Like a Pro
 /* This is inside the proxy class, self is the proxy object */
 // 1 - Treat the target object as a pointer to a pointer
 // 2 - Get the address at index 1 (index 0 is the isa)
 self->_layer = ((id *)_target)[1];
-```
+
+{% endhighlight %}
 
 And **THAT** worked! When that piece of code in apple's framework tried to access the layer through direct pointer access, it finds it in the proxy object!! Yaaay!
 

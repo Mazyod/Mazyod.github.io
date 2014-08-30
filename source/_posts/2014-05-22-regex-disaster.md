@@ -19,17 +19,19 @@ It was such a painful lesson, almost as painful as my previous bash lesson, only
 
 Le me once wanted to write pretty bash code:
 
-```bash
+{% highlight bash %}
 ~$ var=5    # Ugly!
 ~$ var = 5  # better...
-```
+
+{% endhighlight %}
 
 ... Only to realize that the second line is an error. The script I was modifying was not through interactive shell, so I had no idea what is was throwing errors... Till this day, whitespace haunts me in my sleep.
 
 As for the regex part, it was this:
 
-```python
+{% highlight python %}
 regex = r"(?:.*\n.*){0, 3}"
-```
+
+{% endhighlight %}
 
 This looks like a perfectly healthy regex expression, **except that it is not**. Adding that extra space within the braces made the whole thing break and produced unpredictable results. Don't do that.

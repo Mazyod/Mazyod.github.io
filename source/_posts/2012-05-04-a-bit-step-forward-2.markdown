@@ -60,7 +60,7 @@ Now imagine we have to pass these values all around the application. On top of t
 
 So here comes the awesome Bit! (For the record, the code has been changed for brevity sake, and partial closure of the idea :P)
 
-```objc
+{% highlight objc %}
 /*    
     The binary awesomeness:    
     1-bit: Icon    
@@ -82,7 +82,8 @@ typedef enum EStatusItemType
     EStatusItemExtrasMask      = 3 << 2, //11xx    
     EStatusItemFontMask        = 7 << 1  //111x    
 } EStatusItemType;
-```
+
+{% endhighlight %}
 
 
 Wth... ? Well, erm, let me try to explain :). We shall save the setting in a single robust, reliable variable! YES, it is possible! :)
@@ -102,23 +103,25 @@ Now, in the second case, it is most likely we cannot enumerate the enums, but ch
 
 We divide the enums in a binary string such that each each substring has some significance .. Let's look at our enum:
 
-```objc
+{% highlight objc %}
 //Shift the 1 to the left by 0, making it take the first bit 
 EStatusItemIcon            = 1 << 0, //xxxx1 
 //Shift the 1 to the left by 1, making it take the second bit 
 EStatusItemName            = 1 << 1, //xxx1x
-```
+
+{% endhighlight %}
 
 So, that is basically how you reserve a bit for your setting option. Now, what if the setting option for the icon was selected and we wanted to save that? Easy!
 
-```objc
+{% highlight objc %}
 // Start with a fresh type. It looks like '0000' 
 EStatusItemType type = 0; 
   
 if ( iconIsSelected ) 
     type = type | EStatusItemIcon; 
     // That's it!
-```
+
+{% endhighlight %}
 
 Nifty ! That's the bit-wise OR operator. By using this operator, we effectively stored that the checkbox is checked in the type variable. This also applies to the Name checkbox, too!
 
@@ -128,10 +131,11 @@ Of course, I do not want to bother calculating how much is 0000, 0100, 1000, 110
 
 Now, onto the idea of how to use this new technique. Unlike the OR operator, we have to do things a bit (small case b) differently.
 
-```objc
-    type = type | (selectedIndex << 2); 
+{% highlight objc %}
+type = type | (selectedIndex << 2); 
     //That's it!!! xD
-```
+
+{% endhighlight %}
 
 Notice how simple it is!! Of course, we just have to map the indices to the enum counterparts, but that's all!
 

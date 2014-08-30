@@ -14,12 +14,13 @@ categories:
 
 I made a change today to my DNS settings for `mazyod.com`, and whenever I run:
 
-```bash
+{% highlight bash %}
 $ dig mazyod.com
-```
+
+{% endhighlight %}
 
 I am seeing the old IP address!! I got sick of waiting and trying every now and then, so I open terminal and script it:
-```python
+{% highlight python %}
 >>> import time
 >>> import subprocess as sp
 >>> 
@@ -36,13 +37,15 @@ I am seeing the old IP address!! I got sick of waiting and trying every now and 
 ...     else:
 ...         print 'no.. '+output
 ... 
-```
+
+{% endhighlight %}
 
 I **literally** go to the bathroom, and come back to find the output:
 
-```text
+{% highlight text %}
 YAAAY
-```
+
+{% endhighlight %}
 
 ... Took exactly 3 tries before the DNS updated. That's 3 tries multiplied by 10 second intervals between them tries... 
 

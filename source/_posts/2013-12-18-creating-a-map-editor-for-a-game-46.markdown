@@ -68,7 +68,7 @@ JSON files are actually almost identical to plist files from a high level perspe
 
 
 
-```text
+{% highlight text %}
 [    
     {    
         "lname" : "Edogawa",    
@@ -80,7 +80,8 @@ JSON files are actually almost identical to plist files from a high level perspe
         "fname" : "Heiji"    
     },    
 ]
-```
+
+{% endhighlight %}
 
 
 
@@ -108,7 +109,7 @@ Our game utilizes the awesome [JsonCPP](http://jsoncpp.sourceforge.net/) library
 
 
 
-```cpp
+{% highlight cpp %}
 void MapParser::parse(const std::string &mapFile)    
 {    
     FileUtil f;    
@@ -183,7 +184,8 @@ void MapParser::resolveJsonValuesRecuresively(const Json::Value &children)
         resolveJsonValuesRecuresively(grandChildren);    
     }    
 }
-```
+
+{% endhighlight %}
 
 
 
@@ -205,13 +207,14 @@ After fetching the `class_id`, we need to create an object that matches that `cl
 
 
 
-```cpp
+{% highlight cpp %}
 else if (class_id == "MapObject")    
 {    
     MapObject obj(val["parameters_data"]);    
     m_pSink->OnMapObjectCreated(obj);    
 }
-```
+
+{% endhighlight %}
 
 
 
@@ -228,13 +231,14 @@ But, how are these parser resolution if statements generated, you say? I have sh
 
 {% raw %}
 
-```text
+{% highlight text %}
 else if (class_id == "{prefab_name}") 
 {{ 
     {prefab_name} obj(val["parameters_data"]); 
     m_pSink->On{prefab_sink_method}Created(obj); 
 }}
-```
+
+{% endhighlight %}
 
 {% endraw %}
 
@@ -243,7 +247,7 @@ Let's rewind a bit now, and go back to "We send the `parameter_data` to the cons
 
 
 
-```cpp
+{% highlight cpp %}
 MapObject::MapObject(const Json::Value& val): 
 position(val.get("position", Json::Value::null).get("children", Json::Value::null)), 
 entity_id(val.get("entity_id", Json::Value::null).get("value", "").asString()), 
@@ -253,7 +257,8 @@ tile_size(val.get("tile_size", Json::Value::null).get("children", Json::Value::n
 { 
   
 }
-```
+
+{% endhighlight %}
 
 
 
@@ -307,7 +312,7 @@ When someone creates a `MapParser` object, they have to send a pointer to an obj
 
 
 
-```cpp
+{% highlight cpp %}
 class MapParserSink    
 {    
 public:    
@@ -323,7 +328,8 @@ public:
     virtual void OnMapOperandCreated(const MapOperand&) {}    
 #pragma END-ParserSink-CODEGEN    
 };
-```
+
+{% endhighlight %}
 
 
 

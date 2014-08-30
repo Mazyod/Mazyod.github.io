@@ -29,12 +29,13 @@ As I was surfing wikipedia learning about design patterns, I saw this interestin
 
 
 
-```python
+{% highlight python %}
 # Execute if this file is run as a script and not imported as a module 
 if __name__ == "__main__": 
     light_switch = LightSwitch() 
     print("Switch ON test.") 
-```
+
+{% endhighlight %}
 
 
 

@@ -38,9 +38,10 @@ Sweet! So, the size of the objects are all the same, since they are of the same 
 
 So... What is this block of memory? Should be easy! Just an array of whatever the type of objects we want to create!
 
-```c
+{% highlight c %}
 memBlock = malloc(sizeof(GameState)*preallocate);
-```
+
+{% endhighlight %}
 
 Cool. Now, we have our memory block.
 
@@ -56,9 +57,10 @@ So, we are assuming that the memory is returned to us in random order. For examp
 
 The way I implement this is by creating an array of pointers. Pointers to what? GameState, of course!
 
-```c
+{% highlight c %}
 memPtrStack = malloc(memPtrStack, sizeof(GameState *)*preallocate;
-```
+
+{% endhighlight %}
 
 The first thing I do, is initialize this array of pointers to point to the respective index in the memory blocks array:
 
@@ -82,10 +84,11 @@ The most painless way is to probably do the following:
 
 First, instead of allocating an array of memory blocks that is assigned to the `memBlock` variable, we change the variable to `memBlocks`, and make it an array to and array of memory blocks:
 
-```c
+{% highlight c %}
 memBlocks = realloc(memBlocks, sizeof(GameState *)*(index+1));
 memBlocks[index] = malloc(sizeof(GameState)*preallocate);
-```
+
+{% endhighlight %}
 
 So, on every expansion, we bump the number of blocks allocated, and dynamically increase the size of the `memBlocks` array with `realloc`, and then assign the newly created space to a memory block.
 

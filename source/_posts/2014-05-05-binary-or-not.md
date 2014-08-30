@@ -24,14 +24,15 @@ It is unfortunate that python doesn't seem to have a library included that solve
 
 Talk about originality, eh? `binaryornot` is a very simple module that serves the purpose of detecting whether a file or string is binary. I have no idea how it internally works, but it gets the job done:
 
-```python
+{% highlight python %}
 # Import the check module, and name it something more relevant.
 from binaryornot import check as bcheck
 
 if not bcheck.is_binary(pathToFile):
     # Do the search!
 
-```
+
+{% endhighlight %}
 
 Simple, and super handy.
 

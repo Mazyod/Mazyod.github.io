@@ -29,7 +29,7 @@ Then begins my nightmare...
 
 As I tried to link it against my game, I used some reference online, which is to simply do the following:
 
-```text
+{% highlight text %}
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := my_static_lib
@@ -38,7 +38,8 @@ LOCAL_SRC_FILES := ../../lib/MyLib/$(TARGET_ARCH_ABI)/libMyLib.a
 include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
-```
+
+{% endhighlight %}
 
 This is probably the first thing I tried, and it gave me errors about missing symbols... WHAT?! I freak out and use `nm` command, and it shows that the library doesn't have any symbols... "GREAT! THE BUILD SYSTEM IS BROKEN", I cried in rage. As I hopelessly spend hours trying to figure the source of the problem, I keep telling myself: "It's working on iOS, why not android? Because the build toolchain is broken". If something like that was broken, someone ought've noticed... /facepalm.
 

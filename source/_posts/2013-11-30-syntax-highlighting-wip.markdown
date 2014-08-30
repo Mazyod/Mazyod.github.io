@@ -36,9 +36,10 @@ So, I go on a journey with my board and surf all over the Internet for a decent 
 
 After forking the repo, I learned so much about how sublime plugins are developed, and it simply beautiful. It is SO EASY to get started!! I could figure 99.73% of what was going on without even reading the docs. The only gotcha I ran into was, when you create a command and define it in the commands list, you should create an adjacent script that has the same name as the defined command:
 
-```text
+{% highlight text %}
 ex. "command": "export_html_panel" --> ExportHtml.py
-```
+
+{% endhighlight %}
 
 So, all I did was duplicate the ExportHtml.py, rename it to ExportEmbedded.py, clean up the script from generating all the other stuff not related to the code snippet, and BAM! It's working!
 
@@ -46,12 +47,13 @@ One of the issues I ran into, however, was the the way ExportHTML exports the HT
 
 ## Sample:
 
-```
+{% highlight text %}
 /* General */
 a:hover{background:transparent; }
 body{color: /* %body_fg% */; }
 pre{border:0;margin:0;padding:0; }
-```
+
+{% endhighlight %}
 
 ## Conclusion:
 

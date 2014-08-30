@@ -25,7 +25,7 @@ This one is about using Xcode snippets to speed up your development. I present a
 
 Here are the snippets. Just drag the code over to the snippets area in Xcode:
 
-```c++
+{% highlight c++ %}
 class <#class#> : public <#superclass#>
 {
     
@@ -35,9 +35,10 @@ public:
     virtual bool init(<#args-definition#>);
     
 };
-```
 
-```c++
+{% endhighlight %}
+
+{% highlight c++ %}
 <#class#> *<#class#>::create(<#args-definition#>)
 {
     <#class#> *obj = new <#class#>();
@@ -56,4 +57,5 @@ bool <#class#>::init(<#args-definition#>)
     
     return true;
 }
-```
+
+{% endhighlight %}
