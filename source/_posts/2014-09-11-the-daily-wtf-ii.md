@@ -1,0 +1,50 @@
+---
+layout: post
+title: "The Daily WTF II"
+date: 2014-09-11 09:56:22 +0400
+comments: true
+categories: 
+- daily-wtf
+- code
+- programming
+- fail
+- bad
+- development
+---
+
+This one is my favorite, and was the first *wtf* I fixed, because it was so 
+bad...
+
+## The WTF
+
+In iOS, we have view controllers, and the whole app is built around the concept of view controllers. Now, someone decided that if we are going to present a modal view controller, the view life cycle calls are no longer relevant, and they used a cached boolean for a check (not even bothering with `self.presentedViewController`) (/facepalm_all_the_way_to_the_back_of_my_skull):
+
+{% highlight objc %}
+- (void)viewWillAppear
+{
+    if (self.modalPreseted) {
+        return;
+    }
+
+    [super viewWillAppear];
+    // ... more stuff
+}
+
+- (void)viewWillDisappear
+{
+    if (self.modalPreseted) {
+        return;
+    }
+
+    [super viewWillDisappear];
+    // ... more stuff
+}
+{% endhighlight %}
+
+## Why Is It So Bad?
+
+These methods are provided by UIKit, and we are overriding them. These methods are sacred, and are expected to execute the way they are designed to be executed. 
+
+As an iOS developer coming to the project, it's hard and painful enough to learn the code base and the custom implementation, and now you expect me to unlearn UIKit, and learn those hacky ways that don't even make sense?
+
+{%img center caption http://i0.kym-cdn.com/photos/images/newsfeed/000/101/781/Y0UJC.png "" "" %}

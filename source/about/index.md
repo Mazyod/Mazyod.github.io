@@ -8,12 +8,16 @@ footer: true
 ---
 
 There once was a severely confused programmer who thought that he needs to write everything himself that the standard
-language libraries did not provide. Not only that, but he also thought that everything that there is to learn about a
+language libraries did not provide. Not only that, but he also thought that everything there is to learn about a
 programming language could be found in his Deitel textbook of crappiness.
+
+{%img center caption no-invert http://mazyod.com/images/reminiscence_of_the_java_1.gif "" "" %}
 
 That poor programmer grew very little in that confined mindset he had, and barely wrote extremely simple programs with
 tons and tons of code. His main motivation back then were two things: His love for coding, and, encouraged by his
 programming mentor, the skills he demonstrated in programming challenges.
+
+{%img center caption no-invert http://mazyod.com/images/reminiscence_of_the_java_2.gif "" "" %}
 
 A year or so later, still not knowing the importance of a VCS, he decided to take on iOS development, and that was back
 in the dark ages of Xcode 3. The programmer easily wrapped his head around the manual reference counting memory
@@ -22,7 +26,10 @@ programmer used the power of stack overflow, borrowed some knowledge from a frie
 iPhone Development book, he somehow pulled it off...
 
 The first application he built was a tremendous success. It was insane how many people used the crappy first version of
-the app out of pure need of the functionality it provided. That really motivated our friend and made him aim bigger.
+the app out of pure need of the functionality it provided. That really motivated our friend and made him aim bigger. He
+seemed to be really absorbed by the idea of gamemaking, and being a gamer himself only made it more appealing.
+
+{%img center caption no-invert http://mazyod.com/images/reminiscence_of_the_java_3.gif "" "" %}
 
 While struggling with full course loads, he set out to build a game this time. The idea of the game was a simple
 checkers game, and without anyone there to help, he had to write the code, generate the assists, and luckily hire a
