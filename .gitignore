@@ -13,3 +13,4 @@ source/stylesheets/screen.css
 vendor
 node_modules
 Gemfile.lock
+favicon.png
