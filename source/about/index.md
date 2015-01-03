@@ -32,7 +32,7 @@ seemed to be really absorbed by the idea of gamemaking, and being a gamer himsel
 {%img center caption no-invert http://mazyod.com/images/reminiscence_of_the_java_3.gif "" "" %}
 
 While struggling with full course loads, he set out to build a game this time. The idea of the game was a simple
-checkers game, and without anyone there to help, he had to write the code, generate the assists, and luckily hire a
+checkers game, and without anyone there to help, he had to write the code, generate the assets, and luckily hire a
 sound engineer to do the music. After 6 months or so, the long awaited release date was due, and the amount of traction
 the game got was stunning.
 

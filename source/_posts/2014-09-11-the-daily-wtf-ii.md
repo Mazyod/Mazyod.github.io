@@ -17,7 +17,7 @@ bad...
 
 ## The WTF
 
-In iOS, we have view controllers, and the whole app is built around the concept of view controllers. Now, someone decided that if we are going to present a modal view controller, the view life cycle calls are no longer relevant, and they used a cached boolean for a check (not even bothering with `self.presentedViewController`) (/facepalm_all_the_way_to_the_back_of_my_skull):
+In iOS, we have view controllers, and the whole app is built around the concept of view controllers. Now, someone decided that if we are going to present a modal view controller, the view life cycle calls are no longer relevant, and they used a cached boolean for a check (not even bothering with `self.presentedViewController`) (/facepalm-all-the-way-to-the-back-of-my-skull):
 
 {% highlight objc %}
 - (void)viewWillAppear
