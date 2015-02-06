@@ -11,13 +11,13 @@ footer: false
 	<div class="span1">
 	{% unless year == this_year %}
 	  {% assign year = this_year %}
-	    <h1>{{ year }}</h1>
+	    <h2>{{ year }}</h2>
 	{% endunless %}
 	</div>
 	{% if post == site.posts.first %}
 	<div class="span11">
 	{% else %}
-	<div class="span11 border-top">
+	<div class="span11">
 	{% endif %}
 
 	  <article>

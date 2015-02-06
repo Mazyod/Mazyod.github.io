@@ -53,7 +53,12 @@ if (![[NSUserDefaults MCDefaults] boolForKey:didMigrateToAppGroups])
 {
     NSDictionary *oldDefaults = [[NSUserDefaults standardUserDefaults] dictionaryRepresentation];
     
-    [[NSUserDefaults MCDefaults] registerDefaults:oldDefaults];
+    // Massive kudos to Sean for pointing this out
+    for (id key in oldDefaults.allKeys)
+    {
+        [[NSUserDefaults MCDefaults] setObject:oldDefaults[key] forKey:key];
+    }    
+
     [[NSUserDefaults MCDefaults] setBool:YES forKey:didMigrateToAppGroups];
     [[NSUserDefaults MCDefaults] synchronize];
 }

@@ -50,8 +50,6 @@ $outline-height: 5px;
   background: none;
   border: none;
   min-height: 0px;
-
-  @include single-box-shadow(none);
 }
 
 /* Social sharing annoying white background removal */

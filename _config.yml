@@ -26,7 +26,7 @@ navigation:
 - text: '<i class="icon-home"></i>'
   url: /
 - text: '<i class="icon-list"></i>'
-  url: /categories/
+  url: /blog/archives/
 - text: <i class="icon-user"></i>
   url: /about/
 
@@ -107,7 +107,7 @@ disqus_show_comment_count: true
 linkedin_user: mazyad-alabduljaleel
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-59147869-1
 
 # Facebook Like
 facebook_like: true

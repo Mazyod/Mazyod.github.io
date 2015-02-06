@@ -273,7 +273,7 @@ h2 {
 }
 
 h3 {
-  color: $accent-color2;
+  color: $accent-color4;
   font-size: 24px;
   font-weight: 600;
   font-family: "Dosis";
@@ -445,8 +445,6 @@ h6 {
   border: none;
   background: none;
   text-align: center;
-
-  @include single-box-shadow(transparent);
 }
 
 .navbar {

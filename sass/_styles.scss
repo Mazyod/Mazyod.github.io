@@ -105,11 +105,10 @@ ol, ul {
 
 /* pseudo Monokai code blocks */
 .pre-code {
-  overflow: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   display: block;
   padding: .8em;
-  overflow-x: auto;
   background: #181818 !important;
   color: #F8F8F8 !important;
   span { color: #F8F8F8 !important; }
