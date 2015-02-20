@@ -25,6 +25,8 @@ management and the awkward Objective-C syntax, since that is really the easy par
 programmer used the power of stack overflow, borrowed some knowledge from a friend, and armed with the Apress Beginning
 iPhone Development book, he somehow pulled it off...
 
+{%img center caption no-invert http://mazyod.com/images/Icon_BIG.png "" "" %}
+
 The first application he built was a tremendous success. It was insane how many people used the crappy first version of
 the app out of pure need of the functionality it provided. That really motivated our friend and made him aim bigger. He
 seemed to be really absorbed by the idea of gamemaking, and being a gamer himself only made it more appealing.
@@ -36,12 +38,16 @@ checkers game, and without anyone there to help, he had to write the code, gener
 sound engineer to do the music. After 6 months or so, the long awaited release date was due, and the amount of traction
 the game got was stunning.
 
+{%img center caption no-invert http://mazyod.com/images/DamaPromo.png "" "" %}
+
 The game made our programmer able to afford a better laptop, and invest the rest because that's all he needs, anyway.
 
 At that time, it was already time for the senior year at the Engineering school he was attending, so the capstone design
 project was the main theme at that time. Inspired by his professor, he lead a team of 5 towards a very ambitious
 project. The project was to be developed for Mac, Windows, iOS and Android... and a webapp. Yeah, that wasn't gonna end
 well, and it didn't.
+
+{%img center caption no-invert http://mazyod.com/images/Project_Facade.jpg "" "" %}
 
 The leader realized that not everyone in the team shared his vision, motivation, and goal. He realized that rather than
 trying to accommodate everything and carry all the burden, he was suppose to serve as a source of inspiration and
@@ -56,11 +62,15 @@ why after graduation, he set his eyes on the world beyond his home town and comf
 Turkey and Cambodia... But little did he know, with the help of a valuable friend, that he will end up in the largest
 and most important tech hub in the world... San Francisco.
 
+{%img center caption no-invert http://mazyod.com/images/Sourcebits_Logo_Web_Large.png "" "" %}
+
 The intern was now working in a prominent SF based company as part of a game team. He couldn't have been more lucky, it
 was the jackpot of jackpots. His direct boss was both an extremely knowledgable and kind person. The boss welcomed the
 intern with an open heart, and started teaching him the way of the industry. Most of the lessons were regarding game
 design, but as you might be aware, game design is closely connected to other core values and emotions, since that's
 what game designers must understand to build their games around.
+
+{%img center caption no-invert http://mazyod.com/images/peasant_conceptColor.jpg "" "" %}
 
 For almost two months, our pupil completely fed from the knowledge of his boss. By that time, he was itching to start
 looking into this game their making, and *maybe* be able to contribute something... *anything*, he thought. The only
@@ -69,9 +79,13 @@ problem was, there were no engineers in the SF office. They were all working fro
 The eager intern brought up the idea of contributing to the game, just as a thought. This put him in touch with the
 technical lead, and it all started from there.
 
+{%img center caption no-invert http://mazyod.com/images/UI-10-defeat-popup_modal-cut-ready-1.png "" "" %}
+
 As the technical lead worked on designing a network component, he was also thinking about the best way to implement this
 design. With our intern in the picture, using Game Center was now a viable and quick way to prototype the design and get
 something up and running in very little time. That's how the domino effect started.
+
+{%img center caption no-invert http://mazyod.files.wordpress.com/2013/12/meta.png "" "" %}
 
 From implementing the Game Center functionality, the intern passed the test in the proving grounds. This increased his
 credibility in the team, and slowly, but surely, increased the responsibilities.
@@ -88,5 +102,7 @@ Being hired to do something he was already so proficient at, our iOS developer f
 further using other means that work. Reading books, contributing to open source, and even working on side projects
 started to have a large impact on a different level than before. He realized more about his passion. He found vibrant
 online communities he can be part of. He is set to do anything but the sane and logical.
+
+{%img center caption no-invert http://mazyod.com/images/telly.png "" "" %}
 
 ... To be continued
