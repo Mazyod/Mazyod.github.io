@@ -1,0 +1,57 @@
+---
+author: mazyod
+comments: true
+date: 2011-11-18 21:45:02+00:00
+layout: post
+slug: fail
+title: Fail++
+wordpress_id: 48
+---
+
+/FacePalm .. As a certain someone likes to say it :P.
+
+I was happy that I found the line break character bug so quickly, that I totally forgot to think ... "Aren't there any other characters that might cause such problems?"
+
+Of course there is!! Here is one: ' . This single quote is a database administrator's nightmare, as it might cause his precious DB to be injected. Alas, it has to be handled properly in the Dama chat, too.
+
+A quick Google search "Troublesome Characters" yielded the following results:
+
+> Blame mutt for doing exactly what it's told to do. Character sets have very strict definitions of their character codes, and mutt takes those instructions literally, assuming other email software is telling the truth.
+
+Yeah, that's totally irrelevant to the post, due to the completely wrong keywords used to search for a solution...
+
+I'll just fix this character problem (replace `'` with `\'` .. should work, right?) and post any other troublesome characters later...
+
+### UPDATE:
+
+That was quick, I know.. So, what I did was:
+
+{% highlight objc %}
+jsDialog = [jsDialog stringByReplacingOccurrencesOfString:@"'" withString:@"\'"];
+
+{% endhighlight %}
+
+That didn't work ... Wasn't obvious to me that the NSString already took the `\'` as a single character. So, the correct way of doing this is:
+ 
+{% highlight objc %}
+jsDialog = [jsDialog stringByReplacingOccurrencesOfString:@"'" withString:@"\\'"];
+
+{% endhighlight %}
+
+And, for further clarification, I decided to fix the `\` character, as it is as troublesome as the others:
+
+{% highlight objc %}
+//Note how each \\ is interpreted as a single \ in the end
+jsDialog = [jsDialog stringByReplacingOccurrencesOfString:@"\\" withString:@"\\\\"];
+
+{% endhighlight %}
+
+### UPDATE:
+
+ARGH... I have totally forgot that I encapsulate the string inside single quotes at the beginning of the function, as we saw in the previous post... Moved that down after the string modifications.
+
+### Further Fail:
+
+I have yet experienced another fail when I replaced `'` with `\\'` , then replaced `\` with `\\` right after it!!!! I just switched them, and hopefully it works >_>
+
+YEAH!! It can haz WIN! Finally :)

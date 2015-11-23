@@ -1,0 +1,80 @@
+---
+author: mazyod
+comments: true
+date: 2012-01-13 21:28:10+00:00
+layout: post
+slug: dama-v1-8-5
+title: Dama v1.8.5
+wordpress_id: 178
+tags:
+- Chat
+- Checkers
+- cocos2d
+- Dama
+- Damma
+- Game
+- Game Center
+- Games
+- iOS
+- Turkish Checkers
+- universal
+---
+
+Dama v1.8.5 ... Why the weird number? Becuase it looks cool! And, am really sorry, but even though the update is good and absolutely worth it, but it's not major. I have much larger plans for v2.0~!
+
+Onto the release changes!!
+
+
+## #1: Text Chat!
+
+Finally, you can chat with your opponent over game center!! It took so long because, as I explained in previous posts, I had to implement the whole thing in my code, without relaying on any game center capabilities.
+
+[![](http://mazyod.files.wordpress.com/2012/01/img_1203.png)](http://mazyod.files.wordpress.com/2012/01/img_1203.png)
+
+
+[![](http://mazyod.files.wordpress.com/2012/01/img_1204.png)](http://mazyod.files.wordpress.com/2012/01/img_1204.png)
+
+
+[![](http://mazyod.files.wordpress.com/2012/01/img_1205.png)](http://mazyod.files.wordpress.com/2012/01/img_1205.png)
+
+
+[![](http://mazyod.files.wordpress.com/2012/01/img_0001.png)](http://mazyod.files.wordpress.com/2012/01/img_0001.png)
+
+
+## #2: Exit Button!
+
+
+### Allows you to chat after the game ends
+
+
+Before this button was introduced, I made it exit the game if the user touches anywhere on the screen, except for the twitter and facebook buttons. This would mean that if the game ends, the users won't be able to chat!! Well, that's why it had to be fixed and this button was added.
+
+[![](http://mazyod.files.wordpress.com/2012/01/img_1206.png)](http://mazyod.files.wordpress.com/2012/01/img_1206.png)
+
+
+## #3: Exit Confirmation!
+
+
+
+
+### Confirm that you want to exit
+
+
+A long time ago, I parked my car outside the college campus, and walked towards the class in a hurry. Even though I was in a hurry, I saw an old pal, Abdulla Al-Sharrah. After greeting him, I was about to continue my way, but he said he had a suggestion for the Dama! I couldn't miss that now, could I?!
+
+He had a problem while playing his friend. He accidentally pressed the exit button! This is the soul reason of adding this feature :)
+
+[![](http://mazyod.files.wordpress.com/2012/01/img_1202.png)](http://mazyod.files.wordpress.com/2012/01/img_1202.png)
+
+
+## #4: Reachability Test!
+
+
+
+
+### Are you connected to the Internet?
+
+
+Even though "Reachability" is not a word, that is what Apple calls it. The test of checking whether the user's device can reach a certain URL. Upon choosing to play Online, the game initiates a Reachability test to check whether or not you are connected to the internet. To be honest, it is a bit buggy, so sometimes it might say you are not connected when you are connected. That is why I won't force the user to quit Game Center even if the test fails.
+
+[![](http://mazyod.files.wordpress.com/2012/01/img_1201.png)](http://mazyod.files.wordpress.com/2012/01/img_1201.png)

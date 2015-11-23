@@ -1,0 +1,30 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Maz Development Directory
+email: mazyod@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  I call this place my Development Directory, where I just dump all the
+  experiences I have duing my development career. I mostly work with Swift,
+  and C++, for iOS apps and cross-platform games.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://mazyod.com" # the base hostname & protocol for your site
+twitter_username: mazyod
+github_username:  mazyod
+
+# define the navigation structure, to be built in navigation.html
+navigation:
+- text: '<i class="icon-home"></i>'
+  url: /
+- text: '<i class="icon-list"></i>'
+  url: /blog/archives/
+- text: <i class="icon-user"></i>
+  url: /about/
+
+# Build settings
+markdown: kramdown
