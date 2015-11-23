@@ -1,3 +1,131 @@
+
+
+/**
+ * Branding
+ */
+
+.branding-container {
+
+  /* MAZDEVDIR: */
+  font-family: PressStart2P, "Lucida Grande", monospace;
+  font-size: 57px;
+  line-height: 57px;
+
+  .maz {
+    color: #F45D4C;
+  }
+
+  .dev {
+    color: #F7A541;
+  }
+
+  .dir {
+    color: #A1DBB2;
+  }
+
+  margin: 10px;
+}
+
+.main-header-subtitle-container {
+
+  /* Digital Nomad's: */
+  font-family: PressStart2P, "Lucida Grande", monospace;
+  font-size: 26px;
+  line-height: 28px;
+  margin: 10px;
+}
+
+.main-header-buttons-container {
+
+  .github {
+    color: #BEBEBE;
+  }
+  
+  .twitter {
+    color: #55ACEE;
+  }
+
+  a {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: PressStart2P, "Lucida Grande", monospace;
+    font-size: 18px;
+    padding: 10px 15px 10px 15px;
+    border: solid 4px;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+  }
+
+  margin: 30px;
+}
+
+.main-header-arrow-container {
+
+  .main-header-arrow {
+    position: relative;
+  }
+  .main-header-arrow > i {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 0.3em solid;
+    border-bottom: 0.3em solid;
+    left: 0;
+    top: 0;
+  }
+  .main-header-arrow > i+i {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 0.3em solid;
+    border-bottom: 0.3em solid;
+    left: 0.6em;
+    top: 0.6em;
+  }
+  .main-header-arrow > i+i+i {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 0.3em solid;
+    border-bottom: 0.3em solid;
+    left: 1.2em;
+    top: 1.2em;
+  }
+  .main-header-arrow > i+i+i+i {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 0.3em solid;
+    border-bottom: 0.3em solid;
+    left: 1.8em;
+    top: 0.6em;
+  }
+  .main-header-arrow > i+i+i+i+i {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 0.3em solid;
+    border-bottom: 0.3em solid;
+    left: 2.4em;
+    top: 0;
+  }
+}
+
 /**
  * Site header
  */
@@ -5,6 +133,10 @@
 .navbar-outline {
     background-color: $text-color;
     height: 5px;
+}
+
+.main-header-outer {
+    text-align: center;
 }
 
 /**
