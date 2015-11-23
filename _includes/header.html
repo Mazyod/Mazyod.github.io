@@ -1,7 +1,8 @@
-
 <div class="navbar-outline"></div>
 
 {% capture url %}{{ page.url | remove:'index.html' }}{% endcapture %}
 {% if url == '/' %}
     {% include home-header.html %}
+{% else %}
+    {% include minimal-header.html %}
 {% endif %}
