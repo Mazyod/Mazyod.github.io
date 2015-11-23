@@ -26,13 +26,30 @@
   margin: 10px;
 }
 
+/**
+ * Site header
+ */
+
+.navbar-outline {
+  background-color: $text-color;
+  height: 5px;
+}
+
+.main-header-outer {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-header-subtitle-container {
 
   /* Digital Nomad's: */
   font-family: PressStart2P, "Lucida Grande", monospace;
   font-size: 26px;
   line-height: 28px;
-  margin: 10px;
+  margin: 1em;
 }
 
 .main-header-buttons-container {
@@ -40,7 +57,7 @@
   .github {
     color: #BEBEBE;
   }
-  
+
   .twitter {
     color: #55ACEE;
   }
@@ -52,6 +69,7 @@
     font-family: PressStart2P, "Lucida Grande", monospace;
     font-size: 18px;
     padding: 10px 15px 10px 15px;
+    margin: 0.5em;
     border: solid 4px;
     text-decoration: none;
   }
@@ -61,13 +79,14 @@
     text-decoration: none;
   }
 
-  margin: 30px;
+  margin: 2.5em;
 }
 
 .main-header-arrow-container {
 
   .main-header-arrow {
     position: relative;
+    margin-left: -4.0em;
   }
   .main-header-arrow > i {
     position: absolute;
@@ -124,19 +143,6 @@
     left: 2.4em;
     top: 0;
   }
-}
-
-/**
- * Site header
- */
-
-.navbar-outline {
-    background-color: $text-color;
-    height: 5px;
-}
-
-.main-header-outer {
-    text-align: center;
 }
 
 /**
