@@ -6,17 +6,30 @@ layout: default
 
   <h3 class="page-heading">Posts</h3>
 
-  <ul class="post-list">
+  <!--<ul class="post-list">-->
+  <table>
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% unless year == this_year %}
+        {% assign year = this_year %}
+      <tr><th colspan="2" style="text-align: left;">
+        <h2>{{ year }}</h2>
+      </th></tr>
+    {% endunless %}
+      <tr style="vertical-align: top">
+          <td style="padding-right: 8px; width: 3.1em;">
+              <span class="post-meta">{{ post.date | date: "%b %-d" }}</span>
+          </td>
+          <td>
+              <h2>
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </h2>
+          </td>
+      </tr>
+      {% endfor %}
+  </table>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <!--</ul>-->
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
