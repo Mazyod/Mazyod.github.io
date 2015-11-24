@@ -72,6 +72,9 @@ default_asides: [asides/googleplus.html] #, asides/recent_posts.html, asides/git
 #   3rd Party Settings    #
 # ----------------------- #
 
+# embedly
+embedly_key: 5a317c9a09254d0eb873aeae120f105d
+
 # Github repositories
 github_user: Mazyod
 github_repo_count: 0

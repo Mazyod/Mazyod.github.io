@@ -18,9 +18,9 @@ A special post is happening this time, and it is a video! We will explore the ne
 
 Without further ado:
 
-{% embedly http://www.youtube.com/watch?v=TyP0CZWED0M %}
+{% embedly https://www.youtube.com/watch?v=TyP0CZWED0M %}
 
-Here are some relevent code snippets:
+Here are some relevant code snippets:
 
 {% highlight c++ %}
 #define gEventDispatcher Director::getInstance()->getEventDispatcher()

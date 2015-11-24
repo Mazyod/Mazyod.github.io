@@ -109,7 +109,7 @@ Our game utilizes the awesome [JsonCPP](http://jsoncpp.sourceforge.net/) library
 
 
 
-{% highlight cpp %}
+{% highlight c++ %}
 void MapParser::parse(const std::string &mapFile)    
 {    
     FileUtil f;    
@@ -207,7 +207,7 @@ After fetching the `class_id`, we need to create an object that matches that `cl
 
 
 
-{% highlight cpp %}
+{% highlight c++ %}
 else if (class_id == "MapObject")    
 {    
     MapObject obj(val["parameters_data"]);    
@@ -247,7 +247,7 @@ Let's rewind a bit now, and go back to "We send the `parameter_data` to the cons
 
 
 
-{% highlight cpp %}
+{% highlight c++ %}
 MapObject::MapObject(const Json::Value& val): 
 position(val.get("position", Json::Value::null).get("children", Json::Value::null)), 
 entity_id(val.get("entity_id", Json::Value::null).get("value", "").asString()), 
@@ -312,7 +312,7 @@ When someone creates a `MapParser` object, they have to send a pointer to an obj
 
 
 
-{% highlight cpp %}
+{% highlight c++ %}
 class MapParserSink    
 {    
 public:    
