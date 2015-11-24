@@ -1,0 +1,18 @@
+
+.btn {
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  font-family: PressStart2P, "Lucida Grande", monospace;
+  font-size: 18px;
+  padding: 0.4em 0.8em 0.4em 0.8em;
+  margin: 0.5em;
+  border: solid 0.2em;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  cursor: pointer;
+}

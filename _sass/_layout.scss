@@ -52,101 +52,34 @@
   margin: 1em;
 }
 
-.main-header-buttons-container {
-
-  .github {
-    color: #BEBEBE;
-  }
-
-  .twitter {
-    color: #55ACEE;
-  }
-
-  a {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    font-family: PressStart2P, "Lucida Grande", monospace;
-    font-size: 18px;
-    padding: 10px 15px 10px 15px;
-    margin: 0.5em;
-    border: solid 4px;
-    text-decoration: none;
-  }
-
-  .btn:hover {
-    background: #3cb0fd;
-    text-decoration: none;
-  }
-
-  margin: 2.5em;
-}
-
 .main-header-arrow-container {
 
   font-size: 14px;
   margin-top: 5em;
-
-  .main-header-arrow {
-    position: relative;
-    margin-left: -4.0em;
-  }
-  .main-header-arrow > i {
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    border: 0.3em solid;
-    border-bottom: 0.3em solid;
-    left: 0;
-    top: 0;
-  }
-  .main-header-arrow > i+i {
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    border: 0.3em solid;
-    border-bottom: 0.3em solid;
-    left: 0.6em;
-    top: 0.6em;
-  }
-  .main-header-arrow > i+i+i {
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    border: 0.3em solid;
-    border-bottom: 0.3em solid;
-    left: 1.2em;
-    top: 1.2em;
-  }
-  .main-header-arrow > i+i+i+i {
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    border: 0.3em solid;
-    border-bottom: 0.3em solid;
-    left: 1.8em;
-    top: 0.6em;
-  }
-  .main-header-arrow > i+i+i+i+i {
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    border: 0.3em solid;
-    border-bottom: 0.3em solid;
-    left: 2.4em;
-    top: 0;
-  }
 }
+
+/**
+ * Minimal header
+ */
+
+.minimal-header-outer {
+  @extend .wrapper;
+}
+
+.minimal-branding-container {
+  @extend .branding-container;
+
+  font-size: 32px;
+  margin: 0;
+  float: left;
+}
+
+.about-button {
+  @extend .btn;
+  font-size: 15px;
+  float: right;
+}
+
 
 /**
  * Site footer
