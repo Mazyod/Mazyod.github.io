@@ -48,7 +48,7 @@ I would first like to note that I have found this amazing website that explains 
 Let us take a look at the list again, and see what we have left from the behavioral patterns:
 
 
-[![designpatterns1p2](http://mazyod.files.wordpress.com/2013/12/designpatterns1p2.jpeg)](http://mazyod.files.wordpress.com/2013/12/designpatterns1p2.jpeg)
+[![designpatterns1p2](/images/designpatterns1p2.jpg)](/images/designpatterns1p2.jpg)
 
 
 OK, I know what you are saying. There is some asymmetry. The previous part contains less than what is left. Well, that is true, however, there are actually two patterns that I am not even going to bother cover, and two patterns are almost identical, so it should add up evenly.

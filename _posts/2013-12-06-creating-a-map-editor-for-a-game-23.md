@@ -125,7 +125,7 @@ The issue here is, these object properties are not fixed (in the long term)! Eve
 
 Instead of actually writing code that define these structures, we use plists! (Yay, finally we actually explain the plists role). We basically create a plist that contains **prefabs**. (A prefab is simply a well defined structure that we can clone (instantiate) and use as an object instance.) Actually, you can think of a prefab as a class. For example, here is the structure I created for our Map editor:
 
-[![Screenshot 2013-12-05 23.25.26](http://mazyod.files.wordpress.com/2013/12/screenshot-2013-12-05-23-25-26.png?w=640)](http://mazyod.files.wordpress.com/2013/12/screenshot-2013-12-05-23-25-26.png)
+[![Screenshot 2013-12-05 23.25.26](/images/screenshot-2013-12-05-23-25-26.png)](/images/screenshot-2013-12-05-23-25-26.png)
 
 Pretty straightforward. The plist is an array of dictionary. A dictionary defines a prefab. A prefab has 2 essential properties:
 
@@ -150,7 +150,7 @@ A parameter has 2 required properties:
 
 As you see above, I am using a `custom_type` key, where the value for that key is `MapPoint` then `MapSize`. These custom types are actually just referencing custom type prefabs in another plist!! These prefabs have a very similar structure:
 
-[![Screenshot 2013-12-05 23.34.33](http://mazyod.files.wordpress.com/2013/12/screenshot-2013-12-05-23-34-33.png?w=640)](http://mazyod.files.wordpress.com/2013/12/screenshot-2013-12-05-23-34-33.png)
+[![Screenshot 2013-12-05 23.34.33](/images/screenshot-2013-12-05-23-34-33.png)](/images/screenshot-2013-12-05-23-34-33.png)
 
 Exactly the same structure. This is crucial, as we will see later.
 

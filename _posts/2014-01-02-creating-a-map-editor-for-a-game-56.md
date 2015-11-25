@@ -48,17 +48,17 @@ I believe that there is a very interesting relationship between the size of a de
 
 YES! Today we will actually see the UI of this so-called map editor! :D. I mean, initially I didn't want to divert any attention to the Map Editor itself, since the novelty lies in the data driven process of manipulating the Map Editor's features. Ultimately, I realized there is a lot to learn from the Map Editor UI development side, too. Without further Ado, let us look at how it looks like as of Today!
 
-[![meta](http://mazyod.files.wordpress.com/2013/12/meta.png)](http://mazyod.files.wordpress.com/2013/12/meta.png)
+[![meta](/images/meta.png)](/images/meta.png)
 
-[![prefab](http://mazyod.files.wordpress.com/2013/12/prefab.png)](http://mazyod.files.wordpress.com/2013/12/prefab.png)
+[![prefab](/images/prefab.png)](/images/prefab.png)
 
-[![selection](http://mazyod.files.wordpress.com/2013/12/selection.png)](http://mazyod.files.wordpress.com/2013/12/selection.png)
+[![selection](/images/selection.png)](/images/selection.png)
 
 I thought I'd give a glimpse of the UI before we see the inner details. Mind you, there is no way I can cover all the details exhaustively, but a quick run through all the major components that make this Map Editor possible.
 
 First, I would like to shed some light on the views of the application. We will see the view components in detail, and a little bit of the controller part, too, to get a complete picture regarding the views. Only after we talk about all the views, will we start discussing the application model. So, the first view we will be presenting is the upper left panel that has the basic structure of the map components.
 
-[![meta](http://mazyod.files.wordpress.com/2014/01/meta-e1388638813598.png?w=240)](http://mazyod.files.wordpress.com/2014/01/meta-e1388638813598.png)
+[![meta](/images/meta-e1388638813598.png)](/images/meta-e1388638813598.png)
 
 Before we see the code for this component, let me try and explain it at a relatively abstract level. This component is referred to as [`NSOutlineView`](https://developer.apple.com/library/mac/documentation/cocoa/reference/applicationkit/classes/NSOutlineView_Class/Reference/Reference.html). You can provide it with a tree of objects, and it will properly show the objects in a hierarchal fashion. So, when an object has children, it will show the expand triangle to indicate that children exist. That is all there is to it, really. Remember, the UI is not concerned with the implementation details and logic, it is just representing the data for the user.
 
@@ -66,7 +66,7 @@ There are a few things I want to talk about here: How are we supplying the objec
 
 To answer the first question, we are using an [`NSTreeController`](https://developer.apple.com/library/mac/documentation/cocoa/reference/applicationkit/Classes/NSTreeController_Class/Reference/Reference.html). This class is just another object controller that can handle a tree of objects. You can think of object controllers as predefined controllers (from the MVC pattern) that can automagically connect a model to a view without writing the controller code yourself. Other examples include an array controller, which you can bind to a table view, and BAM! The table view displays the objects that are inside an array.
 
-[![Screenshot 2014-01-01 21.38.53](http://mazyod.files.wordpress.com/2014/01/screenshot-2014-01-01-21-38-53.png?w=300)](http://mazyod.files.wordpress.com/2014/01/screenshot-2014-01-01-21-38-53.png)With the tree controller representing the model to the outline view, we can then use [Cocoa Bindings](https://developer.apple.com/library/mac/documentation/cocoa/reference/CocoaBindingsRef/CocoaBindingsRef.html) to say something like: "Hey, outline view. Get the object tree from the controller, and fetch the 'label' property from any object inside the tree and use it as the row name". Yeah, sounds crazy, but that's how it works!
+[![Screenshot 2014-01-01 21.38.53](/images/screenshot-2014-01-01-21-38-53.png)](/images/screenshot-2014-01-01-21-38-53.png)With the tree controller representing the model to the outline view, we can then use [Cocoa Bindings](https://developer.apple.com/library/mac/documentation/cocoa/reference/CocoaBindingsRef/CocoaBindingsRef.html) to say something like: "Hey, outline view. Get the object tree from the controller, and fetch the 'label' property from any object inside the tree and use it as the row name". Yeah, sounds crazy, but that's how it works!
 
 What was said previously begs the question: But where does this label come from? Excellent question, Bob. I have been talking about object hierarchy and structure, but I never really talked about the object itself. The objects in the hierarchy are actually instances of a custom class called: ECObject. By looking at the structure of this class, you can easily realize that the properties defined are what we bind to the outline view and tree controller.
 
@@ -105,7 +105,7 @@ One last thing I would like to cover here are the "Add" and "Delete" buttons. Be
 
 I think this covers the components outline view pretty well (this is what I refer to the outline view we just covered). Moving along, we shall now look at the lower left view, which also happens to be an outline view! The difference, though, is that this one is view-based, and the previous was cell based. Don't concern yourself with this difference, though. Anyways, this component is referred to as the parameters outline view, since it displays the parameters of an ECObject. Refer to the previous code snippet, and look for the parameters property.
 
-[![meta](http://mazyod.files.wordpress.com/2014/01/meta1-e1388643846879.png?w=300)](http://mazyod.files.wordpress.com/2014/01/meta1-e1388643846879.png) In the MapMeta example on the left, you can see that based on the parameter's type, we show the appropriate UI component. For example, if the parameter is a boolean, a checkmark is shown. Unfortunately, all we have in this example are numbers, which use an NSTextField component with an attached NSFormatter that makes sure the user enters a valid number. Note how parameters can have children. "map_size" is of type "Size", which is just a parameter with two child number parameters.
+[![meta](/images/meta1-e1388643846879.png)](/images/meta1-e1388643846879.png) In the MapMeta example on the left, you can see that based on the parameter's type, we show the appropriate UI component. For example, if the parameter is a boolean, a checkmark is shown. Unfortunately, all we have in this example are numbers, which use an NSTextField component with an attached NSFormatter that makes sure the user enters a valid number. Note how parameters can have children. "map_size" is of type "Size", which is just a parameter with two child number parameters.
 
 Similar to how we used the ECObject class to represent an object in the components outline view, we use ECParameter class here to represent the objects in the parameters outline view. Since it is pretty much the same procedure, I won't bother explain it again. However, one interesting part is how the parameters outline view _morphs_ based on the parameter type! I'll just paste the code that does that. It is located in an NSTableCellView subclass, called ECMorphingCell.
 
@@ -186,7 +186,7 @@ I will only mention that this is all pretty straight forward, except the **enum 
 
 Anyways, all I have left is the rendering view, which renders all the entities as visual objects the user can interact with. It might look a bit complicated, but it is actually quite simple.
 
-[![prefab](http://mazyod.files.wordpress.com/2014/01/prefab-e1388670561213.png?w=300)](http://mazyod.files.wordpress.com/2014/01/prefab.png) The basic idea behind this is: I subclassed NSView and overrided drawRect: in order to render the Model. Inside the view, I dispatch a timer that calls setNeedsDisplay 2 times per second, so I don't have to worry about the model changing at all. This is a less efficient polling approach, but works really well, so meh. Then, within drawRect:, I get the model, and do some quartz drawing! I'll post some code so you can get the main idea:
+[![prefab](/images/prefab-e1388670561213.png)](/images/prefab.png) The basic idea behind this is: I subclassed NSView and overrided drawRect: in order to render the Model. Inside the view, I dispatch a timer that calls setNeedsDisplay 2 times per second, so I don't have to worry about the model changing at all. This is a less efficient polling approach, but works really well, so meh. Then, within drawRect:, I get the model, and do some quartz drawing! I'll post some code so you can get the main idea:
 
 {% highlight objc %}
 - (void)drawRect:(CGRect)r    

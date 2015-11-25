@@ -81,7 +81,7 @@ Went back to a static IP with the PC (So it doesn't change, and cause me to chan
 
 Then, Mr. Wireshark (the most awesome sniffing tool I came across) took it from here:
 
-[![](http://mazyod.files.wordpress.com/2011/12/sniff3.png)](http://mazyod.files.wordpress.com/2011/12/sniff3.png)
+[![](/images/sniff3.png)](/images/sniff3.png)
 
 Yeah, I sent through whatsapp: "Muwahahahaha!!" (Mind the number of "haha"s) and there it was .. Plain text! Moreover, the blurred area are JiMMaR's and my phone number! This message was sent to a group which included both of us...
 

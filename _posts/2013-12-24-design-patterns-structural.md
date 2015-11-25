@@ -46,7 +46,7 @@ With that weird introduction out of the way, let's dive into a real intro. What 
 
 
 
-[![designpatterns_struct](http://mazyod.files.wordpress.com/2013/12/designpatterns_struct.jpg)](http://mazyod.files.wordpress.com/2013/12/designpatterns_struct.jpg)
+[![designpatterns_struct](/images/designpatterns_struct.jpg)](/images/designpatterns_struct.jpg)
 
 
 

@@ -81,4 +81,4 @@ Yay, now this should do it! YOU WISH. And, wish granted :D ... That was "all". N
 
 Notice how all the answers where flawlessly solved thanks to StackOverflow!! Don't blame me for liking them so much and becoming a fanboy:
 
-[![](http://mazyod.files.wordpress.com/2012/01/img_1123.jpg)](http://mazyod.files.wordpress.com/2012/01/img_1123.jpg)
+[![](/images/img_1123.jpg)](/images/img_1123.jpg)

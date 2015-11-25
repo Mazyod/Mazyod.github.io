@@ -32,8 +32,8 @@ So ... I opened the code from**_ long ago_**, and saw that I had implemented the
 
 The Result:
 
-[![](http://mazyod.files.wordpress.com/2011/10/screen-shot-2011-10-30-at-10-30-25-pm2.png)](http://mazyod.files.wordpress.com/2011/10/screen-shot-2011-10-30-at-10-30-25-pm2.png)[
-](http://mazyod.files.wordpress.com/2011/10/screen-shot-2011-10-30-at-10-30-25-pm1.png)
+[![](/images/screen-shot-2011-10-30-at-10-30-25-pm2.png)](/images/screen-shot-2011-10-30-at-10-30-25-pm2.png)[
+](/images/screen-shot-2011-10-30-at-10-30-25-pm1.png)
 
 
 (The reason it says "Mazyod" and "JiMMaR" is that I was transferring the feed directly from MSN to this program ... Not really, that would be awesome, though.)
@@ -82,6 +82,6 @@ Time for some coding action?
 
 You get:
 
-![s](http://mazyod.files.wordpress.com/2011/10/screen-shot-2011-10-30-at-10-30-25-pm2.png?w=640)
-![s](http://mazyod.files.wordpress.com/2011/10/webview1.png?w=1000&h=)
-![s](http://mazyod.files.wordpress.com/2011/10/webview2.png?w=1000&h=)
+![s](/images/screen-shot-2011-10-30-at-10-30-25-pm2.png?w=640)
+![s](/images/webview1.png)
+![s](/images/webview2.png)

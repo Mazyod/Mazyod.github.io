@@ -43,7 +43,7 @@ No, this is not a [movie review](http://www.imdb.com/title/tt0127357/), I am gon
 **Progress:** Working on v5.0.
 
 
-[![](http://mazyod.files.wordpress.com/2012/11/default2x.png)](http://mazyod.files.wordpress.com/2012/11/default2x.png)
+[![](/images/default2x.png)](/images/default2x.png)
 
 
 ### Dama: لعبة الدامة [link](https://itunes.apple.com/us/app/id442570707?ls=1&mt=8)
@@ -57,7 +57,7 @@ No, this is not a [movie review](http://www.imdb.com/title/tt0127357/), I am gon
 + Android version
 
 
-[![](http://mazyod.files.wordpress.com/2012/11/screenshot-2011-07-02-13-06-56.png)](http://mazyod.files.wordpress.com/2012/11/screenshot-2011-07-02-13-06-56.png)
+[![](/images/screenshot-2011-07-02-13-06-56.png)](/images/screenshot-2011-07-02-13-06-56.png)
 
 
 * * *
@@ -78,5 +78,5 @@ No, this is not a [movie review](http://www.imdb.com/title/tt0127357/), I am gon
 + Mac app Dev.
 
 
-[![](http://mazyod.files.wordpress.com/2012/11/project_facade.jpg?w=225)](http://mazyod.files.wordpress.com/2012/11/project_facade.jpg)
+[![](/images/project_facade.jpg)](/images/project_facade.jpg)
 

@@ -48,7 +48,7 @@ I know that I said that I _might_ write about design patterns in the previous po
 In order to have a very quick overview over the content of today's post, let us check out this awesome design patterns cheat sheet:
 
 
-[![designpatterns1](http://mazyod.files.wordpress.com/2013/12/designpatterns1.jpg)](http://mazyod.files.wordpress.com/2013/12/designpatterns1.jpg)
+[![designpatterns1](/images/designpatterns1.jpg)](/images/designpatterns1.jpg)
 
 
 * * *

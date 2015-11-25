@@ -16,7 +16,7 @@ On with the post, the sneak peak! Today, though shalt expose parts of thy projec
 
 Without further ado .. Let us look at this project!
 
-[![Islamicaster](https://mazyod.files.wordpress.com/2012/05/islamicaster.jpg)](https://mazyod.files.wordpress.com/2012/05/islamicaster.jpg)
+[![Islamicaster](/images/islamicaster.jpg)](/images/islamicaster.jpg)
 
 Islamicaster .. Inspired from all the "caster" applications out there, me and my mates in the project decided to call our project "Islamic - caster", with the c being mutual. And please, it is pronounced ISLAMIC and not IZLAMIC.
 
@@ -72,4 +72,4 @@ Day2: 9:00am - 8:00pm
 
 **We really look forward to seeing you there!**
 
-[![](https://mazyod.files.wordpress.com/2012/05/islamicaster-icon1.jpg)](https://mazyod.files.wordpress.com/2012/05/islamicaster-icon1.jpg)
+[![](/images/islamicaster-icon1.jpg)](/images/islamicaster-icon1.jpg)

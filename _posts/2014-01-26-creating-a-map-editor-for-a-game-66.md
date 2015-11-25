@@ -76,7 +76,7 @@ If we can't create explicit subclasses, nor use generic data structures, then wh
 
 
 
-[![EverCraftModel](http://mazyod.files.wordpress.com/2014/01/evercraftmodel-e1390717916549.png)](http://mazyod.files.wordpress.com/2014/01/evercraftmodel.png)
+[![EverCraftModel](/images/evercraftmodel-e1390717916549.png)](/images/evercraftmodel.png)
 
 
 
@@ -84,7 +84,7 @@ If we can't create explicit subclasses, nor use generic data structures, then wh
 
 
 
-[![EverCraftAdapters](http://mazyod.files.wordpress.com/2014/01/evercraftadapters.png)](http://mazyod.files.wordpress.com/2014/01/evercraftadapters.png)
+[![EverCraftAdapters](/images/evercraftadapters.png)](/images/evercraftadapters.png)
 
 
 

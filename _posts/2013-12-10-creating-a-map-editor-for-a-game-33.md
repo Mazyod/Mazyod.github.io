@@ -116,7 +116,7 @@ Don't let no nothing intimidate you here. It is a simple use of the [argparse](h
 
 
 
-[![Screenshot 2013-12-08 17.31.30](http://mazyod.files.wordpress.com/2013/12/screenshot-2013-12-08-17-31-30.png)](http://mazyod.files.wordpress.com/2013/12/screenshot-2013-12-08-17-31-30.png)
+[![Screenshot 2013-12-08 17.31.30](/images/screenshot-2013-12-08-17-31-30.png)](/images/screenshot-2013-12-08-17-31-30.png)
 
 
 
