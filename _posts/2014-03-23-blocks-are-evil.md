@@ -48,7 +48,7 @@ I mean, I can't easily tell in the middle of execution what privileges I have. C
 
 Let's make a quick sequence diagram, since I feel like making one:
 
-{% img center caption /images/twitter-auth-sequence.png "" "This is how it is" %}
+![](/images/twitter-auth-sequence.png)
 
 ### Which Brings Us to the Problem
 

@@ -46,5 +46,5 @@ categories:
 - This will be the best SEO post of all time
 - I wonder if I should stop typing ..
 
-{%img center caption no-invert http://mazyod.com/images/tumblr_mu3ldtX6ZA1s4kxqxo1_500.gif "" "" %}
+![](/images/tumblr_mu3ldtX6ZA1s4kxqxo1_500.gif)
 

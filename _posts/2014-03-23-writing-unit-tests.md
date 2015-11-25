@@ -14,7 +14,7 @@ categories:
 
 Here I am struggling to learn a code base that has been under the works for half a decade or so, and I am finding some parts of it somewhat difficult to grasp. I resist an urge to refactor all the things:
 
-{%img center caption no-invert /images/clean-all-the-things.png "" ""%}
+![](/images/clean-all-the-things.png)
 
 The main reason is... I have no idea what is the systematic approach I should take that will ultimately yield the best results! I can't just jump at the code and subjectively make it my own, you know... Hence, my travels begin in search for the truth.
 

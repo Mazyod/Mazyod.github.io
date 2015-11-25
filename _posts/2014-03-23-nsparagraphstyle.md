@@ -24,7 +24,7 @@ I was thinking about patching the whole thing, or even ditching AutoLayout, but 
 
 Thankfully, `NSAttributedString` knew how to render custom Arabic fonts without any extra work! And since that was handled by UILabel, it also calculated the intrinsic size semi-correctly! (it was just cutting off some letter from the top and bottom).
 
-{%img center caption no-invert http://mazyod.com/images/bad-text.png "" "" %}
+![](/images/bad-text.png)
 
 As you can see, some of the text is cut off :(. Fret not! `NSParagraphStyle` to the rescue!
 
@@ -37,7 +37,7 @@ style.alignment = self.textAlignment;
 
 And the results!!
 
-{%img center caption no-invert http://mazyod.com/images/good-text.png "" "" %}
+![](/images/good-text.png)
 
 ## Conclusion
 

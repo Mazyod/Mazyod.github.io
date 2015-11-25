@@ -25,7 +25,7 @@ categories:
 
 Finally .. I've made the move to [Realm](http://realm.io/).
 
-{%img center caption no-invert http://mazyod.com/images/realm-logo.png "" "" %}
+![](/images/realm-logo.png)
 
 ## What Happened?
 
@@ -46,7 +46,7 @@ Finally, two things happened simultaneously:
 + I was trying to get to-many relationship to work, and `MagicalRecord` failed.
 + Swift compiler crashed ...
 
-{%img center caption no-invert http://mazyod.com/images/justjimmar_2015-Jul-22.jpg "" "" %}
+![](/images/justjimmar_2015-Jul-22.jpg)
 
 Seriously...
 

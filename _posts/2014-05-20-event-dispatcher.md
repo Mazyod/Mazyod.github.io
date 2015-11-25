@@ -18,7 +18,7 @@ A special post is happening this time, and it is a video! We will explore the ne
 
 Without further ado:
 
-{% embedly https://www.youtube.com/watch?v=TyP0CZWED0M %}
+[Youtube link](https://www.youtube.com/watch?v=TyP0CZWED0M)
 
 Here are some relevant code snippets:
 

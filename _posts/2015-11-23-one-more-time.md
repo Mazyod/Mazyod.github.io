@@ -17,4 +17,4 @@ No introduction, no conclusion, just pure anticipation of the new blog design to
 
 ### Coming soon
 
-{%img center caption no-invert http://mazyod.com/images/blog-content-design.png "" "" %}
+![](/images/blog-content-design.png)

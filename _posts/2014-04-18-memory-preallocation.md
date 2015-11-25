@@ -64,15 +64,15 @@ memPtrStack = malloc(memPtrStack, sizeof(GameState *)*preallocate;
 
 The first thing I do, is initialize this array of pointers to point to the respective index in the memory blocks array:
 
-{%img center caption no-invert http://mazyod.com/images/prealloc_1.png "" "" %}
+![](/images/prealloc_1.png)
 
 Then, let's say three requests came in for memory blocks. We move the index by three, and "give" those pointers to the caller:
 
-{%img center caption no-invert http://mazyod.com/images/prealloc_2.png "" "" %}
+![](/images/prealloc_2.png)
 
 Finally, when the pointer is suppose to be freed, who ever called the alloc must give use the pointer back so we add it into the pointer stack, and that block will be available again for the next time alloc is called:
 
-{%img center caption no-invert http://mazyod.com/images/prealloc_3.png "" "" %}
+![](/images/prealloc_3.png)
 
 ### The Expansion
 

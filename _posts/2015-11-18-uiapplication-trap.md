@@ -27,7 +27,7 @@ Working on about 6 project at the same time is just not something I've been used
 
 In all cases! With that lifestyle, returning to [Habitica](http://habitica.com) was a no-brainer. With Habitica back in the picture, its time to level up like crazy!!
 
-{%img center caption no-invert http://mazyod.com/images/lvlup.gif "" "" %}
+![](/images/lvlup.gif)
 
 ## The Wrath of the Singleton
 

@@ -27,7 +27,7 @@ There is no way I'm gonna waste time solving a sudoku, but what I will do is sha
 
 ## Sudoku Pie, Literally
 
-{%img center caption no-invert http://mazyod.com/images/sudok.png "" "" %}
+![](/images/sudok.png)
 
 You get my point now.
 

@@ -47,4 +47,4 @@ These methods are provided by UIKit, and we are overriding them. These methods a
 
 As an iOS developer coming to the project, it's hard and painful enough to learn the code base and the custom implementation, and now you expect me to unlearn UIKit, and learn those hacky ways that don't even make sense?
 
-{%img center caption /images/srsly.png "" "" %}
+![](/images/srsly.png)

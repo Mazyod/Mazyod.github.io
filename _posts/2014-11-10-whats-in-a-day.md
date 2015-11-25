@@ -24,7 +24,7 @@ First, if you are an Android dork, just forget it. There is no way Android will 
 
 Interactive animations are when the animation can either play fully on its own, or be controlled by a gesture from the user:
 
-{%img center caption no-invert http://mazyod.com/images/1.3mb.gif "" "" %}
+![](/images/1.3mb.gif)
 
 I really don't want to explain how they work, as there are [two](http://www.objc.io/issue-12/custom-container-view-controller-transitions.html) of them [tutorials](http://www.iosnomad.com/blog/2014/5/12/interactive-custom-container-view-controller-transitions) that cover the subject pretty thoroughly.
 

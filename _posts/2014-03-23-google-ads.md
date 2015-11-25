@@ -17,19 +17,19 @@ I mean, is it really that hard to realize the point of advertising? It's __expos
 
 Le me searching for a good analytics, backend, push notification, ... etc service:
 
-{%img center caption no-invert http://mazyod.com/images/rapid.jpg "" "" %}
+![](/images/rapid.jpg)
 
 I find a few good services, but non of them really fit my need!
 
-{%img center caption no-invert http://mazyod.com/images/analytics-services.png "" "" %}
+![](/images/analytics-services.png)
 
 ... Hence, decides uncle google to just keep showing me these service that _Do Not Fit My Need!_
 
-{%img center caption http://mazyod.com/images/0044.gif "" ""%}
+![](/images/0044.gif)
 
 As I was feeling frustrated, a glimmer of hope shone in my brainz:
 
-{%img center caption no-invert http://mazyod.com/images/Parse_Cloud.png "" ""%}
+![](/images/Parse_Cloud.png)
 
 I remembered parse and StackMob, and ultimately went with parse... Without Google getting a dime for my conversion!!
 

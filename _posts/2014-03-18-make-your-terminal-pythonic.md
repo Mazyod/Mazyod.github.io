@@ -16,7 +16,7 @@ This is one of the truly awesome posts that I have been dying to share. Terminal
 
 After writing bash commands for a year or so, and realizing that I hate it so bad, and I am barely getting good at it, I decided to go full-fledged python. Every script I write should be in python, whether it was to rename files, or deploy this post online. But how can I quickly write python scripts and make them accessible? Here is how:
 
-{%img center caption no-invert http://mazyod.com/images/Screenshot_2014-03-19_08.06.01.png "" "" %}
+![](/images/Screenshot_2014-03-19_08.06.01.png)
 
 ### The Bad Way™
 

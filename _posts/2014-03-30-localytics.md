@@ -18,13 +18,13 @@ Well, I have a confession here. Parse unfortunately tries to do everything at on
 
 For my case, I found a really awesome analytics service, which is localytics.
 
-{%img center caption no-invert http://mazyod.com/images/localytics.png "" "" %}
+![](/images/localytics.png)
 
 They have an awesome pricing criteria, as well as a _really_ awesome dashboard and analysis tools.
 
 As for the crash reports, there were two that stood out, namely crittercism and hokeyapp. The only reason you would want to choose the former is if you don't have much traffic, since they have a generous free tier. Otherwise, the basic hockeyapp tier is paid, no free tier, but _super_ cheap and super generous. Hence, I am in!
 
-{%img center caption no-invert http://mazyod.com/images/hockeyapp_logo.png "" "" %}
+![](/images/hockeyapp_logo.png)
 
 ## Conclusion
 

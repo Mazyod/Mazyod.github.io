@@ -16,7 +16,7 @@ categories:
 
 I don't even recall if I... Oh, I did blog a bit about what I have been doing, which is the code sharing thing and stuff related to Kuwait Prayer Times. Well, there we go:
 
-{%img center caption no-invert http://mazyod.com/images/kpt_v5.0.0.png "" "" %}
+![](/images/kpt_v5.0.0.png)
 
 I finally submitted. Even though I wrote [that blog post about testing](http://mazyod.com/blog/2014/03/28/close-call/), I did even more testing, and found like a bunch of other bugs, that lead to other bugs in the Mac app, which almost drove me nuts trying to make everything perfect. It just can't be perfect.
 

@@ -100,7 +100,7 @@ So, with that out of the way, let's see how can we make this happen:
 
 Some changes need to be made to the project itself, first. There must be a build configuration that has the code signing and provisioning profile set manually. In my case, I created a new build configuration, and set up the code signing and previously created provisioning profile:
 
-{%img center caption no-invert http://mazyod.com/images/code-signing-circle.png "" "" %}
+![](/images/code-signing-circle.png)
 
 You can use Release if you like, or call it Distribution, just make sure you take note of which build configuration is using the distribution identity.
 
@@ -116,7 +116,7 @@ Just go over to the project settings on circle CI, and set up the environment va
 
 Here is how it should look like (you don't need all of those):
 
-{%img center caption no-invert http://mazyod.com/images/circle-ci-environment.png "" "" %}
+![](/images/circle-ci-environment.png)
 
 ### Scripts
 

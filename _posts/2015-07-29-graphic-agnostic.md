@@ -38,7 +38,7 @@ Using this approach separates the concerns pretty well. This helps us achieve ma
 
 I don't really have the time nor motivation to write down all the details, but I made a quick video tutorial about the subject. You can see the project structure, and terminal client, and how awesome it is to develop with this approach:
 
-{% embedly https://www.youtube.com/watch?v=326vKdiAn4g %}
+[Youtube link](https://www.youtube.com/watch?v=326vKdiAn4g)
 
 ## Conclusion
 

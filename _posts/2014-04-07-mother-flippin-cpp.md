@@ -81,7 +81,7 @@ rapidjson::GenericValue
 
 "Yo, Joe. Can you implement this _simple_ algorithm for me in C++? Oh look, you probably finished it... Wait, what? That is just you declaring a variable?"
 
-{%img center caption http://mazyod.com/images/yao-ming-rage-face.png "" "" %}
+![](/images/yao-ming-rage-face.png)
 
 Now, the C++ compiler is blamed for throwing such an undebuggable error, and the rapidjson developers are blamed for not using `explicit` keyword on the copy constructor.
 
