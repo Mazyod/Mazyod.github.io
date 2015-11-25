@@ -13,6 +13,16 @@ layout: default
   </div>
 
 </article>
+<section style="margin-bottom: 2em">
+  <div style="overflow: hidden;">
+    {% if page.previous.url %}
+    <div style="float: left;"><a href="{{ page.previous.url }}" title="{{page.previous.title}}">&laquo; {{page.previous.title}}</a></div>
+    {% endif %}
+    {% if page.next.url %}
+    <div style="float: right;"><a href="{{ page.next.url }}" title="{{page.next.title}}">{{page.next.title}} &raquo;</a></div>
+    {% endif %}
+  </div>
+</section>
 {% if site.disqus_short_name %}
 <section>
   <h1>Comments</h1>
