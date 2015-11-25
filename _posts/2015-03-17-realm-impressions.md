@@ -27,7 +27,7 @@ Its SDKs are opensourced and available on github, but the core database itself i
 
 ## Realm
 
-![](http://mazyod.com/images/realm-logo.png)
+{%img center caption no-invert http://mazyod.com/images/realm-logo.png "" "" %}
 
 > Realm is a mobile database: a replacement for SQLite & Core Data
 

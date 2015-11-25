@@ -15,5 +15,5 @@ categories:
 
 Here is a very quick tip on how to start iOS development.
 
-![video](https://www.youtube.com/watch?v=JGgYpr918lo)
+{% embedly https://www.youtube.com/watch?v=JGgYpr918lo %}
 

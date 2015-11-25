@@ -48,7 +48,7 @@ I mean, I can't easily tell in the middle of execution what privileges I have. C
 
 Let's make a quick sequence diagram, since I feel like making one:
 
-![](http://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgVHdpdHRlciBBdXRoIEZsb3cKVmlldyAtPgASCFdyYXBwZXI6IEdldCB0aW1lbGluZS4KABAOLT5TVABDBzogSW5pdGlhbGl6ZSB3aXRoIEFwcE9ubHkgYXV0aAoAHwktLT4AUhBEb25lCgA-HEdldCBUAHwHAC0dABwJAIEYEC0-VmlldwAVDFZpZXcAeRJSZXR3ZWV0Cm5vdGUgcmlnaHQgb2YAggIRV2FpdC4uLiBhcmUgd2UAgWAJb3IgZnVsbHkgcHJpdmlsZWRnZWQ_Cg&s=napkin)
+{% img center caption /images/twitter-auth-sequence.png "" "This is how it is" %}
 
 ### Which Brings Us to the Problem
 

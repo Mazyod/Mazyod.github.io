@@ -19,7 +19,7 @@ categories:
 
 Whenever I write something about synchronization, I am required, by law, to reference this picture:
 
-![](http://mazyod.com/images/golden-pair.jpg)
+{%img center caption no-invert http://mazyod.com/images/golden-pair.jpg "" "" %}
 
 If you don't get it, just let it slide.
 

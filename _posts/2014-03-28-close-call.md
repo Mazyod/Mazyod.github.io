@@ -25,7 +25,7 @@ So, let's just to the actual thing.
 
 Due to my screw-ups in the past, I have become a testing Nazi.
 
-![](http://mazyod.com/images/testing.jpg)
+{%img center caption no-invert http://mazyod.com/images/testing.jpg "" "" %}
 
 No matter how confident I feel about the small changes I make; before releasing software, I just test... and test... and test... which ends up taking like 60% of the actual development time cycle.
 

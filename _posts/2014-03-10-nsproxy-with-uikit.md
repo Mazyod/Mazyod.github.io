@@ -25,7 +25,7 @@ I was entrusted with the deceivingly mundane task of localization. The task quic
 
 Thanks to [Apple's AutoLayout system](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html), flipping the UI around was surprisingly easy! Specifically, assigning leading and trailing spaces for subviews will make the layout intelligently switch between LTR and RTL. Unfortunately, Apple didn't take it a step further to support flipped controls, specifically `UISegmentedControl` in my case.
 
-![](http://mazyod.com/images/segmented-en.png) ![](http://mazyod.com/images/segmented-ar.png)
+{% img center caption /images/segmented-en.png "" "LTR segmented control" %} {% img center caption /images/segmented-ar.png "" "RTL segmented control" %}
 
 As you can see, this is the problem:
 
@@ -60,7 +60,7 @@ As you can see, the superclass may query the selected segment's index either thr
 
 The first thing that crossed my mind was to wrap the object with a proxy that would flip all the segment indexes coming in and out of the control:
 
-![](http://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUHJveHkgU29sdXRpb24gTG9naWMgRmxvdwoKT3V0c2lkZXItPgAgBTogc2VsZWN0ZWRTZWdtZW50SW5kZXgoKQoAPgUtPgAPB2VkQ29udHJvbAAXGQAZEC0AWAlyZXN1bHQKbm90ZSByaWdodCBvZgCBHAY6IENoZWNrIHRoZSB1c2VyJ3MgbGFuZ3VhZ2UKYWx0IEwABgcgTFRSAIEKBy0-AIE5CABQCWVsc2UAIQpSVEwAGBNzAIFXBkNvdW50IC0AgQwHIC0gMQplbmQ&s=napkin)
+{% img center caption /images/segment-sequence-1.png "proxy-pattern-figure" "This is a simple example. You can imagine how it would be for all the cases, right?" %}
 
 That seemed like to much work, so I went ahead and implemented a simple category that the developer has to call in order to get the proper result [(available on github)](https://github.com/Mazyod/RTLSegmentedControl). The way it works is simple: Replace all your calls that are related to the segment index with the methods found in the category, and it will check if the user's language is RTL, and flip accordingly:
 

@@ -46,7 +46,7 @@ For example, I really suffered from managing audio files, and always forgot wher
 
 Solution? [Go back to this post about scripting awesomeness](http://mazyod.com/blog/2014/03/18/make-your-terminal-pythonic/). Let's see hoe much my script library has grown in a week or so...
 
-![](http://mazyod.com/images/py-scripts.png)
+{%img center caption no-invert http://mazyod.com/images/py-scripts.png "" "" %}
 
 Sweeeeeeet.
 

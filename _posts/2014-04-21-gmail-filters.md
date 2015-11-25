@@ -14,7 +14,7 @@ categories:
 - work
 ---
 
-![](http://mazyod.com/images/Gmail_logo.png)
+{%img center caption no-invert http://mazyod.com/images/Gmail_logo.png "" "" %}
 
 It seems inevitable that once you start using GitHub seriously, you run into this issue where you just get overwhelmed by the number of emails sent in a single hour. It also gets distracting and annoying when you just don't have the time to go over them, and need to see everything else.
 

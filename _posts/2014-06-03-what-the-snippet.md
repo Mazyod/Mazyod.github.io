@@ -21,7 +21,7 @@ I am **really** getting used to this video blogging business. It feels like I wa
 
 This one is about using Xcode snippets to speed up your development. I present a use case with cocos2d-x, but it can be used with anything really... Even [Swift](https://developer.apple.com/swift/) ;).
 
-![video](http://www.youtube.com/watch?v=TSY0vNLnLYc)
+{% embedly http://www.youtube.com/watch?v=TSY0vNLnLYc %}
 
 Here are the snippets. Just drag the code over to the snippets area in Xcode:
 

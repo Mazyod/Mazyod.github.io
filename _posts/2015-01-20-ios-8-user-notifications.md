@@ -60,7 +60,7 @@ In my application, local notifications are everything. If that feature doesn't w
 
 Here is the whole flow of how things work:
 
-![](http://mazyod.com/images/Notifications.png)
+{%img center caption no-invert http://mazyod.com/images/Notifications.png "" "" %}
 
 ### Checking Permissions
 

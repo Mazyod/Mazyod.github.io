@@ -37,7 +37,7 @@ __Uncertainty__. That's a lovely word to `#include` in a startup's `#define`. Fo
 
 Another very `!important` point is concentration. Startups aren't really the `malloc()` for working just at work. I noticed a `HUGE_VALF` improvement, for example, when I pushed a `new RuntimeException()` I was stuck on, to later that night, to allow myself to think about the problem, and cook it in my head. It's like, you should always be ready to jump at the project anytime, because you are excited about it .. if not:
 
-![](http://mazyod.com/images/joker.gif)
+{%img center caption no-invert http://mazyod.com/images/joker.gif "" "Guarenteed Results" %}
 
 ## Conclusion
 

@@ -46,7 +46,7 @@ Granted the tests aren't by any means fast, nor very well structured, but they w
 
 Here is the general structure:
 
-![](http://mazyod.com/images/Screenshot_2015-02-08_12.58.08.png)
+{%img center caption no-invert http://mazyod.com/images/Screenshot_2015-02-08_12.58.08.png "" "" %}
 
 As you can see, first we test the account management stuff by registering a new user, attempting to login after that, then retrieving and updating the user info .. stuff like that.
 
@@ -89,7 +89,7 @@ The flaky marker has been imported from [here](https://github.com/klrmn/pytest-r
 
 ## The Sample
 
-![](http://mazyod.com/images/Screenshot_2015-02-08_13.11.47.png)
+{%img center caption no-invert http://mazyod.com/images/Screenshot_2015-02-08_13.11.47.png "" "" %}
 
 ## Conclusion
 

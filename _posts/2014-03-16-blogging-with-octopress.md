@@ -20,7 +20,7 @@ $ blog_new_post "blogging-with-octopress"
 
 Then, sublime opens up, and I am ready to start writing things!
 
-![](http://mazyod.com/images/sublime-markdown.png)
+{%img center caption no-invert http://mazyod.com/images/sublime-markdown.png "" "Sublime Text with the awesome MarkdownEditing plug-in" %}
 
 And, the way I add images like the one above is, after taking the screenshot, I would call this:
 
