@@ -8,7 +8,6 @@ footer: false
   {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
   <div class="row-fluid">
     <div class="span1">
-  	{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
   	{% unless year == this_year %}
   	  {% assign year = this_year %}
   	    <h2>{{ year }}</h2>
