@@ -67,7 +67,9 @@
 
 .minimal-header-outer {
   @extend .wrapper;
-  
+
+  margin-top: 0.5em;
+
   > a {
     color: $text-color;
   }
