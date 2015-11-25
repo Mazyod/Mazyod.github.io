@@ -7,20 +7,23 @@
 .branding-container {
 
   /* MAZDEVDIR: */
-  font-family: PressStart2P, "Lucida Grande", monospace;
+  font-family: 'Press Start 2P', "Lucida Grande", monospace;
   font-size: 57px;
   line-height: 57px;
 
   .maz {
     color: #F45D4C;
+    display: inline-block;
   }
 
   .dev {
     color: #F7A541;
+    display: inline-block;
   }
 
   .dir {
     color: #A1DBB2;
+    display: inline-block;
   }
 
   margin: 10px;
@@ -46,7 +49,7 @@
 .main-header-subtitle-container {
 
   /* Digital Nomad's: */
-  font-family: PressStart2P, "Lucida Grande", monospace;
+  font-family: 'Press Start 2P', "Lucida Grande", monospace;
   font-size: 26px;
   line-height: 28px;
   margin: 1em;
@@ -64,6 +67,10 @@
 
 .minimal-header-outer {
   @extend .wrapper;
+  
+  > a {
+    color: $text-color;
+  }
 }
 
 .minimal-branding-container {

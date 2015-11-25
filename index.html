@@ -17,8 +17,9 @@ layout: default
       </th></tr>
     {% endunless %}
       <tr style="vertical-align: top">
-          <td style="padding-right: 8px; width: 3.1em;">
-              <span class="post-meta">{{ post.date | date: "%b %-d" }}</span>
+          <td style="padding-right: 8px; padding-top: 0.5em; width: 2em; line-height: 1em;">
+              <div>{{ post.date  | date: "%-d" }}</div>
+              <div class="post-meta">{{ post.date | date: "%b" }}</div>
           </td>
           <td>
               <h2>
