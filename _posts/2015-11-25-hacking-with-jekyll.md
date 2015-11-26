@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hacking With Jekyll
-date: 2015-11-25 17:58:13
+date: 2015-11-25 17:59:58
 categories: 
 - blog
 - jekyll
@@ -34,7 +34,7 @@ Most annoying crap I dealt with was [compass](http://compass-style.org/). It jus
 
 Another pain point was generating the blog from source ... Since I was using lots of plugins, I couldn't make github generate the website for me, so I had to build it locally, then push the result. Generating the blog took about 10 - 15 mins! That was crazy .. I know I have 200+ posts, but still! This was really annoying, especially if I had made some sort of syntax error or want to preview a post.
 
-Finally, the elaborate directory structure and options was overwhelming for my needs, hence it was time to be minimalistic.
+Finally, the elaborate directory structure and options were overwhelming for my needs, hence it was time to be minimalistic.
 
 ### Octoflat
 
