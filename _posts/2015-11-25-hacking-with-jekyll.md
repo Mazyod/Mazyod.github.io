@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hacking With Jekyll
-date: 2015-11-25 17:59:58
+date: 2015-11-25 18:03:49
 categories: 
 - blog
 - jekyll
@@ -54,7 +54,7 @@ The blog finally generates in just _7 seconds_, compared to the original 15 minu
 
 Admittedly, I had to [rewrite all the script I had]({% post_url 2014-03-16-blogging-with-octopress %}), but that's ok! Now that I have full control over the template created for a new post, I went ahead and created a much more sensible default template for my needs. All it took was a couple of minutes, really. I'll probably blog about the new workflow some day!
 
-Last but not least, now I have the capacity to maybe so A/B testing, see which changes readers like more and so on, since making changes is so easy!
+Last but not least, now I have the capacity to maybe do A/B testing, see which changes readers like more and so on, since making changes is so easy!
 
 ## Conclusion
 
