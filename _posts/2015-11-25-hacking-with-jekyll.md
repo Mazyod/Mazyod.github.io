@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hacking With Jekyll
-date: 2015-11-25 17:48:57
+date: 2015-11-25 17:58:13
 categories: 
 - blog
 - jekyll
@@ -32,7 +32,7 @@ Octopress was using Jekyll plugins to its fullest. Also, I was using it pre-v3.0
 
 Most annoying crap I dealt with was [compass](http://compass-style.org/). It just didn't work most of the time, hard to configure, and full of bugs. Thankfully, it's removed in most recent octopress releases.
 
-Another pain point was generating the blog from source ... Since I was using lots of plugins, I couldn't make github generate the website for me, so I had to build it locally, then push the result. Generating the blog took about 10 - 15 mins! That was crazy .. I know I have 200+ posts, but still! This was really annoying, especially if I had made some sort of syntax error or want to previous a post.
+Another pain point was generating the blog from source ... Since I was using lots of plugins, I couldn't make github generate the website for me, so I had to build it locally, then push the result. Generating the blog took about 10 - 15 mins! That was crazy .. I know I have 200+ posts, but still! This was really annoying, especially if I had made some sort of syntax error or want to preview a post.
 
 Finally, the elaborate directory structure and options was overwhelming for my needs, hence it was time to be minimalistic.
 
