@@ -19,7 +19,7 @@ I just can't take it anymore.. I have been quite conservative of some really *wt
 
 Apparently, we have these two methods in our class:
 
-```objc
+{% highlight objc %}
 - (void)requestFacebookPermissionsWithCompletionHandler:(void (^)(NSArray *permissions, NSError *error))completion
 {
     ...
@@ -29,7 +29,7 @@ Apparently, we have these two methods in our class:
 {
     ...
 }
-```
+{% endhighlight %}
 
 Here is the best part: 
 
