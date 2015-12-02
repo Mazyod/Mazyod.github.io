@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lavish Ideas
-date: 2015-11-27 00:33:33
+date: 2015-11-27 00:33:33 -0800
 categories: 
 - blog
 - rant

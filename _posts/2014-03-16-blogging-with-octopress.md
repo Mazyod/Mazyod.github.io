@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Blogging With Octopress"
-date: 2014-03-16 08:50:12 +0400
+date: 2014-03-16 08:50:12
 comments: true
 categories: 
 - blogging
