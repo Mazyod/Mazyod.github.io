@@ -18,8 +18,6 @@ permalink: /blog/:year/:month/:day/:title/
 twitter_username: mazyod
 github_username:  mazyod
 
-safe: true
-
 # define the navigation structure, to be built in navigation.html
 navigation:
 - text: '<i class="icon-home"></i>'
@@ -30,7 +28,9 @@ navigation:
   url: /about/
 
 # Build settings
+safe: true
 markdown: kramdown
+exclude: [vendor]
 
 # Disqus Comments
 disqus_short_name: mazyod
