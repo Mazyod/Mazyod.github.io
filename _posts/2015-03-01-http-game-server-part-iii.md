@@ -70,7 +70,7 @@ To do that, I transparently create a guest account that represents the player, a
 
 Here is a typical flow of how this works:
 
-![](/images/backend-diagram.png)
+![image](/images/backend-diagram.png)
 
 There isn't really much to cover, otherwise. After the user logs in or registered, I add them to the session. Because of GAE's scalable nature, it's much more efficient for the RESTful API to be stateless, and the users send their state using a secure cookie. This means, the secure cookie is decrypted for each requests, and the user is served based on that state. No DB access required.
 

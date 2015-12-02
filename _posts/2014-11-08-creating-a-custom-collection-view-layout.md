@@ -50,7 +50,7 @@ override func layoutAttributesForDecorationViewOfKind... {
 
 And a preview:
 
-![](/images/custom-collection-view-layout.png)
+![image](/images/custom-collection-view-layout.png)
 
 What is this magic, you say? Well, it's thanks to these meta structures that describe our layout for us. Along with some slick swift functional tricks, this code can't get any simpler!
 

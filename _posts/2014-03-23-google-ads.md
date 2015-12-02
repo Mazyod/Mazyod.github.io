@@ -17,19 +17,19 @@ I mean, is it really that hard to realize the point of advertising? It's __expos
 
 Le me searching for a good analytics, backend, push notification, ... etc service:
 
-![](/images/rapid.jpg)
+![image](/images/rapid.jpg)
 
 I find a few good services, but non of them really fit my need!
 
-![](/images/analytics-services.png)
+![image](/images/analytics-services.png)
 
 ... Hence, decides uncle google to just keep showing me these service that _Do Not Fit My Need!_
 
-![](/images/0044.gif)
+![image](/images/0044.gif)
 
 As I was feeling frustrated, a glimmer of hope shone in my brainz:
 
-![](/images/Parse_Cloud.png)
+![image](/images/Parse_Cloud.png)
 
 I remembered parse and StackMob, and ultimately went with parse... Without Google getting a dime for my conversion!!
 

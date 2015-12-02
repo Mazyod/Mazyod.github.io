@@ -105,7 +105,7 @@ Anyways, this is where the hybrid mode came into existence! The hybrid mode says
 
 Cocos2d is truly awesome .. It is not epic, but only awesome. By spending only a couple of hours on the Dama iOS project, which was based on Cocos2d v.1.0.1, I was able to port it to the Cocos2d v2.0 Mac version! Yes, the game now runs on Mac!! :D
 
-[![](/images/screen-shot-2012-04-20-at-6-41-01-pm.png)](/images/screen-shot-2012-04-20-at-6-41-01-pm.png)
+[![image](/images/screen-shot-2012-04-20-at-6-41-01-pm.png)](/images/screen-shot-2012-04-20-at-6-41-01-pm.png)
 
 Not to say there aren't any caveats, but it runs! With sound!
 

@@ -27,7 +27,7 @@ There is no way I'm gonna waste time solving a sudoku, but what I will do is sha
 
 ## Sudoku Pie, Literally
 
-![](/images/sudok.png)
+![image](/images/sudok.png)
 
 You get my point now.
 

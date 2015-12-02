@@ -46,5 +46,5 @@ categories:
 - This will be the best SEO post of all time
 - I wonder if I should stop typing ..
 
-![](/images/tumblr_mu3ldtX6ZA1s4kxqxo1_500.gif)
+![image](/images/tumblr_mu3ldtX6ZA1s4kxqxo1_500.gif)
 

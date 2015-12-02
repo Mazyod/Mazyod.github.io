@@ -72,4 +72,4 @@ Day2: 9:00am - 8:00pm
 
 **We really look forward to seeing you there!**
 
-[![](/images/islamicaster-icon1.jpg)](/images/islamicaster-icon1.jpg)
+[![image](/images/islamicaster-icon1.jpg)](/images/islamicaster-icon1.jpg)

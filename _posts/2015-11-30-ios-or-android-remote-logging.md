@@ -133,7 +133,7 @@ Finally, we assign the value of this node that we reached to the log message. We
 
 Now, let's see what this handy work of ours gives us:
 
-![]({{ site.url }}/images/firebase-nashr.png)
+![image]({{ site.url }}/images/firebase-nashr.png)
 
 Isn't that just dandy! This is the default firebase web viewer, and you can see how neatly the logs are structured, and how easy it is to quickly dig into them and find issues for a particular user.
 

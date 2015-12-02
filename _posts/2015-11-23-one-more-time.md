@@ -17,4 +17,4 @@ No introduction, no conclusion, just pure anticipation of the new blog design to
 
 ### Coming soon
 
-![](/images/blog-content-design.png)
+![image](/images/blog-content-design.png)

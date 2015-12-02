@@ -18,7 +18,7 @@ categories:
 
 Recently, I was privileged with the task of configuring a mac mini server with Jenkins to automate our build process, and distribute new versions OTA using HockeyApp.
 
-![](/images/jenkins-logo.png)
+![image](/images/jenkins-logo.png)
 
 The task was anything but smooth. I did not expect Jenkins to have so many bugs!! Well, less Jenkins, and more the plugins that are around it. Anyways, let's dive right into it.
 

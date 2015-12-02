@@ -49,7 +49,7 @@ I slammed my laptop in frustration..
 
 Finally, it clicked in my head that I can go ahead with a universal approach that I can use throughout my apps! What if I just show a temporary view in the beginning with a spinner, just to wait till the user hits "allow", and the crash is sent?
 
-![](/images/crash-detected.jpg)
+![image](/images/crash-detected.jpg)
 
 The users started seeing this screen instead of the app just crashing on launch. Even better, they were able to hit "allow", and I get my crash report!
 

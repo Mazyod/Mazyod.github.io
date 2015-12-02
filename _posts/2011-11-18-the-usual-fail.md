@@ -21,7 +21,7 @@ After clearing the way, I finally got back on track with the Dama chat implement
 
 Let us first see how much the chatView evolved since the last time we spoke:
 
-[![](/images/screen-shot-2011-11-18-at-8-48-05-pm2.png)](/images/screen-shot-2011-11-18-at-8-48-05-pm2.png)
+[![image](/images/screen-shot-2011-11-18-at-8-48-05-pm2.png)](/images/screen-shot-2011-11-18-at-8-48-05-pm2.png)
 
 *It says (null) as the name because am calling [[GKLocalPlayer localPlayer] alias], and it is returning nil. Why? Because this is currently implemented in the single player mode for testing!*
 

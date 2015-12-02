@@ -139,7 +139,7 @@ Finally, the embedded __Framework__ error... Cocoapods strikes again! Framework8
 
 [According to this issue](https://github.com/CocoaPods/CocoaPods/issues/3440), Cocoapods just insists on embedding the linked framework into its target even if the target is a framework itself. The suggested way to solve the issue is to convert the intermediate framework (Framework8) into a pod itself ...
 
-![](/images/jaa7pj5.jpg)
+![image](/images/jaa7pj5.jpg)
 
 So, instead, I pull SwiftyJSON, build it locally, drop it into the workspace, add it to Framework8 framework search paths (without linking it!!), and finally make sure SwiftyJSON is added to the main app pod file. DONE.
 

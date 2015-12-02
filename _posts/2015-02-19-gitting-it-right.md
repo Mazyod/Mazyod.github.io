@@ -34,29 +34,29 @@ First things first, everyone should have their own fork of the main repository. 
 
 Once you've settled on your fork, here is how your structure should look like:
 
-![](/images/gitting-it-right-1.png)
+![image](/images/gitting-it-right-1.png)
 
 Now that you have your own fork, celebrate! Once that's over, it's time to write some code. But, what is that code gonna be about? How will it affect/be affected by other changes? It's good to have these questions in mind, but the approach presented here should cleanly cover all that stuff.
 
 Every new feature, bug fix, refactor you want to work on should go into its own branch. This allows the developer to focus on one properly contained problem. Let's assume you want to implement a features. So, you would branch from master, and implement the feature there:
 
-![](/images/gitting-it-right-2.png)
+![image](/images/gitting-it-right-2.png)
 
 Yay, you implemented your first feature! Celebrate once more. Then, it's time to submit your feature to the main repo so you're teammates can see how awesome you are... OH NOES! While you were implementing your features, someone merged their own progress into the main repo. Who knows how well your code will work with theirs?
 
-![](/images/gitting-it-right-3.png)
+![image](/images/gitting-it-right-3.png)
 
 Well, we can't just do a [hail Mary merge](https://www.youtube.com/watch?v=ywcD94gqxQM) and hope for the best. You have to make sure everything works!! So, first, you should update your repo with the latest code:
 
-![](/images/gitting-it-right-4.png)
+![image](/images/gitting-it-right-4.png)
 
 Then, you merge your code with your master branch:
 
-![](/images/gitting-it-right-5.png)
+![image](/images/gitting-it-right-5.png)
 
 Now, you can test and make sure your code doesn't affect the newly added code. If it does, you simply update your branch, and merge again with your master branch. Once everything is tiptop, you can proceed with updating the main repo:
 
-![](/images/gitting-it-right-6.png)
+![image](/images/gitting-it-right-6.png)
 
 ## Conclusion
 

@@ -34,13 +34,13 @@ This will obviously make sure you have all the dependencies.
 
 After that, make sure you remove all the linked libraries in the build phase, except cocos. Here are the before and after screenshots:
 
-![](/images/build-phases-xcode-before.png)
+![image](/images/build-phases-xcode-before.png)
 
-![](/images/build-phases-xcode-after.png)
+![image](/images/build-phases-xcode-after.png)
 
 Finally, update the linker flags to use the new Cocos2d-x way of linking against libraries:
 
-![](/images/xcode-linker-flags.png)
+![image](/images/xcode-linker-flags.png)
 
 That was pretty much it for me!
 

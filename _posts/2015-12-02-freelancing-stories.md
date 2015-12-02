@@ -49,7 +49,7 @@ Whatever you do, never work for a fixed price. ___Never___. No exceptions.
 
 There are literally zero clients that will come to you and say "Hey, my project is complicated, and I appreciate any effort you put in". Instead, all their projects are "simple" and "straight-forward", should be done in less then a few months, and they have all the details figured out... You're looking at the wireframes going, "Yeah... that's a scribble on a napkin, what am I suppose to make out of that?"
 
-![]({{ site.url }}/images/software_development_comic.jpg)
+![image]({{ site.url }}/images/software_development_comic.jpg)
 
 The solution to that is actually quite simple. Don't work for fixed price, ever. For your sake and the sake of the client, working for fixed price means one will be cheating the other. It'll either be the developer doing a crappy job and demanding the whole pay, or the client making unreasonable claims about the scope as they envisioned it, demanding you see it through (even if it takes years). Really, you don't want that.
 

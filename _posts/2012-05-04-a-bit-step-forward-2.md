@@ -45,7 +45,7 @@ While coding the project that I have been talking about in some of the previous 
 
 The problem was the large and ugly amount of primitives that are associated with the settings view that I had. (What the heck is that guy talking about?!) Don't worry, that was suppose to be a bit ambiguous :P. So, let's take an example, shall we? Take a good look at the following settings view:
 
-[![](/images/settingsscreen-cocoa-nstoolbar.png)](/images/settingsscreen-cocoa-nstoolbar.png)
+[![image](/images/settingsscreen-cocoa-nstoolbar.png)](/images/settingsscreen-cocoa-nstoolbar.png)
 
 Ok, after looking at it, imagine how are we going to save the checkboxes states and the popup buttons selections. Don't worry about how to save the font, size, and colors for now. (NOTE: Without using Cocoa Bindings. I have my reasons for not using them).
 

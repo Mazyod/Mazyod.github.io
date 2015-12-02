@@ -38,7 +38,7 @@ First, let's quickly learn what a socket based server is..
 
 A socket based server is basically a server that creates a communication socket for each connected client. This socket is basically "the doorman" for a persistent network connection (either TCP or UDP) that the server and client start communicating through:
 
-![](/images/socket-diagram.png)
+![image](/images/socket-diagram.png)
 
 The biggest advantage here is that the server can push data to the client at anytime, without the client specifically requesting something. This can be useful for multiplayer games, where the actions of a player are broadcasted to all the connected clients.
 

@@ -60,7 +60,7 @@ In my application, local notifications are everything. If that feature doesn't w
 
 Here is the whole flow of how things work:
 
-![](/images/Notifications.png)
+![image](/images/Notifications.png)
 
 ### Checking Permissions
 

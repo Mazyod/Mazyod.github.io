@@ -97,7 +97,7 @@ What was said previously begs the question: But where does this label come from?
 
 {% endhighlight %}
 
-![](/images/evercraft-children.png)
+![image](/images/evercraft-children.png)
 
 Now, regarding how the outline view knows the object has children, this comes for free when we bound it to the tree controller. The tree controller has to be set up with the property that refers to the children in the ECObject. I also set the object type of the tree controller content to ECObject. Note, the image on the left has been photoshoped for brevity sake.
 

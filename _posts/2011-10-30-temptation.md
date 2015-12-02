@@ -32,7 +32,7 @@ So ... I opened the code from**_ long ago_**, and saw that I had implemented the
 
 The Result:
 
-[![](/images/screen-shot-2011-10-30-at-10-30-25-pm2.png)](/images/screen-shot-2011-10-30-at-10-30-25-pm2.png)[
+[![image](/images/screen-shot-2011-10-30-at-10-30-25-pm2.png)](/images/screen-shot-2011-10-30-at-10-30-25-pm2.png)[
 ](/images/screen-shot-2011-10-30-at-10-30-25-pm1.png)
 
 

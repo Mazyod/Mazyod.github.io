@@ -29,7 +29,7 @@ Unity doesn't provide a command line interface (cli) for generating builds, so y
 
 The script is going to be an [Editor Script](http://docs.unity3d.com/Manual/ExtendingTheEditor.html), meaning you must create a new script in the project, and add it to "Editor" directory in the root of the project directory:
 
-![](/images/unity-script.png)
+![image](/images/unity-script.png)
 
 The script should contain code to call the build pipeline, and generate the Xcode project. In the code below, I hardcoded the output directory, so you must make sure the directory `Builds/iOS` exists in the project.
 
@@ -77,7 +77,7 @@ public static class AutoBuilder {
 
 After adding the script above, you will now be able to see an option in the editor to generate the Xcode project:
 
-![](/images/unity-editor-script.png)
+![image](/images/unity-editor-script.png)
 
 OK, it's cool that we have the option to do it through UI, but what if we want to incorporate that with a build script? Simple task.
 

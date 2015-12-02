@@ -22,7 +22,7 @@ I thought that was cool, but didn't quite do it myself because I work on my own 
 
 Here is an example of a problem I am trying to solve:
 
-![](/images/Screenshot_2014-08-29_12.50.02.png)
+![image](/images/Screenshot_2014-08-29_12.50.02.png)
 
 As you can probably tell, this is the matchmaking process in the game, and using [yEd](http://www.yworks.com/en/products_yed_about.html), I can easily draw this FSM and make sure I account for all situations.
 

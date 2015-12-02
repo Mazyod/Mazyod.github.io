@@ -15,11 +15,11 @@ The SSD haz finally arrived!
 
 So, the question immediately rises, is it worth the $370? See for yourself:
 
-[![](/images/screen-shot-2011-12-15-at-3-58-23-pm.png)](/images/screen-shot-2011-12-15-at-3-58-23-pm.png)
+[![image](/images/screen-shot-2011-12-15-at-3-58-23-pm.png)](/images/screen-shot-2011-12-15-at-3-58-23-pm.png)
 
 That's the freaking-ishly slow HDD of the 20th century .. Moving on to the 21st century:
 
-[![](/images/screen-shot-2011-12-15-at-3-57-44-pm.png)](/images/screen-shot-2011-12-15-at-3-57-44-pm.png)
+[![image](/images/screen-shot-2011-12-15-at-3-57-44-pm.png)](/images/screen-shot-2011-12-15-at-3-57-44-pm.png)
 
 Unless the Math that I was taught was all a lie, I'd say that's a good 4x performance boost!!
 

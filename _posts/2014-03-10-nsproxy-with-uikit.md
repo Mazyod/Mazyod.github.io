@@ -25,7 +25,7 @@ I was entrusted with the deceivingly mundane task of localization. The task quic
 
 Thanks to [Apple's AutoLayout system](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html), flipping the UI around was surprisingly easy! Specifically, assigning leading and trailing spaces for subviews will make the layout intelligently switch between LTR and RTL. Unfortunately, Apple didn't take it a step further to support flipped controls, specifically `UISegmentedControl` in my case.
 
-![](/images/segmented-en.png) ![](/images/segmented-ar.png)
+![image](/images/segmented-en.png) ![image](/images/segmented-ar.png)
 
 As you can see, this is the problem:
 
@@ -60,7 +60,7 @@ As you can see, the superclass may query the selected segment's index either thr
 
 The first thing that crossed my mind was to wrap the object with a proxy that would flip all the segment indexes coming in and out of the control:
 
-![](/images/segment-sequence-1.png)
+![image](/images/segment-sequence-1.png)
 
 That seemed like to much work, so I went ahead and implemented a simple category that the developer has to call in order to get the proper result [(available on github)](https://github.com/Mazyod/RTLSegmentedControl). The way it works is simple: Replace all your calls that are related to the segment index with the methods found in the category, and it will check if the user's language is RTL, and flip accordingly:
 

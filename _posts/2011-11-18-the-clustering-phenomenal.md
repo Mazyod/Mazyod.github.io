@@ -29,7 +29,7 @@ Well, onto the post...
 
 I actually forgot what I was go- ..oh right. I wanted to mark the end of today's progress. So, here it is:
 
-[![](/images/screen-shot-2011-11-19-at-2-25-46-am.png)](/images/screen-shot-2011-11-19-at-2-25-46-am.png)
+[![image](/images/screen-shot-2011-11-19-at-2-25-46-am.png)](/images/screen-shot-2011-11-19-at-2-25-46-am.png)
 
 The main points:
 	
