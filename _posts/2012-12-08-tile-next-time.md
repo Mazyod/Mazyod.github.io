@@ -17,4 +17,4 @@ Hurray! A video tutorial! And a short one! How luck you are :p
 
 How to make a texture tilable? Well, check the video out! Tile Next Time! Later!
 
-[youtube=http://youtu.be/6acA-ImrdEc]
+[Youtube Link](http://youtu.be/6acA-ImrdEc)

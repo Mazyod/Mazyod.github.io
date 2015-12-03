@@ -16,4 +16,4 @@ tags:
 
 Or, whatever they are worth.. Here:
 
-[youtube http://www.youtube.com/watch?v=vI8s0cqzc9c&w;=420&h;=315]
+[Youtube Link](http://www.youtube.com/watch?v=vI8s0cqzc9c&w;=420&h;=315)
