@@ -11,11 +11,11 @@ categories:
 - idea
 ---
 
-<span style="font-size: 72pt;">🇺🇸 San Diego</span>
+<span style="font-size: 72pt;">🇺🇸 Boston</span>
 
 # Where Next
 
-<span style="font-size: 72pt;">😥?</span>
+<span style="font-size: 72pt;">New York</span>
 
 __About This Page__
 
