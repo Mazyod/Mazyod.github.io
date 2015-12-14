@@ -20,13 +20,19 @@ While thinking for a topic to write about, I realized that just the fact of choo
 
 I've been integrating [Sentry](https://getsentry.com/welcome/) with an iOS app these days, and it's a really rewarding experience. I've assumed charge of the whole stack, from deploying Sentry on [AWS](http://aws.amazon.com/free), all the way to writing the exact logs in the iOS app itself. Will hopefully post about that as soon as its done!
 
+[Post published!]({% post_url 2015-11-30-ios-or-android-remote-logging.md %})
+
 ### AppleTV
 
 Another thing is developing an Apple TV app from an existing iOS app source. AppleTV SDK is pretty good, but there are some really nice (and really weird) differences. I'll hopefully highlight that experience once it is done, as well.
 
+[Post published!]({% post_url 2015-12-10-developing-tvos-apps.md %})
+
 ### zsh
 
 [zsh](http://www.zsh.org/) is just just simply the best thing that happened to my terminal experience hands down. In terms of overall benefit to my workflow, it easily out-shines Homebrew, cask, and any other tool I've ever used .. COMBINED. I just have to write about how awesome zsh is .. In fact, I'll start drafting this post right now, and just fill it up as I keep using zsh everyday.
+
+[Post published!]({% post_url 2015-11-28-oh-my-zsh.md %})
 
 ### On Being a Freelancer
 
