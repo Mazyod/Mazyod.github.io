@@ -38,6 +38,8 @@ Another thing is developing an Apple TV app from an existing iOS app source. App
 
 I've worked on two freelance projects in the past few months, and I believe there are some really good lessons I've learned that could be worth sharing. It's unfortunate that freelancing isn't what we imagine it to be...
 
+[Post published!]({% post_url 2015-12-02-freelancing-stories %})
+
 ### WatchOS Apps
 
 Of course! I've recently shipped an app with AppleWatch support, including glances, complications, and time travel! Definitely interesting topics to be discussed on that front.
@@ -45,6 +47,8 @@ Of course! I've recently shipped an app with AppleWatch support, including glanc
 ### Kitz
 
 As I build more bits and pieces of [Kitz](http://kitz.io/), I keep learning more and more important lessons I'd really like to discuss in depth on this blog. [I've already posted about one]({% post_url 2015-11-20-generic-constraints-with-optionals %}), but there is way more stuff to be posted.
+
+[Post published!]({% post_url 2015-12-07-swifty-nsnotificationcenter %})
 
 ## Conclusion
 
