@@ -61,7 +61,8 @@ That's where Notificationz comes in. It is super light-weight and simple, and ju
 import Notificationz
 
 // Define your global helper only once for all files
-let NC = NotificationCenter(nsCenter: NSNotificationCenter.defaultCenter())
+let center = NSNotificationCenter.defaultCenter()
+let NC = NotificationCenterAdapter(notificationCenter: center)
 
 class Sample {
 
