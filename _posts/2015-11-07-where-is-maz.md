@@ -11,11 +11,11 @@ categories:
 - idea
 ---
 
-<span style="font-size: 72pt;">🇺🇸 Houston</span>
+<span style="font-size: 72pt;">🇺🇸 San Francisco</span>
 
 # Where Next
 
-<span style="font-size: 72pt;">San Francisco</span>
+<span style="font-size: 72pt;">IDK!</span>
 
 __About This Page__
 
