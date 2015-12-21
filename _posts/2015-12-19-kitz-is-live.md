@@ -63,7 +63,7 @@ Last, but not least, [continuous integration, brought to you by Travis][travis-k
 
 ## Conclusion
 
-Give these libraries a try, open issues, submit PRs, I'll even add you to the organization is you like. It's meant to be a collaborative effort in a fun environment. Also, star, share and spread the ❤️.
+Give these libraries a try, open issues, submit PRs, I'll even add you to the organization if you like. It's meant to be a collaborative effort in a fun environment. Also, star, share and spread the ❤️.
 
 [kitz-link]: http://kitz.io
 [toast-link]: https://www.youtube.com/watch?v=MwDhUt5ewKk
