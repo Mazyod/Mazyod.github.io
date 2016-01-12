@@ -15,7 +15,7 @@ categories:
 
 # Where Next
 
-<span style="font-size: 72pt;">IDK!</span>
+<span style="font-size: 72pt;">🇯🇵 Tokyo</span>
 
 __About This Page__
 
