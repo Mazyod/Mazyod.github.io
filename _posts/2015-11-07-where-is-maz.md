@@ -11,11 +11,11 @@ categories:
 - idea
 ---
 
-<span style="font-size: 72pt;">🇺🇸 San Francisco</span>
+<span style="font-size: 72pt;">🇯🇵 Tokyo</span>
 
 # Where Next
 
-<span style="font-size: 72pt;">🇯🇵 Tokyo</span>
+Just staying in Tokyo for a while :D
 
 __About This Page__
 
