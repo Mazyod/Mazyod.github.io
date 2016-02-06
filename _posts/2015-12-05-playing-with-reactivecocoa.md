@@ -2,7 +2,7 @@
 layout: post
 title: Playing With ReactiveCocoa
 date: 2015-12-05 02:10:51 -0800
-categories: 
+categories:
 - ios
 - swift
 - xcode
@@ -45,7 +45,7 @@ The example we will take a look at is something I am actually using in a shippin
 
 What does this look like?
 
-![]({{ site.url }}/images/reactive-login.png)
+![Reactive Login]({{ site.url }}/images/reactive-login.png)
 
 What about teh codez?
 
@@ -77,7 +77,7 @@ We create the signals by first `zip`-ing the field with its validator, the itera
 {% highlight swift %}
 // Prepare signals
 let signals = zip(fields, validators).map { field, validator in
-    
+
     field
         .rac_textSignal()
         .map { validator($0 as! String) }

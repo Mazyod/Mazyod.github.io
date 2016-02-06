@@ -23,8 +23,8 @@ That's the freaking-ishly slow HDD of the 20th century .. Moving on to the 21st 
 
 Unless the Math that I was taught was all a lie, I'd say that's a good 4x performance boost!!
 
-The Mac feels great! Lighting fast file read/write/copy. Photoshop CS 5.1 starts without bouncing on the dashboard for half an hour as it did before. I really like this awesome Crucial[*] product!!
+The Mac feels great! Lighting fast file read/write/copy. Photoshop CS 5.1 starts without bouncing on the dashboard for half an hour as it did before. I really like this awesome Crucial(1) product!!
 
-[*]: I am not getting paid one penny for saying this >.>
+(1): I am not getting paid one penny for saying this >.>
 
 Well, let me see if that site finished setting up my account so I can haz server programmingz 8)

@@ -43,7 +43,7 @@ No, this is not a [movie review](http://www.imdb.com/title/tt0127357/), I am gon
 **Progress:** Working on v5.0.
 
 
-[![image](/images/default2x.png)](/images/default2x.png)
+[![image](images/default2x.png)](images/default2x.png)
 
 
 ### Dama: لعبة الدامة [link](https://itunes.apple.com/us/app/id442570707?ls=1&mt=8)
@@ -79,4 +79,3 @@ No, this is not a [movie review](http://www.imdb.com/title/tt0127357/), I am gon
 
 
 [![image](/images/project_facade.jpg)](/images/project_facade.jpg)
-

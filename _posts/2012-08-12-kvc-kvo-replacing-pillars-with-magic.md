@@ -8,17 +8,17 @@ title: 'KVC & KVO: Replacing Pillars with Magic'
 wordpress_id: 257
 ---
 
-[Mukashi, Mukashi](wiki.answers.com/Q/What_does_mukashi_mean) .. There lived two young kids, a boy (names KVC) and his sister (named KVO). You see, they were born twins, and the laws of mortality did not apply to them. (Plain and simple, they never aged for some reason). They lived happily in the forest, where they survived by utilizing their two main skills:
+[Mukashi, Mukashi](http://wiki.answers.com/Q/What_does_mukashi_mean) .. There lived two young kids, a boy (names KVC) and his sister (named KVO). You see, they were born twins, and the laws of mortality did not apply to them. (Plain and simple, they never aged for some reason). They lived happily in the forest, where they survived by utilizing their two main skills:
 
 
 
-	
+
   * KVC would use his awesome trap **setting **techniques to place traps near rabbit holes, then go rest.
 
-	
+
   * KVO would then use her keen eyes to **observe** the traps for any changes, and promptly alert her brother if anything happened.
 
-	
+
   * KVC would finally **get** the trap containing their loot, and they would enjoy a delicious meal at the end of the day.
 
 
@@ -48,10 +48,10 @@ As you might have deduced from the boring tale above, KVC does two main things:
 
 
 
-	
+
   1. Sets <del>traps</del> values.
 
-	
+
   2. Gets values.
 
 
@@ -59,22 +59,22 @@ As you might have deduced from the boring tale above, KVC does two main things:
 
 {% highlight objc %}
 @interface Foo : NSObject  
-{ 
-    id var1; 
-    id var2; 
-    ... 
-    id varN; 
+{
+    id var1;
+    id var2;
+    ...
+    id varN;
 }
 
 {% endhighlight %}
 
-Now, with this class having all theses [iVars](en.wikipedia.org/wiki/Instance_variable), it would be a pain to do something like:
+Now, with this class having all theses [iVars](http://en.wikipedia.org/wiki/Instance_variable), it would be a pain to do something like:
 
 
 {% highlight objc %}
-Foo* foo = [[Foo alloc] init]; 
-foo.var1 = ...; 
-foo.var2 = ...; 
+Foo* foo = [[Foo alloc] init];
+foo.var1 = ...;
+foo.var2 = ...;
 ...
 
 {% endhighlight %}
@@ -84,12 +84,12 @@ What's the alternative? KVC! Here is how it works:
 
 {% highlight objc %}
 for (int i = 1 ; i<=N ; i++)  
-{ 
-    NSString* varName = [NSString stringWithFormat:@"var%d", i]; 
-    [foo setValue:[NSNumber numberWithInt:22] forKey:varName]; 
-} 
-  
-// And inorder to read the vars in a similar fashion: 
+{
+    NSString* varName = [NSString stringWithFormat:@"var%d", i];
+    [foo setValue:[NSNumber numberWithInt:22] forKey:varName];
+}
+
+// And inorder to read the vars in a similar fashion:
 int var1 = [[foo valueForKey:@"var1"] intValue];
 
 {% endhighlight %}
@@ -98,13 +98,13 @@ Notice two things:
 
 
 
-	
+
   1. The instance variable we are setting is of type `int`, while we are sending and `NSNumber` object.
 
-	
+
   2. What the heck happens if the setters and getters are overriden?!
 
-	
+
   3. The value we are settings might not be so conveniently easy to determine.
 
 
@@ -118,7 +118,7 @@ Remember what was KVO's job? Observe. Thus, it is quite simply useful to observe
 
 {% highlight objc %}
 /* Polling approach. Yuck! */    
-     
+
 // Inside the gun class:    
 - (void)fireBullet     
 {    
@@ -137,9 +137,9 @@ Some of us might started thinking, what's wrong with that? Nice, simple and it w
 
 {% highlight objc %}
 /* Polling approach, with delegate. Gross! */    
-     
+
 // Inside bullet class:    
-     
+
 // this method updates the bullet position each frame    
 // thus we see an animation of the bullet moving:    
 - (void)update     
@@ -150,16 +150,16 @@ Some of us might started thinking, what's wrong with that? Nice, simple and it w
         [delegate bulletDidExitScreen:self];    
     }    
 }    
-     
+
 // Inside the gun class:    
-     
+
 // handle delegate method:    
 - (void)bulletDidExitScreen:(Bullet *)bullet     
 {    
     [self showBulletAvailable];    
     [bullet setReady:YES];    
 }    
-     
+
 - (void)fireBullet     
 {    
     // No longer need to check if bullet exited the screen    
@@ -184,14 +184,14 @@ OK, with that crap out of the way, let's see how KVO does it:
         [self reloadBullet:bullet];    
         [bullet fireWithAngle:zelta];    
         [self showBulletUnavailable];    
-     
+
         [bullet addObserver:self    
                  forKeyPath:@"position.x"    
                     options:NSKeyValueObservingOptionNew    
                     context:NULL];    
     }    
 }    
-     
+
 - (void)observeValueForKeyPath:(NSString *)keyPath    
                       ofObject:(id)object    
                         change:(NSDictionary *)change    

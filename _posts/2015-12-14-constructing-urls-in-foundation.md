@@ -2,7 +2,7 @@
 layout: post
 title: Constructing URLs in Foundation
 date: 2015-12-14 19:23:26-0500
-categories: 
+categories:
 - Foundation
 - NSURL
 - query
@@ -31,7 +31,7 @@ So, the API was rewritten to make the definitions easier to write and maintain. 
 
 {% highlight swift %}
 struct Path {
-    
+
     var pathComponents = [String]()
     var queryParameters = [String:String]()
 }
@@ -60,7 +60,7 @@ The biggest caveat about `NSURL` that developers miss is its immutability. It ha
 As mentioned, this class acts as a factory for `NSURL` instances. You can initialize an instance of `NSURLComponents`, then start customizing how the resulting `NSURL` instances will be. Let's see an example:
 
 {% highlight swift %}
-let comps = NSURLComponents() 
+let comps = NSURLComponents()
 comps.scheme = "https"
 comps.host = "github.com"
 comps.path = "/SwiftKitz/Appz"
@@ -78,5 +78,5 @@ You should haven't gotten the gist of this class from the example above. It is a
 
 It is very important for developers, especially seasoned ones, to continuously research for better ways to tasks they are used to performing, like constructing an `NSURL` instance. New, better APIs might be available, and leveraging them might resolve hidden bugs in your code, and probably help speed your development process further.
 
-[appz-repo]: https://github.com/SwiftyKitz/Appz
+[appz-repo]: https://github.com/SwiftKitz/Appz
 [holyalgorithm-pr]: https://github.com/SwiftKitz/Appz/pull/6

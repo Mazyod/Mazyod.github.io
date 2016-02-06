@@ -2,7 +2,7 @@
 layout: post
 title: Developing tvOS Apps
 date: 2015-12-10 00:28:04-0500
-categories: 
+categories:
 - tvos
 - uikit
 - programming
@@ -23,7 +23,7 @@ categories:
 
 My response ....
 
-![]({{ site.url }}/images/one-does-not-simple-tvos.jpg)
+![One does not simply copy paste iOS code into tvos]({{ site.url }}/images/one-does-not-simple-tvos.jpg)
 
 Yes, lots of work is involved in porting an app to tvOS, but it wasn't too bad all things considered. Let's see the highlights of this experience.
 
@@ -47,7 +47,7 @@ I abandoned all hope of coming up with an elegant solution at this point, and de
 
 ### UIKit
 
-This was an immediate win, and immediately felt like the right solutions. Creating a storyboard, and adding simple collection views and navigation controllers got me up and running in no time, thanks to reusing my iOS experience. 
+This was an immediate win, and immediately felt like the right solutions. Creating a storyboard, and adding simple collection views and navigation controllers got me up and running in no time, thanks to reusing my iOS experience.
 
 At that point, an important decision was made, which is to simplify the tvOS app as much as possible, such that it would fit one storyboard. We don't have time for bells and whistles, so constraints had to be put in place early on to ensure the project will make it.
 
@@ -70,7 +70,7 @@ Amazing! But there was an edge case where we showed a label when the image wasn'
 
 {% highlight objc %}
 [coordinator addCoordinatedAnimations:^{
-    
+
     if (context.nextFocusedView == self) {
         self.backgroundColor = [UIColor whiteColor];
         self.label.textColor = [UIColor darkGrayColor];
@@ -88,14 +88,14 @@ The final issue was navigation. After implementing a `UINavigationController`, t
 
 {% highlight swift %}
 override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-    
+
     if presses.first?.type != .Menu {
         super.pressesBegan(presses, withEvent: event)
     }
 }
 
 override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-    
+
     if presses.first?.type != .Menu {
         super.pressesEnded(presses, withEvent: event)
     }

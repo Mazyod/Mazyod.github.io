@@ -3,7 +3,7 @@ layout: post
 title: "HTTP Game Server: Part I"
 date: 2015-02-17 14:35:37 +0400
 comments: true
-categories: 
+categories:
 - http
 - game
 - server
@@ -26,7 +26,7 @@ I have been thinking of a topic to write about, and couldn't find a quick and ea
 
 This time around, I will be talking in details about things I'm working on, and how it came along. These posts might span multiple parts, but that's even better, as I have more content to roll out!
 
-So, this post is going to be about how I built a RESTful API backend for my game. Hopefully it will be enjoyable, and useful! It reminds me of the [Map Editor series](http://mazyod.com/blog/categories/never-ever/), so if you haven't checked that one out, please do!
+So, this post is going to be about how I built a RESTful API backend for my game. Hopefully it will be enjoyable, and useful! It reminds me of the Map Editor series, so if you haven't checked that one out, please do!
 
 ## Design
 
@@ -50,4 +50,3 @@ Finally, I plugged the API design into a machine, and a backend was built for me
 ## Conclusion
 
 This was a quick look at the design phase of building the REST-based, turn-based game backend. In the upcoming article, we'll see how we can build this API using Google App Engine.
-

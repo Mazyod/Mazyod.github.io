@@ -29,7 +29,7 @@ tags:
 - starcraft
 ---
 
-_This is the second post of a six posts series regarding creating a map editor software for an RTS game. If you haven't already, [check out the first post of the series](http://mazyod.com/2013/11/30/creating-a-map-editor-for-a-game-13/)._
+_This is the second post of a six posts series regarding creating a map editor software for an RTS game. If you haven't already, [check out the first post of the series]({% post_url 2013-11-30-creating-a-map-editor-for-a-game-13 %})._
 
 So, I had a nasty cliff hanger in the previous post, which made me feel sorry for the reader, and thus I decided to write the second part ASAP! ... Actually, I couldn't care less, this is just part of my day.
 
@@ -47,28 +47,28 @@ What is so special about these XML files? They are restricted to contain only ce
 
 
 
-	
+
   1. Arrays
 
-	
+
   2. Dictionaries (Maps)
 
-	
+
   3. Strings
 
-	
+
   4. Integers
 
-	
+
   5. Reals
 
-	
+
   6. Booleans
 
-	
+
   7. Dates (not the food, timestamps)
 
-	
+
   8. Data (arbitrary binary data)
 
 
@@ -84,42 +84,42 @@ Now that we all understand what plists are, it's time to see them in action! Pre
 
 
 
-	
+
   1. **Object Properties**:
 
-	
+
     * _UID (int)_: automatically generated unique ID for referencing
 
 
 
-	
+
     * _Entity (String)_: e.g. militia_unit_lvl01, critter_spider_lvl04, ... etc.
 
-	
+
     * _Position (Point)_: position of the object
 
-	
+
     * _Size (Size)_: the size the object occupies, calculated in tiles (2x2, 5x5, ...)
 
 
-	
+
   2. **Zone**:
 
-	
+
     * _UID (int)_: automatically generated unique ID for referencing
 
-	
+
     * _Position (Point)_: position of the zone
 
-	
+
     * _Size (Size)_: the size the zone occupies
 
 
-	
+
   3. ... and so on.
 
 
-The issue here is, these object properties are not fixed (in the long term)! Even though we define a zone as a UID, position and size, there is a possibility that the game designer would want to something more interesting with the zones in the future, which would mean reworking the Map Editor, adding code to the game engine to load the new properties, use them, ... etc. SUCH A PAIN!! Good thing we have plists... 
+The issue here is, these object properties are not fixed (in the long term)! Even though we define a zone as a UID, position and size, there is a possibility that the game designer would want to something more interesting with the zones in the future, which would mean reworking the Map Editor, adding code to the game engine to load the new properties, use them, ... etc. SUCH A PAIN!! Good thing we have plists...
 
 (**UPDATE**: I was actually requested to add a `commander_id` parameter to the object's structure yesterday. Commander ID would signify whether that object is a player's object, an enemey object, an allied object, or of course, neutral. All it took was 5 seconds to add that parameter to the plist, and run a script!)
 
@@ -131,17 +131,17 @@ Pretty straightforward. The plist is an array of dictionary. A dictionary define
 
 
 
-	
+
   1. **Name:** in order to fetch the prefab.
 
-	
+
   2. **Parameters: **the variables that belong to the prefab.
 A parameter has 2 required properties:
 
-	
+
     1. **Name**
 
-	
+
     2. **Value or custom_type**(if value is used, we can the type by checking the value type (string, int, ... etc.). Or, we can use the `custom_type` key to assign our custom types to the prefab.
 
 
@@ -164,13 +164,13 @@ In the ideal world, these plists are actually too verbose. For example, I am cre
 ....|-> **name**: _String =_ _MapZone_ <br />
 ....|-> **parameters**: _Array_ <br />
 ........|-> **Item**: _Dictionary_ <br />
-............|-> **name**: _String_ = _position_ 
+............|-> **name**: _String_ = _position_
 
 **We use:** <br />
 **root** : _Dictionary_ <br />
 |-> **MapZone** : _Dictionary_ <br />
 ....|-> **parameters** : _Dictionary_ <br />
-........|-> **position** : _Dictionary_ 
+........|-> **position** : _Dictionary_
 
 Unfortunately, as you will see later, I use the explained verbose structure to support `NSTreeController`, which requires your structure to have an "array of children". I won't say more, tune in next time!!
 

@@ -35,7 +35,7 @@ tags:
 - terminal
 ---
 
-_This is the third post of a three post series regarding creating a map editor software for an RTS game. If you haven’t already, check out the [first](http://mazyod.com/2013/11/30/creating-a-map-editor-for-a-game-13/) and [second](http://mazyod.com/2013/12/06/creating-a-map-editor-for-a-game-23/) posts of the series._
+_This is the third post of a three post series regarding creating a map editor software for an RTS game. If you haven’t already, check out the [first]({% post_url 2013-11-29-creating-a-map-editor-for-a-game-13 %}) and [second]({% post_url 2013-12-06-creating-a-map-editor-for-a-game-23 %}) posts of the series._
 
 
 
@@ -95,17 +95,17 @@ This is where the script's entry point is. We execute the code below and pass in
 {% highlight python %}
 import argparse    
 from codegen_cpp import writeStructs    
-     
+
 # -- Application begin -- #    
-     
+
 parser = argparse.ArgumentParser(description='Generates C++ code from plists.')    
 parser.add_argument('--plist', metavar='plist', type=str, nargs=1, help='plists that describe the code', required=True)    
 parser.add_argument('--include', metavar='include', type=str, nargs='+', help='header files to be included')    
 parser.add_argument('--header', metavar='headerFile', type=str, nargs=1, help='The header file to be generated')    
 parser.add_argument('--source', metavar='sourceFile', type=str, nargs=1, help='The source file to be generated')    
-     
+
 args = parser.parse_args()    
-     
+
 writeStructs(args.plist, args.include, args.header, args.source)
 
 {% endhighlight %}
@@ -152,24 +152,24 @@ def writeStructs(plistFiles, includes, outputHeaders, outputSources) :
     header = outputHeaders[0]   
     headerContents = ""   
     sourceContents = ""   
- 
+
     ...   
 
     plistFile = plistFiles[0]   
     alltypes = plistlib.readPlist(plistFile)   
-    
+
     for atype in alltypes :   
         structName = atype["name"]   
         params = atype["parameters"]
-        
+
         ...   
-        
+
         headerContents += generateStructHeader(structName, superStruct, params, userContent) + '\n'   
         sourceContents += generateStructSource(structName, superStruct, params) + '\n'   
-    
-    
+
+
     writeHeader(headerContents, includes, header)   
-    
+
     if (outputSources != None) :   
         writeSource(sourceContents, outputSources[0], header)   
 
@@ -180,10 +180,10 @@ Starting from the top, we want to make sure we are getting what we expect. The a
 
 
 
-    
+
 {% highlight bash %}
 $ python codegen_struct.py --plists p1.plist p2.plist --header header.h
-# the code above will make argparse return: 
+# the code above will make argparse return:
 # args.plists = ['p1.plist', 'p2.plist']
 # args.header = ['header.h']
 
@@ -214,17 +214,17 @@ typeMapper = {
     "bool" : "bool"    
 }    
 
-... 
-    
+...
+
 def generateStructHeader(structName, superStruct, parameters, userContent) :    
     content = ""    
     for ivar in parameters:    
-     
+
         name = ivar.get("name", None)    
         value = ivar.get("value", None)    
         custom = ivar.get("custom_type", None)    
         cppignore = ivar.get("cpp_ignore", False)    
-            
+
         ivarLine = ""    
         # ignore this key, we don't want to generate it    
         if cppignore:    
@@ -237,7 +237,7 @@ def generateStructHeader(structName, superStruct, parameters, userContent) :
         elif custom is not None :    
             ivarLine = "\t"+custom    
             ivarLine += " "+name+";\n"    
-     
+
         content += ivarLine    
 
 {% endhighlight %}
@@ -254,7 +254,7 @@ This wasn't the end of the function, there is more. After we built the code for 
 structTemplateFile = open("struct_template.txt", "r")   
 structTemplateFmt = structTemplateFile.read()   
 structTemplateFile.close()   
-   
+
 # if the struct has a super class   
 if superStruct is not "" :   
     superStruct = " : "+superStruct   
@@ -283,18 +283,18 @@ Let's take a quick look at the template file:
 {% raw %}
 
 {% highlight text %}
-struct {structName}{superStruct} 
-{{ 
-{structVars} 
-#pragma START-{structName}-USERCODE 
-{userContent} 
-#pragma END-{structName}-USERCODE 
+struct {structName}{superStruct}
+{{
+{structVars}
+#pragma START-{structName}-USERCODE
+{userContent}
+#pragma END-{structName}-USERCODE
 }};
 
 {% endhighlight %}
 
 
-So, we simply plug in the structName, assume superStruct is empty, structVars is the ivars and constructor we generated above, and that's it! Don't worry about the #pragma stuff, and userContent. Note, though, how we are using double braces `{{`, `}}` to escape the actual braces, because a single brace {} is a python format specifier. 
+So, we simply plug in the structName, assume superStruct is empty, structVars is the ivars and constructor we generated above, and that's it! Don't worry about the #pragma stuff, and userContent. Note, though, how we are using double braces `{{`, `}}` to escape the actual braces, because a single brace {} is a python format specifier.
 
 {% endraw %}
 
