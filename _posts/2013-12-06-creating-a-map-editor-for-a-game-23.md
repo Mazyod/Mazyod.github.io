@@ -45,30 +45,13 @@ So, a plist is subset of an XML file :). Its format is defined by Apple, that is
 
 What is so special about these XML files? They are restricted to contain only certain types of data:
 
-
-
-
   1. Arrays
-
-
   2. Dictionaries (Maps)
-
-
   3. Strings
-
-
   4. Integers
-
-
   5. Reals
-
-
   6. Booleans
-
-
   7. Dates (not the food, timestamps)
-
-
   8. Data (arbitrary binary data)
 
 
@@ -82,41 +65,18 @@ You can read more about [plists here](http://en.wikipedia.org/wiki/Property_list
 
 Now that we all understand what plists are, it's time to see them in action! Previously, [I explained the entities that make up the Map Editor]({% post_url 2013-11-30-creating-a-map-editor-for-a-game-13 %}), now we shall dissect the entities!
 
+1. **Object Properties**:
+  * _UID (int)_: automatically generated unique ID for referencing
+  * _Entity (String)_: e.g. militia_unit_lvl01, critter_spider_lvl04, ... etc.
+  * _Position (Point)_: position of the object
+  * _Size (Size)_: the size the object occupies, calculated in tiles (2x2, 5x5, ...)
 
+2. **Zone**:
+  * _UID (int)_: automatically generated unique ID for referencing
+  * _Position (Point)_: position of the zone
+  * _Size (Size)_: the size the zone occupies
 
-
-  1. **Object Properties**:
-
-
-    * _UID (int)_: automatically generated unique ID for referencing
-
-
-
-
-    * _Entity (String)_: e.g. militia_unit_lvl01, critter_spider_lvl04, ... etc.
-
-
-    * _Position (Point)_: position of the object
-
-
-    * _Size (Size)_: the size the object occupies, calculated in tiles (2x2, 5x5, ...)
-
-
-
-  2. **Zone**:
-
-
-    * _UID (int)_: automatically generated unique ID for referencing
-
-
-    * _Position (Point)_: position of the zone
-
-
-    * _Size (Size)_: the size the zone occupies
-
-
-
-  3. ... and so on.
+3. ... and so on.
 
 
 The issue here is, these object properties are not fixed (in the long term)! Even though we define a zone as a UID, position and size, there is a possibility that the game designer would want to something more interesting with the zones in the future, which would mean reworking the Map Editor, adding code to the game engine to load the new properties, use them, ... etc. SUCH A PAIN!! Good thing we have plists...
@@ -129,23 +89,11 @@ Instead of actually writing code that define these structures, we use plists! (Y
 
 Pretty straightforward. The plist is an array of dictionary. A dictionary defines a prefab. A prefab has 2 essential properties:
 
-
-
-
-  1. **Name:** in order to fetch the prefab.
-
-
-  2. **Parameters: **the variables that belong to the prefab.
+1. **Name:** in order to fetch the prefab.
+2. **Parameters:** the variables that belong to the prefab.
 A parameter has 2 required properties:
-
-
-    1. **Name**
-
-
-    2. **Value or custom_type**(if value is used, we can the type by checking the value type (string, int, ... etc.). Or, we can use the `custom_type` key to assign our custom types to the prefab.
-
-
-
+  1. **Name**
+  2. **Value or custom_type**(if value is used, we can the type by checking the value type (string, int, ... etc.). Or, we can use the `custom_type` key to assign our custom types to the prefab.
 
 
 As you see above, I am using a `custom_type` key, where the value for that key is `MapPoint` then `MapSize`. These custom types are actually just referencing custom type prefabs in another plist!! These prefabs have a very similar structure:
@@ -175,9 +123,7 @@ In the ideal world, these plists are actually too verbose. For example, I am cre
 Unfortunately, as you will see later, I use the explained verbose structure to support `NSTreeController`, which requires your structure to have an "array of children". I won't say more, tune in next time!!
 
 
-
 ## Conclusion
-
 
 
 Now that we have all our data set up and good to go, we shall explore how to translate these plist files into a functional UI as well as a parser for the engine! Remember, the ultimate goal is to show the user these entities in the map editor and allow him to manipulate the data, export a map, and load that map in the engine, all in a data driven way, defined by these plists!! [Click here to go to the third part of this series]({% post_url 2013-12-10-creating-a-map-editor-for-a-game-33 %}).
