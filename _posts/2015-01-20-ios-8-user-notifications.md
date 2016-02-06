@@ -20,7 +20,7 @@ categories:
 
 ## Introduction
 
-Previously, I highlighted some key points regarding the changes iOS 8 brought to [local and push notifications](http://mazyod.com/blog/2014/10/24/on-apns/). Using those points, and taking it a step further, I'd like to share today how to properly handle `UIUserNotification` in iOS 8. 
+Previously, I highlighted some key points regarding the changes iOS 8 brought to [local and push notifications]({% post_url 2014-10-24-on-apns %}). Using those points, and taking it a step further, I'd like to share today how to properly handle `UIUserNotification` in iOS 8. 
 
 (Remember, User Notifications are now the combined API for both local and remote notifications).
 

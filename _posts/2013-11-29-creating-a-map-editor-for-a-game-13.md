@@ -147,4 +147,4 @@ The first task we had to do was think about how the Python script is going to ge
 
 
 
-This is it for the first post in this series! In the next post, we will explore how the plist files are structured and how to make the best out of their organized structure! [Click here to go to the next post](http://mazyod.com/2013/12/06/creating-a-map-editor-for-a-game-23/).
+This is it for the first post in this series! In the next post, we will explore how the plist files are structured and how to make the best out of their organized structure! [Click here to go to the next post]({% post_url 2013-12-06-creating-a-map-editor-for-a-game-23 %}).

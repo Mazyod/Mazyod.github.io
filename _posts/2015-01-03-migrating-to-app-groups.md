@@ -23,9 +23,9 @@ categories:
 
 ## Quick Follow Up
 
-This is a quick follow up to the [previous post regarding app groups](http://mazyod.com/blog/2015/01/03/app-groups/). After verifying how it works, I went ahead and looked at how I can migrate my current settings from the standard defaults to the app group container. Here is how it went down...
+This is a quick follow up to the [previous post regarding app groups]({% post_url 2015-01-03-app-groups %}). After verifying how it works, I went ahead and looked at how I can migrate my current settings from the standard defaults to the app group container. Here is how it went down...
 
-First, I over-complicated things, as usual. I thought I could use a cascading similar to the one we saw in [the UIFont post](http://mazyod.com/blog/2014/12/19/ios-feast/). Basically, I would have to wrap the `NSUserDefault` with a subclass, and on every access to the defaults, I would check if that key is migrated or not, then migrate it from the standard defaults if it isn't.
+First, I over-complicated things, as usual. I thought I could use a cascading similar to the one we saw in [the UIFont post]({% post_url 2014-12-19-ios-feast %}). Basically, I would have to wrap the `NSUserDefault` with a subclass, and on every access to the defaults, I would check if that key is migrated or not, then migrate it from the standard defaults if it isn't.
 
 Something like:
 

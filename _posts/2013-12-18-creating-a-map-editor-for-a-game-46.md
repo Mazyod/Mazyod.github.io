@@ -190,7 +190,7 @@ void MapParser::resolveJsonValuesRecuresively(const Json::Value &children)
 
 
 
-Starting with the `MapParser::parse` method, it first takes the map file name passed as an argument and loads it from the file-system using the fileUtils component. After that, it's JSONCpp's turn. We use the library to create the root `JSON::Value`, which is an array in our case. This might be a good time to go back to [the second post in this series and review the map editor object format](http://mazyod.com/2013/12/06/creating-a-map-editor-for-a-game-23/#map-editor-format). After reviewing the format, you can see that the root is an array of dictionaries. That's why, in the code we send the root object directly to the `MapParser::resolveJsonValuesRecuresively`. This method takes an array JSON::Value.
+Starting with the `MapParser::parse` method, it first takes the map file name passed as an argument and loads it from the file-system using the fileUtils component. After that, it's JSONCpp's turn. We use the library to create the root `JSON::Value`, which is an array in our case. This might be a good time to go back to [the second post in this series and review the map editor object format]({% post_url 2013-12-06-creating-a-map-editor-for-a-game-23 %}#map-editor-format). After reviewing the format, you can see that the root is an array of dictionaries. That's why, in the code we send the root object directly to the `MapParser::resolveJsonValuesRecuresively`. This method takes an array JSON::Value.
 
 
 

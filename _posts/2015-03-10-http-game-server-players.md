@@ -26,7 +26,7 @@ categories:
 
 ## Introduction
 
-Yet another part of the HTTP Game server is upon us, and this time we shall be looking at the **Player model**. As always, you can check out the previous parts, [first](http://mazyod.com/blog/2015/02/17/http-game-server-part-i/), [second](http://mazyod.com/blog/2015/02/24/http-game-server-part-ii/), and [third](http://mazyod.com/blog/2015/03/01/http-game-server-part-iii/).
+Yet another part of the HTTP Game server is upon us, and this time we shall be looking at the **Player model**. As always, you can check out the previous parts, [first]({% post_url 2015-02-17-http-game-server-part-i %}), [second]({% post_url 2015-02-24-http-game-server-part-ii %}), and [third]({% post_url 2015-03-01-http-game-server-part-iii %}).
 
 One small note, I realized it was insanely stupid to mark the titles by parts. This makes the post ambiguous to the reader, so instead, I'll be highlighting the topic in the title from now on.
 
@@ -52,7 +52,7 @@ With that distinction made, I now have to different player classes in the code b
 
 ### User Registration
 
-This is actually [covered in the previous post](http://mazyod.com/blog/2015/03/01/http-game-server-part-iii/)... Sorry about this disorganization from my part.
+This is actually [covered in the previous post]({% post_url 2015-03-01-http-game-server-part-iii %})... Sorry about this disorganization from my part.
 
 ## Leaderboards
 

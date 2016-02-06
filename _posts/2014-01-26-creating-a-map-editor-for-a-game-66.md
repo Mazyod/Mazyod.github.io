@@ -54,7 +54,7 @@ If I were to ask any programmer on the face of the earth what he would expect th
 
 
 
-I will go ahead and say that, initially, I loaded those plist files into `NSDictionaries` and `NSArrays`, and the app worked fine. With the power of [Key-Value Coding (KVC)](http://mazyod.com/2012/08/12/kvc-kvo-replacing-pillars-with-magic/), which is behind Cocoa bindings, I was able to implement a very generic data model without a single subclass. That is almost impossible to do without making the code horrible unreadable, but fortunately, I utilized ObjC's categories to work around that! So, no subclasses, just categories :D.
+I will go ahead and say that, initially, I loaded those plist files into `NSDictionaries` and `NSArrays`, and the app worked fine. With the power of [Key-Value Coding (KVC)]({% post_url 2012-08-12-kvc-kvo-replacing-pillars-with-magic %}), which is behind Cocoa bindings, I was able to implement a very generic data model without a single subclass. That is almost impossible to do without making the code horrible unreadable, but fortunately, I utilized ObjC's categories to work around that! So, no subclasses, just categories :D.
 
 
 
@@ -66,7 +66,7 @@ So, did I just stick with this? Unfortunately, the answer is NO. A **HUGE** burd
 
 
 
-If we can't create explicit subclasses, nor use generic data structures, then what's the compromise we are looking for? I'll tell you what it is: It's an "[adapter](http://mazyod.com/2013/12/24/design-patterns-structural/#adapter-pattern)" class that represents a UI element, but has a reference to the actual data! Let us start visualizing what's going on:
+If we can't create explicit subclasses, nor use generic data structures, then what's the compromise we are looking for? I'll tell you what it is: It's an "[adapter]({% post_url 2013-12-24-design-patterns-structural %}#adapter-pattern)" class that represents a UI element, but has a reference to the actual data! Let us start visualizing what's going on:
 
 
 

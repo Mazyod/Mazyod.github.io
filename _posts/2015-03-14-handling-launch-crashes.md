@@ -25,9 +25,9 @@ categories:
 
 ## Introduction
 
-__NOTE__: If you want to see what was actually happening, and how I managed to solve this issue, [please read this follow up](http://mazyod.com/blog/2015/03/21/swift-x/).
+__NOTE__: If you want to see what was actually happening, and how I managed to solve this issue, [please read this follow up]({% post_url 2015-03-21-swift-x %}).
 
-Here is a really quick post about properly handling crashes. There was [a previous post where I highlight how to reduce the damage of crashing](http://mazyod.com/blog/2015/02/01/reduce-the-damage-of-crashing/). This time, I'll highlight how you can go a step further to ensure you get those precious crash reports.
+Here is a really quick post about properly handling crashes. There was [a previous post where I highlight how to reduce the damage of crashing]({% post_url 2015-02-01-reduce-the-damage-of-crashing %}). This time, I'll highlight how you can go a step further to ensure you get those precious crash reports.
 
 ## Hell's Gate
 

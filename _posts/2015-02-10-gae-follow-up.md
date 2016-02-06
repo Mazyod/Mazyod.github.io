@@ -22,7 +22,7 @@ categories:
 
 ## Introduction
 
-This is a quick follow up post to the previous post regarding [writing tests for Google App Engine applications](http://mazyod.com/blog/2015/02/08/testing-gae/).
+This is a quick follow up post to the previous post regarding [writing tests for Google App Engine applications]({% post_url 2015-02-08-testing-gae %}).
 
 In the previous post, we just saw how to write quick functional tests to make sure the RESTful API is sane. This follow up is to shed a bit more light on py.test, and how it can be used to the fullest, as well as some more details on how the Google AppEngine (GAE) development instance is setup.
 

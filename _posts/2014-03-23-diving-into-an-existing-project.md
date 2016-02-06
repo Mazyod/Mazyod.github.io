@@ -11,7 +11,7 @@ categories:
 - snippets
 ---
 
-I am looking into [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development) these days for the reasons I mention in [this post](http://mazyod.com/blog/2014/03/23/writing-unit-tests/), and I came across a seemingly famous book called, [Test-Driven iOS Development](http://www.amazon.com/Test-Driven-iOS-Development-Developers-Library/dp/0321774183). I have to say this... Stay away.
+I am looking into [Test Driven Development (TDD)](http://en.wikipedia.org/wiki/Test-driven_development) these days for the reasons I mention in [this post]({% post_url 2014-03-23-writing-unit-tests %}), and I came across a seemingly famous book called, [Test-Driven iOS Development](http://www.amazon.com/Test-Driven-iOS-Development-Developers-Library/dp/0321774183). I have to say this... Stay away.
 
 Maybe I am enjoying this critic business, but I also like to share my findings and try to raise the expectations for content that users consume. Basically, I found a few flaws in the book that I would like to point out:
 

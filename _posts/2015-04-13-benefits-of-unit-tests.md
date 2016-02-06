@@ -17,7 +17,7 @@ categories:
 
 There is a very common problems among programmers that haven't tried unit tests .. They don't know how to start. Most of the programmers that I've met, including myself, had this problem, and the natural way to go about this is to buy a book and start reading.
 
-Problem is, I had some [really bad experience with books on that topic](http://mazyod.com/blog/2014/03/23/diving-into-an-existing-project/), so did the people I met.
+Problem is, I had some [really bad experience with books on that topic]({% post_url 2014-03-23-diving-into-an-existing-project %}), so did the people I met.
 
 Today, I have finally had enough unit test experience that allows me to explain how to go about this.
 

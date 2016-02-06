@@ -23,7 +23,7 @@ categories:
 
 Heads up. Whenever you see the `rant` tag, brace yourselves for a post about some of my experiences, that aren't really based on true facts or data. It's just stuff that I found useful, and thought I'd share.
 
-With that said, Fine Grain! Doing a quick google images search should give you an idea what this article is about. Yes, it's about breaking down your code base, [kind of like that post How to Compose](http://mazyod.com/blog/2014/09/04/how-to-compose/), but a bit more ranty.
+With that said, Fine Grain! Doing a quick google images search should give you an idea what this article is about. Yes, it's about breaking down your code base, [kind of like that post How to Compose]({% post_url 2014-09-04-how-to-compose %}), but a bit more ranty.
 
 This post might not turn out to be ranty afterall. I have some pretty cool examples lined up.. Let's take a look.
 
@@ -35,7 +35,7 @@ First, ask yourself this question:
 
 Some languages support tuples, others support pointers, and maybe some language out there supports something else I'm not aware of .. The point being, answers will vary depending on what language you write in, probably.
 
-[Remember this post?](http://mazyod.com/blog/2014/11/17/tol/) It says "Program into a language". That's how it should be, and the answer should actually be consistent (for a OOP language, at least).
+[Remember this post?]({% post_url 2014-11-17-tol %}) It says "Program into a language". That's how it should be, and the answer should actually be consistent (for a OOP language, at least).
 
 The real answer is to create a new class/struct that will aggregate the return values. This approach is guaranteed to be consistent across all OOP languages, since all it needs is a class, and that's what OO is good at.
 

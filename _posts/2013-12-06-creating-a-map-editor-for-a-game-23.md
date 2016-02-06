@@ -80,7 +80,7 @@ You can read more about [plists here](http://en.wikipedia.org/wiki/Property_list
 ## Give Data the Keys:
 
 
-Now that we all understand what plists are, it's time to see them in action! Previously, [I explained the entities that make up the Map Editor](http://mazyod.com/2013/11/30/creating-a-map-editor-for-a-game-13/), now we shall dissect the entities!
+Now that we all understand what plists are, it's time to see them in action! Previously, [I explained the entities that make up the Map Editor]({% post_url 2013-11-30-creating-a-map-editor-for-a-game-13 %}), now we shall dissect the entities!
 
 
 
@@ -180,4 +180,4 @@ Unfortunately, as you will see later, I use the explained verbose structure to s
 
 
 
-Now that we have all our data set up and good to go, we shall explore how to translate these plist files into a functional UI as well as a parser for the engine! Remember, the ultimate goal is to show the user these entities in the map editor and allow him to manipulate the data, export a map, and load that map in the engine, all in a data driven way, defined by these plists!! [Click here to go to the third part of this series](http://mazyod.com/2013/12/10/creating-a-map-editor-for-a-game-33/).
+Now that we have all our data set up and good to go, we shall explore how to translate these plist files into a functional UI as well as a parser for the engine! Remember, the ultimate goal is to show the user these entities in the map editor and allow him to manipulate the data, export a map, and load that map in the engine, all in a data driven way, defined by these plists!! [Click here to go to the third part of this series]({% post_url 2013-12-10-creating-a-map-editor-for-a-game-33 %}).

@@ -28,7 +28,7 @@ tags:
 - WSGI
 ---
 
-_This is part of the [Terminology series](http://mazyod.com/2013/12/23/terminology-series/)._
+_This is part of the [Terminology series]({% post_url 2013-12-23-terminology-series %})._
 
 
 

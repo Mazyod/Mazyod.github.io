@@ -14,7 +14,7 @@ categories:
 - programming
 ---
 
-In a previous post, I talked about [the beauty of composition](http://mazyod.com/blog/2014/09/03/the-beauty-of-composition/). Today, I want to extend on that with a beautiful enlightenment that I had. Lucky you, I am gonna share it, and you are reading it!
+In a previous post, I talked about [the beauty of composition]({% post_url 2014-09-03-the-beauty-of-composition %}). Today, I want to extend on that with a beautiful enlightenment that I had. Lucky you, I am gonna share it, and you are reading it!
 
 ## Breaking It Down
 
