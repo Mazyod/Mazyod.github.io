@@ -6,7 +6,7 @@ comments: true
 categories: [objective-c, uikit, nsproxy, proxy-design-pattern, ios]
 ---
 
-## Introduction <sup>[(?)](/about#post-introduction)</sup>
+## Introduction
 
 I am really having trouble with this introduction... I erased it and started all over like 5 times now. Well, no more. What ever comes out, it shalt remain...
 
