@@ -3,7 +3,7 @@ layout: post
 title: "Memory Preallocation"
 date: 2014-04-18 21:18:21 +0400
 comments: true
-categories: 
+categories:
 - memory
 - malloc
 - realloc
@@ -13,7 +13,7 @@ categories:
 - slicing
 - development
 - performance
-- 
+-
 ---
 
 No, no, I am not referring to the pooling of high-level objects and caching them, that's child's play. I am referring to hard core C level memory preallocation, slicing, and pooling.
@@ -102,12 +102,10 @@ Since we are sending pointers to the callers, moving the underlying memory will 
 
 ### The Performance
 
-I haven't really tested the performance of this versus the non prealloc's performance, but I really want to do that soon. I already have the benchmarks from the Objective-C bot, and the non prealloced C bot [on this page](http://islamicaster.com/dama/benchmarkView.php). I need to run the non prealloced tests again, since I moved to static libraries and cocos2d-x, which may or may not affect performance. Then, I can safely do the prealloc tests.
+I haven't really tested the performance of this versus the non prealloc's performance, but I really want to do that soon. I already have the benchmarks from the Objective-C bot, and the non prealloced C bot. I need to run the non prealloced tests again, since I moved to static libraries and cocos2d-x, which may or may not affect performance. Then, I can safely do the prealloc tests.
 
 Now, if this prealloc thingie gives me another major boost, I can probably implement an AI that can easily beat top Dama players without breaking a sweat :D
 
 ## Conclusion
 
 It kills me that this hasn't made it to my game's update yet.... IT KILLS ME.
-
-

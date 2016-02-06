@@ -166,12 +166,7 @@ Starting with the `MapParser::parse` method, it first takes the map file name pa
 As the name implies, `MapParser::resolveJsonValuesRecuresively` is a recursive method, hence it needs a base case that breaks the recursion. The base case is when the "JSON::Value& children" is a null value. Please note, it is not the regular C++ null!! This is a JSON::Value that has a null type. It is awesome because it won't crash your app when you try accessing it, as opposed to using C++ null. This is actually a design pattern called the [Null Object pattern](http://sourcemaking.com/design_patterns/null_object). Moving along, we then loop over the children array, which contains JSON::Values of the object (dictionary) type. Notice the difference here from the mentioned format, the use of "class_id" instead of "name" to indicate the type.
 
 
-
-
-
 After fetching the `class_id`, we need to create an object that matches that `class_id` value, but these object types may change anytime! We may want to add new types, remove types, etc. Not to mention that the string checking is a very "error-prone" approach on its own. The whole idea is to make this data driven, right? HENCE, the `#pragma START-ParserResolver-CODEGEN`! :D This #pragma thing is actually the delimiter for the python script to start generating the "Resolution code". I call it resolution code because it resolves the type of the object that needs to be created from a string. So, let us zoom into a single component of the resolution code:
-
-
 
 
 {% highlight c++ %}
@@ -180,17 +175,9 @@ else if (class_id == "MapObject")
     MapObject obj(val["parameters_data"]);    
     m_pSink->OnMapObjectCreated(obj);    
 }
-
 {% endhighlight %}
 
-
-
-
 In this example, we are checking if the class_id is equal to `MapObject`. Of course, we saw in the previous post that we are generating these entity structs, right? This way, if the class_id is equal to the entity type, we simply send the `JSON::Value`'s "parameters_data" to the constructor. This is another difference from the format presented earlier, actually, so keep that in mind. Anyway, this "parameters_data" is a dictionary that has keys which are the parameters' names (`position`, `size`, `type`, ... etc), so we pass it to the object's constructor so it can initialize the entity with the JSON values. REMEMBER, this code is generated, and so is the constructor code for those classes, as we will see in a bit.
-
-
-
-
 
 But, how are these parser resolution if statements generated, you say? I have shown enough code generation scripts, so I am just gonna say it's as simple as before. We have a template file (see below) that we fill with the info. There is a slight trick that I do here, which is if the class_id has a super class, I handle it differently. This has to do with the "m_pSink" thingy. Let's move to that.
 
@@ -204,15 +191,12 @@ else if (class_id == "{prefab_name}")
     {prefab_name} obj(val["parameters_data"]);
     m_pSink->On{prefab_sink_method}Created(obj);
 }}
-
 {% endhighlight %}
 
 {% endraw %}
 
 
 Let's rewind a bit now, and go back to "We send the `parameter_data` to the constructor". Ok, we send the `parameter_data` to the constructor, but what does it do with it? Let's see the code first:
-
-
 
 {% highlight c++ %}
 MapObject::MapObject(const Json::Value& val):
@@ -224,7 +208,6 @@ tile_size(val.get("tile_size", Json::Value::null).get("children", Json::Value::n
 {
 
 }
-
 {% endhighlight %}
 
 
@@ -268,7 +251,7 @@ public:
     virtual void OnMapOperandCreated(const MapOperand&) {}    
 #pragma END-ParserSink-CODEGEN    
 };
-{% endhighlight %
+{% endhighlight %}
 
 As you can see, these methods are basically callbacks for every entity type that the parser can create. And before you ask, YES, THIS IS GENERATED, TOO! It is actually quite obvious that this is generated from the delimiters that are there. So, there you have it! That's how the developer gets the objects and starts using 'em! As simple as that!
 
