@@ -8,7 +8,7 @@ categories: [objective-c, uikit, nsproxy, proxy-design-pattern, ios]
 
 ## Introduction <sup>[(?)](/about#post-introduction)</sup>
 
-I am really having trouble with this introduction... I erased it and started all over like 5 times now. Well, no more. What ever comes out, it shalt remain... 
+I am really having trouble with this introduction... I erased it and started all over like 5 times now. Well, no more. What ever comes out, it shalt remain...
 
 I wanted to express this new source of inspiration, motivation and even an escape from the endless piles of work that is waiting to get done. That source is ... Books! Not any type of books, though. Books that provide extremely useful information and advice, and at the same time are deep and honest, as well as funny, mind you. Can't stay focused without a little laugh. The first book I started with is [Jeff Atwood's](http://blog.codinghorror.com/) awesome book, [Effective Programming: More Than Writing Code](http://www.hyperink.com/Effective-Programming-More-Than-Writing-Code-b1559). I have honestly yet to finish the book, I recently started.
 
@@ -23,7 +23,7 @@ After working the whole day on this problem (which I have been thinking about fo
 
 I was entrusted with the deceivingly mundane task of localization. The task quickly because more interesting when I realized we need to support two languages: English (Left-To-Right) and Arabic (Right-To-Left). Text alignment and other code-side changes weren't anything if statements couldn't solve, however, the dreaded XIB files were the main issue. In my previous apps that preceded Xcode 5, I had to create and manage multiple XIB files, which was just plain annoying... Not with Xcode 5!
 
-Thanks to [Apple's AutoLayout system](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html), flipping the UI around was surprisingly easy! Specifically, assigning leading and trailing spaces for subviews will make the layout intelligently switch between LTR and RTL. Unfortunately, Apple didn't take it a step further to support flipped controls, specifically `UISegmentedControl` in my case.
+Thanks to Apple's AutoLayout system, flipping the UI around was surprisingly easy! Specifically, assigning leading and trailing spaces for subviews will make the layout intelligently switch between LTR and RTL. Unfortunately, Apple didn't take it a step further to support flipped controls, specifically `UISegmentedControl` in my case.
 
 ![image](/images/segmented-en.png) ![image](/images/segmented-ar.png)
 
@@ -51,7 +51,7 @@ SegmenedControl Possible Backtrace
 - [SegmentControlOwner drawViews]
 - [UISegmentedControl drawRect:]
 /* will the drawing logic use the accessor... */
-- [CustomSegmentedControl selectedSegmentIndex] 
+- [CustomSegmentedControl selectedSegmentIndex]
  /* ...or directly read the _selectedSegment ivar? */
 
 {% endhighlight %}
@@ -121,11 +121,11 @@ forwardInvocation: example PART 1
         NSInteger index;
         [invocation getArgument:&index atIndex:2];
         /* note above, arg0 is ALWAYS the target, arg1 is _cmd */
-        
+
         /* Do validation, maybe? set the index again */
         index = MAX(0, index);
         [invocation setArgument:&index atIndex:2];
-        
+
         /* self.target is the encapsulated object */
         /* calling invoke will also set the returnValue for us */
         [invocation invokeWithTarget:self.target];
