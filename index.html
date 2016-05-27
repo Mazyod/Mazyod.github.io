@@ -17,15 +17,18 @@ layout: default
         </th></tr>
       {% endunless %}
       <tr style="vertical-align: top">
-          <td style="padding-right: 8px; padding-top: 0.5em; width: 1.5em; line-height: 1em; font-size: 0.9em;">
-              <div>{{ post.date  | date: "%-d" }}</div>
-              <div class="post-meta" style="font-size: 0.7em">{{ post.date | date: "%b" }}</div>
-          </td>
-          <td>
-              <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-              </h2>
-          </td>
+        <td style="padding-right: 8px; padding-top: 0.5em; width: 1.5em; line-height: 1em; font-size: 0.9em;">
+          <div>{{ post.date  | date: "%-d" }}</div>
+          <div class="post-meta" style="font-size: 0.7em">{{ post.date | date: "%b" }}</div>
+        </td>
+        <td style="padding-top: 0.1em;">
+          <p style="font-size: 0.7em; margin-bottom: -5px;color: darkgray; font-weight: 100;">
+            {{ post.categories[0] }}
+          </p>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </td>
       </tr>
     {% endfor %}
   </table>
