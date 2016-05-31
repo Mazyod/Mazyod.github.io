@@ -6,6 +6,8 @@ layout: post
 slug: the-usual-fail
 title: The Usual FAIL
 wordpress_id: 40
+categories:
+- ios
 tags:
 - iPhone
 - Javascript

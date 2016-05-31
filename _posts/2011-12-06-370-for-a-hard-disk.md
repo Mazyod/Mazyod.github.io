@@ -6,6 +6,8 @@ layout: post
 slug: 370-for-a-hard-disk
 title: '"$370 for a hard disk?"'
 wordpress_id: 122
+categories:
+- tech
 tags:
 - 256GB
 - Amazon.com

@@ -6,6 +6,8 @@ layout: post
 slug: a-bunch-of-nonsense
 title: A Bunch Of Nonsense
 wordpress_id: 217
+categories:
+- cocos2d
 tags:
 - cocos2d
 - delegate

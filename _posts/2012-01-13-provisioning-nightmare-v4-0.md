@@ -6,6 +6,8 @@ layout: post
 slug: provisioning-nightmare-v4-0
 title: Provisioning Nightmare v4.0
 wordpress_id: 171
+categories:
+- ios
 tags:
 - CodeSign error
 - Entitlements

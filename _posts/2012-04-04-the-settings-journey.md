@@ -6,6 +6,8 @@ layout: post
 slug: the-settings-journey
 title: The Settings Journey
 wordpress_id: 206
+categories:
+- rant
 ---
 
 I believe it is about time I announced something about what's making me so quiet and eating my time like crazy, isn't it?

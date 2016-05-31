@@ -6,6 +6,8 @@ layout: post
 slug: what-shall-it-be
 title: What Shall It Be ... ?
 wordpress_id: 192
+categories:
+- ios
 tags:
 - c classes
 - dama game

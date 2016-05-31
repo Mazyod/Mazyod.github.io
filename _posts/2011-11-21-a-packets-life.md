@@ -6,6 +6,8 @@ layout: post
 slug: a-packets-life
 title: A Packet's Life
 wordpress_id: 67
+categories:
+- software-engineering
 tags:
 - inheritance
 - Network

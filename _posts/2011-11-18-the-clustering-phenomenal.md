@@ -6,6 +6,8 @@ layout: post
 slug: the-clustering-phenomenal
 title: The Clustering Phenomena
 wordpress_id: 54
+categories:
+- game-dev
 tags:
 - Chat
 - cocos2d

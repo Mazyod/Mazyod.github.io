@@ -6,6 +6,8 @@ layout: post
 slug: whats-in-an-ssd
 title: What's in an SSD?
 wordpress_id: 151
+categories:
+- tech
 tags:
 - HDD
 - SSD

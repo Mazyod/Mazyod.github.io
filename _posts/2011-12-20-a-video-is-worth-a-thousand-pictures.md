@@ -6,6 +6,8 @@ layout: post
 slug: a-video-is-worth-a-thousand-pictures
 title: A Video is Worth a Thousand Pictures
 wordpress_id: 163
+categories:
+- tech
 tags:
 - youtube
 - SSD

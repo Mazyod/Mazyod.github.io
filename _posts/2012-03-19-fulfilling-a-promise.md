@@ -6,6 +6,8 @@ layout: post
 slug: fulfilling-a-promise
 title: Fulfilling A Promise
 wordpress_id: 201
+categories:
+- ios
 tags:
 - code
 - example

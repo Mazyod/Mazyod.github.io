@@ -6,6 +6,8 @@ layout: post
 slug: sniffing-without-a-cold
 title: Sniffing without a Cold
 wordpress_id: 127
+categories:
+- hacking
 tags:
 - College
 - Network

@@ -6,6 +6,8 @@ layout: post
 slug: catching-up
 title: Catching Up ... !
 wordpress_id: 167
+categories:
+- blog
 tags:
 - application
 - Computer
@@ -61,11 +63,7 @@ That's all about genetic algorithms... Onto the next.
 
 
 
-
-
 ## #2 Implementing an SRC
-
-
 
 
 ### Computer Organization Course Project

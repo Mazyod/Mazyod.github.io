@@ -6,6 +6,8 @@ layout: post
 slug: speedy-goodness
 title: Speedy Goodness
 wordpress_id: 158
+categories:
+- tech
 tags:
 - free ram
 - SSD

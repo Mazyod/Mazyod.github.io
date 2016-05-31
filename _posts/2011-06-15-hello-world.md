@@ -6,6 +6,8 @@ layout: post
 slug: hello-world
 title: First Post!
 wordpress_id: 1
+categories:
+- blog
 ---
 
 Hmm.. I really don't get it ... How does this work?

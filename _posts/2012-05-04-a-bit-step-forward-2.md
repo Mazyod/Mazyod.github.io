@@ -6,6 +6,8 @@ layout: post
 slug: a-bit-step-forward-2
 title: A Bit Step Forward
 wordpress_id: 230
+categories:
+- programming
 tags:
 - and
 - bit operations

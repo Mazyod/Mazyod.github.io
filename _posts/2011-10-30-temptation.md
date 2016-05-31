@@ -6,6 +6,8 @@ layout: post
 slug: temptation
 title: Temptation!
 wordpress_id: 21
+categories:
+- rant
 ---
 
 So, the title says it all!! Actually, it is rather awkward and misleading ...
@@ -18,16 +20,11 @@ I got a tweet earlier today requesting the chat feature in the [Dama](http://itu
 
 So ... I opened the code from**_ long ago_**, and saw that I had implemented the the text chatting dialogs as follows:
 
+* A subclassed UIView that has been tweaked to have rounded edges and a special pointed edge to imitate the speech bubble thing.
 
+* Inside it was the dreaded UITableView, which has its own UITableViewController.
 
-	
-  * A subclassed UIView that has been tweaked to have rounded edges and a special pointed edge to imitate the speech bubble thing.
-
-	
-  * Inside it was the dreaded UITableView, which has its own UITableViewController.
-
-	
-  * Moreover, as if that was not enough, came the custom UITableViewCell, which has a customized UIWebView embedded to allow special CSS formatting.
+* Moreover, as if that was not enough, came the custom UITableViewCell, which has a customized UIWebView embedded to allow special CSS formatting.
 
 
 The Result:
