@@ -93,3 +93,5 @@ Also, I can easily do load testing by running 1000 bots or so on one machine and
 ## Conclusion
 
 Elixir is just great for writing bots, whether they are chat bots, testing sentinels, or whatever. The Actor-based model maps to bots 1-to-1, so that should really be a surprise!
+
+[fsm-github]: https://github.com/sasa1977/fsm
