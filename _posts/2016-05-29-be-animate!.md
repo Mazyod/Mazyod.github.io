@@ -24,7 +24,7 @@ So, yeah, to wrap it up, if you are a developer who excels at designing animatio
 
 ## How Good Exactly?
 
-Origami is so good, to the point that I was able to prototype two relatively complex interactions and animations within less than an hour while on a plane (as they in Japanese "Sasuga, Digital Nomad-san!". Granted, I spent a few hours a few days ago playing around with the workflow and getting my hands dirty with the nuts and bolts of this tool.
+Origami is so good, to the point that I was able to prototype two relatively complex interactions and animations within than an hour .. while on a plane (as they say in Japanese "Sasuga, Digital Nomad-san!"). Granted, I spent a few hours a few days ago playing around with the workflow and getting my hands dirty with the nuts and bolts of this tool.
 
 In any case, the main reason Origami either shines or diminishes in a team is because of its unique workflow. Until now, every single animation system I've ever worked with uses keyframes (Flash, AE, Unity, Spine, ... etc). That makes sense (kinda), but makes things hard and complicated once you start introducing interactions. Most people put up with it, tho, since everyone is familiar with keyframes.
 
