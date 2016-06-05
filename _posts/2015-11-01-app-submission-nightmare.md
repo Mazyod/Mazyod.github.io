@@ -125,7 +125,7 @@ The exact __Realm__ error was:
 
 > Unsupported architectures.  The executable for xxxx/Realm.framwork contains unsupported architectures [x86_64, i386]
 
-Thankfully, I had just missed a step in integrating the framework, which [can be found here](https://github.com/realm/realm-cocoa/issues/2352).
+Thankfully, I had just missed a step in integrating the framework...
 
 As for the __AppleWatch__ issues, I was easily able to reduce the size by compressing the icon images using [ImageAlpha](http://pngmini.com/). How much, you say? saved about 7.5 MB!
 
