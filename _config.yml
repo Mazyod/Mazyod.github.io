@@ -34,3 +34,6 @@ exclude: [vendor]
 
 # Disqus Comments
 disqus_short_name: mazyod
+
+# Google Analytics
+google_analytics: UA-59147869-1
