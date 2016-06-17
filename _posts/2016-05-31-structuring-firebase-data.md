@@ -39,14 +39,14 @@ Dynamic data, on the other hand, is data that can change after being loaded the 
 
 You've got a user's feed of stories, and each story has comments. So, if you decide to use a nested structure where you have:
 
-Root/users/USER/feed/[STORY]/[COMMENT]
++ Root/users/USER/feed/[STORY]/[COMMENT]
 
 Anytime a comment is added to that last array, the **whole** object gets rewritten, all the way from the /users path, which can get insanely expensive pretty quickly. The alternative, is to denormalize your data, and just include object ids, which you later fetch using another Firebase instance:
 
-Root/users/[USER_ID]
-Root/[USER_ID]/user_data
-Root/[USER_STORIES]/[STORY]
-Root/[STORY_COMMENTS]/[COMMENT]
++ Root/users/[USER_ID]
++ Root/[USER_ID]/user_data
++ Root/[USER_STORIES]/[STORY]
++ Root/[STORY_COMMENTS]/[COMMENT]
 
 By moving everything to the root, it may seem like a chore at first, but this isolation is quite neat, as it allows you to fetch and update data in an isolated way.
 
