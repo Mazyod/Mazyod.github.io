@@ -56,11 +56,11 @@ First off, notice how the User class extends `WebappUser`. I'm using `webapp2`, 
 As for the custom properties defined above, it's as simple as:
 
 + *username*: duh
-+ *rating & sigma*: To rank the players. See [TrueSkill](http://trueskill.org/).
++ *rating & sigma*: To rank the players. See [TrueSkill][trueskill].
 + *stats*: Just to log how many games the user played.
 + *last_seen*: For various reasons, including idle user detection.
 
-As for the account handlers to do all the registration, login, logout, ... etc, all I needed was [this blog post](http://blog.abahgat.com/2013/01/07/user-authentication-with-webapp2-on-google-app-engine/). I won't be covering this part, since it's really a duplicate of what's on that post.
+As for the account handlers to do all the registration, login, logout, ... etc, all I needed was [this blog post][app-engine-auth]. I won't be covering this part, since it's really a duplicate of what's on that post.
 
 The only real addition I added was "The Lean User", as the title suggests.. But, what is a lean user??
 
@@ -84,3 +84,5 @@ Hopefully, in the next part we will start covering more about the actual game me
 + Matchmaking queues
 + Leaderboard and stats
 
+[trueskill]: http://trueskill.org/
+[app-engine-auth]: https://blog.abahgat.com/2013/01/07/user-authentication-with-webapp2-on-google-app-engine/
