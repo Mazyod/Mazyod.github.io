@@ -7,7 +7,7 @@ slug: google-app-engine-gae
 title: Google App Engine (GAE)
 wordpress_id: 551
 categories:
-- Game Development
+- game-development
 tags:
 - app
 - application

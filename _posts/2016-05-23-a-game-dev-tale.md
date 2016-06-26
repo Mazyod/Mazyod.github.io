@@ -3,7 +3,7 @@ layout: post
 title: A Game Dev Tale
 date: 2016-05-23 22:44:06-0400
 categories: 
-- game-dev
+- game-development
 ---
 
 ## Introduction

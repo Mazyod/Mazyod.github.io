@@ -7,7 +7,7 @@ slug: creating-a-map-editor-for-a-game-66
 title: Creating a Map Editor for a Game (6/6)
 wordpress_id: 597
 categories:
-- Game Development
+- game-development
 - Never Ever
 tags:
 - adapter

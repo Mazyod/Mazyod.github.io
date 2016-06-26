@@ -7,11 +7,11 @@ slug: creating-a-map-editor-for-a-game-23
 title: Creating a Map Editor for a Game (2/6)
 wordpress_id: 357
 categories:
-- Game Development
+- game-development
 - Never Ever
 tags:
 - C++
-- Game Development
+- game-development
 - Games
 - Map Editor
 - NSArray

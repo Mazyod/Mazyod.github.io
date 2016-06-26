@@ -7,7 +7,7 @@ slug: creating-a-map-editor-for-a-game-33
 title: Creating a Map Editor for a Game (3/6)
 wordpress_id: 400
 categories:
-- Game Development
+- game-development
 - Never Ever
 tags:
 - argparse
@@ -19,7 +19,7 @@ tags:
 - editor
 - file
 - Game
-- Game Development
+- game-development
 - Games
 - generating code
 - map

@@ -7,7 +7,7 @@ slug: creating-a-map-editor-for-a-game-56
 title: Creating a Map Editor for a Game (5/6)
 wordpress_id: 553
 categories:
-- Game Development
+- game-development
 - Never Ever
 tags:
 - AppKit
