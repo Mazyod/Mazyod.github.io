@@ -13,7 +13,7 @@ As highlighted by the nifty list below, this is part III of the four part series
 + [The GUI system][gui-system-link]
 + [The game engine][game-engine-link]
 + **The game services**
-+ [The backend system]*(coming soon)*
++ [The backend system][backend-post]
 
 I apologize for the ambiguous, possibly inaccurate, name "game services". I just didn't know what to call these features, even though we use them in every single game we ever make.
 
@@ -55,3 +55,4 @@ This one was brief, as it should be, and it concludes the client-side part! In t
 
 [gui-system-link]: {% post_url 2016-06-26-whats-in-a-game %}
 [game-engine-link]: {% post_url 2016-06-28-rev-up-your-engine %}
+[backend-post]: {% post_url 2016-07-01-back-me-up! %}

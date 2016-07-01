@@ -15,7 +15,7 @@ In the second article in this game development series overway, I would like to s
 + [The GUI system][gui-system-post]
 + **The game engine**
 + [The game services][game-services-post]
-+ The backend system *(coming soon)*
++ [The backend system][backend-post]
 
 The term "Game Engine" is arguably not well defined. For example, I can call the following code a game engine:
 
@@ -55,4 +55,4 @@ Sorry for the lack of excitement here, a topic about game engines should really 
 [gui-system-post]: {% post_url 2016-06-26-whats-in-a-game %}
 [swig-article]: {% post_url 2016-02-16-swig-swag %}
 [game-services-post]: {% post_url 2016-06-29-quality-of-service %}
-
+[backend-post]: {% post_url 2016-07-01-back-me-up! %}

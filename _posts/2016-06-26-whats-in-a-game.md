@@ -21,7 +21,7 @@ __Overview:__
 + __The GUI system__
 + [The game engine][game-engine-post]
 + [The game services][game-services-post]
-+ The backend system _(coming soon)_
++ [The backend system][backend-post]
 
 ## Chewy GUI
 
@@ -66,3 +66,5 @@ Look forward to future posts about the rest of the topics!
 [expensive-aaa-games]: https://en.wikipedia.org/wiki/List_of_most_expensive_video_games_to_develop
 [game-engine-post]: {% post_url 2016-06-28-rev-up-your-engine %}
 [game-services-post]: {% post_url 2016-06-29-quality-of-service %}
+[backend-post]: {% post_url 2016-07-01-back-me-up! %}
+
