@@ -10,4 +10,4 @@ to further lower the barrier of writing to my blog, I decided to start this devl
 
 Well, I actually started this because I am too lazy to create a live programming video feed. I kinda needed to make my development experience feel more interesting than just me typing stuff into a computer ... So, ... This is really unfocused.
 
-Too make my development experience more interesting, I decided to start this devlog. That's sums it up.
+In order to make my development experience more interesting, I decided to start this devlog. That's sums it up.
