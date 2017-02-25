@@ -24,20 +24,20 @@ That wasn't fun. Feeling pressured to ship after so long, not being able to see 
 
 In 2014, I worked at a startup in Dubai as an iOS developer with a decent team and salary. I'm now working in Dubai as an iOS developer with a decent team and salary. The difference? Before shipping, and after... Perhaps you can't attribute the difference fully to the shipping of the game, but I sure feel it has lots to do with it.
 
-**2014**: I brooded over the thought of studying Japanese.
-**2017**: I enrolled before settling in, and already enjoying the classes.
++ **2014**: I brooded over the thought of studying Japanese.
++ **2017**: I enrolled before settling in, and already enjoying the classes.
 
-**2014**: I've attempted to buy a car, apartment, and make big decisions, but failed to execute anything.
-**2017**: I've got a new job + relocation, car, and apartment in 3 months. Also, I feel prepared to take the biggest step in an adult's life.
++ **2014**: I've attempted to buy a car, apartment, and make big decisions, but failed to execute anything.
++ **2017**: I've got a new job + relocation, car, and apartment in 3 months. Also, I feel prepared to take the biggest step in an adult's life.
 
-**2014**: I indulged in mindless refactoring at work with low biz value.
-**2017**: I'm proposing and pushing structural changes from day one.
++ **2014**: I indulged in mindless refactoring at work with low biz value.
++ **2017**: I'm proposing and pushing structural changes from day one.
 
-**2014**: I lacked the confidence at work, home, and in social gatherings.
-**2017**: I'm much more content with how my relationships turn out.
++ **2014**: I lacked the confidence at work, home, and in social gatherings.
++ **2017**: I'm much more content with how my relationships turn out.
 
-**2014**: One small external emotional impact could leave me broken for weeks.
-**2017**: It barely takes more than a few minutes to get over something.. After all, I shipped DAMA! XD
++ **2014**: One small external emotional impact could leave me broken for weeks.
++ **2017**: It barely takes more than a few minutes to get over something.. After all, I shipped DAMA! XD
 
 I hope my point became clear with the examples above. I am not really sure if my game was a stigma in the past that pulled me back, but at least I'm certain now that it's a source of pride and confidence.
 
