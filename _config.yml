@@ -27,8 +27,10 @@ navigation:
 - text: <i class="icon-user"></i>
   url: /about/
 
+# gems
+plugins: [jekyll-gist]
+
 # Build settings
-safe: true
 markdown: kramdown
 exclude: [vendor]
 

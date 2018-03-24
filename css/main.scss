@@ -2,10 +2,10 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i');
 
 // Our variables
-$base-font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+$base-font-family: "Open Sans", sans-serif;
 $base-font-size:   21px;
 $base-font-weight: 100;
 $small-font-size:  $base-font-size * 0.875;
@@ -13,7 +13,7 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #ebe7d3;
+$text-color:       #d8d4be;
 $background-color: #22231d;
 $code-background:  #191611;
 $brand-color:      #EB7000;
