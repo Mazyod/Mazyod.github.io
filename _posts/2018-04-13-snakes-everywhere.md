@@ -2,13 +2,13 @@
 layout: post
 title: Snakes, Everywhere!
 date: 2018-04-13 19:29:23+0400
-categories: 
+categories:
 - programming
 ---
 
 ## Introduction
 
-Ehm, for this one, I am really disappointed at my network of pythonistas. I was looking for such critical tool that would change my life forever when it comes to developing Python applications, yet no one could point the the ultimate solution I ended up finding by chance.
+Ehm, for this one, I am really disappointed at my network of pythonistas. I was looking for such critical tool that would change my life forever when it comes to developing Python applications, yet no one could point the ultimate solution I ended up finding by chance.
 
 The problem statement goes:
 
@@ -29,7 +29,7 @@ The reason this is bad is mainly because it still requires `pip` and a proper py
 
 ## Homebrew
 
-I have another inclination, which I was so close to doing. Distribute through Homebrew. I had released a Homebrew formula before (truck), so it was not that bad of an option.
+I have another inclination, which I was so close to doing. Distribute through Homebrew. I had released a Homebrew formula before ([truck][truck-link]), so it was not that bad of an option.
 
 I started to look at the homebrew docs for defaults, and sure enough, homebrew runs your app in an isolated virtualenv, so you don't need to worry about the users' mess.
 
@@ -56,3 +56,6 @@ With the power of a Mac OS app, I intend to provide a slick UX for interacting w
 ## Conclusion
 
 This post is really intended to take an overview about the available options for distributing Python apps, and doesn't go into details on how to actually use PyInstaller effectively. That's for another post....
+
+
+[truck-link]: https://github.com/Mazyod/homebrew-truck
