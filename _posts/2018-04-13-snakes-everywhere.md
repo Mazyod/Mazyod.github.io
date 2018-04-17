@@ -8,7 +8,7 @@ categories:
 
 ## Introduction
 
-Ehm, for this one, I am really disappointed at my network of pythonistas. I was looking for such critical tool that would change my life forever when it comes to developing Python applications, yet no one could point the ultimate solution I ended up finding by chance.
+Ehm, for this one, I am really disappointed at my network of pythonistas. I was looking for such critical tool that would change my life forever when it comes to developing Python applications, yet no one could point to the ultimate solution I ended up finding by chance.
 
 The problem statement goes:
 
@@ -56,6 +56,5 @@ With the power of a Mac OS app, I intend to provide a slick UX for interacting w
 ## Conclusion
 
 This post is really intended to take an overview about the available options for distributing Python apps, and doesn't go into details on how to actually use PyInstaller effectively. That's for another post....
-
 
 [truck-link]: https://github.com/Mazyod/homebrew-truck
