@@ -2,7 +2,7 @@
 layout: post
 title: Shipping the Game
 date: 2017-02-25 22:41:48+0400
-categories: 
+categories:
 - dama
 ---
 
@@ -37,7 +37,7 @@ In 2014, I worked at a startup in Dubai as an iOS developer with a decent team a
 + **2017**: I'm much more content with how my relationships turn out.
 
 + **2014**: One small external emotional impact could leave me broken for weeks.
-+ **2017**: It barely takes more than a few minutes to get over something.. After all, I shipped DAMA! XD
++ **2017**: It barely takes more than a few minutes to get over something.. After all, I shipped [DAMA][DAMA-link]! XD
 
 I hope my point became clear with the examples above. I am not really sure if my game was a stigma in the past that pulled me back, but at least I'm certain now that it's a source of pride and confidence.
 
@@ -62,3 +62,5 @@ No proper structure, barely any useful content, and when it was finally there at
 ## Conclusion
 
 I'm super glad that I've seen my game through, and I wouldn't change anything if I would go back in time. It wasn't about the actual game; it was about the learnings and the journey.
+
+[DAMA-link]: http://level3.io/
