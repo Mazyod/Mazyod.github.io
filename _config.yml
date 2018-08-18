@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
   experiences I have duing my development career. I mostly work with Swift,
   and C++, for iOS apps and cross-platform games.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://mazyod.com" # the base hostname & protocol for your site
+url: "https://mazyod.com" # the base hostname & protocol for your site
 permalink: /blog/:year/:month/:day/:title/
 twitter_username: mazyod
 github_username:  mazyod
