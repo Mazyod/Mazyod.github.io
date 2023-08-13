@@ -1,18 +1,5 @@
 title: The Beauty of Composition
-categories:
-- software
-- design
-- pattern
-- programming
-- architecture
-- structure
-- modular
-- reusable
-- view
-- controller
-- composition
-- ios
-- controller
+tags: software, design, pattern, programming, architecture, structure, modular, reusable, view, controller, composition, ios, controller
 comments: true
 date: 2014-09-03 11:10:12+00:00
 

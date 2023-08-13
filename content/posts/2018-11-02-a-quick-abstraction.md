@@ -1,6 +1,5 @@
 title: A Quick Abstraction
-categories:
-- programming
+tags: programming
 date: 2018-11-02 22:30:23+00:00
 
 ## Introduction

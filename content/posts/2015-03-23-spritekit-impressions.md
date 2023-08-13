@@ -1,21 +1,5 @@
 title: SpriteKit Impressions
-categories:
-- spritekit
-- ios
-- swift
-- development
-- game
-- xcode
-- 2d
-- programming
-- code
-- pinball
-- breakout
-- physics
-- software
-- architecture
-- cocos2d
-- game-design
+tags: spritekit, ios, swift, development, game, xcode, 2d, programming, code, pinball, breakout, physics, software, architecture, cocos2d, game-design
 comments: true
 date: 2015-03-23 18:06:46+00:00
 

@@ -1,6 +1,5 @@
 title: Structuring Firebase Data
-categories:
-- firebase
+tags: firebase
 date: 2016-05-31 12:17:32+00:00
 
 

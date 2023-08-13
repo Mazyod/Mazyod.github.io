@@ -1,12 +1,5 @@
 title: How to Logout from Hockeyapp
-categories:
-- snippets
-- hockeyapp
-- development
-- uninstall
-- defaults
-- tricks
-- pro-tip
+tags: snippets, hockeyapp, development, uninstall, defaults, tricks, pro-tip
 comments: true
 date: 2014-08-20 12:53:08+00:00
 

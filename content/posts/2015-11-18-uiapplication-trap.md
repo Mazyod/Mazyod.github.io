@@ -1,18 +1,5 @@
 title: UIApplication Trap
-categories:
-- uiapplication
-- shared
-- application
-- ios
-- swift
-- launch
-- main
-- xcode
-- weird
-- bug
-- programming
-- debugging
-- broken
+tags: uiapplication, shared, application, ios, swift, launch, main, xcode, weird, bug, programming, debugging, broken
 comments: true
 date: 2015-11-18 17:03:03+00:00
 

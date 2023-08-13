@@ -1,14 +1,5 @@
 title: The Daily WTF
-categories:
-- daily
-- wtf
-- code
-- horrible
-- horror
-- coding
-- programing
-- job
-- rant
+tags: daily, wtf, code, horrible, horror, coding, programing, job, rant
 comments: true
 date: 2014-09-03 15:29:41+00:00
 

@@ -1,7 +1,6 @@
 title: A Bunch Of Nonsense
 author: mazyod
-categories:
-- cocos2d
+tags: cocos2d
 comments: true
 date: 2012-04-21 07:11:42+00:00
 slug: a-bunch-of-nonsense

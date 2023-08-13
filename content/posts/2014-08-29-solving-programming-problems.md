@@ -1,15 +1,5 @@
 title: Solving Programming Problems
-categories:
-- programming
-- development
-- problem-solving
-- graph
-- yed
-- flow-chart
-- state
-- machine
-- FSM
-- design
+tags: programming, development, problem-solving, graph, yed, flow-chart, state, machine, FSM, design
 comments: true
 date: 2014-08-29 12:45:00+00:00
 

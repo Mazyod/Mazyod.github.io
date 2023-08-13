@@ -1,6 +1,5 @@
 title: A Game Dev Tale
-categories:
-- game-development
+tags: game-development
 date: 2016-05-23 22:44:06+00:00
 
 ## Introduction

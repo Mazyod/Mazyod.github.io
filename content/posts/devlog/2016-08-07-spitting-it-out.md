@@ -1,5 +1,5 @@
 title: Spitting It Out
-categories: null
+tags: null
 date: 2016-08-07 18:26:02+00:00
 
 Not a very friendly title, but I really need to throw out there what's happening these days. It's too valuable to be lost in translation or in a long term memory archives...

@@ -1,17 +1,5 @@
 title: Swift VIII
-categories:
-- swift
-- tips
-- snippet
-- static
-- class
-- singleton
-- function
-- method
-- constant
-- lazy
-- safe
-- property
+tags: swift, tips, snippet, static, class, singleton, function, method, constant, lazy, safe, property
 comments: true
 date: 2015-02-25 13:51:29+00:00
 

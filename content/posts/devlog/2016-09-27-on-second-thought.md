@@ -1,6 +1,5 @@
 title: on second thought
-categories:
-- dama
+tags: dama
 date: 2016-09-27 15:59:32+00:00
 
 Well, I did need to write about the current authentication design, not that I think it's amazing or anything like that, but in fact, I need to write it out in order to properly think about it.

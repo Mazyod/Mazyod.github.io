@@ -1,6 +1,5 @@
 title: Let's Encrypt Phoenix!
-categories:
-- phoenix
+tags: phoenix
 date: 2016-12-19 18:53:02+00:00
 
 ## Introduction

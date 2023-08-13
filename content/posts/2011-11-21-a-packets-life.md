@@ -1,7 +1,6 @@
 title: A Packet's Life
 author: mazyod
-categories:
-- software-engineering
+tags: software-engineering
 comments: true
 date: 2011-11-21 19:10:46+00:00
 slug: a-packets-life

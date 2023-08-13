@@ -1,10 +1,5 @@
 title: Dear Future Self I
-categories:
-- future self
-- snippets
-- rant
-- organization
-- life
+tags: future self, snippets, rant, organization, life
 comments: true
 date: 2014-03-29 14:01:07+00:00
 

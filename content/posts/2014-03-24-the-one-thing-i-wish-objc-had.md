@@ -1,10 +1,5 @@
 title: The One Thing I Wish ObjC Had
-categories:
-- objc
-- rant
-- snippets
-- software
-- python
+tags: objc, rant, snippets, software, python
 comments: true
 date: 2014-03-24 19:10:15+00:00
 

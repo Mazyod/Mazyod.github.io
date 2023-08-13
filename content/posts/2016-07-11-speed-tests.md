@@ -1,6 +1,5 @@
 title: Speed Tests
-categories:
-- elixir
+tags: elixir
 date: 2016-07-11 08:29:57+00:00
 
 ## Introduction

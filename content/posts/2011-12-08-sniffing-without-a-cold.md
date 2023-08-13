@@ -1,7 +1,6 @@
 title: Sniffing without a Cold
 author: mazyod
-categories:
-- hacking
+tags: hacking
 comments: true
 date: 2011-12-08 20:12:20+00:00
 slug: sniffing-without-a-cold

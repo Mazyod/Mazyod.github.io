@@ -1,7 +1,5 @@
 title: What Happen?!
-categories:
-- rant
-- diary
+tags: rant, diary
 comments: true
 date: 2014-04-18 08:38:56+00:00
 

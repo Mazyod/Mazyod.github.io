@@ -1,20 +1,5 @@
 title: Migrating to App Groups
-categories:
-- ios
-- xcode
-- widget
-- app
-- groups
-- extensions
-- defaults
-- migration
-- backward
-- compatibility
-- data
-- nsuserdefaults
-- persistence
-- share
-- settings
+tags: ios, xcode, widget, app, groups, extensions, defaults, migration, backward, compatibility, data, nsuserdefaults, persistence, share, settings
 comments: true
 date: 2015-01-03 15:57:38+00:00
 

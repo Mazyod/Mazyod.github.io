@@ -1,19 +1,5 @@
 title: GAE Follow Up
-categories:
-- backend
-- gae
-- google
-- appengine
-- development
-- python
-- pytest
-- test
-- testing
-- tdd
-- functional
-- rest
-- terminal
-- instance
+tags: backend, gae, google, appengine, development, python, pytest, test, testing, tdd, functional, rest, terminal, instance
 comments: true
 date: 2015-02-10 08:37:39+00:00
 

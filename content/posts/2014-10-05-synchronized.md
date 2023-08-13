@@ -1,14 +1,5 @@
 title: Synchronized
-categories:
-- sync
-- rsync
-- server
-- ubuntu
-- ssh
-- remote
-- files
-- project
-- directory
+tags: sync, rsync, server, ubuntu, ssh, remote, files, project, directory
 comments: true
 date: 2014-10-05 16:22:02+00:00
 

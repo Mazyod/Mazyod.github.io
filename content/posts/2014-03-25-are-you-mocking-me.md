@@ -1,11 +1,5 @@
 title: Are You Mocking Me?!
-categories:
-- TDD
-- test driven development
-- ios
-- XCTests
-- OCMock
-- programming
+tags: TDD, test driven development, ios, XCTests, OCMock, programming
 comments: true
 date: 2014-03-25 13:39:04+00:00
 

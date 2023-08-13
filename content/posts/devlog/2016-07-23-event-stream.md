@@ -1,6 +1,5 @@
 title: Event Stream
-categories:
-- dama
+tags: dama
 date: 2016-07-23 18:06:19+00:00
 
 After much struggling, procrastinating, and LoLing, I have finally set my mind to it. Previously, I have explained how I should be moving the game state within the game logic, but once I started looking at the code some more, something stood out.

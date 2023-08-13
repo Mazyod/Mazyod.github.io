@@ -1,6 +1,5 @@
 title: Be Animate!
-categories:
-- origami
+tags: origami
 date: 2016-05-29 11:04:13+00:00
 
 ## Introduction

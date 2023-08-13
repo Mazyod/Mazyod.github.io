@@ -1,13 +1,5 @@
 title: Nomad Review - San Diego
-categories:
-- nomad
-- travel
-- work
-- remote
-- workplace
-- finance
-- culture
-- atmosphere
+tags: nomad, travel, work, remote, workplace, finance, culture, atmosphere
 date: 2015-12-16 23:27:10+00:00
 
 ## Introduction

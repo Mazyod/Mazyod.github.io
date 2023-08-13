@@ -1,13 +1,5 @@
 title: Now, It is a Must
-categories:
-- kpt
-- ios
-- programming
-- software
-- rant
-- apple
-- appstore
-- library
+tags: kpt, ios, programming, software, rant, apple, appstore, library
 comments: true
 date: 2014-04-04 01:06:48+00:00
 

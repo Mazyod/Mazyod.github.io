@@ -1,13 +1,5 @@
 title: No Freaking Way
-categories:
-- python
-- objective-c
-- MCEngine
-- lunar
-- date
-- calculation
-- ftp
-- automation
+tags: python, objective-c, MCEngine, lunar, date, calculation, ftp, automation
 comments: true
 date: 2014-03-17 20:43:28+00:00
 

@@ -1,11 +1,5 @@
 title: The Daily WTF II
-categories:
-- daily-wtf
-- code
-- programming
-- fail
-- bad
-- development
+tags: daily-wtf, code, programming, fail, bad, development
 comments: true
 date: 2014-09-11 09:56:22+00:00
 

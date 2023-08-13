@@ -1,6 +1,5 @@
 title: Phoenix Channel with a User
-categories:
-- phoenix
+tags: phoenix
 date: 2016-06-04 00:47:29+00:00
 
 ## Introduction

@@ -1,12 +1,5 @@
 title: Biggest Mistake
-categories:
-- snippets
-- development
-- ios
-- NSUserDefaults
-- settings
-- persistence
-- version control
+tags: snippets, development, ios, NSUserDefaults, settings, persistence, version control
 comments: true
 date: 2014-03-21 19:14:38+00:00
 

@@ -1,6 +1,5 @@
 title: Mining, ethOS and Bots!
-categories:
-- programming
+tags: programming
 date: 2018-03-24 22:33:57+00:00
 
 ## Introduction

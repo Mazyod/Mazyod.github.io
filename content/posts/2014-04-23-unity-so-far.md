@@ -1,14 +1,5 @@
 title: Unity So Far
-categories:
-- unity
-- unity3d
-- review
-- gotchas
-- transition
-- animation
-- state
-- FSM
-- any-state
+tags: unity, unity3d, review, gotchas, transition, animation, state, FSM, any-state
 comments: true
 date: 2014-04-23 21:41:29+00:00
 

@@ -1,23 +1,5 @@
 title: App Submission Nightmare
-categories:
-- appstore
-- submission
-- error
-- apple-watch
-- xcode
-- itunes
-- connect
-- upload
-- size
-- realm
-- embed
-- framework
-- code
-- signing
-- archive
-- generic
-- provisioning
-- profile
+tags: appstore, submission, error, apple-watch, xcode, itunes, connect, upload, size, realm, embed, framework, code, signing, archive, generic, provisioning, profile
 comments: true
 date: 2015-11-01 10:36:47+00:00
 

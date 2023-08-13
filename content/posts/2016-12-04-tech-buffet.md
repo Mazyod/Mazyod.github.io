@@ -1,7 +1,5 @@
 title: Tech Buffet
-categories:
-- blog
-- rant
+tags: blog, rant
 date: 2016-12-04 23:45:23+00:00
 
 ## Introduction

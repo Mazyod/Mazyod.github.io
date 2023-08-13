@@ -1,16 +1,5 @@
 title: Continuous Integration With Unity
-categories:
-- unity3d
-- ci
-- continuous
-- integration
-- automation
-- xcode
-- ios
-- workflow
-- jenkins
-- cli
-- terminal
+tags: unity3d, ci, continuous, integration, automation, xcode, ios, workflow, jenkins, cli, terminal
 comments: true
 date: 2015-01-20 14:41:48+00:00
 

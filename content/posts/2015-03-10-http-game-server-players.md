@@ -1,23 +1,5 @@
 title: 'HTTP Game Server: Players'
-categories:
-- api
-- appengine
-- backend
-- design
-- gae
-- game
-- google
-- http
-- kod
-- multiplayer
-- restful
-- scalable
-- server
-- turn-based
-- player
-- user
-- model
-- ndb
+tags: api, appengine, backend, design, gae, game, google, http, kod, multiplayer, restful, scalable, server, turn-based, player, user, model, ndb
 comments: true
 date: 2015-03-10 15:45:37+00:00
 

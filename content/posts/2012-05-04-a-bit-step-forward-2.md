@@ -1,7 +1,6 @@
 title: A Bit Step Forward
 author: mazyod
-categories:
-- programming
+tags: programming
 comments: true
 date: 2012-05-04 19:15:36+00:00
 slug: a-bit-step-forward-2

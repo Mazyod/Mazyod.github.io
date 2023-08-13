@@ -1,13 +1,5 @@
 title: Workflow & Pipeline
-categories:
-- rant
-- app
-- development
-- software
-- management
-- project
-- workflow
-- operation
+tags: rant, app, development, software, management, project, workflow, operation
 comments: true
 date: 2014-04-15 01:57:35+00:00
 

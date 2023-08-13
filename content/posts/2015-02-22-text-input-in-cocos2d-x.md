@@ -1,15 +1,5 @@
 title: Text Input in Cocos2d-x
-categories:
-- cocos2d-x
-- text
-- input
-- texfield
-- ttf
-- editbox
-- api
-- c++
-- snippet
-- tip
+tags: cocos2d-x, text, input, texfield, ttf, editbox, api, c++, snippet, tip
 comments: true
 date: 2015-02-22 21:50:07+00:00
 

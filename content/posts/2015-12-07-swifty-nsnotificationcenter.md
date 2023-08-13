@@ -1,16 +1,5 @@
 title: Swifty NSNotificationCenter
-categories:
-- swift
-- foundation
-- kitz
-- nsnotification
-- nsnotificationcenter
-- library
-- github
-- opensource
-- programming
-- code
-- raii
+tags: swift, foundation, kitz, nsnotification, nsnotificationcenter, library, github, opensource, programming, code, raii
 date: 2015-12-07 12:32:25+00:00
 
 ## Introduction

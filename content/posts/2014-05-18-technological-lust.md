@@ -1,15 +1,5 @@
 title: Technological Lust
-categories:
-- development
-- programming
-- technology
-- backend
-- python
-- qt
-- desktop
-- game
-- c++
-- knowledge
+tags: development, programming, technology, backend, python, qt, desktop, game, c++, knowledge
 comments: true
 date: 2014-05-18 17:16:09+00:00
 

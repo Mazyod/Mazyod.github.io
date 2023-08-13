@@ -1,11 +1,5 @@
 title: Mother Flippin C++
-categories:
-- c++
-- cocos2d-x
-- rapidjson
-- linker
-- error
-- rant
+tags: c++, cocos2d-x, rapidjson, linker, error, rant
 comments: true
 date: 2014-04-07 22:14:19+00:00
 

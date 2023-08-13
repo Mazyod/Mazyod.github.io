@@ -1,6 +1,5 @@
 title: State, Logic, and Graphics
-categories:
-- dama
+tags: dama
 date: 2016-07-23 09:47:25+00:00
 
 I am struggling to find the zen between three entities in my game:

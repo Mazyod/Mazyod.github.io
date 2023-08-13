@@ -1,18 +1,5 @@
 title: Orientation Goodness
-categories:
-- ios
-- swift
-- ios
-- rotation
-- orientation
-- animation
-- transition
-- view
-- controller
-- size
-- change
-- switch
-- snippet
+tags: ios, swift, ios, rotation, orientation, animation, transition, view, controller, size, change, switch, snippet
 comments: true
 date: 2015-03-05 23:02:11+00:00
 

@@ -1,16 +1,5 @@
 title: What the Snippet
-categories:
-- cocos2dx
-- v3.0
-- snippets
-- xcode
-- video
-- tutorial
-- productivity
-- development
-- workflow
-- fast
-- code
+tags: cocos2dx, v3.0, snippets, xcode, video, tutorial, productivity, development, workflow, fast, code
 comments: true
 date: 2014-06-03 06:44:05+00:00
 

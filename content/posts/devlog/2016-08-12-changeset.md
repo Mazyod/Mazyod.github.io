@@ -1,6 +1,5 @@
 title: Changeset
-categories:
-- dama
+tags: dama
 date: 2016-08-12 14:59:05+00:00
 
 That was painful ... Dealing with Ecto changesets.

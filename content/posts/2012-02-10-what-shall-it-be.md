@@ -1,7 +1,6 @@
 title: What Shall It Be ... ?
 author: mazyod
-categories:
-- ios
+tags: ios
 comments: true
 date: 2012-02-10 08:44:57+00:00
 slug: what-shall-it-be

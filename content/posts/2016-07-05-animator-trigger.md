@@ -1,6 +1,5 @@
 title: Animator Trigger
-categories:
-- unity
+tags: unity
 date: 2016-07-05 22:14:01+00:00
 
 Less programming these days, and more animation design. I've been using Unity's animation system to bring the game to life, and it's a pretty solid system, I have to say.

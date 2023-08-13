@@ -1,17 +1,5 @@
 title: Cocoapods Headers
-categories:
-- ios
-- cocoapods
-- snippet
-- tip
-- xcode
-- error
-- header
-- not
-- found
-- link
-- search
-- swift
+tags: ios, cocoapods, snippet, tip, xcode, error, header, not, found, link, search, swift
 comments: true
 date: 2015-02-25 12:48:33+00:00
 

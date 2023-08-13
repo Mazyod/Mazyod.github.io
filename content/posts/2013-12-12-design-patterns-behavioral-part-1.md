@@ -1,7 +1,6 @@
 title: 'Design Patterns: Behavioral (Part 1)'
 author: mazyod
-categories:
-- Software Engineering
+tags: Software Engineering
 comments: true
 date: 2013-12-12 20:31:26+00:00
 slug: design-patterns-behavioral-part-1

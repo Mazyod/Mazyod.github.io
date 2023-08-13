@@ -1,17 +1,5 @@
 title: iOS 8 User Notifications
-categories:
-- apple
-- notification
-- local
-- push
-- user
-- xcode
-- swift
-- objc
-- programming
-- tutorial
-- best
-- practice
+tags: apple, notification, local, push, user, xcode, swift, objc, programming, tutorial, best, practice
 comments: true
 date: 2015-01-20 13:12:17+00:00
 
@@ -33,9 +21,8 @@ BOOL needsPermissions = [[UIApplication sharedApplication] respondsToSelector:@s
 if (needsPermissions)
 {
     UIUserNotificationType types = UIUserNotificationTypeSound|UIUserNotificationTypeAlert;
-    UIUserNotificationSettings *notifSettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
-    
-    [[UIApplication sharedApplication] registerUserNotificationSettings:notifSettings];
+    UIUserNotificationSettings *notifSettings = [UIUserNotificationSettings settingsForTypes:types tags: apple, notification, local, push, user, xcode, swift, objc, programming, tutorial, best, practice
+registerUserNotificationSettings:notifSettings];
 }
 ```
 

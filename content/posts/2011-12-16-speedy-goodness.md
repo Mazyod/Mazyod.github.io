@@ -1,7 +1,6 @@
 title: Speedy Goodness
 author: mazyod
-categories:
-- tech
+tags: tech
 comments: true
 date: 2011-12-16 13:19:06+00:00
 slug: speedy-goodness

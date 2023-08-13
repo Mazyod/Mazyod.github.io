@@ -1,7 +1,6 @@
 title: Catching Up ... !
 author: mazyod
-categories:
-- blog
+tags: blog
 comments: true
 date: 2012-01-10 16:59:57+00:00
 slug: catching-up

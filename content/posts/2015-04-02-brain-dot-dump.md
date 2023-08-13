@@ -1,11 +1,5 @@
 title: Brain.Dump()
-categories:
-- rant
-- useless
-- waste
-- time
-- drunk
-- sleep
+tags: rant, useless, waste, time, drunk, sleep
 comments: true
 date: 2015-04-02 21:21:43+00:00
 

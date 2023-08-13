@@ -1,7 +1,6 @@
 title: Fulfilling A Promise
 author: mazyod
-categories:
-- ios
+tags: ios
 comments: true
 date: 2012-03-19 22:50:21+00:00
 slug: fulfilling-a-promise

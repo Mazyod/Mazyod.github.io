@@ -1,9 +1,5 @@
 title: A DO'H! Moment
-categories:
-- snippets
-- rant
-- stackOverflow
-- stack exchange
+tags: snippets, rant, stackOverflow, stack exchange
 comments: true
 date: 2014-03-22 22:58:10+00:00
 

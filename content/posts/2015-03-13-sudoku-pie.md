@@ -1,18 +1,5 @@
 title: Sudoku Pie
-categories:
-- sudoku
-- python
-- problem
-- solving
-- algorithm
-- code
-- random
-- efficient
-- snippet
-- lol
-- fun
-- golf
-- meh
+tags: sudoku, python, problem, solving, algorithm, code, random, efficient, snippet, lol, fun, golf, meh
 comments: true
 date: 2015-03-13 01:02:31+00:00
 

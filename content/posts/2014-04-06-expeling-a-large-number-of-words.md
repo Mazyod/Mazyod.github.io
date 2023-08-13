@@ -1,6 +1,5 @@
 title: Expeling a Large Number of Words
-categories:
-- rant
+tags: rant
 comments: true
 date: 2014-04-06 23:28:35+00:00
 

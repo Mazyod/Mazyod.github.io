@@ -1,19 +1,5 @@
 title: Gitting It Right
-categories:
-- git
-- development
-- process
-- ios
-- programming
-- vcs
-- flow
-- style
-- productivity
-- collaboration
-- team
-- branch
-- fork
-- repository
+tags: git, development, process, ios, programming, vcs, flow, style, productivity, collaboration, team, branch, fork, repository
 comments: true
 date: 2015-02-19 14:12:40+00:00
 

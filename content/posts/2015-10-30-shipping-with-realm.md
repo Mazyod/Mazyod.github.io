@@ -1,17 +1,5 @@
 title: Shipping With Realm
-categories:
-- realm
-- ios
-- swift
-- xcode
-- app
-- appstore
-- release
-- impression
-- review
-- migration
-- schema
-- version
+tags: realm, ios, swift, xcode, app, appstore, release, impression, review, migration, schema, version
 comments: true
 date: 2015-10-30 15:45:59+00:00
 

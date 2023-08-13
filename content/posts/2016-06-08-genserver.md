@@ -1,6 +1,5 @@
 title: GenServer
-categories:
-- elixir
+tags: elixir
 date: 2016-06-08 17:42:57+00:00
 
 ## Introduction

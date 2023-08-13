@@ -1,11 +1,5 @@
 title: KPT v1.22 Submitted
-categories:
-- Mac
-- apps
-- KPT
-- Kuwait
-- AppStore
-- development
+tags: Mac, apps, KPT, Kuwait, AppStore, development
 comments: true
 date: 2014-03-18 12:09:23+00:00
 

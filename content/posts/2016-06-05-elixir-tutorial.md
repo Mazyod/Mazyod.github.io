@@ -1,6 +1,5 @@
 title: Elixir Tutorial
-categories:
-- elixir
+tags: elixir
 date: 2016-06-05 21:30:37+00:00
 
 ## Introduction

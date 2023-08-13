@@ -1,7 +1,6 @@
 title: 'Design Patterns: Structural'
 author: mazyod
-categories:
-- Software Engineering
+tags: Software Engineering
 comments: true
 date: 2013-12-24 21:39:03+00:00
 slug: design-patterns-structural

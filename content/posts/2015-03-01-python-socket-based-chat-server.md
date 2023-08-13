@@ -1,15 +1,5 @@
 title: Python Socket-Based Chat Server
-categories:
-- python
-- chat
-- server
-- backend
-- development
-- programming
-- snippet
-- tutorial
-- socket
-- udp
+tags: python, chat, server, backend, development, programming, snippet, tutorial, socket, udp
 comments: true
 date: 2015-03-01 17:16:41+00:00
 

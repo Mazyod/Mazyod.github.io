@@ -1,5 +1,5 @@
 title: MonoDevelop For N00bs
-categories: null
+tags: null
 date: 2016-02-16 09:53:31+00:00
 
 ## Introduction

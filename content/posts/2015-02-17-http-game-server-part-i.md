@@ -1,19 +1,5 @@
 title: 'HTTP Game Server: Part I'
-categories:
-- http
-- game
-- server
-- implementation
-- backend
-- multiplayer
-- checkers
-- turn-based
-- api
-- restful
-- gae
-- google
-- appengine
-- apiary
+tags: http, game, server, implementation, backend, multiplayer, checkers, turn-based, api, restful, gae, google, appengine, apiary
 comments: true
 date: 2015-02-17 14:35:37+00:00
 

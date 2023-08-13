@@ -1,18 +1,5 @@
 title: Playing With ReactiveCocoa
-categories:
-- ios
-- swift
-- xcode
-- reactive
-- programming
-- functional
-- reactivecocoa
-- github
-- framework
-- library
-- review
-- design
-- uikit
+tags: ios, swift, xcode, reactive, programming, functional, reactivecocoa, github, framework, library, review, design, uikit
 date: 2015-12-05 02:10:51+00:00
 
 ## Introduction

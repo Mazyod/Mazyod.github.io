@@ -1,5 +1,5 @@
 title: ReactNative as a Framework
-categories: null
+tags: null
 date: 2017-08-05 18:46:15+00:00
 
 It has been a while since I have posted anything, and to be honest, I shouldn't be posting anything, since I've got loads of other things to worry about..! But oh well, I have searched the Internets high and wide for tids and bits about packaging ReactNative as an iOS framework, and couldn't find anything useful...

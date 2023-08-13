@@ -1,12 +1,5 @@
 title: Less is Better
-categories:
-- objective-c
-- init
-- attribute
-- directive
-- singleton
-- restriction
-- fool-proof
+tags: objective-c, init, attribute, directive, singleton, restriction, fool-proof
 comments: true
 date: 2014-05-05 11:57:07+00:00
 

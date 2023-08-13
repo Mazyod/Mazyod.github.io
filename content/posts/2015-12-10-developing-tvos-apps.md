@@ -1,17 +1,5 @@
 title: Developing tvOS Apps
-categories:
-- tvos
-- uikit
-- programming
-- ios
-- xcode
-- swift
-- appletv
-- apple
-- introduction
-- tutorial
-- dependencies
-- restkit
+tags: tvos, uikit, programming, ios, xcode, swift, appletv, apple, introduction, tutorial, dependencies, restkit
 date: 2015-12-10 00:28:04+00:00
 
 ## Introduction

@@ -1,16 +1,5 @@
 title: Generic Constraints with Optionals
-categories:
-- swift
-- code
-- programming
-- xcode
-- generics
-- optional
-- nullability
-- conformance
-- inheritance
-- typealias
-- constraints
+tags: swift, code, programming, xcode, generics, optional, nullability, conformance, inheritance, typealias, constraints
 comments: true
 date: 2015-11-20 13:13:34+00:00
 

@@ -1,19 +1,5 @@
 title: iOS or Android Remote Logging
-categories:
-- software
-- development
-- mobile
-- ios
-- android
-- firebase
-- logging
-- remote
-- bugs
-- debugging
-- tracking
-- b2b
-- lean
-- startup
+tags: software, development, mobile, ios, android, firebase, logging, remote, bugs, debugging, tracking, b2b, lean, startup
 date: 2015-11-30 22:42:15+00:00
 
 ## Introduction

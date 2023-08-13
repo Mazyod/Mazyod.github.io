@@ -1,7 +1,6 @@
 title: Google App Engine (GAE)
 author: mazyod
-categories:
-- game-development
+tags: game-development
 comments: true
 date: 2013-12-27 21:46:06+00:00
 slug: google-app-engine-gae

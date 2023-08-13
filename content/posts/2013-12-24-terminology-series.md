@@ -1,7 +1,6 @@
 title: Terminology Series
 author: mazyod
-categories:
-- Terminology
+tags: Terminology
 comments: true
 date: 2013-12-24 03:39:59+00:00
 slug: terminology-series

@@ -1,18 +1,5 @@
 title: Fine Grain
-categories:
-- development
-- software
-- engineering
-- design
-- pattern
-- code
-- structure
-- architecture
-- maintainability
-- clean
-- rant
-- composition
-- modular
+tags: development, software, engineering, design, pattern, code, structure, architecture, maintainability, clean, rant, composition, modular
 comments: true
 date: 2015-03-03 20:08:19+00:00
 

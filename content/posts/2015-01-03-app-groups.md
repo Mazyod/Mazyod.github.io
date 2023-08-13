@@ -1,16 +1,5 @@
 title: App Groups
-categories:
-- ios
-- defaults
-- persistence
-- storage
-- settings
-- nsuserdefaults
-- share
-- data
-- widget
-- app
-- groups
+tags: ios, defaults, persistence, storage, settings, nsuserdefaults, share, data, widget, app, groups
 comments: true
 date: 2015-01-03 12:10:49+00:00
 

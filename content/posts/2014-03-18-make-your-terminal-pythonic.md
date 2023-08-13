@@ -1,11 +1,5 @@
 title: Make Your Terminal Pythonic!
-categories:
-- terminal
-- bash
-- python
-- scripting
-- workflow
-- snippets
+tags: terminal, bash, python, scripting, workflow, snippets
 comments: true
 date: 2014-03-18 21:28:26+00:00
 

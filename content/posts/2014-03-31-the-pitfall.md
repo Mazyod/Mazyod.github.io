@@ -1,8 +1,5 @@
 title: The Pitfall
-categories:
-- snippets
-- rant
-- programming
+tags: snippets, rant, programming
 comments: true
 date: 2014-03-31 11:35:14+00:00
 

@@ -1,12 +1,5 @@
 title: Forcing AAC Down iTunes' Throat
-categories:
-- iTunes
-- AAC
-- Audio
-- convert
-- ffmpeg
-- afconvert
-- snippets
+tags: iTunes, AAC, Audio, convert, ffmpeg, afconvert, snippets
 comments: true
 date: 2014-03-14 09:56:27+00:00
 

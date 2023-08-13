@@ -1,11 +1,5 @@
 title: Writing Unit Tests
-categories:
-- software
-- development
-- programming
-- testing
-- unit test
-- code design
+tags: software, development, programming, testing, unit test, code design
 comments: true
 date: 2014-03-23 14:30:08+00:00
 

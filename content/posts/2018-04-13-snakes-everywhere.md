@@ -1,6 +1,5 @@
 title: Snakes, Everywhere!
-categories:
-- programming
+tags: programming
 date: 2018-04-13 19:29:23+00:00
 
 ## Introduction

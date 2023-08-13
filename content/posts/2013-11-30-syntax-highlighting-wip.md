@@ -1,7 +1,6 @@
 title: Syntax Highlighting [WIP!]
 author: mazyod
-categories:
-- Open Source
+tags: Open Source
 comments: true
 date: 2013-11-30 23:36:20+00:00
 slug: syntax-highlighting-wip

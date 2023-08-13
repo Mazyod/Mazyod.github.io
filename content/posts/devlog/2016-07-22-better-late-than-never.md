@@ -1,6 +1,5 @@
 title: Better Late Than Never
-categories:
-- rant
+tags: rant
 date: 2016-07-22 13:03:01+00:00
 
 Wow, I really should have started doing this since forever ... But you you what they always say:

@@ -1,13 +1,5 @@
 title: How to Compose
-categories:
-- composition
-- design
-- code
-- implementation
-- architecture
-- aspect
-- modular
-- programming
+tags: composition, design, code, implementation, architecture, aspect, modular, programming
 comments: true
 date: 2014-09-04 15:39:15+00:00
 

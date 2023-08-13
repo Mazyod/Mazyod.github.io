@@ -1,17 +1,5 @@
 title: iOS Widgets
-categories:
-- ios
-- programming
-- rant
-- widget
-- extension
-- today
-- development
-- error
-- autolayout
-- interface-builder
-- xcode
-- swift
+tags: ios, programming, rant, widget, extension, today, development, error, autolayout, interface-builder, xcode, swift
 comments: true
 date: 2014-12-26 01:19:07+00:00
 

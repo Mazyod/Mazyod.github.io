@@ -1,5 +1,5 @@
 title: Errors Localization
-categories: null
+tags: null
 date: 2016-08-04 12:01:48+00:00
 
 Forgot that on a similar note to the previous post, I was wondering how I should deal with error message localization. I can deal with the localization on the frontend or the backend. If I choose either, there are also multiple ways to approach either one... Then, there is the hybrid approach, where the backend sends all localized strings, and the client picks the right one...

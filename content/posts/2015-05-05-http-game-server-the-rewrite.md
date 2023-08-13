@@ -1,20 +1,5 @@
 title: 'HTTP Game Server: The Rewrite'
-categories:
-- api
-- appengine
-- backend
-- design
-- gae
-- game
-- google
-- http
-- kod
-- multiplayer
-- restful
-- scalable
-- server
-- turn-based
-- c++
+tags: api, appengine, backend, design, gae, game, google, http, kod, multiplayer, restful, scalable, server, turn-based, c++
 comments: true
 date: 2015-05-05 18:03:22+00:00
 

@@ -1,13 +1,5 @@
 title: Cocos2dx 3.0 Callbacks
-categories:
-- cocos2dx
-- v3.0
-- callbacks
-- callfunc
-- std
-- bind
-- callfuncO_selector
-- c++11
+tags: cocos2dx, v3.0, callbacks, callfunc, std, bind, callfuncO_selector, c++11
 comments: true
 date: 2014-04-04 22:44:57+00:00
 

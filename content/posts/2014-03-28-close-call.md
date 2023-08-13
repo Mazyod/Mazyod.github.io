@@ -1,14 +1,5 @@
 title: Close Call
-categories:
-- rant
-- testing
-- objective-c
-- library
-- development
-- programming
-- snippets
-- xcode
-- UILocalNotification
+tags: rant, testing, objective-c, library, development, programming, snippets, xcode, UILocalNotification
 comments: true
 date: 2014-03-28 17:52:12+00:00
 

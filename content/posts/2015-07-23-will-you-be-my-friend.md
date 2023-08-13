@@ -1,19 +1,5 @@
 title: Will You Be My Friend?
-categories:
-- friend
-- poco
-- pocoproject
-- class
-- c++
-- programming
-- tips
-- nullable
-- optional
-- template
-- safety
-- encapsulation
-- oop
-- design
+tags: friend, poco, pocoproject, class, c++, programming, tips, nullable, optional, template, safety, encapsulation, oop, design
 comments: true
 date: 2015-07-23 23:37:28+00:00
 

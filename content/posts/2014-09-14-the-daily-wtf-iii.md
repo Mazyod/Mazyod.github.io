@@ -1,10 +1,5 @@
 title: The Daily WTF III
-categories:
-- daily-wtf
-- code
-- horror
-- fail
-- programming
+tags: daily-wtf, code, horror, fail, programming
 comments: true
 date: 2014-09-14 15:26:59+00:00
 

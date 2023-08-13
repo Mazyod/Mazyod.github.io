@@ -1,16 +1,5 @@
 title: Multiplayer
-categories:
-- multiplayer
-- online
-- game
-- development
-- challenge
-- c++
-- indie
-- design
-- architecture
-- question
-- rant
+tags: multiplayer, online, game, development, challenge, c++, indie, design, architecture, question, rant
 comments: true
 date: 2015-08-02 02:00:07+00:00
 

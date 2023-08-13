@@ -1,6 +1,5 @@
 title: i forgot about this
-categories:
-- dama
+tags: dama
 date: 2016-09-27 15:55:47+00:00
 
 Holy crap, I completely forgot about this devlog `>__<` .. definitely should not have...

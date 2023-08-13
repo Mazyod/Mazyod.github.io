@@ -1,7 +1,6 @@
 title: Python n00b Tip
 author: mazyod
-categories:
-- Python
+tags: Python
 comments: true
 date: 2013-12-12 01:35:14+00:00
 slug: python-n00b-tip

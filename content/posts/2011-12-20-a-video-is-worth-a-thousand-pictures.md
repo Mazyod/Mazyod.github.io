@@ -1,7 +1,6 @@
 title: A Video is Worth a Thousand Pictures
 author: mazyod
-categories:
-- tech
+tags: tech
 comments: true
 date: 2011-12-20 17:51:47+00:00
 slug: a-video-is-worth-a-thousand-pictures

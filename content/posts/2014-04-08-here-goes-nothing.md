@@ -1,12 +1,5 @@
 title: Here Goes Nothing
-categories:
-- kpt
-- release
-- ios
-- rant
-- appstore
-- application
-- itunes
+tags: kpt, release, ios, rant, appstore, application, itunes
 comments: true
 date: 2014-04-08 07:01:38+00:00
 

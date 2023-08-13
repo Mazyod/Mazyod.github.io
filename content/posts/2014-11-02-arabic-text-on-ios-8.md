@@ -1,13 +1,5 @@
 title: Arabic Text on iOS 8
-categories:
-- ios
-- arabic
-- text
-- string
-- calculation
-- attributed
-- custom
-- font
+tags: ios, arabic, text, string, calculation, attributed, custom, font
 comments: true
 date: 2014-11-02 15:19:18+00:00
 

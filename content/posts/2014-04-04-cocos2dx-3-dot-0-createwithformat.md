@@ -1,13 +1,5 @@
 title: Cocos2dx 3.0 createWithFormat
-categories:
-- cocos2dx
-- ccstring
-- string
-- createwithformat
-- stringwithformat
-- format
-- c++
-- snippets
+tags: cocos2dx, ccstring, string, createwithformat, stringwithformat, format, c++, snippets
 comments: true
 date: 2014-04-04 22:09:09+00:00
 

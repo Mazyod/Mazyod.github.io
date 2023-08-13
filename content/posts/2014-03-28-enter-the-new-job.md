@@ -1,14 +1,5 @@
 title: Enter the New Job
-categories:
-- rant
-- snippets
-- diary
-- programmer
-- job
-- startup
-- hiring
-- codairy
-- enterpenuer
+tags: rant, snippets, diary, programmer, job, startup, hiring, codairy, enterpenuer
 comments: true
 date: 2014-03-28 03:29:32+00:00
 

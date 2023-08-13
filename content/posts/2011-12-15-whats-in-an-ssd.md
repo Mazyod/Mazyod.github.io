@@ -1,7 +1,6 @@
 title: What's in an SSD?
 author: mazyod
-categories:
-- tech
+tags: tech
 comments: true
 date: 2011-12-15 18:45:30+00:00
 slug: whats-in-an-ssd

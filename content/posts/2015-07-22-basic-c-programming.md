@@ -1,11 +1,5 @@
 title: Basic C Programming
-categories:
-- c
-- programming
-- development
-- snippets
-- clion
-- tips
+tags: c, programming, development, snippets, clion, tips
 comments: true
 date: 2015-07-22 13:14:11+00:00
 

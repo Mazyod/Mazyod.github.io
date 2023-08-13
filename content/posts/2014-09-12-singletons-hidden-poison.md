@@ -1,10 +1,5 @@
 title: Singletons Hidden Poison
-categories:
-- singleton
-- anti-pattern
-- software
-- programming
-- architecture
+tags: singleton, anti-pattern, software, programming, architecture
 comments: true
 date: 2014-09-12 11:26:30+00:00
 

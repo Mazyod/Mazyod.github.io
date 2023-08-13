@@ -1,10 +1,5 @@
 title: Blogging With Octopress
-categories:
-- blogging
-- sublime text
-- octopress
-- terminal
-- python
+tags: blogging, sublime text, octopress, terminal, python
 comments: true
 date: 2014-03-16 08:50:12+00:00
 

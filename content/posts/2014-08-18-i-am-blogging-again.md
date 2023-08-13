@@ -1,9 +1,5 @@
 title: I Am Blogging, Again!
-categories:
-- rant
-- blogging
-- technology
-- philosophy
+tags: rant, blogging, technology, philosophy
 comments: true
 date: 2014-08-18 18:04:32+00:00
 

@@ -1,13 +1,5 @@
 title: UITableViews and Enums
-categories:
-- ios
-- objective-c
-- pro-tip
-- snippets
-- programming
-- development
-- enums
-- uitableview
+tags: ios, objective-c, pro-tip, snippets, programming, development, enums, uitableview
 comments: true
 date: 2014-03-26 19:50:24+00:00
 

@@ -1,13 +1,5 @@
 title: Event Dispatcher
-categories:
-- cocos2d-x
-- event-dispatcher
-- youtube
-- tutorial
-- notification
-- ccnotificationcenter
-- lambda
-- video
+tags: cocos2d-x, event-dispatcher, youtube, tutorial, notification, ccnotificationcenter, lambda, video
 comments: true
 date: 2014-05-20 23:02:48+00:00
 

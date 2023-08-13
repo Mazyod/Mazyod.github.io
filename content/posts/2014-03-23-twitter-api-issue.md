@@ -1,11 +1,5 @@
 title: Twitter API Issue
-categories:
-- twitter
-- snippets
-- api
-- error
-- json
-- response
+tags: twitter, snippets, api, error, json, response
 comments: true
 date: 2014-03-23 23:52:51+00:00
 

@@ -1,25 +1,5 @@
 title: Marry CircleCI to Hockey
-categories:
-- circleci
-- ci
-- continuous
-- integration
-- hockeyapp
-- puck
-- build
-- terminal
-- cli
-- bash
-- script
-- python
-- certificate
-- xcode
-- code-signing
-- provisioning
-- settings
-- distribution
-- ota
-- archive
+tags: circleci, ci, continuous, integration, hockeyapp, puck, build, terminal, cli, bash, script, python, certificate, xcode, code-signing, provisioning, settings, distribution, ota, archive
 comments: true
 date: 2015-03-26 15:10:25+00:00
 

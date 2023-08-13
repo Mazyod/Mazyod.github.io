@@ -1,19 +1,5 @@
 title: Reduce the Damage of Crashing
-categories:
-- crash
-- report
-- software
-- programming
-- ios
-- cocoa
-- mac
-- hockeyapp
-- analytics
-- service
-- programming
-- development
-- swift
-- objc
+tags: crash, report, software, programming, ios, cocoa, mac, hockeyapp, analytics, service, programming, development, swift, objc
 comments: true
 date: 2015-02-01 09:40:32+00:00
 

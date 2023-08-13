@@ -1,10 +1,5 @@
 title: Where is Maz?
-categories:
-- lol
-- rant
-- life
-- haidar
-- idea
+tags: lol, rant, life, haidar, idea
 comments: true
 date: 2015-11-07 13:35:42+00:00
 

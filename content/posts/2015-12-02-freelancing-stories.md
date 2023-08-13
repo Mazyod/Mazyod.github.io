@@ -1,15 +1,5 @@
 title: Freelancing Stories
-categories:
-- freelancing
-- programming
-- career
-- contract
-- toptal
-- client
-- ios
-- communication
-- project
-- management
+tags: freelancing, programming, career, contract, toptal, client, ios, communication, project, management
 date: 2015-12-02 11:24:16+00:00
 
 ## Introduction

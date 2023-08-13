@@ -1,7 +1,6 @@
 title: Temptation!
 author: mazyod
-categories:
-- rant
+tags: rant
 comments: true
 date: 2011-10-30 19:53:29+00:00
 slug: temptation

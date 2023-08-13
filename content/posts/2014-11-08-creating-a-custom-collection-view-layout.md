@@ -1,14 +1,5 @@
 title: Creating A Custom Collection View Layout
-categories:
-- swift
-- collectionview
-- layout
-- ios
-- uikit
-- tip
-- tutorial
-- learn
-- custom
+tags: swift, collectionview, layout, ios, uikit, tip, tutorial, learn, custom
 comments: true
 date: 2014-11-08 17:07:11+00:00
 

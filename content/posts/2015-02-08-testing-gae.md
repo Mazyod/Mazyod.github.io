@@ -1,23 +1,5 @@
 title: Testing GAE
-categories:
-- gae
-- google
-- app
-- engine
-- development
-- backend
-- ndb
-- test
-- testing
-- unit-test
-- tdd
-- mock
-- api
-- script
-- python
-- integration
-- system
-- pytest
+tags: gae, google, app, engine, development, backend, ndb, test, testing, unit-test, tdd, mock, api, script, python, integration, system, pytest
 comments: true
 date: 2015-02-08 12:46:10+00:00
 

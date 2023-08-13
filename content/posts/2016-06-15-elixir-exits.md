@@ -1,6 +1,5 @@
 title: Elixir Exits
-categories:
-- elixir
+tags: elixir
 date: 2016-06-15 21:22:24+00:00
 
 ## Introduction

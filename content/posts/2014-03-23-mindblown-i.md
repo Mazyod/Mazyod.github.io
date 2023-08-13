@@ -1,10 +1,5 @@
 title: Mindblown I
-categories:
-- PHP
-- backend
-- development
-- snippets
-- rant
+tags: PHP, backend, development, snippets, rant
 comments: true
 date: 2014-03-23 00:05:36+00:00
 

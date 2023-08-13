@@ -1,16 +1,5 @@
 title: Spine Skeleton Data Caching in Cocos2d-X
-categories:
-- spine
-- skeleton
-- cache
-- pool
-- reuse
-- faster
-- performance
-- v3
-- cocos2d-x
-- c++
-- esoteric
+tags: spine, skeleton, cache, pool, reuse, faster, performance, v3, cocos2d-x, c++, esoteric
 comments: true
 date: 2014-10-10 20:42:25+00:00
 

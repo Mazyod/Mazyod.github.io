@@ -1,6 +1,5 @@
 title: Backend Testing Using Bots
-categories:
-- elixir
+tags: elixir
 date: 2016-06-01 10:59:31+00:00
 tags:
 - elixir

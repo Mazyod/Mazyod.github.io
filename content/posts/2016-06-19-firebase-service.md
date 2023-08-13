@@ -1,6 +1,5 @@
 title: Firebase Service
-categories:
-- firebase
+tags: firebase
 date: 2016-06-19 05:24:02+00:00
 
 ## Introduction

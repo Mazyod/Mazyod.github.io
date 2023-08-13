@@ -1,6 +1,5 @@
 title: A Sockety Tale
-categories:
-- websocket
+tags: websocket
 date: 2016-12-10 14:16:51+00:00
 
 ## Introduction

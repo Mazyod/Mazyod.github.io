@@ -1,14 +1,5 @@
 title: Over Gitting It
-categories:
-- git
-- rant
-- brainfart
-- daily
-- diary
-- why
-- life
-- programmer
-- developer
+tags: git, rant, brainfart, daily, diary, why, life, programmer, developer
 comments: true
 date: 2014-05-07 20:49:17+00:00
 

@@ -1,13 +1,5 @@
 title: NSParagraphStyle
-categories:
-- ios
-- custom fonts
-- font
-- style
-- NSParagraphStyle
-- line height
-- uilabel
-- clipping
+tags: ios, custom fonts, font, style, NSParagraphStyle, line height, uilabel, clipping
 comments: true
 date: 2014-03-23 22:46:30+00:00
 

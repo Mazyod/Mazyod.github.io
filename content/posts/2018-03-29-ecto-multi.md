@@ -1,6 +1,5 @@
 title: Ecto.Multi
-categories:
-- programming
+tags: programming
 date: 2018-03-29 02:46:53+00:00
 
 ## Introduction

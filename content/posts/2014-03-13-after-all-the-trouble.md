@@ -1,10 +1,5 @@
 title: After All That Trouble...
-categories:
-- snippets
-- python
-- programming
-- scripting
-- subprocess
+tags: snippets, python, programming, scripting, subprocess
 comments: true
 date: 2014-03-13 17:15:55+00:00
 

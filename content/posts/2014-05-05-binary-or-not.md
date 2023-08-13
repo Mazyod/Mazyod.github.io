@@ -1,13 +1,5 @@
 title: Binary, Or Not!
-categories:
-- binary
-- binaryornot
-- file
-- files
-- string
-- python
-- pip
-- pypi
+tags: binary, binaryornot, file, files, string, python, pip, pypi
 comments: true
 date: 2014-05-05 11:46:47+00:00
 

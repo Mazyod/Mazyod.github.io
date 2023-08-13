@@ -1,13 +1,5 @@
 title: What's in a Day
-categories:
-- ios
-- swift
-- xcode
-- learn
-- rant
-- life
-- development
-- programming
+tags: ios, swift, xcode, learn, rant, life, development, programming
 comments: true
 date: 2014-11-10 01:46:45+00:00
 

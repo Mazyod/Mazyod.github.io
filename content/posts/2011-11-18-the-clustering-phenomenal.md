@@ -1,7 +1,6 @@
 title: The Clustering Phenomena
 author: mazyod
-categories:
-- game-development
+tags: game-development
 comments: true
 date: 2011-11-18 23:41:00+00:00
 slug: the-clustering-phenomenal

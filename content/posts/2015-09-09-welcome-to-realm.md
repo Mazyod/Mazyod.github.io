@@ -1,22 +1,5 @@
 title: Welcome to Realm
-categories:
-- realm
-- ios
-- swift
-- core-data
-- sqlite
-- data
-- persistence
-- rest
-- api
-- backend
-- sync
-- json
-- parse
-- mapping
-- mantle
-- swiftyJSON
-- github
+tags: realm, ios, swift, core-data, sqlite, data, persistence, rest, api, backend, sync, json, parse, mapping, mantle, swiftyJSON, github
 comments: true
 date: 2015-09-09 00:01:28+00:00
 

@@ -1,17 +1,5 @@
 title: Static Libraries and Swift
-categories:
-- swift
-- objective-c
-- library
-- static
-- link
-- import
-- module
-- umbrella
-- header
-- map
-- xcode
-- ios
+tags: swift, objective-c, library, static, link, import, module, umbrella, header, map, xcode, ios
 comments: true
 date: 2014-11-11 22:23:19+00:00
 

@@ -1,12 +1,5 @@
 title: Enlightenment
-categories:
-- rant
-- change
-- development
-- programming
-- process
-- game
-- code
+tags: rant, change, development, programming, process, game, code
 comments: true
 date: 2015-04-05 22:17:27+00:00
 

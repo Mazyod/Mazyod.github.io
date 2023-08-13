@@ -1,10 +1,5 @@
 title: Diving Into an Existing Project
-categories:
-- testing
-- unit tests
-- development
-- programming
-- snippets
+tags: testing, unit tests, development, programming, snippets
 comments: true
 date: 2014-03-23 12:53:44+00:00
 

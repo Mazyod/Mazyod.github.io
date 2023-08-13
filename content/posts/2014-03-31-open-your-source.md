@@ -1,12 +1,5 @@
 title: Open Your Source
-categories:
-- open-source
-- programming
-- ios
-- xcode
-- auto-complete
-- component
-- library
+tags: open-source, programming, ios, xcode, auto-complete, component, library
 comments: true
 date: 2014-03-31 20:17:46+00:00
 

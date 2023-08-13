@@ -1,15 +1,5 @@
 title: Memory Preallocation
-categories:
-- memory
-- malloc
-- realloc
-- c
-- algorithms
-- pooling
-- slicing
-- development
-- performance
-- null
+tags: memory, malloc, realloc, c, algorithms, pooling, slicing, development, performance, null
 comments: true
 date: 2014-04-18 21:18:21+00:00
 

@@ -1,6 +1,5 @@
 title: Problem Solving
-categories:
-- programming
+tags: programming
 date: 2018-07-22 09:04:11+00:00
 
 ## Introduction

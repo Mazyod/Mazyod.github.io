@@ -1,6 +1,5 @@
 title: More Errors
-categories:
-- dama
+tags: dama
 date: 2016-08-04 14:08:23+00:00
 
 Even more errors, and more edge cases to solve ... If you are developing a game, really there is never a dull moment around here .. Every single detail is a challenge that requires careful thought and planning. The idea is that once you start executing, everything should just fall into place.

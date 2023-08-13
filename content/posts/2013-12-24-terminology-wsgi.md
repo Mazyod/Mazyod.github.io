@@ -1,7 +1,6 @@
 title: Terminology! [WSGI]
 author: mazyod
-categories:
-- Web
+tags: Web
 comments: true
 date: 2013-12-24 03:48:58+00:00
 slug: terminology-wsgi

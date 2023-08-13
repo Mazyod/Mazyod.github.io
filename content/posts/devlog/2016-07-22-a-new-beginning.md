@@ -1,6 +1,5 @@
 title: A New Beginning
-categories:
-- dama
+tags: dama
 date: 2016-07-22 11:53:31+00:00
 
 to further lower the barrier of writing to my blog, I decided to start this devlog thingie. I can just do brain dumps here without even worrying about the structure, title, content, or anything like that...

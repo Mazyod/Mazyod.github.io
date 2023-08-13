@@ -1,17 +1,5 @@
 title: Constructing URLs in Foundation
-categories:
-- Foundation
-- NSURL
-- query
-- path
-- escape
-- hardcode
-- clean
-- snippet
-- tutorial
-- ios
-- osx
-- swift
+tags: Foundation, NSURL, query, path, escape, hardcode, clean, snippet, tutorial, ios, osx, swift
 date: 2015-12-14 19:23:26+00:00
 
 ## Introduction

@@ -1,22 +1,5 @@
 title: Handling Launch Crashes
-categories:
-- snippet
-- hockeyapp
-- sdk
-- crash
-- report
-- error
-- debug
-- swift
-- unowned
-- closure
-- callback
-- selector
-- ios
-- sigtrap
-- breakpoint
-- fbkvocontroller
-- sigsegv
+tags: snippet, hockeyapp, sdk, crash, report, error, debug, swift, unowned, closure, callback, selector, ios, sigtrap, breakpoint, fbkvocontroller, sigsegv
 comments: true
 date: 2015-03-14 20:45:46+00:00
 

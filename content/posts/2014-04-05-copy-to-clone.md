@@ -1,13 +1,5 @@
 title: Copy to Clone
-categories:
-- cocos2dx
-- v3.0
-- snippets
-- copy
-- clone
-- memory-management
-- crash
-- c++
+tags: cocos2dx, v3.0, snippets, copy, clone, memory-management, crash, c++
 comments: true
 date: 2014-04-05 22:47:56+00:00
 

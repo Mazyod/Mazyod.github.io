@@ -1,17 +1,5 @@
 title: Rapid iOS Development
-categories:
-- ios
-- development
-- programming
-- software
-- engineering
-- design
-- pattern
-- structure
-- architecture
-- rapid
-- agile
-- prototyping
+tags: ios, development, programming, software, engineering, design, pattern, structure, architecture, rapid, agile, prototyping
 comments: true
 date: 2015-02-15 17:45:46+00:00
 

@@ -1,10 +1,5 @@
 title: Google Ads
-categories:
-- google
-- ads
-- snippets
-- rant
-- nonsense
+tags: google, ads, snippets, rant, nonsense
 comments: true
 date: 2014-03-23 22:01:24+00:00
 

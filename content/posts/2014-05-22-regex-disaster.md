@@ -1,14 +1,5 @@
 title: Regex Disaster
-categories:
-- regex
-- python
-- scripting
-- snippets
-- pycharm
-- search
-- replace
-- re
-- sub
+tags: regex, python, scripting, snippets, pycharm, search, replace, re, sub
 comments: true
 date: 2014-05-22 14:15:12+00:00
 

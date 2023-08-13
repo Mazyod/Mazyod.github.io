@@ -1,13 +1,5 @@
 title: A Challenge
-categories:
-- python
-- import
-- clean
-- xcode
-- objective-c
-- script
-- programming
-- ocd
+tags: python, import, clean, xcode, objective-c, script, programming, ocd
 comments: true
 date: 2014-05-13 17:07:23+00:00
 

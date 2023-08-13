@@ -1,19 +1,5 @@
 title: Updating Cocos2d-x
-categories:
-- snippet
-- cocos2d-x
-- rant
-- development
-- mac
-- ios
-- xcode
-- undefined
-- symbols
-- error
-- linkage
-- linker
-- header
-- not-found
+tags: snippet, cocos2d-x, rant, development, mac, ios, xcode, undefined, symbols, error, linkage, linker, header, not-found
 comments: true
 date: 2015-02-21 11:50:08+00:00
 

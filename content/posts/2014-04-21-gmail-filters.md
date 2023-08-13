@@ -1,13 +1,5 @@
 title: Gmail Filters
-categories:
-- rant
-- gmail
-- github
-- filters
-- setup
-- workflow
-- pipeline
-- work
+tags: rant, gmail, github, filters, setup, workflow, pipeline, work
 comments: true
 date: 2014-04-21 11:40:30+00:00
 

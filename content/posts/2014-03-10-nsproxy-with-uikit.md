@@ -1,10 +1,5 @@
 title: Using NSProxy With UIKit
-categories:
-- objective-c
-- uikit
-- nsproxy
-- proxy-design-pattern
-- ios
+tags: objective-c, uikit, nsproxy, proxy-design-pattern, ios
 comments: true
 date: 2014-03-10 19:22:35+00:00
 

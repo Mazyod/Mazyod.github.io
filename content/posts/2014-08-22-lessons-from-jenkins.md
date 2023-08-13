@@ -1,13 +1,5 @@
 title: Lessons from Jenkins
-categories:
-- jenkins
-- cli
-- development
-- server
-- build
-- automation
-- remote
-- vnc
+tags: jenkins, cli, development, server, build, automation, remote, vnc
 comments: true
 date: 2014-08-22 09:55:47+00:00
 

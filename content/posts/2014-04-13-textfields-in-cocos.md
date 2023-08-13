@@ -1,11 +1,5 @@
 title: Textfields in Cocos
-categories:
-- cocos2dx
-- textfieldttf
-- editbox
-- v3.0
-- text
-- input
+tags: cocos2dx, textfieldttf, editbox, v3.0, text, input
 comments: true
 date: 2014-04-13 07:00:29+00:00
 

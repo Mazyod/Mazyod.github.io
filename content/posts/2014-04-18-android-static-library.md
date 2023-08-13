@@ -1,16 +1,5 @@
 title: Android Static Libraries
-categories:
-- android
-- cocos2dx
-- v3.0
-- android
-- static-library
-- makefile
-- programming
-- snippets
-- compile
-- architecture
-- arm
+tags: android, cocos2dx, v3.0, android, static-library, makefile, programming, snippets, compile, architecture, arm
 comments: true
 date: 2014-04-18 21:14:05+00:00
 

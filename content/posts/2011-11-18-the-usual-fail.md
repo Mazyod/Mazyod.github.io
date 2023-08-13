@@ -1,7 +1,6 @@
 title: The Usual FAIL
 author: mazyod
-categories:
-- ios
+tags: ios
 comments: true
 date: 2011-11-18 18:09:04+00:00
 slug: the-usual-fail

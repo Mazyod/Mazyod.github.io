@@ -1,11 +1,5 @@
 title: C++ References
-categories:
-- cocos2dx
-- v3.0
-- snippets
-- c++
-- programming
-- reference
+tags: cocos2dx, v3.0, snippets, c++, programming, reference
 comments: true
 date: 2014-04-05 23:54:47+00:00
 

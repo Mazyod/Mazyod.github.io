@@ -1,16 +1,5 @@
 title: Wrangling Autolayout
-categories:
-- autolayout
-- swift
-- purelayout
-- github
-- opensource
-- ios
-- uikit
-- uiview
-- constraints
-- layout
-- snippet
+tags: autolayout, swift, purelayout, github, opensource, ios, uikit, uiview, constraints, layout, snippet
 comments: true
 date: 2015-11-21 20:30:58+00:00
 

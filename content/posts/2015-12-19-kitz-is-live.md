@@ -1,27 +1,5 @@
 title: Kitz is Live!
-categories:
-- opensource
-- github
-- code
-- swift
-- programming
-- library
-- kit
-- framework
-- cocoapods
-- carthage
-- tests
-- easy
-- simple
-- modular
-- ios
-- osx
-- tvos
-- watchos
-- travis
-- ci
-- developer
-- apple
+tags: opensource, github, code, swift, programming, library, kit, framework, cocoapods, carthage, tests, easy, simple, modular, ios, osx, tvos, watchos, travis, ci, developer, apple
 date: 2015-12-19 20:11:44+00:00
 
 ## Kitz Debut

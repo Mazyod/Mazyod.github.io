@@ -1,12 +1,5 @@
 title: One More Time
-categories:
-- rant
-- design
-- ui
-- ux
-- blog
-- snippet
-- life
+tags: rant, design, ui, ux, blog, snippet, life
 comments: true
 date: 2015-11-23 16:08:12+00:00
 

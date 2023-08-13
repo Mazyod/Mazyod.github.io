@@ -1,19 +1,5 @@
 title: 'HTTP Game Server: Part III'
-categories:
-- http
-- design
-- api
-- game
-- turn-based
-- backend
-- gae
-- google
-- appengine
-- scalable
-- restful
-- multiplayer
-- server
-- kod
+tags: http, design, api, game, turn-based, backend, gae, google, appengine, scalable, restful, multiplayer, server, kod
 comments: true
 date: 2015-03-01 15:32:18+00:00
 

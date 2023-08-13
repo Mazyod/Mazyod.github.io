@@ -1,23 +1,5 @@
 title: Graphic Agnostic
-categories:
-- graphics
-- game
-- indie
-- development
-- c++
-- c++11
-- poco
-- pocoproject
-- cli
-- interface
-- terminal
-- command
-- testing
-- automation
-- maintainability
-- library
-- integration
-- functional
+tags: graphics, game, indie, development, c++, c++11, poco, pocoproject, cli, interface, terminal, command, testing, automation, maintainability, library, integration, functional
 comments: true
 date: 2015-07-29 05:33:44+00:00
 

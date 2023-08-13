@@ -1,12 +1,5 @@
 title: Automating the Hijri Offset
-categories:
-- automation
-- KPT
-- python
-- objective-c
-- NSCalendar
-- date
-- snippets
+tags: automation, KPT, python, objective-c, NSCalendar, date, snippets
 comments: true
 date: 2014-03-17 11:39:43+00:00
 

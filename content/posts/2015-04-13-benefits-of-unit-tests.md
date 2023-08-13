@@ -1,12 +1,5 @@
 title: Benefits of Unit Tests
-categories:
-- unit-test
-- snippet
-- code
-- programming
-- tdd
-- game
-- development
+tags: unit-test, snippet, code, programming, tdd, game, development
 comments: true
 date: 2015-04-13 10:53:37+00:00
 

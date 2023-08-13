@@ -1,13 +1,5 @@
 title: Notification Center
-categories:
-- cocos2dx
-- notification-center
-- ccnotificationcenter
-- observer
-- pattern
-- notify
-- deprecations
-- v3.0
+tags: cocos2dx, notification-center, ccnotificationcenter, observer, pattern, notify, deprecations, v3.0
 comments: true
 date: 2014-04-12 14:44:21+00:00
 

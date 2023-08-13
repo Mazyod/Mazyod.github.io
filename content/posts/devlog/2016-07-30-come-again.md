@@ -1,6 +1,5 @@
 title: Come Again?
-categories:
-- dama
+tags: dama
 date: 2016-07-30 22:04:18+00:00
 
 So, after spending all that time perfecting the relationship between the game logic, graphics, and view, the game started coming together. Implementing new crap is much simpler, since everything is where it belongs, and it doesn't take time to think about where to implement it.

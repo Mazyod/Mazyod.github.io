@@ -1,21 +1,5 @@
 title: 'HTTP Game Server: Part II'
-categories:
-- api
-- appengine
-- backend
-- game
-- checkers
-- gae
-- google
-- http
-- implementation
-- multiplayer
-- restful
-- server
-- turn-based
-- socket
-- tcp
-- udp
+tags: api, appengine, backend, game, checkers, gae, google, http, implementation, multiplayer, restful, server, turn-based, socket, tcp, udp
 comments: true
 date: 2015-02-24 17:24:42+00:00
 

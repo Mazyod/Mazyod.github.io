@@ -1,6 +1,5 @@
 title: Quality of Service
-categories:
-- game-development
+tags: game-development
 date: 2016-06-29 19:20:13+00:00
 
 ## Introduction

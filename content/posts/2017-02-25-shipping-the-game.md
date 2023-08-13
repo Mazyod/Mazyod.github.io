@@ -1,6 +1,5 @@
 title: Shipping the Game
-categories:
-- dama
+tags: dama
 date: 2017-02-25 22:41:48+00:00
 
 OMG, I STILL CAN'T GET OVER THE FACT THAT I'VE SHIPPED MY GAME!

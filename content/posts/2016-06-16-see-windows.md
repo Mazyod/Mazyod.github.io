@@ -1,6 +1,5 @@
 title: See Windows
-categories:
-- programming
+tags: programming
 date: 2016-06-16 05:46:36+00:00
 
 ## Introduction

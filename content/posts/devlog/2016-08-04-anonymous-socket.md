@@ -1,6 +1,5 @@
 title: Anonymous Socket
-categories:
-- dama
+tags: dama
 date: 2016-08-04 16:45:04+00:00
 
 Even though I set the title as "Anonymous Socket", I decided not to go that route after all...

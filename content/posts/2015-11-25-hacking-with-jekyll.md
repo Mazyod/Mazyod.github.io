@@ -1,16 +1,5 @@
 title: Hacking With Jekyll
-categories:
-- blog
-- jekyll
-- octopress
-- markdown
-- python
-- scripting
-- ruby
-- github
-- pages
-- post
-- entry
+tags: blog, jekyll, octopress, markdown, python, scripting, ruby, github, pages, post, entry
 date: 2015-11-25 18:03:49+00:00
 
 ## Introduction

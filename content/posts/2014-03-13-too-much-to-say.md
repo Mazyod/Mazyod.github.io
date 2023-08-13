@@ -1,6 +1,5 @@
 title: Too Much To Say!
-categories:
-- rant
+tags: rant
 comments: true
 date: 2014-03-13 17:32:34+00:00
 

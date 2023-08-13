@@ -1,10 +1,5 @@
 title: Blocks Are Evil
-categories:
-- objective-c
-- blocks
-- snippets
-- rant
-- programming
+tags: objective-c, blocks, snippets, rant, programming
 comments: true
 date: 2014-03-23 01:23:57+00:00
 

@@ -1,7 +1,6 @@
 title: The Settings Journey
 author: mazyod
-categories:
-- rant
+tags: rant
 comments: true
 date: 2012-04-04 11:18:04+00:00
 slug: the-settings-journey

@@ -1,10 +1,5 @@
 title: Lavish Ideas
-categories:
-- blog
-- rant
-- life
-- choices
-- tech
+tags: blog, rant, life, choices, tech
 date: 2015-11-27 00:33:33+00:00
 
 ## Introduction

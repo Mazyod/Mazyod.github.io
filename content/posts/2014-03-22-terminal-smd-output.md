@@ -1,10 +1,5 @@
 title: Terminal Awesomeness
-categories:
-- terminal
-- snippets
-- scripting
-- Unix
-- command-line
+tags: terminal, snippets, scripting, Unix, command-line
 comments: true
 date: 2014-03-22 01:03:41+00:00
 

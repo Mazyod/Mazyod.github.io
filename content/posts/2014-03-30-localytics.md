@@ -1,11 +1,5 @@
 title: Localytics
-categories:
-- analytics
-- ios
-- software
-- programming
-- snippets
-- review
+tags: analytics, ios, software, programming, snippets, review
 comments: true
 date: 2014-03-30 20:51:13+00:00
 

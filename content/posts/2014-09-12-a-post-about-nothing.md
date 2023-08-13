@@ -1,6 +1,5 @@
 title: A Post About Nothing
-categories:
-- nothing
+tags: nothing
 comments: true
 date: 2014-09-12 18:53:52+00:00
 

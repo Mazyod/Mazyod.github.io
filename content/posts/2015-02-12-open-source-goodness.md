@@ -1,20 +1,5 @@
 title: Open Source Goodness
-categories:
-- open-source
-- code
-- programming
-- github
-- ios
-- xcode
-- objc
-- reactive
-- functional
-- kvo
-- cocoa
-- libextobjc
-- dznemptydataset
-- fxforms
-- blockskit
+tags: open-source, code, programming, github, ios, xcode, objc, reactive, functional, kvo, cocoa, libextobjc, dznemptydataset, fxforms, blockskit
 comments: true
 date: 2015-02-12 22:27:28+00:00
 

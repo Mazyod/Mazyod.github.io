@@ -1,13 +1,5 @@
 title: Cocos2d-x With a RESTful Backend
-categories:
-- rant
-- dev-diary
-- c++
-- game-development
-- snippets
-- http
-- restful
-- backend
+tags: rant, dev-diary, c++, game-development, snippets, http, restful, backend
 comments: true
 date: 2014-04-07 23:09:51+00:00
 

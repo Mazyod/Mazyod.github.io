@@ -1,6 +1,5 @@
 title: Doing Yoga with C#
-categories:
-- csharp
+tags: csharp
 date: 2016-08-08 16:17:02+00:00
 
 ## Introduction

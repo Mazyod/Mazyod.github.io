@@ -1,14 +1,5 @@
 title: Hackathon
-categories:
-- rant
-- hackathon
-- how
-- tip
-- protip
-- programming
-- development
-- software
-- random
+tags: rant, hackathon, how, tip, protip, programming, development, software, random
 comments: true
 date: 2015-01-22 01:36:28+00:00
 

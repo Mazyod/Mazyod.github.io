@@ -1,6 +1,5 @@
 title: Smarter Game Results
-categories:
-- dama
+tags: dama
 date: 2016-07-22 13:10:21+00:00
 
 Damn, that's why I was stuck on this all along!!

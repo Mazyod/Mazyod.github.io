@@ -1,18 +1,5 @@
 title: Realm Impressions
-categories:
-- rant
-- realm
-- ios
-- swift
-- opensource
-- api
-- code
-- development
-- persistence
-- database
-- tightdb
-- null
-- coredata
+tags: rant, realm, ios, swift, opensource, api, code, development, persistence, database, tightdb, null, coredata
 comments: true
 date: 2015-03-17 22:39:10+00:00
 

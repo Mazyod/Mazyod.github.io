@@ -1,17 +1,5 @@
 title: A Developer's Life
-categories:
-- rant
-- life
-- programming
-- achieve
-- accomplish
-- task
-- project
-- side
-- hanging
-- why
-- fml
-- xcode
+tags: rant, life, programming, achieve, accomplish, task, project, side, hanging, why, fml, xcode
 comments: true
 date: 2015-01-19 01:16:40+00:00
 

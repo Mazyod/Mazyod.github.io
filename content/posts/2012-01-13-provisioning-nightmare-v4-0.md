@@ -1,7 +1,6 @@
 title: Provisioning Nightmare v4.0
 author: mazyod
-categories:
-- ios
+tags: ios
 comments: true
 date: 2012-01-13 19:36:16+00:00
 slug: provisioning-nightmare-v4-0

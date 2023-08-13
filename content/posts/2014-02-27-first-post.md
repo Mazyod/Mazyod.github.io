@@ -1,10 +1,5 @@
 title: First Post!
-categories:
-- rant
-- testing-badges
-- categories
-- thingies
-- software-enenengineering
+tags: rant, testing-badges, categories, thingies, software-enenengineering
 comments: true
 date: 2014-02-27 08:47:42+00:00
 

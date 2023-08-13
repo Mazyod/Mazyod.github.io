@@ -1,8 +1,6 @@
 title: Creating a Map Editor for a Game (1/6)
 author: mazyod
-categories:
-- game-development
-- Never Ever
+tags: game-development, Never Ever
 comments: true
 date: 2013-11-29 22:30:11+00:00
 slug: creating-a-map-editor-for-a-game-13

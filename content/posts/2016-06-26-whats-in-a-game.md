@@ -1,6 +1,5 @@
 title: Chewy GUI
-categories:
-- game-development
+tags: game-development
 date: 2016-06-26 05:46:36+00:00
 
 ## Introduction

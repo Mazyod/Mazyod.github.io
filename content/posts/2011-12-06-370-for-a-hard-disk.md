@@ -1,7 +1,6 @@
 title: '"$370 for a hard disk?"'
 author: mazyod
-categories:
-- tech
+tags: tech
 comments: true
 date: 2011-12-06 19:29:35+00:00
 slug: 370-for-a-hard-disk

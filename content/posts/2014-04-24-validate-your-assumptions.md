@@ -1,11 +1,5 @@
 title: Validate Your Assumptions
-categories:
-- rant
-- development
-- testing
-- workflow
-- programming
-- iOS
+tags: rant, development, testing, workflow, programming, iOS
 comments: true
 date: 2014-04-24 11:11:20+00:00
 

@@ -1,15 +1,5 @@
 title: Unleash Your Inner Child
-categories:
-- programming
-- development
-- rant
-- child
-- unleash
-- motivation
-- project
-- work
-- momentum
-- flow
+tags: programming, development, rant, child, unleash, motivation, project, work, momentum, flow
 comments: true
 date: 2015-01-26 10:07:12+00:00
 
