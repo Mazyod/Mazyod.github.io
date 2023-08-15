@@ -10,10 +10,12 @@ python = "^3.10"
 pelican = {version = "^4.8.0", extras = ["markdown"]}
 pelican-neighbors = "^1.2.0"
 minchin-pelican-plugins-nojekyll = "^1.2.0"
+pymdown-extensions = "^10.1"
 
 
 [tool.poetry.group.dev.dependencies]
 bpython = "^0.24"
+black = "^23.7.0"
 
 [build-system]
 requires = ["poetry-core"]

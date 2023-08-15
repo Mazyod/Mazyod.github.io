@@ -1,29 +1,29 @@
-AUTHOR = 'Mazyad Alabduljaleel'
-SITENAME = 'Maz Development Directory'
-SITEURL = ''
-SITE_EMAIL = 'mazyod@gmail.com'
-GITHUB_USERNAME = 'mazyod'
+AUTHOR = "Mazyad Alabduljaleel"
+SITENAME = "Maz Development Directory"
+SITEURL = ""
+SITE_EMAIL = "mazyod@gmail.com"
+GITHUB_USERNAME = "mazyod"
 
 # maintain compatibility with old URLs
-ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = f'{ARTICLE_URL}index.html'
+ARTICLE_URL = "blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/"
+ARTICLE_SAVE_AS = f"{ARTICLE_URL}index.html"
 
-PAGE_URL = '{slug}/'
-PAGE_SAVE_AS = f'{PAGE_URL}index.html'
+PAGE_URL = "{slug}/"
+PAGE_SAVE_AS = f"{PAGE_URL}index.html"
 
-SITE_DESCRIPTION = '''
+SITE_DESCRIPTION = """
 I call this place my Development Directory, where I just dump all the
 experiences I have duing my development career. I mostly work with Swift,
 and C++, for iOS apps and cross-platform games.
-'''
+"""
 
-PATH = 'content'
+PATH = "content"
 ARTICLE_PATHS = ["posts"]
 
-TIMEZONE = 'Asia/Kuwait'
-DEFAULT_LANG = 'en'
+TIMEZONE = "Asia/Kuwait"
+DEFAULT_LANG = "en"
 
-THEME = '../pelican-press-start'
+THEME = "../pelican-press-start"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -32,15 +32,55 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+MARKDOWN = {
+    "extension_configs": {
+        # 'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        "markdown.extensions.smarty": {},
+        "markdown.extensions.sane_lists": {},
+        # "proxy" for `markdown.extensions.extra``
+        "pymdownx.extra": {},
+        # emphasis that is more like GFM
+        "pymdownx.betterem": {},
+        # use emoji shortcodes
+        "pymdownx.emoji": {},
+        # code highlighting
+        "pymdownx.highlight": {},
+        "pymdownx.inlinehilite": {},
+        "pymdownx.superfences": {},
+        # turn markdown links into ... links
+        "pymdownx.magiclink": {},
+        # strict parsing of headers
+        "pymdownx.saneheaders": {},
+        # fancy symbols
+        "pymdownx.smartsymbols": {},
+    },
+    "output_format": "html5",
+    # "extensions": [
+    #     "pymdownx.superfences",
+    #     "pymdownx.inlinehilite",
+    #     "pymdownx.tilde",
+    #     "pymdownx.caret",
+    #     "pymdownx.keys",
+    #     "footnotes",
+    #     "attr_list",
+    #     "tables",
+    # ],
+}
+
+
 # Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (
+    ("Pelican", "https://getpelican.com/"),
+    ("Python.org", "https://www.python.org/"),
+    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
+    ("You can modify those links in your config file", "#"),
+)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+    ("You can add links in your config file", "#"),
+    ("Another social link", "#"),
+)
 
 DEFAULT_PAGINATION = False
 
