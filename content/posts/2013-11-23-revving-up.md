@@ -3,19 +3,7 @@ author: mazyod
 comments: true
 date: 2013-11-23 19:29:49+00:00
 slug: revving-up
-tags:
-- C++
-- coding
-- concepts
-- knowledge
-- management
-- news
-- Objective-C
-- Programming
-- tech
-- tutorials
-- workflow
-- Xcode
+tags: C++, coding, concepts, knowledge, management, news, Objective-C, Programming, tech, tutorials, workflow, Xcode
 wordpress_id: 297
 
 It has surely been a while, almost a year as Jim puts it... **THIS IS UNACCEPTABLE**! Ok, I should just tell that to myself instead of just throwing it out there...

@@ -1,15 +1,10 @@
 title: A Video is Worth a Thousand Pictures
 author: mazyod
-tags: tech
+category: tech
 comments: true
 date: 2011-12-20 17:51:47+00:00
 slug: a-video-is-worth-a-thousand-pictures
-tags:
-- youtube
-- SSD
-- performance
-- mac
-- tech
+tags: youtube, SSD, performance, mac, tech
 wordpress_id: 163
 
 Or, whatever they are worth.. Here:

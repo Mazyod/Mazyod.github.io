@@ -1,14 +1,10 @@
 title: The Usual FAIL
 author: mazyod
-tags: ios
+category: ios
 comments: true
 date: 2011-11-18 18:09:04+00:00
 slug: the-usual-fail
-tags:
-- iPhone
-- Javascript
-- UIKit
-- UIWebview
+tags: iPhone, Javascript, UIKit, UIWebview
 wordpress_id: 40
 
 Obviously enough .. I have failed to be the frequent poster I dreamt of being. (Why is dreamt not a word? Someone please contact the association responsible and force them to add it). Well, I **was** out of the country for more than a week. And I **was** bombarded with 2 projects and 2 midterms that I had to prepare within a week. Fortunate enough for me, I finished the projects and both midterms got postponed :D.

@@ -1,17 +1,10 @@
 title: '"$370 for a hard disk?"'
 author: mazyod
-tags: tech
+category: tech
 comments: true
 date: 2011-12-06 19:29:35+00:00
 slug: 370-for-a-hard-disk
-tags:
-- 256GB
-- Amazon.com
-- Crucial
-- Hard Disk
-- HDD
-- Performance
-- SSD
+tags: 256GB, Amazon.com, Crucial, Hard Disk, HDD, Performance, SSD
 wordpress_id: 122
 
 Well, one of my treasured friends asked me about the new SSD drive that I bought: "$ 370 for a hard disk?". This question urged me to write a new post :P

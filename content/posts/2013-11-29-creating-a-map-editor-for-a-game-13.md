@@ -1,25 +1,10 @@
 title: Creating a Map Editor for a Game (1/6)
 author: mazyod
-tags: game-development, Never Ever
+category: game-development
 comments: true
 date: 2013-11-29 22:30:11+00:00
 slug: creating-a-map-editor-for-a-game-13
-tags:
-- application
-- cocoa
-- code
-- code generation
-- geeky
-- Map Editor
-- mobile
-- Never Ever
-- plist
-- Programming
-- python
-- RTS
-- scripting
-- source code
-- startcraft
+tags: application, cocoa, code, code generation, geeky, Map Editor, mobile, Never Ever, plist, Programming, python, RTS, scripting, source code, startcraft
 wordpress_id: 324
 
 _This is a 6 part series of how I carried out a task of creating a map editor for our mobile RTS game. As of the this writing, 3 parts have already been published._

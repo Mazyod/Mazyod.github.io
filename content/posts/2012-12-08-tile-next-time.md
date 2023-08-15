@@ -3,11 +3,7 @@ author: mazyod
 comments: true
 date: 2012-12-08 12:22:57+00:00
 slug: tile-next-time
-tags:
-- tutorial
-- photoshop
-- tiles
-- seamless
+tags: tutorial, photoshop, tiles, seamless
 wordpress_id: 291
 
 Hurray! A video tutorial! And a short one! How luck you are :p

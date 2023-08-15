@@ -10,7 +10,7 @@ Previously, I had used the "standalone" approach to get my certs, which worked g
 
 ## The Root of Groot
 
-![][root-of-groot]
+![Root of Groot][root-of-groot]
 
 Actually, I wanna talk about Webroot, a certbot plugin that allows you to verify your domain through an existing web server.
 
@@ -24,7 +24,7 @@ After much dabbling around with the production server, I finally realized that t
 
 So, to get webroot working with your phoenix server, first change your `cli.ini` configuration like so:
 
-```text
+```ini
 rsa-key-size = 4096
 email = me@example.com
 # disabled for renew: domains = my.domain.com
@@ -40,7 +40,7 @@ Please take note above of the following:
 
 Once you do that, you can proceed with running the certbot program:
 
-```text
+```sh
 ./certbot-auto renew --dry-run
 ```
 

@@ -1,12 +1,10 @@
 title: Speedy Goodness
 author: mazyod
-tags: tech
+category: tech
 comments: true
 date: 2011-12-16 13:19:06+00:00
 slug: speedy-goodness
-tags:
-- free ram
-- SSD
+tags: free ram, SSD
 wordpress_id: 158
 
 I am really sorry, guys. I have "jumped the gun" about the SSD, and based on that I made an inaccurate judgment...

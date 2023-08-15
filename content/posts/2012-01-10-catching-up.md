@@ -1,24 +1,10 @@
 title: Catching Up ... !
 author: mazyod
-tags: blog
+category: blog
 comments: true
 date: 2012-01-10 16:59:57+00:00
 slug: catching-up
-tags:
-- application
-- Computer
-- connection pool
-- Genetic Algorithms
-- Glassfish
-- Java
-- JDBC
-- JSP
-- Organization
-- Programming
-- RISC
-- server
-- servlet
-- SRC
+tags: application, Computer, connection pool, Genetic Algorithms, Glassfish, Java, JDBC, JSP, Organization, Programming, RISC, server, servlet, SRC
 wordpress_id: 167
 
 Happy New Year! Good thing we woke up and found it 2012, and not 2011S :D.

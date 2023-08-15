@@ -1,18 +1,10 @@
 title: The Clustering Phenomena
 author: mazyod
-tags: game-development
+category: game-development
 comments: true
 date: 2011-11-18 23:41:00+00:00
 slug: the-clustering-phenomenal
-tags:
-- Chat
-- cocos2d
-- Dama
-- iOS
-- iPhone
-- multiplayer
-- Network
-- Programming
+tags: Chat, cocos2d, Dama, iOS, iPhone, multiplayer, Network, Programming
 wordpress_id: 54
 
 Clustering ... It refers to many things. What pops into my mind is something we studied in data structures. I'll give you a chance to guess this one, too.

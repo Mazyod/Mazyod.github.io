@@ -1,35 +1,10 @@
 title: 'Design Patterns: Behavioral (Part 2)'
 author: mazyod
-tags: Software Engineering
+category: Software Engineering
 comments: true
 date: 2013-12-16 08:26:37+00:00
 slug: design-patterns-behavioral-part-2
-tags:
-- cocoa
-- code
-- coding
-- College
-- command pattern
-- Design
-- design patterns
-- engineering
-- framework
-- interpreter pattern
-- iterator pattern
-- Java
-- knowledge
-- lesson
-- library
-- Objective-C
-- overview
-- patterns
-- Programming
-- Software Engineering
-- state pattern
-- template method
-- tutorial
-- university
-- Visitor pattern
+tags: cocoa, code, coding, College, command pattern, Design, design patterns, engineering, framework, interpreter pattern, iterator pattern, Java, knowledge, lesson, library, Objective-C, overview, patterns, Programming, Software Engineering, state pattern, template method, tutorial, university, Visitor pattern
 wordpress_id: 489
 
 _This is the second post of a five part series where I explore the most famous software design patterns and try and give an overview with examples from my own perspective. If you haven't, [check out the first part of this series]({% post_url 2013-12-12-design-patterns-behavioral-part-1 %}), which is also about behavioral design patterns._

@@ -1,23 +1,10 @@
 title: A Bunch Of Nonsense
 author: mazyod
-tags: cocos2d
+category: cocos2d
 comments: true
 date: 2012-04-21 07:11:42+00:00
 slug: a-bunch-of-nonsense
-tags:
-- cocos2d
-- delegate
-- delegation
-- design patterns
-- iOS
-- journey
-- Mac
-- Objective-C
-- objects
-- observer
-- OOP
-- Programming
-- Settings programming
+tags: cocos2d, delegate, delegation, design patterns, iOS, journey, Mac, Objective-C, objects, observer, OOP, Programming, Settings programming
 wordpress_id: 217
 
 I really do not know why I suddenly decided to call a blog post "Nonsense", since they have all been pretty much nonsense-ful...

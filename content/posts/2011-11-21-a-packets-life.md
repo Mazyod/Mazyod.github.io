@@ -1,17 +1,10 @@
 title: A Packet's Life
 author: mazyod
-tags: software-engineering
+category: software-engineering
 comments: true
 date: 2011-11-21 19:10:46+00:00
 slug: a-packets-life
-tags:
-- inheritance
-- Network
-- Object Oriented Programming
-- OOP
-- Packet
-- Programming
-- Software Engineering
+tags: inheritance, Network, Object Oriented Programming, OOP, Packet, Programming, Software Engineering
 wordpress_id: 67
 
 Ok, after the finalizing the annoying chatting view, I finally went into a programming frenzy and forgot all about this blog. Yes, this is something good. Very good. From the very first post, I admitted, I don't care about the reader :P.

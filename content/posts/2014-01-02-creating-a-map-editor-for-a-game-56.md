@@ -1,40 +1,10 @@
 title: Creating a Map Editor for a Game (5/6)
 author: mazyod
-tags: game-development, Never Ever
+category: game-development
 comments: true
 date: 2014-01-02 13:42:49+00:00
 slug: creating-a-map-editor-for-a-game-56
-tags:
-- AppKit
-- application
-- binding
-- cocoa
-- coding
-- controller
-- customize
-- Design
-- development
-- editor
-- Game
-- map
-- model
-- MVC
-- NSObject
-- NSObjectController
-- NSOutlineView
-- NSTableCellView
-- NSTreeController
-- objc
-- Objective-C
-- paradigm
-- pattern
-- Programming
-- rendering
-- Software Engineering
-- subclass
-- tools
-- UI
-- view
+tags: AppKit, application, binding, cocoa, coding, controller, customize, Design, development, editor, Game, map, model, MVC, NSObject, NSObjectController, NSOutlineView, NSTableCellView, NSTreeController, objc, Objective-C, paradigm, pattern, Programming, rendering, Software Engineering, subclass, tools, UI, view
 wordpress_id: 553
 
 _This is the fifth part of a series highlighting the process developing a Map Editor for a game. In the previous posts, we looked at the data model that drives the map editor, and how we are generating C++ code automatically using python scripts. As promised, this part will be all about the Cocoa application, that is, the Map Editor itself._

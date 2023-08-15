@@ -1,19 +1,7 @@
 title: Backend Testing Using Bots
-tags: elixir
+category: elixir
 date: 2016-06-01 10:59:31+00:00
-tags:
-- elixir
-- bot
-- programming
-- backend
-- erlang
-- fsm
-- state
-- machine
-- ai
-- artificial
-- intelligence
-- supervisor
+tags: elixir, bot, programming, backend, erlang, fsm, state, machine, ai, artificial, intelligence, supervisor
 
 ## Introduction
 

@@ -3,15 +3,7 @@ author: mazyod
 comments: true
 date: 2012-09-17 11:40:13+00:00
 slug: benchmarking-data-minig
-tags:
-- artificial intelligence
-- benchmarking
-- blogging
-- bot
-- Dama
-- gaming
-- optimization
-- technology
+tags: artificial intelligence, benchmarking, blogging, bot, Dama, gaming, optimization, technology
 wordpress_id: 262
 
 One of the things that makes my blood boil while programming is **benchmarking**. First, let us see what benchmarking is, and which type am I talking about... Rejoice! No crude introduction. Not this time, at least!

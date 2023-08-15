@@ -1,24 +1,10 @@
 title: Fulfilling A Promise
 author: mazyod
-tags: ios
+category: ios
 comments: true
 date: 2012-03-19 22:50:21+00:00
 slug: fulfilling-a-promise
-tags:
-- code
-- example
-- IAP
-- in app purchase
-- In-App
-- iOS
-- iPad
-- iPhone
-- iPod
-- open-source
-- Purchase
-- source
-- source code
-- tutorial
+tags: code, example, IAP, in app purchase, In-App, iOS, iPad, iPhone, iPod, open-source, Purchase, source, source code, tutorial
 wordpress_id: 201
 
 So much of a promise, huh? >_>

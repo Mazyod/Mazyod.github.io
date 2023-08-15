@@ -14,7 +14,7 @@ Don't believe me? Ask anyone who was foolish enough to ask me, "So, how is the g
 
 That wasn't fun. Feeling pressured to ship after so long, not being able to see the finish line, skill level not matching the challenges at hand ... Check the image below, and I need not say more.
 
-![](/images/challenge_vs_skill.jpg)
+![Skill level vs Challenge level chart](/images/challenge_vs_skill.jpg)
 
 ### What Are the Implications?
 

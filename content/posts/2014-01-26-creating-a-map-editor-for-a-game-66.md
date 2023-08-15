@@ -1,34 +1,10 @@
 title: Creating a Map Editor for a Game (6/6)
 author: mazyod
-tags: game-development, Never Ever
+category: game-development
 comments: true
 date: 2014-01-26 07:14:45+00:00
 slug: creating-a-map-editor-for-a-game-66
-tags:
-- adapter
-- AppKit
-- class
-- cocoa
-- data
-- Design
-- development
-- editor
-- entities
-- Game
-- Games
-- instance
-- instantiate
-- map
-- model
-- NSOutlineView
-- pattern
-- persistence
-- Software
-- Software Engineering
-- store
-- thing
-- UML
-- worker
+tags: adapter, AppKit, class, cocoa, data, Design, development, editor, entities, Game, Games, instance, instantiate, map, model, NSOutlineView, pattern, persistence, Software, Software Engineering, store, thing, UML, worker
 wordpress_id: 597
 
 _This is the sixth part of a series highlighting the development of a Map Editor app for a game. In the previous posts, we looked at the data model that drives the map editor, and how we are generating C++ code automatically using python scripts. As promised, this part will be all about the entities of the Cocoa application._

@@ -1,27 +1,10 @@
 title: Creating a Map Editor for a Game (2/6)
 author: mazyod
-tags: game-development, Never Ever
+category: game-development
 comments: true
 date: 2013-12-06 07:39:44+00:00
 slug: creating-a-map-editor-for-a-game-23
-tags:
-- C++
-- game-development
-- Games
-- Map Editor
-- NSArray
-- NSDictionary
-- NSOutlineView
-- NSTreeController
-- Objective-C
-- plist
-- Programming
-- python
-- scripting
-- Software
-- Software design
-- Software Engineering
-- starcraft
+tags: C++, game-development, Games, Map Editor, NSArray, NSDictionary, NSOutlineView, NSTreeController, Objective-C, plist, Programming, python, scripting, Software, Software design, Software Engineering, starcraft
 wordpress_id: 357
 
 _This is the second post of a six posts series regarding creating a map editor software for an RTS game. If you haven't already, [check out the first post of the series]({% post_url 2013-11-29-creating-a-map-editor-for-a-game-13 %})._

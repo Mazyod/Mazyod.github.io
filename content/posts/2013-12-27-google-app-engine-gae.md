@@ -1,26 +1,10 @@
 title: Google App Engine (GAE)
 author: mazyod
-tags: game-development
+category: game-development
 comments: true
 date: 2013-12-27 21:46:06+00:00
 slug: google-app-engine-gae
-tags:
-- app
-- application
-- billing
-- engine
-- free
-- GAE
-- google
-- instruction set architecture
-- introduction
-- PaaS
-- platform
-- python
-- service
-- Software
-- software developers
-- what is
+tags: app, application, billing, engine, free, GAE, google, instruction set architecture, introduction, PaaS, platform, python, service, Software, software developers, what is
 wordpress_id: 551
 
 When man first brought forth the power of programming, they were doing everything from scratch. Slowly, developers started to contribute frameworks and wrappers to make it easier to use a resource. I mean, imagine having to write an iOS app or a web app by aligning transistors? Yeah, it'll probably take 29343 years to write a hello world app, with bugs of course. Hence, people came up with the ISA (instruction set architecture) to facilitate software developers with the hardware they ultimately want to run programs on. That isn't enough, is it? It'll probably take 22 years to write an Assembly program that authenticates users, tracks sessions, connect to the datastore, ... etc. "Well, let's write a higher level language", developers agreed. Now, we have cool languages like C++, Java, ... etc. I am sure that is enough? Nope. Even with a high level programming language, we have frameworks on top of frameworks, and on top of all that a Platform as a Service (PaaS). That's GAE.

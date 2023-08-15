@@ -1,23 +1,10 @@
 title: Python n00b Tip
 author: mazyod
-tags: Python
+category: Python
 comments: true
 date: 2013-12-12 01:35:14+00:00
 slug: python-n00b-tip
-tags:
-- Burhan
-- coding
-- how-to
-- interface
-- learn
-- Programming
-- python
-- scripting
-- sublime
-- tip
-- tutorial
-- __init__
-- __main__
+tags: Burhan, coding, how-to, interface, learn, Programming, python, scripting, sublime, tip, tutorial, __init__, __main__
 wordpress_id: 445
 
 As I was surfing wikipedia learning about design patterns, I saw this interesting piece of code in the python example of the command design pattern:

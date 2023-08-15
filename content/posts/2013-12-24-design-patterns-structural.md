@@ -1,33 +1,10 @@
 title: 'Design Patterns: Structural'
 author: mazyod
-tags: Software Engineering
+category: Software Engineering
 comments: true
 date: 2013-12-24 21:39:03+00:00
 slug: design-patterns-structural
-tags:
-- adapter pattern
-- article
-- book
-- code
-- Design
-- design patterns
-- education
-- engineering
-- examples
-- Games
-- implementation
-- Java
-- knowledge
-- maz
-- objc
-- Objective-C
-- patterns
-- Programming
-- Software
-- source
-- structural
-- structural design patterns
-- tutorial
+tags: adapter pattern, article, book, code, Design, design patterns, education, engineering, examples, Games, implementation, Java, knowledge, maz, objc, Objective-C, patterns, Programming, Software, source, structural, structural design patterns, tutorial
 wordpress_id: 533
 
 _In previous posts, we covered 11 behavioral design patterns. For now, we will switch to structural design patterns, and hopefully, Creational design patterns will follow._

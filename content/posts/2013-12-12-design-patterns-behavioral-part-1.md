@@ -1,35 +1,10 @@
 title: 'Design Patterns: Behavioral (Part 1)'
 author: mazyod
-tags: Software Engineering
+category: Software Engineering
 comments: true
 date: 2013-12-12 20:31:26+00:00
 slug: design-patterns-behavioral-part-1
-tags:
-- AppKit
-- book
-- chain of responsibility
-- cocoa
-- code programming
-- Design
-- design patterns
-- engineering
-- help
-- knowledge
-- mediator
-- memento
-- message
-- MVC
-- nsnotification
-- nsnotificationcenter
-- objc
-- Objective-C
-- observer
-- passing
-- pattern
-- processing
-- Software
-- threads
-- UIKit
+tags: AppKit, book, chain of responsibility, cocoa, code programming, Design, design patterns, engineering, help, knowledge, mediator, memento, message, MVC, nsnotification, nsnotificationcenter, objc, Objective-C, observer, passing, pattern, processing, Software, threads, UIKit
 wordpress_id: 456
 
 _This is a part of (hopefully) a 5 part series, where we rediscover the most popular software design patterns!It is split into 2 behavioral patterns overview, 1 structural, 1 creational, and 1 bonus patterns!_

@@ -1,27 +1,10 @@
 title: Syntax Highlighting [WIP!]
 author: mazyod
-tags: Open Source
+category: Open Source
 comments: true
 date: 2013-11-30 23:36:20+00:00
 slug: syntax-highlighting-wip
-tags:
-- code
-- embedded
-- export
-- highlighting
-- HTML
-- HTMLExport
-- online
-- open-source
-- Programming
-- python
-- snippet
-- sublime
-- sublime text
-- syntax
-- tools
-- web
-- website
+tags: code, embedded, export, highlighting, HTML, HTMLExport, online, open-source, Programming, python, snippet, sublime, sublime text, syntax, tools, web, website
 wordpress_id: 360
 
 **This post was addressing an issue back in the dark wordpress ages, so it may no longer be relevent**

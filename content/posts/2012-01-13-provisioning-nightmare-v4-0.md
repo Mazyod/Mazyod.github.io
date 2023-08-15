@@ -1,20 +1,10 @@
 title: Provisioning Nightmare v4.0
 author: mazyod
-tags: ios
+category: ios
 comments: true
 date: 2012-01-13 19:36:16+00:00
 slug: provisioning-nightmare-v4-0
-tags:
-- CodeSign error
-- Entitlements
-- Entitlements.plist
-- error
-- iOS
-- profile
-- Provisioning
-- StackOverflow
-- Xcode
-- Xcode 4
+tags: CodeSign error, Entitlements, Entitlements.plist, error, iOS, profile, Provisioning, StackOverflow, Xcode, Xcode 4
 wordpress_id: 171
 
 After experiencing Apple's provisioning nightmare with Xcode 3 several times, I finally mastered it. Unfortunately, it is time to submit my Dama game from Xcode 4, and it wasn't a pleasant experience =/.

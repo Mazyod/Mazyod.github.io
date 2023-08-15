@@ -1,16 +1,10 @@
 title: Sniffing without a Cold
 author: mazyod
-tags: hacking
+category: hacking
 comments: true
 date: 2011-12-08 20:12:20+00:00
 slug: sniffing-without-a-cold
-tags:
-- College
-- Network
-- Packet Sniffing
-- Privacy
-- Security
-- Whatsapp
+tags: College, Network, Packet Sniffing, Privacy, Security, Whatsapp
 wordpress_id: 127
 
 People usually sniff when they have a common cold, flu or other runny nose diseases. Well, I have been sniffing without being affected by any of these!

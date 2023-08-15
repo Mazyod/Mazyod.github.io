@@ -1,16 +1,10 @@
 title: What Shall It Be ... ?
 author: mazyod
-tags: ios
+category: ios
 comments: true
 date: 2012-02-10 08:44:57+00:00
 slug: what-shall-it-be
-tags:
-- c classes
-- dama game
-- iPhone
-- mac development
-- opengl api
-- prayer times
+tags: c classes, dama game, iPhone, mac development, opengl api, prayer times
 wordpress_id: 192
 
 The urge of writing a blog post pursues me, even when I have no idea what I want to blog about!! It occurred to me to blog about Mac development, but I just started yesterday! Hopefully it will make a good blog post after I get the hang of it...

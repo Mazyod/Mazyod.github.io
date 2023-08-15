@@ -1,26 +1,10 @@
 title: A Bit Step Forward
 author: mazyod
-tags: programming
+category: programming
 comments: true
 date: 2012-05-04 19:15:36+00:00
 slug: a-bit-step-forward-2
-tags:
-- and
-- bit operations
-- Computer
-- enterprise-it
-- enum
-- loading
-- masking
-- Objective-C
-- or
-- preferences
-- Programming
-- programming in objective c
-- saving
-- settings
-- shift operator
-- technology
+tags: and, bit operations, Computer, enterprise-it, enum, loading, masking, Objective-C, or, preferences, Programming, programming in objective c, saving, settings, shift operator, technology
 wordpress_id: 230
 
 **WARNING: This post is not intended for the faint heart and is also not intended for people who hate blabbers .. I am in a mood that tells me I am about blabber a LOT**

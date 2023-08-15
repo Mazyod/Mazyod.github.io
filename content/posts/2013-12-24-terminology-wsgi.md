@@ -1,27 +1,10 @@
 title: Terminology! [WSGI]
 author: mazyod
-tags: Web
+category: Web
 comments: true
 date: 2013-12-24 03:48:58+00:00
 slug: terminology-wsgi
-tags:
-- app
-- code
-- development
-- engine
-- frameworks
-- GAE
-- gateway
-- google
-- interface
-- internet
-- Programming
-- python
-- server
-- Software
-- terminology
-- web
-- WSGI
+tags: app, code, development, engine, frameworks, GAE, gateway, google, interface, internet, Programming, python, server, Software, terminology, web, WSGI
 wordpress_id: 543
 
 _This is part of the [Terminology series]({% post_url 2013-12-24-terminology-series %})._

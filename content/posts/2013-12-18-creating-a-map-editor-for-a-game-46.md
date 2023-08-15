@@ -1,42 +1,10 @@
 title: Creating a Map Editor For a Game (4/6)
 author: mazyod
-tags: game-development, Never Ever
+category: game-development
 comments: true
 date: 2013-12-18 05:38:28+00:00
 slug: creating-a-map-editor-for-a-game-46
-tags:
-- app
-- apps
-- Cpp
-- code
-- code generating
-- code generation
-- cpp
-- delegate
-- delegation
-- Design
-- dev
-- development
-- engineering
-- Game
-- game dev
-- Games
-- JSON
-- jsoncpp
-- library
-- map
-- Map Editor
-- parser
-- pattern
-- Programming
-- python
-- scripting
-- scripts
-- sink
-- Software
-- template
-- writing
-- XML
+tags: app, apps, Cpp, code, code generating, code generation, cpp, delegate, delegation, Design, dev, development, engineering, Game, game dev, Games, JSON, jsoncpp, library, map, Map Editor, parser, pattern, Programming, python, scripting, scripts, sink, Software, template, writing, XML
 wordpress_id: 437
 
 _This series was initially expected to be 3 parts long, but the new estimated length is actually 6 parts(!). You can hopefully find the previous parts somewhere in the blog. First part is the problem statement, second part is data model, third part is the script._
@@ -52,7 +20,7 @@ _Honestly, there is nothing that can substitute the great documentation in the [
 JSON files are actually almost identical to plist files from a high level perspective. They can represent arrays, dictionaries, strings, numbers, booleans, and nulls. Not 100% identical to plists, but close enough. They need the root object to be either an array or a dictionary. The most desirable feature of JSON files is the lightweight format they have. It is also very readable, unlike XML files. Let's look a a very simple JSON file:
 
 
-```text
+```json
 [    
     {    
         "lname" : "Edogawa",    
