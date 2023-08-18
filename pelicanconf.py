@@ -13,10 +13,12 @@ PAGE_SAVE_AS = f"{PAGE_URL}index.html"
 
 STATIC_PATHS = [
     "static/favicon.ico",
+    "static/CNAME",
 ]
 
 EXTRA_PATH_METADATA = {
     "static/favicon.ico": {"path": "favicon.ico"},
+    "static/CNAME": {"path": "CNAME"},
 }
 
 SITE_DESCRIPTION = """
