@@ -146,17 +146,13 @@ But, how are these parser resolution if statements generated, you say? I have sh
 
 
 
-{% raw %}
-
-```text
+```c
 else if (class_id == "{prefab_name}")
 {{
     {prefab_name} obj(val["parameters_data"]);
     m_pSink->On{prefab_sink_method}Created(obj);
 }}
 ```
-
-{% endraw %}
 
 
 Let's rewind a bit now, and go back to "We send the `parameter_data` to the constructor". Ok, we send the `parameter_data` to the constructor, but what does it do with it? Let's see the code first:

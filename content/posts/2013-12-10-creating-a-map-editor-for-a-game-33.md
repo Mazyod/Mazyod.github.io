@@ -252,9 +252,7 @@ Simpler than you thought? YES! We have a template file for how a C++ struct shou
 Let's take a quick look at the template file:
 
 
-{% raw %}
-
-```text
+```c
 struct {structName}{superStruct}
 {{
 {structVars}
@@ -267,8 +265,6 @@ struct {structName}{superStruct}
 
 
 So, we simply plug in the structName, assume superStruct is empty, structVars is the ivars and constructor we generated above, and that's it! Don't worry about the #pragma stuff, and userContent. Note, though, how we are using double braces `{{`, `}}` to escape the actual braces, because a single brace {} is a python format specifier.
-
-{% endraw %}
 
 
 ## Conclusion
