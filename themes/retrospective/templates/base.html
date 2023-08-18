@@ -67,11 +67,25 @@
   <footer class="my-4">
     <h1 class="fs-5">{{ SITENAME }}</h1>
     <div class="text-muted" style="font-size: 12pt">
-    <div>
-    <a href="https://github.com/{{ GITHUB_USERNAME }}">
-        <i class="icon">{% include "github.svg" %}</i>
-        <span class="username">{{ GITHUB_USERNAME }}</span>
-    </a>
+    <div class="d-flex flex-column gap-2">
+      <div>
+      <a href="https://github.com/{{ GITHUB_USERNAME }}">
+          <i class="icon">{% include "github.svg" %}</i>
+          <span class="icon-text">{{ GITHUB_USERNAME }}</span>
+      </a>
+      </div>
+      <div>
+      <a href="/feed.xml">
+          <i class="icon">{% include "rss.svg" %}</i>
+          <span class="icon-text">RSS</span>
+      </a>
+      </div>
+      <div>
+      <a href="/feeds/all.atom.xml">
+          <i class="icon">{% include "rss.svg" %}</i>
+          <span class="icon-text">Atom</span>
+      </a>
+      </div>
     </div>
     <p class="mt-3 w-50">{{ SITE_DESCRIPTION }}</p>
     <div class="mt-3 text-center">

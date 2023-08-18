@@ -159,15 +159,20 @@ pre {
 .icon {
 
   > svg {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
+    width: 20px;
+    height: 20px;
 
-    path {
-      fill: var(--grey-color);
+    fill: var(--grey-color) !important;
+
+    > path {
+      fill: var(--grey-color) !important;
     }
   }
+}
+
+.icon-text {
+  margin-left: 4px;
+  vertical-align: middle;
 }
 
 /* --- Arrow --- */
