@@ -11,6 +11,14 @@ ARTICLE_SAVE_AS = f"{ARTICLE_URL}index.html"
 PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = f"{PAGE_URL}index.html"
 
+STATIC_PATHS = [
+    "static/favicon.ico",
+]
+
+EXTRA_PATH_METADATA = {
+    "static/favicon.ico": {"path": "favicon.ico"},
+}
+
 SITE_DESCRIPTION = """
 Dumping ground for all my experiences as a Software Engineer.
 <br />

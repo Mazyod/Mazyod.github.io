@@ -209,6 +209,10 @@ pre {
 
 .branding-container {
   /* MAZDEVDIR */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   font-family: "Press Start 2P", "Lucida Grande", monospace;
   font-size: 57px;
   line-height: 57px;
