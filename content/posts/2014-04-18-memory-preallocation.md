@@ -9,7 +9,7 @@ What I'll do is, I'll run through the thought process I went through, and that s
 
 ### Wait, Why?
 
-I did mention this in [a post from long, long ago]({% post_url 2013-11-23-revving-up %}). Read it up.
+I did mention this in [a post from long, long ago]({filename}2013-11-23-revving-up.md). Read it up.
 
 ### The Problem Statement
 

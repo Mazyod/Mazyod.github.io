@@ -3,7 +3,7 @@ tags: python, objective-c, MCEngine, lunar, date, calculation, ftp, automation
 comments: true
 date: 2014-03-17 20:43:28+00:00
 
-There is just no freaking way such a simple programming task takes so much time!! Remember the [hijri automation thingie?]({% post_url 2014-03-17-automating-the-hijri-offset %}). Well, turns out I have not thought it thoroughly enough...
+There is just no freaking way such a simple programming task takes so much time!! Remember the [hijri automation thingie?]({filename}2014-03-17-automating-the-hijri-offset.md). Well, turns out I have not thought it thoroughly enough...
 
 ###### STEP 1: THE FACEPALM
 
@@ -132,7 +132,7 @@ else:
 
 ###### STEP 3: THE SHORTCUT
 
-Finally, of course, we have the shortcut! Remember the post about [how my blog pipeline is setup]({% post_url 2014-03-16-blogging-with-octopress %})? Remember those convenient commands? Well, one coming up for the kpt update script!
+Finally, of course, we have the shortcut! Remember the post about [how my blog pipeline is setup]({filename}2014-03-16-blogging-with-octopress.md)? Remember those convenient commands? Well, one coming up for the kpt update script!
 
 ```bash
 $ kpt_update_hijri 

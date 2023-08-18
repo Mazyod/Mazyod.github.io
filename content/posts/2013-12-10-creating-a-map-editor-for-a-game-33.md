@@ -7,7 +7,7 @@ slug: creating-a-map-editor-for-a-game-33
 tags: argparse, automation, bash, C++, coding, cpp, editor, file, Game, game-development, Games, generating code, map, Map Editor, plist, plistlib, Programming, python, read, script, scripting, Software, terminal
 wordpress_id: 400
 
-_This is the third post of a three post series regarding creating a map editor software for an RTS game. If you haven’t already, check out the [first]({% post_url 2013-11-29-creating-a-map-editor-for-a-game-13 %}) and [second]({% post_url 2013-12-06-creating-a-map-editor-for-a-game-23 %}) posts of the series._
+_This is the third post of a three post series regarding creating a map editor software for an RTS game. If you haven’t already, check out the [first]({filename}2013-11-29-creating-a-map-editor-for-a-game-13.md) and [second]({filename}2013-12-06-creating-a-map-editor-for-a-game-23.md) posts of the series._
 
 
 

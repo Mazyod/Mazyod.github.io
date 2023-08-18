@@ -3,7 +3,7 @@ tags: snippets, rant, stackOverflow, stack exchange
 comments: true
 date: 2014-03-22 22:58:10+00:00
 
-Apparently, the main reason [Jeff Atwood](http://blog.codinghorror.com/) started stackOverflow is to trick programmers into writing. This is one of the many secrets he reveals in his book Effective programming [(discussed here)]({% post_url 2014-03-10-nsproxy-with-uikit %}). He explains how writing is a fundamental communication skill we should work on, and that's why he has his blog and all..
+Apparently, the main reason [Jeff Atwood](http://blog.codinghorror.com/) started stackOverflow is to trick programmers into writing. This is one of the many secrets he reveals in his book Effective programming [(discussed here)]({filename}2014-03-10-nsproxy-with-uikit.md). He explains how writing is a fundamental communication skill we should work on, and that's why he has his blog and all..
 
 In any case! There is also this very interesting fact that he talks about, which is:
 

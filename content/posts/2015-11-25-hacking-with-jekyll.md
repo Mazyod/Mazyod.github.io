@@ -38,7 +38,7 @@ The new blog is so simple, I don't even have to break it down into sections. It'
 
 The blog finally generates in just _7 seconds_, compared to the original 15 minutes, I'd say that's a significant win. Also, all I have to do is push the changes to github, and github will build the blog for me! Yatta!
 
-Admittedly, I had to [rewrite all the script I had]({% post_url 2014-03-16-blogging-with-octopress %}), but that's ok! Now that I have full control over the template created for a new post, I went ahead and created a much more sensible default template for my needs. All it took was a couple of minutes, really. I'll probably blog about the new workflow some day!
+Admittedly, I had to [rewrite all the script I had]({filename}2014-03-16-blogging-with-octopress.md), but that's ok! Now that I have full control over the template created for a new post, I went ahead and created a much more sensible default template for my needs. All it took was a couple of minutes, really. I'll probably blog about the new workflow some day!
 
 Last but not least, now I have the capacity to maybe do A/B testing, see which changes readers like more and so on, since making changes is so easy!
 

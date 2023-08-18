@@ -49,6 +49,6 @@ No matter how good an engine gets, it'll fail horribly if it tries to be a "do-i
 
 This one was brief, as it should be, and it concludes the client-side part! In the next post, we will switch over to the server, and see how game development looks from that angle.
 
-[gui-system-link]: {% post_url 2016-06-26-whats-in-a-game %}
-[game-engine-link]: {% post_url 2016-06-28-rev-up-your-engine %}
+[gui-system-link]: {filename}2016-06-26-whats-in-a-game.md
+[game-engine-link]: {filename}2016-06-28-rev-up-your-engine.md
 [backend-post]: {% post_url 2016-07-01-back-me-up! %}

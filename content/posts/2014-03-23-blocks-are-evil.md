@@ -3,7 +3,7 @@ tags: objective-c, blocks, snippets, rant, programming
 comments: true
 date: 2014-03-23 01:23:57+00:00
 
-I really hope it is not just me who get gets obsessed with a technique and thinks it solves everything... Back in the day, learning about singletons made me write freaking UI components as singletons. It seemed like it's the solution to everything... Then, there is my obsession with [Objective-C's categories]({% post_url 2014-03-22-a-doh-moment %}), and now them C-Blocks!
+I really hope it is not just me who get gets obsessed with a technique and thinks it solves everything... Back in the day, learning about singletons made me write freaking UI components as singletons. It seemed like it's the solution to everything... Then, there is my obsession with [Objective-C's categories]({filename}2014-03-22-a-doh-moment.md), and now them C-Blocks!
 
 ```objc
 // C block sample (lambda functions)

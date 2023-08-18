@@ -4,7 +4,7 @@ date: 2015-11-30 22:42:15+00:00
 
 ## Introduction
 
-I have highlighted [in a previous post]({% post_url 2015-11-27-lavish-ideas %}) that I'll be writing a topic about [Sentry](https://getsentry.com/welcome/). The reason I said that was because I was in the process of building a remote logging service for an iOS app. Ultimately, it took less than two hours to implement.
+I have highlighted [in a previous post]({filename}2015-11-27-lavish-ideas.md) that I'll be writing a topic about [Sentry](https://getsentry.com/welcome/). The reason I said that was because I was in the process of building a remote logging service for an iOS app. Ultimately, it took less than two hours to implement.
 
 Here is the scoop: Sentry is just impossible to deploy for a n00b like me. It is dependent on nginx, django, redis, and postgres... Can you believe that? I just want to get a logging server for a simple app, and I have to learn and deploy all these services? I didn't have the luxury of time, so a pivot was inevitable.
 

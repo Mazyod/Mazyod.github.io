@@ -22,7 +22,7 @@ As the project progressed, I first kept working on the UI side, throwing suggest
 
 By the end of the first sprint, I showed the client a complete basic app fully functional, but without backend integration. All the data in the app was dummy data, but at least the UI implementation was almost perfect. The client sent back some minor feedback regarding the UI demo, and decided to move forward with the project and start integrating the backend ... This is where things went south.
 
-As I started integrating various endpoints, I discovered many problems with the backend API design. It was flawed. I patiently worked with the backend developer to amend these flaws, and trying to integrate whatever I can with the app itself. At that time, the transition between Xcode 6 and 7 happened, as well as my discovery that [CoreData and Swift don't work well with each other]({% post_url 2015-09-09-welcome-to-realm %}).
+As I started integrating various endpoints, I discovered many problems with the backend API design. It was flawed. I patiently worked with the backend developer to amend these flaws, and trying to integrate whatever I can with the app itself. At that time, the transition between Xcode 6 and 7 happened, as well as my discovery that [CoreData and Swift don't work well with each other]({filename}2015-09-09-welcome-to-realm.md).
 
 Progress wasn't being made as fast as it started thanks to these problems, and then out of nowhere, the client got worried and discouraged. I tried to explain how the problems affecting development were slowing the progress, but due to severe lack of communication, the client just made up theories about this project, and decided to end the contract.
 

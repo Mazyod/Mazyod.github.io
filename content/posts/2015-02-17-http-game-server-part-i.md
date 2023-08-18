@@ -28,7 +28,7 @@ So, while I was going through the design, I would actually run my game and see i
 
 Finally, I plugged the API design into a machine, and a backend was built for me! OK, I was just kidding there. I simply used Google App Engine to implement this API, and I was able to focus on learning GAE and the implementation, with the design being out of the way.
 
-**NOTE:** Admittedly, [I briefly talked about Apiary before]({% post_url 2014-04-04-apiary %}), but that was before I actually used it, so it doesn't count.
+**NOTE:** Admittedly, [I briefly talked about Apiary before]({filename}2014-04-04-apiary.md), but that was before I actually used it, so it doesn't count.
 
 ## Conclusion
 

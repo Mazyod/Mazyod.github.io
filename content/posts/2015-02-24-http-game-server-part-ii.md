@@ -5,7 +5,7 @@ date: 2015-02-24 17:24:42+00:00
 
 ## Introduction
 
-[Alrighty then](https://www.youtube.com/watch?v=0tJGk4ofc18), it's time for the second part of this HTTP game server awesomeness! In case you missed it, you can [check out the first part over here]({% post_url 2015-02-17-http-game-server-part-i %}).
+[Alrighty then](https://www.youtube.com/watch?v=0tJGk4ofc18), it's time for the second part of this HTTP game server awesomeness! In case you missed it, you can [check out the first part over here]({filename}2015-02-17-http-game-server-part-i.md).
 
 For this part, I'll present the technical decision made, and the reasoning behind them.
 

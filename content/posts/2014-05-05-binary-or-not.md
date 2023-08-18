@@ -3,7 +3,7 @@ tags: binary, binaryornot, file, files, string, python, pip, pypi
 comments: true
 date: 2014-05-05 11:46:47+00:00
 
-One of the [terminal scripts]({% post_url 2014-03-18-make-your-terminal-pythonic %}) that I heavily use is the search and replace script. It simply searches for occurrences of a string, and highlights the results in terminal. You can optionally choose to replace that string with something else.
+One of the [terminal scripts]({filename}2014-03-18-make-your-terminal-pythonic.md) that I heavily use is the search and replace script. It simply searches for occurrences of a string, and highlights the results in terminal. You can optionally choose to replace that string with something else.
 
 In any case, it caused me a lot of headaches and unnecessarily slowed down the search when the script scanned binary files. Not only is it not useful to search those files, but the binary can easily corrupt if we replace something in it by mistake.
 

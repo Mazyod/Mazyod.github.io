@@ -7,7 +7,7 @@ I don't even recall if I... Oh, I did blog a bit about what I have been doing, w
 
 ![image](/images/kpt_v5.0.0.png)
 
-I finally submitted. Even though I wrote [that blog post about testing]({% post_url 2014-03-28-close-call %}), I did even more testing, and found like a bunch of other bugs, that lead to other bugs in the Mac app, which almost drove me nuts trying to make everything perfect. It just can't be perfect.
+I finally submitted. Even though I wrote [that blog post about testing]({filename}2014-03-28-close-call.md), I did even more testing, and found like a bunch of other bugs, that lead to other bugs in the Mac app, which almost drove me nuts trying to make everything perfect. It just can't be perfect.
 
 In any case, the most important "feature" I added lately, is to properly support migrating all the user preferences from the old version. I usually don't care about that, and require the user to delete the app and reinstall it or something, but not this time, and no more of that in the future.
 

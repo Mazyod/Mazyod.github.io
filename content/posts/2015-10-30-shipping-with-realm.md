@@ -25,7 +25,7 @@ For starters, all you really need to do is set the `schemaVersion` property on y
 
 __Shared Container__
 
-First step is to [set up an application group, and get a shared container going]({% post_url 2015-01-03-app-groups %}). The shared container will host the Realm files, and as per the docs, they can be accessed concurrently across processes without issues!
+First step is to [set up an application group, and get a shared container going]({filename}2015-01-03-app-groups.md). The shared container will host the Realm files, and as per the docs, they can be accessed concurrently across processes without issues!
 
 ```swift
 let fileManager = NSFileManager.defaultManager()

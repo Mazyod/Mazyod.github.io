@@ -5,7 +5,7 @@ date: 2015-03-01 15:32:18+00:00
 
 ## Introduction
 
-Welcome to part three, which was preceded by parts [one]({% post_url 2015-02-17-http-game-server-part-i %}) and [two]({% post_url 2015-02-24-http-game-server-part-ii %}). For this part, I wanted to go into a bit more details about the design and implementation of the API. Unfortunately, I don't think I've built the backend robust enough for me to just put everything out there.. But, the main parts are pretty secure, so I'll share those.
+Welcome to part three, which was preceded by parts [one]({filename}2015-02-17-http-game-server-part-i.md) and [two]({filename}2015-02-24-http-game-server-part-ii.md). For this part, I wanted to go into a bit more details about the design and implementation of the API. Unfortunately, I don't think I've built the backend robust enough for me to just put everything out there.. But, the main parts are pretty secure, so I'll share those.
 
 Please keep in mind, this game backend design and implementation is kinda specific to HTTP and GAE. Using this design for other setups is not recommended, and you are proceeding on your own risk, if that is the case.
 

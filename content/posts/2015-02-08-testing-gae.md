@@ -80,4 +80,4 @@ Stay tuned!
 
 **Update**
 
-[Here you go! the follow up, as promised]({% post_url 2015-02-10-gae-follow-up %}).
+[Here you go! the follow up, as promised]({filename}2015-02-10-gae-follow-up.md).

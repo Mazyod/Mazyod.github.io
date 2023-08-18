@@ -5,7 +5,7 @@ date: 2015-04-05 22:17:27+00:00
 
 ## Introduction
 
-I've been blogging recently about Swift and SpriteKit, and that's mostly eating up all my time, making me miss a blogging day, and also writing a [completely useless post]({% post_url 2015-04-02-brain-dot-dump %}).
+I've been blogging recently about Swift and SpriteKit, and that's mostly eating up all my time, making me miss a blogging day, and also writing a [completely useless post]({filename}2015-04-02-brain-dot-dump.md).
 
 Now, to justify this, the previous three posts before that have been quite lengthy and informative, so it's only natural that the bigger you are the harder you fall, lol.
 

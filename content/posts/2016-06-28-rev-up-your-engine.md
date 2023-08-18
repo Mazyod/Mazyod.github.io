@@ -48,7 +48,7 @@ So, with a bit of SWIG and python magic, as [highlighted here][swig-article], Un
 Sorry for the lack of excitement here, a topic about game engines should really be much more thrilling, lol. Again, my game is super simple on the gaming side, so learn something different for a change!
 
 
-[gui-system-post]: {% post_url 2016-06-26-whats-in-a-game %}
-[swig-article]: {% post_url 2016-02-16-swig-swag %}
-[game-services-post]: {% post_url 2016-06-29-quality-of-service %}
+[gui-system-post]: {filename}2016-06-26-whats-in-a-game.md
+[swig-article]: {filename}2016-02-16-swig-swag.md
+[game-services-post]: {filename}2016-06-29-quality-of-service.md
 [backend-post]: {% post_url 2016-07-01-back-me-up! %}

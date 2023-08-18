@@ -75,4 +75,4 @@ def cmd_ec2_rsyc_project(project_path="."):
 
 ## Conclusion
 
-With all that setup in [the pythonic terminal]({% post_url 2014-03-18-make-your-terminal-pythonic %}), it's as tasty as pie!
+With all that setup in [the pythonic terminal]({filename}2014-03-18-make-your-terminal-pythonic.md), it's as tasty as pie!

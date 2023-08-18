@@ -33,7 +33,7 @@ After you find yourself suffering because of the "**HOW**" and not the "**WHAT**
 
 For example, I really suffered from managing audio files, and always forgot where that script was, and what are the settings, and how to move the assets over, ... UGH! Just horrible.
 
-Solution? [Go back to this post about scripting awesomeness]({% post_url 2014-03-18-make-your-terminal-pythonic %}). Let's see hoe much my script library has grown in a week or so...
+Solution? [Go back to this post about scripting awesomeness]({filename}2014-03-18-make-your-terminal-pythonic.md). Let's see hoe much my script library has grown in a week or so...
 
 ![image](/images/py-scripts.png)
 
