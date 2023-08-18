@@ -12,9 +12,11 @@ PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = f"{PAGE_URL}index.html"
 
 SITE_DESCRIPTION = """
-I call this place my Development Directory, where I just dump all the
-experiences I have duing my development career. I mostly work with Swift,
-and C++, for iOS apps and cross-platform games.
+Dumping ground for all my experiences as a Software Engineer.
+<br />
+I mostly work with Python and Docker, sometimes JS, Elixir and Unity.
+<br />
+Swift, Objective-C and C++ in a former life.
 """
 
 PATH = "content"
