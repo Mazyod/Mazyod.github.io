@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - {{ article.title|striptags }}{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+{% if article.description %}
+<meta name="description" content="{{article.description}}" />
+{% endif %}
+
+{% for tag in article.tags %}
+<meta name="tags" content="{{tag}}" />
+{% endfor %}
+
+{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+<header>
+  <h1 class="entry-title">{{ article.title }}</h1>
+</header>
+<footer class="post-info">
+  <time class="published fw-lighter" datetime="{{ article.date.isoformat() }}">
+    {{ article.date | strftime('%B %-d, %Y') }}
+  </time>
+  {% if article.modified %}
+  <time class="modified" datetime="{{ article.modified.isoformat() }}">
+    {{ article.locale_modified }}
+  </time>
+  {% endif %}
+  <!-- {% if article.authors %}
+    <address class="vcard author">
+      By {% for author in article.authors %}
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+        {% endfor %}
+    </address>
+    {% endif %} -->
+  <!-- {% if article.category %}
+    <div class="category">
+        Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+    </div>
+    {% endif %} -->
+  {% if article.tags %}
+  <div class="tags">
+    Tags:
+    {% for tag in article.tags %}
+    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</footer><!-- /.post-info -->
+<article class="mt-4">
+  {{ article.content }}
+</article>
+<section class="mt-5">
+  <div class="d-flex">
+    {% if article.prev_article %}
+    <div>
+      <a href="{{ article.prev_article.url }}" title="{{article.prev_article.title}}">&laquo;
+        {{article.prev_article.title}}</a>
+    </div>
+    {% endif %}
+    <div class="flex-grow-1"></div>
+    {% if article.next_article %}
+    <div>
+      <a href="{{ article.next_article.url }}" title="{{article.next_article.title}}">{{article.next_article.title}}
+        &raquo;</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% include "disqus.html" %}
+{% endblock %}

@@ -25,7 +25,7 @@ ARTICLE_PATHS = ["posts"]
 TIMEZONE = "Asia/Kuwait"
 DEFAULT_LANG = "en"
 
-THEME = "../pelican-press-start"
+THEME = "themes/retrospective"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

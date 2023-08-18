@@ -1,0 +1,305 @@
+:root, [data-bs-theme="dark"] {
+  --bs-body-color: #ece8d1;
+  --bs-body-bg: #1b1d16;
+  --bs-code-color: #a1dbb2;
+
+  --code-background: #14140f;
+  --brand-color: #eb7000;
+
+  /* define spacing-unit = 30px */
+  --spacing-unit: 30px;
+  --content-width: 800px;
+
+  --grey-color: #b4b4b4;
+  --grey-color-light: #dcdcdc;
+  --grey-color-dark: #7a7a7a;
+
+  --base-font-family: Roboto, sans-serif;
+  --base-font-size: 21px;
+  --base-font-weight: 300;
+  --small-font-size: 18px;
+  --base-line-height: 1.5;
+}
+
+/* --- Basic styling --- */
+body {
+  overflow-x: hidden;
+
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+
+  letter-spacing: 0.02em;
+  font: var(--base-font-weight) 21px/1.5 var(--base-font-family);
+
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+.content {
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.875rem;
+}
+
+/* --- Images --- */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* --- Figures --- */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: var(--small-font-size);
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+/* --- Headings --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lucida Grande", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  color: #f45d4c;
+}
+
+h2 {
+  color: #f7a541;
+}
+
+h3 {
+  color: #faca66;
+}
+
+h4 {
+  color: #fee5ad;
+}
+
+/* --- Links --- */
+a {
+  color: #009fc5;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten(#009fc5, 25%);
+  }
+}
+
+/* --- Buttons --- */
+.btn {
+  border-radius: 0.5em;
+  font-family: 'Press Start 2P', "Lucida Grande", monospace;
+  border: solid 0.2em;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: solid 0.2em;
+}
+
+
+/* --- Blockquotes --- */
+blockquote {
+  color: #a1dbb2;
+  padding-top: 6pt;
+  padding-bottom: 6pt;
+  background-color: rgba(66, 66, 66, 0.31);
+  border-left: 4px solid var(--grey-color-dark);
+  padding-left: calc(var(--spacing-unit) / 2);
+  font-size: 18px;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* --- Code formatting --- */
+
+/* Highlight.js overrides */
+/* code.hljs {
+  background-color: var(--code-background);
+} */
+
+/* for code inside pre, set display explicitly to block */
+pre code {
+  display: block;
+  overflow-x: auto;
+  padding: 1em 0em;
+}
+
+pre {
+  overflow: inherit;
+  margin-left: calc(-1 * var(--spacing-unit)); /* centers the pseudo-element */
+  padding-left: var(--spacing-unit);
+  width: calc(100% + (var(--spacing-unit) * 2));
+  height: 100%; /* makes the pseudo-element as tall as the .code-block */
+  background-color: var(--code-background); /* your desired background color for the code block */
+}
+
+/* --- Icons --- */
+.icon {
+
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+
+    path {
+      fill: var(--grey-color);
+    }
+  }
+}
+
+/* --- Arrow --- */
+
+.main-header-arrow {
+  position: relative;
+  margin-left: -4em;
+}
+.main-header-arrow i {
+  --block-size: 8px;
+
+  position: absolute;
+  width: var(--block-size);
+  height: var(--block-size);
+  background-color: var(--bs-body-color);
+}
+.main-header-arrow > i {
+  left: 0;
+  top: 0;
+}
+.main-header-arrow > i + i {
+  left: calc(var(--block-size) * 1);
+  top: calc(var(--block-size) * 1);
+}
+.main-header-arrow > i + i + i {
+  left: calc(var(--block-size) * 2);
+  top: calc(var(--block-size) * 2);
+}
+.main-header-arrow > i + i + i + i {
+  left: calc(var(--block-size) * 3);
+  top: calc(var(--block-size) * 1);
+}
+.main-header-arrow > i + i + i + i + i {
+  left: calc(var(--block-size) * 4);
+  top: 0;
+}
+
+/* --- Branding --- */
+
+.branding-container {
+  /* MAZDEVDIR */
+  font-family: "Press Start 2P", "Lucida Grande", monospace;
+  font-size: 57px;
+  line-height: 57px;
+  margin: 10px;
+
+  .maz {
+    color: #f45d4c;
+    display: inline-block;
+  }
+
+  .dev {
+    color: #f7a541;
+    display: inline-block;
+  }
+
+  .dir {
+    color: #a1dbb2;
+    display: inline-block;
+  }
+}
+
+/* --- Site header --- */
+.navbar-outline {
+  background-color: var(--bs-body-color);
+  height: 5px;
+}
+
+.main-header-outer {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.retro-font { 
+  font-family: "Press Start 2P", "Lucida Grande", monospace;
+  font-size: 26px;
+  line-height: 28px;
+}
+
+.main-header-arrow-container {
+  font-size: 14px;
+  margin-top: 5em;
+}
+
+/* --- Page content --- */
+.page-content {
+  padding: var(--spacing-unit) 0;
+}
+
+.page-heading {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.post-meta {
+  font-size: var(--small-font-size);
+  color: var(--grey-color);
+}
+
+/* --- Devlog --- */
+.strike {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.strike > span {
+  font-size: var(--small-font-size);
+  position: relative;
+  display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9999px;
+  height: 1px;
+  background: var(--grey-color);
+}
+
+.strike > span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.strike > span:after {
+  left: 100%;
+  margin-left: 15px;
+}
