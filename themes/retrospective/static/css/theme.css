@@ -39,6 +39,7 @@ body {
 }
 
 iframe {
+  /* fixes disqus background issue (it becomes white without this) */
   color-scheme: light;
 }
 
