@@ -12,6 +12,7 @@ pelican-neighbors = "^1.2.0"
 minchin-pelican-plugins-nojekyll = "^1.2.0"
 pymdown-extensions = "^10.1"
 pelican-sitemap = "^1.1.0"
+pelican-yaml-metadata = "^2.1.1"
 
 
 [tool.poetry.group.dev.dependencies]

@@ -667,6 +667,22 @@ pelican = ">=4.5"
 markdown = ["markdown (>=3.2)"]
 
 [[package]]
+name = "pelican-yaml-metadata"
+version = "2.1.1"
+description = "Pelican plugin for YAML-formatted Markdown metadata headers"
+optional = false
+python-versions = ">=3.8.1"
+files = [
+    {file = "pelican_yaml_metadata-2.1.1-py3-none-any.whl", hash = "sha256:93db45af2e626cd9dbef420e6b609374df4444d95c9c257f9c163f3d3afa0391"},
+    {file = "pelican_yaml_metadata-2.1.1.tar.gz", hash = "sha256:d1df4c5e3f8181e57d0ac1d9fd14609a6d57640e75164ec86ce1d3905cb0636a"},
+]
+
+[package.dependencies]
+markdown = ">=3.3.4"
+pelican = ">=4.8.0"
+pyyaml = ">=5.4.1"
+
+[[package]]
 name = "platformdirs"
 version = "3.10.0"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
@@ -913,4 +929,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "73eaeadd30f2124cc49b5229b69454af5f2e5ff25661edb5cdbc89de9a68a48b"
+content-hash = "cba60122fcc3f21f90a090445304e37e31c238c8c5ffd12bc59628e267b2e972"
