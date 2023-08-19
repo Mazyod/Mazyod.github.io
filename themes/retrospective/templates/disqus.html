@@ -3,18 +3,18 @@
   <h1>Comments</h1>
   <div id="disqus_thread"></div>
   <script>
-      r disqus_config = function () {
-        is.page.url = '{{ SITEURL }}/{{ article.url }}';
-        is.page.identifier = '{{ SITEURL }}/{{ article.url }}';
-      
+    var disqus_config = function () {
+      this.page.url = '{{ SITEURL }}/{{ article.url }}';
+      this.page.identifier = '{{ SITEURL }}/{{ article.url }}';
+    };
 
-      unction () {
-        r d = document, s = d.createElement('script');
+    (function () {
+      var d = document, s = d.createElement('script');
 
-        src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-        setAttribute('data-timestamp', +new Date());
-        .head || d.body).appendChild(s);
-      ();
+      s.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
   </script>
   <noscript>
     Please enable JavaScript to view the
