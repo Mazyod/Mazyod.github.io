@@ -1,8 +1,0 @@
-version: 2
-updates:
-- package-ecosystem: poetry
-  directory: "/"
-  schedule:
-    interval: weekly
-    time: "01:08"
-    timezone: US/Central
