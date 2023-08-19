@@ -1,25 +1,27 @@
 {% if DISQUS_SITENAME %}
-<h1>Comments</h1>
-<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-        this.page.url = '{{ SITEURL }}/{{ article.url }}';
-        this.page.identifier = '{{ SITEURL }}/{{ article.url }}';
-    };
-    
-    (function() {
-        var d = document, s = d.createElement('script');
+<section class="mt-3">
+    <h1>Comments</h1>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = '{{ SITEURL }}/{{ article.url }}';
+            this.page.identifier = '{{ SITEURL }}/{{ article.url }}';
+        };
 
-        s.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>
-    Please enable JavaScript to view the 
-    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
-        comments powered by Disqus.
-    </a>
-</noscript>
+        (function () {
+            var d = document, s = d.createElement('script');
+
+            s.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>
+        Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+            comments powered by Disqus.
+        </a>
+    </noscript>
+</section>
 {% else %}
 {% endif %}
