@@ -1,8 +1,6 @@
 
 # MazDevDir
 
-[![Build Status](https://travis-ci.org/Mazyod/Mazyod.github.io.svg?branch=master)](https://travis-ci.org/Mazyod/Mazyod.github.io)
-
-My blog! Check it out here: http://mazyod.com .. Hopefully running Jekyll 3.x!
+My blog! Check it out here: https://mazyod.com .. Powered by [Pelican](http://getpelican.com)
 
 ![](http://imgur.com/XYSbGLO.png)

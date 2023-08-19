@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main-header-outer">
+  <div>
+    <div class="branding-container">
+      <div class="maz">MAZ</div>
+      <div class="dev">DEV</div>
+      <div class="dir">DIR</div>
+    </div>
+    <div class="retro-font m-5">
+      <p>Digital<br />Nomad's<br>Journal</p>
+    </div>
+    <div class="main-header-arrow-container">
+      <i class="main-header-arrow">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+      </i>
+    </div>
+  </div>
+</div>
+<section id="content" class="page-content">
+  <div class="home">
+    <div>
+      {% set ns = namespace(year=0) %}
+      {% for article in articles %}
+      {% if article.category != "devlog" %}
+      {% set article_year = article.date.strftime('%Y') %}
+      {% set is_article_year_new = ns.year != article_year %}
+      {% if ns.year != article_year %}
+      {% set ns.year = article_year %}
+      <h2 class="my-3">{{ article_year }}</h2>
+      {% endif %}
+      <div class="d-flex gap-3">
+        <div style="line-height: 1.1em;">
+          <div>{{ article.date.strftime('%-d') }}</div>
+          <div class="post-meta" style="font-size: 0.7em">{{ article.date.strftime('%b') }}</div>
+        </div>
+        <div>
+          <h4>
+            <a href="{{ article.url }}">{{ article.title }}</a>
+          </h4>
+          <p style="font-size: 0.7em; margin-top: -5px; color: darkgray; font-weight: 100;">
+            {{ article.category }}
+          </p>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section><!-- /#content -->
+{% endblock content %}
