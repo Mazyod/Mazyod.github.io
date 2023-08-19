@@ -1,6 +1,4 @@
 :root, [data-bs-theme="dark"] {
-  color-scheme: dark light;
-
   --bs-body-color: #ece8d1;
   --bs-body-bg: #1b1d16;
   --bs-code-color: #a1dbb2;
@@ -41,7 +39,7 @@ body {
 }
 
 iframe {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 .content {
