@@ -36,19 +36,20 @@
         {% endfor %}
     </address>
     {% endif %} -->
+  {# TODO: enable tags/categories later #}
   <!-- {% if article.category %}
     <div class="category">
         Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
     </div>
     {% endif %} -->
-  {% if article.tags %}
+  {# {% if article.tags %}
   <div class="tags">
     Tags:
     {% for tag in article.tags %}
     <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
     {% endfor %}
   </div>
-  {% endif %}
+  {% endif %} #}
 </footer><!-- /.post-info -->
 <article class="mt-4">
   {{ article.content }}
