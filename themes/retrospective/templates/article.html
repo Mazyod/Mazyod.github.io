@@ -58,14 +58,14 @@
   <div class="d-flex">
     {% if article.prev_article %}
     <div>
-      <a href="{{ article.prev_article.url }}" title="{{article.prev_article.title}}">&laquo;
+      <a href="{{ SITEURL }}/{{ article.prev_article.url }}" title="{{article.prev_article.title}}">&laquo;
         {{article.prev_article.title}}</a>
     </div>
     {% endif %}
     <div class="flex-grow-1"></div>
     {% if article.next_article %}
     <div>
-      <a href="{{ article.next_article.url }}" title="{{article.next_article.title}}">{{article.next_article.title}}
+      <a href="{{ SITEURL }}/{{ article.next_article.url }}" title="{{article.next_article.title}}">{{article.next_article.title}}
         &raquo;</a>
     </div>
     {% endif %}
