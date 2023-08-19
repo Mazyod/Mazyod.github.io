@@ -55,7 +55,7 @@
   {{ article.content }}
 </article>
 <section class="mt-5">
-  <div class="d-flex">
+  <div class="d-flex flex-wrap gap-3">
     {% if article.prev_article %}
     <div>
       <a href="{{ SITEURL }}/{{ article.prev_article.url }}" title="{{article.prev_article.title}}">&laquo;
