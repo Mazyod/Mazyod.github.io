@@ -1,5 +1,5 @@
 ---
-title: 'Verdict: It's a Match!'
+title: "Verdict: It's a Match!"
 category: python
 date: 2023-08-20T16:55:23Z
 ---
@@ -148,7 +148,6 @@ match obj:
         return obj.value
     case _:
         return copy.deepcopy(obj)
-
 ```
 
 Honestly, this looks like a monster. The value of this code will also greatly
