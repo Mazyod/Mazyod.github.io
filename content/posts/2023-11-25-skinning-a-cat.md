@@ -1,7 +1,7 @@
 ---
 title: "Skinning a Cat"
 category: python
-date: 2023-08-29T17:55:23Z
+date: 2023-11-25T20:50:23Z
 ---
 
 ## Introduction
