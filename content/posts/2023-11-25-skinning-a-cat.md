@@ -6,18 +6,18 @@ date: 2023-11-25T20:50:23Z
 
 ## Introduction
 
-As much as the next guy, I find the saying "There's more than one way to skin a
-cat" quite morbid and gruesome. Yet, I like to use it and tell myself that
-people aren't really skinning cats for sport or professionally, it's just a
+I find the saying "There's more than one way to skin a cat", just as much as the
+next guy, quite morbid and gruesome. And yet, I like to use it and tell myself
+that people aren't really skinning cats for sport or professionally, it's just a
 saying. So the cat we are going to skin today is Visual Studio Code.
 
-I can't believe I somehow off-handedly, irresponsibly added yet another opinion
-to the heated question of whether VS Code is an Editor or an IDE. I'm making a
-case it's a cat, apparently.
+I can't believe I somehow, completely off-handedly and irresponsibly, added yet
+another opinion to the heated question of whether VS Code is an Editor or an
+IDE. I'm making a case it's a cat, apparently.
 
 ## Digging Tunnels
 
-We recently got hold of the hottest piece of hardware in the market these days..
+We recently got hold of the hottest piece of hardware on the market these days..
 The glorious A100 GPU. Granted, the H100 eclipsed it, and next year we will see
 the H200 and B100, however, for simple people like myself, the A100 is the best
 hardware I could realistically expect to work with. Now, we have it.
