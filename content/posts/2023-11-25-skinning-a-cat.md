@@ -36,13 +36,13 @@ and 70B parameter LLMs, and let 'em rip on the GPU.
 
 We .. Were .. Blown .. Away.
 
-The fact high quality models, like llama2 30B, loaded pretty quickly, and
-started giving us wealth of knowledge to use was incredible. My brain felt like
-fireworks were going off in it as I was thinking of all the possibilities. At
-the same time, I also realized that JupyterLab isn't necessarily the ideal
-environment for maximum productivity. Users shared the same environment, it
-didn't have powerful extensions like VS Code, and it was restricted in many
-ways.
+The fact that high quality models, like the [llama2 13B][llama-13b], loaded
+pretty quickly, and started giving us wealth of knowledge to use was incredible.
+My brain felt like fireworks were going off in it as I was thinking of all the
+possibilities. At the same time, I also realized that JupyterLab isn't
+necessarily the ideal environment for maximum productivity. Users shared the
+same environment, it didn't have powerful extensions like VS Code, and it was
+restricted in many ways.
 
 It was time to dig some tunnels.
 
@@ -180,6 +180,7 @@ The Algorithm:
 4. Automate
 5. Accelerate
 
+[llama-13b]: https://ollama.ai/library/llama2:13b
 [code-server]: https://github.com/coder/code-server
 [vscode-server]: https://code.visualstudio.com/docs/remote/vscode-server
 [perplexity]: https://www.perplexity.ai/
