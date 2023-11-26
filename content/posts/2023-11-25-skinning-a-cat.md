@@ -102,7 +102,84 @@ So, let's get back to the A100 GPU and our local development needs.
 
 Since we were already running JupyterLab on the VM, the immediate solution that
 came to mind was to use JupyterLab's VS Code extension to select a kernel
-running on the VM, and use that to run our code.
+running on the VM, and use that to run our code. This worked seamlessly, and
+honestly, I thought I as done then and there.
+
+However, we quickly realized that code referencing broke. VS Code showed
+squiggly lines under all the imports, and we couldn't navigate to the
+definitions of any of the functions we were using. This was a deal breaker for
+us.
+
+Another side effect was the lack of structure parity between the local project
+and the actual environment. For example, if you want to import a local file, or
+use an LLM, you need to reference it from the remote server, which made it very
+awkward to work with.
+
+### Being a Good Host
+
+At that point, I was like, no problem! We will just install Python 3 on the VM,
+and use that as an SSH host similar to how we were using WSL2 on Windows
+locally.
+
+Since we are using RHEL 7, it had python 2.7 installed by default. So, I fired
+up [perplexity][perplexity], and it gave me a perfect, step-by-step guide on how
+to install Python 3 from source. I had to do it this way, since yum was
+outdated, and I didn't want to risk downloading potentially incompatible
+packages from other sources. The installation went fine, until I started the
+REPL, and it turned out I now needed to install/compile openssl, sqlite, and a
+bunch of other stuff. `(╯°□°）╯︵ ┻━┻`
+
+### The Devil's in the Container
+
+Since we deploy all our services on Docker, it made sense to give Docker a shot
+at this. I wanted to try using Dev Containers for a while, but never had a good
+reason to do so. This was the perfect opportunity.
+
+I struggled for a bit at first, since the default dev container settings I had
+was showing a warning as deprecated, while the new format didn't yet have enough
+documentation and examples online. I eventually figured it out, but it was just
+for running a local container as a dev environment. I needed it on the GPU VM.
+
+I first tested the obvious way, which is to connect to the host through VS Code
+SSH, then manage the dev containers. This kinda worked, but now you are in this
+inception-like situation where you are connecting to a VM through SSH, to run a
+container also on the remote host. Not a big fan.
+
+I then researched on how to use the `DOCKER_HOST` environment variable to
+connect the local docker client to a remote docker daemon. This had the
+potential to eliminate the need for the SSH step, however, it introduced a new
+more serious problem. When VS Code tries to prepare the dev container, it
+symlinks the local project to a folder, which is then mounted to the container
+as a volume. We can't symlink the local project to the VM, obviously.
+
+### The Final Boss
+
+As the weekend came around, I was thinking about what to try next, since it
+seemed like such a simple problem! As I was thinking about the simple facts and
+the problem I'm trying to solve here, I realized that I could just have a remote
+container which the local VS Code can SSH into, just like WSL. I mean, just
+because we will be running the code in a container, doesn't mean we have to use
+dev containers!
+
+This is the step we are at right now, honestly. Just setting up a simple
+container that exposes an SSH server, and allows VS Code to connect to it
+directly, without the need to go through the host first. An initial PoC showed
+some promising results.
+
+## Conclusion
+
+I've been reading Elon Musk's biography, by Walter Isaacson, and I have to say,
+it's been a very inspiring read. I shall impart a prat of the book I found
+particularly useful to apply at work:
+
+The Algorithm:
+
+1. Question Every Requirement
+2. Delete as Much as Possible
+3. Simplify and Optimize
+4. Automate
+5. Accelerate
 
 [code-server]: https://github.com/coder/code-server
 [vscode-server]: https://code.visualstudio.com/docs/remote/vscode-server
+[perplexity]: https://www.perplexity.ai/
