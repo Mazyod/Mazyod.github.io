@@ -68,4 +68,7 @@ devserver-global:
 publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
+new-post:
+	$(PY) newpost.py
+
 .PHONY: html help clean regenerate serve serve-global devserver publish
