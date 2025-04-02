@@ -17,9 +17,8 @@ pelican-yaml-metadata = "^2.1.1"
 
 
 [tool.poetry.group.dev.dependencies]
-bpython = "^0.24"
-black = "^23.7.0"
 invoke = "^2.2.0"
+ruff = ">=0.11.0"
 
 [build-system]
 requires = ["poetry-core"]
