@@ -14,11 +14,23 @@ PAGE_SAVE_AS = f"{PAGE_URL}index.html"
 # disable author pages
 AUTHOR_SAVE_AS = ""
 
-DIRECT_TEMPLATES = ["index", "archives", "tags", "categories"]
+DIRECT_TEMPLATES = ["index", "archives", "tags", "categories", "offline"]
 
 STATIC_PATHS = ["static"]
 
 PATH_METADATA = r"static/(?P<path>.+)"
+
+# PWA and Modern Web Features
+MANIFEST_PATH = "themes/retrospective/static/manifest.json"
+SERVICE_WORKER_PATH = "themes/retrospective/static/js/sw.js"
+
+# Additional static files for modern features
+EXTRA_PATH_METADATA = {
+    'themes/retrospective/static/manifest.json': {'path': 'manifest.json'},
+    'themes/retrospective/static/js/sw.js': {'path': 'sw.js'},
+    'themes/retrospective/static/js/sw-register.js': {'path': 'theme/js/sw-register.js'},
+    'themes/retrospective/static/css/modern-features.css': {'path': 'theme/css/modern-features.css'},
+}
 
 SITE_DESCRIPTION = """
 Dumping ground for all my experiences as a Software Engineer.
@@ -95,6 +107,41 @@ SOCIAL = (
 )
 
 DEFAULT_PAGINATION = False
+
+# Modern Web Standards and Performance
+USE_CACHE = True
+CACHE_CONTENT = True
+CACHE_PATH = 'cache'
+GZIP_CACHE = True
+
+# SEO and Social Media
+SITE_LOGO = "/images/Icon_BIG.png"
+SITE_LOGO_SIZE = "192x192"
+
+# OpenGraph defaults
+DEFAULT_OG_IMAGE = "/images/Icon_BIG.png"
+TWITTER_CARD_USE = True
+
+# Security Headers (for server configuration reference)
+SECURITY_HEADERS = {
+    'Content-Security-Policy': "default-src 'self'; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net; font-src 'self' fonts.gstatic.com; script-src 'self' 'unsafe-inline' www.googletagmanager.com cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' www.google-analytics.com",
+    'X-Frame-Options': 'DENY',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+}
+
+# PWA Configuration
+PWA_CONFIG = {
+    'name': SITENAME,
+    'short_name': 'MazDev',
+    'theme_color': '#212529',
+    'background_color': '#212529',
+    'display': 'standalone',
+    'orientation': 'portrait-primary',
+    'start_url': '/',
+    'scope': '/'
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True

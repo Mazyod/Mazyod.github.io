@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+
+{% block title %}Offline - {{ SITENAME }}{% endblock title %}
+
+{% block description %}You are currently offline. This page is cached and available while you're not connected to the internet.{% endblock description %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="text-center py-5">
+        <div class="mb-4">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor" class="text-muted">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/>
+          </svg>
+        </div>
+        
+        <h1 class="display-4 text-muted mb-3">You're Offline</h1>
+        
+        <p class="lead mb-4">
+          No internet connection detected. Don't worry, you can still browse cached content!
+        </p>
+        
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8">
+            <div class="card bg-dark border-secondary">
+              <div class="card-body">
+                <h5 class="card-title">What you can do:</h5>
+                <ul class="list-unstyled text-start">
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle text-success me-2"></i>
+                    Browse recently visited blog posts
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle text-success me-2"></i>
+                    Read cached articles and pages
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle text-success me-2"></i>
+                    Navigate through the site structure
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-x-circle text-warning me-2"></i>
+                    Access new content (requires internet)
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-x-circle text-warning me-2"></i>
+                    Submit comments or forms
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mb-4">
+          <button 
+            onclick="checkConnection()" 
+            class="btn btn-primary btn-lg me-3"
+            id="checkConnectionBtn"
+          >
+            <span id="checkConnectionText">Check Connection</span>
+            <span id="checkConnectionSpinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"></span>
+          </button>
+          
+          <a href="/" class="btn btn-outline-secondary btn-lg">
+            Go to Homepage
+          </a>
+        </div>
+        
+        <div class="mt-5">
+          <h3 class="h5 text-muted mb-3">Quick Navigation</h3>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="/" class="btn btn-sm btn-outline-light">Home</a>
+            <a href="/archives.html" class="btn btn-sm btn-outline-light">Archives</a>
+            <a href="/categories.html" class="btn btn-sm btn-outline-light">Categories</a>
+            <a href="/tags.html" class="btn btn-sm btn-outline-light">Tags</a>
+            <a href="/about/" class="btn btn-sm btn-outline-light">About</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let isChecking = false;
+  
+  async function checkConnection() {
+    if (isChecking) return;
+    
+    isChecking = true;
+    const btn = document.getElementById('checkConnectionBtn');
+    const text = document.getElementById('checkConnectionText');
+    const spinner = document.getElementById('checkConnectionSpinner');
+    
+    // Show loading state
+    text.textContent = 'Checking...';
+    spinner.classList.remove('d-none');
+    btn.disabled = true;
+    
+    try {
+      // Try to fetch a small resource
+      const response = await fetch('/', { 
+        method: 'HEAD',
+        cache: 'no-store',
+        signal: AbortSignal.timeout(5000) // 5 second timeout
+      });
+      
+      if (response.ok) {
+        // Connection restored
+        text.textContent = 'Connected! Redirecting...';
+        spinner.classList.add('d-none');
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-success');
+        
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    } catch (error) {
+      // Still offline
+      text.textContent = 'Still Offline';
+      spinner.classList.add('d-none');
+      btn.classList.remove('btn-primary');
+      btn.classList.add('btn-warning');
+      
+      setTimeout(() => {
+        text.textContent = 'Check Connection';
+        btn.classList.remove('btn-warning');
+        btn.classList.add('btn-primary');
+        btn.disabled = false;
+        isChecking = false;
+      }, 2000);
+    }
+  }
+  
+  // Listen for online events
+  window.addEventListener('online', () => {
+    // Show a notification that connection is restored
+    const alert = document.createElement('div');
+    alert.className = 'alert alert-success alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3';
+    alert.style.zIndex = '1050';
+    alert.innerHTML = `
+      <strong>Connection Restored!</strong> You're back online.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
+    document.body.appendChild(alert);
+    
+    // Auto-reload after a short delay
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
+  });
+  
+  // Update the page if the service worker has an update
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.addEventListener('message', event => {
+      if (event.data && event.data.type === 'CACHE_UPDATED') {
+        // Show update notification
+        const alert = document.createElement('div');
+        alert.className = 'alert alert-info alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3';
+        alert.style.zIndex = '1050';
+        alert.innerHTML = `
+          <strong>Content Updated!</strong> New content is available.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        document.body.appendChild(alert);
+      }
+    });
+  }
+</script>
+
+<style>
+  /* Custom styles for offline page */
+  .card {
+    backdrop-filter: blur(10px);
+  }
+  
+  .btn {
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .display-4 {
+      font-size: 2rem;
+    }
+    
+    .btn-lg {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+</style>
+{% endblock content %}

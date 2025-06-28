@@ -17,15 +17,15 @@
 
 {% block content %}
 {% include "navbar.html" %}
-<header>
+<header role="banner" aria-label="Article header">
   <h1 class="entry-title">{{ article.title }}</h1>
 </header>
-<footer class="post-info">
-  <time class="published fw-lighter" datetime="{{ article.date.isoformat() }}">
+<footer class="post-info" role="contentinfo" aria-label="Article metadata">
+  <time class="published fw-lighter" datetime="{{ article.date.isoformat() }}" aria-label="Published on {{ article.date | strftime('%B %-d, %Y') }}">
     {{ article.date | strftime('%B %-d, %Y') }}
   </time>
   {% if article.modified %}
-  <time class="modified" datetime="{{ article.modified.isoformat() }}">
+  <time class="modified" datetime="{{ article.modified.isoformat() }}" aria-label="Modified on {{ article.locale_modified }}">
     {{ article.locale_modified }}
   </time>
   {% endif %}
@@ -51,25 +51,26 @@
   </div>
   {% endif %} #}
 </footer><!-- /.post-info -->
-<article class="mt-4">
+<article class="mt-4" role="article" aria-label="{{ article.title }}">
   {{ article.content }}
 </article>
-<section class="mt-5">
+<nav class="mt-5" role="navigation" aria-label="Article navigation">
+  <h2 class="sr-only">Navigate between articles</h2>
   <div class="d-flex flex-wrap gap-3">
     {% if article.prev_article %}
     <div>
-      <a href="{{ SITEURL }}/{{ article.prev_article.url }}" title="{{article.prev_article.title}}">&laquo;
+      <a href="{{ SITEURL }}/{{ article.prev_article.url }}" title="{{article.prev_article.title}}" aria-label="Previous article: {{article.prev_article.title}}" rel="prev">&laquo;
         {{article.prev_article.title}}</a>
     </div>
     {% endif %}
     <div class="flex-grow-1"></div>
     {% if article.next_article %}
     <div>
-      <a href="{{ SITEURL }}/{{ article.next_article.url }}" title="{{article.next_article.title}}">{{article.next_article.title}}
+      <a href="{{ SITEURL }}/{{ article.next_article.url }}" title="{{article.next_article.title}}" aria-label="Next article: {{article.next_article.title}}" rel="next">{{article.next_article.title}}
         &raquo;</a>
     </div>
     {% endif %}
   </div>
-</section>
+</nav>
 {% include "disqus.html" %}
 {% endblock %}

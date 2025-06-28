@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="main-header-outer">
+<header class="main-header-outer" role="banner" aria-label="Site header">
   <div>
-    <div class="branding-container">
+    <div class="branding-container" role="img" aria-label="MAZDEVDIR - Site logo">
       <div class="maz">MAZ</div>
       <div class="dev">DEV</div>
       <div class="dir">DIR</div>
     </div>
-    <div class="retro-font m-5">
+    <div class="retro-font m-5" role="img" aria-label="Site tagline">
       <p>Digital<br />Nomad's<br>Journal</p>
     </div>
-    <div class="main-header-arrow-container">
+    <div class="main-header-arrow-container" aria-hidden="true">
       <i class="main-header-arrow">
         <i></i>
         <i></i>
@@ -20,10 +20,11 @@
       </i>
     </div>
   </div>
-</div>
-<section id="content" class="page-content">
+</header>
+<section id="content" class="page-content" role="main" aria-label="Blog articles">
   <div class="home">
     <div>
+      <h1 class="sr-only">Blog Articles by Year</h1>
       {% set ns = namespace(year=0) %}
       {% for article in articles %}
       {% if article.category != "devlog" %}
@@ -31,22 +32,24 @@
       {% set is_article_year_new = ns.year != article_year %}
       {% if ns.year != article_year %}
       {% set ns.year = article_year %}
-      <h2 class="my-3">{{ article_year }}</h2>
+      <h2 class="my-3" id="year-{{ article_year }}" aria-label="Articles from {{ article_year }}">{{ article_year }}</h2>
       {% endif %}
-      <div class="d-flex gap-3">
-        <div style="line-height: 1.1em;">
-          <div>{{ article.date.strftime('%-d') }}</div>
-          <div class="post-meta" style="font-size: 0.7em">{{ article.date.strftime('%b') }}</div>
+      <article class="d-flex gap-3" role="article" aria-labelledby="article-{{ loop.index }}">
+        <div style="line-height: 1.1em;" aria-label="Published on {{ article.date.strftime('%B %-d, %Y') }}">
+          <time datetime="{{ article.date.isoformat() }}">
+            <div>{{ article.date.strftime('%-d') }}</div>
+            <div class="post-meta" style="font-size: 0.7em">{{ article.date.strftime('%b') }}</div>
+          </time>
         </div>
         <div>
-          <h4>
-            <a href="{{ article.url }}">{{ article.title }}</a>
-          </h4>
-          <p style="font-size: 0.7em; margin-top: -5px; color: darkgray; font-weight: 100;">
+          <h3 id="article-{{ loop.index }}">
+            <a href="{{ article.url }}" aria-label="Read article: {{ article.title }}">{{ article.title }}</a>
+          </h3>
+          <p style="font-size: 0.7em; margin-top: -5px; color: darkgray; font-weight: 100;" aria-label="Category: {{ article.category }}">
             {{ article.category }}
           </p>
         </div>
-      </div>
+      </article>
       {% endif %}
       {% endfor %}
     </div>

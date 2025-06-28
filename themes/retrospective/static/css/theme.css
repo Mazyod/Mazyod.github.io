@@ -1,59 +1,17 @@
-:root, [data-bs-theme="dark"] {
-  --bs-body-color: #ece8d1;
-  --bs-body-bg: #1b1d16;
-  --bs-code-color: #a1dbb2;
-
-  --code-background: #14140f;
-  --brand-color: #eb7000;
-
-  /* define spacing-unit = 30px */
-  --spacing-unit: 30px;
-  --content-width: 800px;
-
-  --grey-color: #b4b4b4;
-  --grey-color-light: #dcdcdc;
-  --grey-color-dark: #7a7a7a;
-
-  --base-font-family: Roboto, sans-serif;
-  --base-font-size: 21px;
-  --base-font-weight: 300;
-  --small-font-size: 18px;
-  --base-line-height: 1.5;
-}
-
-/* --- Basic styling --- */
-body {
-  overflow-x: hidden;
-
-  color: var(--bs-body-color);
-  background-color: var(--bs-body-bg);
-
-  letter-spacing: 0.02em;
-  font: var(--base-font-weight) 21px/1.5 var(--base-font-family);
-
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
-}
+/* Note: Critical CSS variables and basic styling moved to inline CSS in base.html */
 
 iframe {
   /* fixes disqus background issue (it becomes white without this) */
   color-scheme: light;
 }
 
-.content {
-  max-width: 780px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1.875rem;
-}
-
 /* --- Images --- */
 img {
   max-width: 100%;
   vertical-align: middle;
+  height: auto;
+  /* Add lazy loading optimization */
+  loading: lazy;
 }
 
 /* --- Figures --- */
@@ -72,41 +30,11 @@ li {
   }
 }
 
-/* --- Headings --- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lucida Grande", sans-serif;
-  font-weight: 700;
-}
-
-h1 {
-  color: #f45d4c;
-}
-
-h2 {
-  color: #f7a541;
-}
-
-h3 {
-  color: #faca66;
-}
-
-h4 {
-  color: #fee5ad;
-}
+/* Note: Basic heading and link styles moved to inline CSS in base.html */
 
 /* --- Links --- */
-a {
-  color: #009fc5;
-  text-decoration: none;
-
-  &:hover {
-    color: lighten(#009fc5, 25%);
-  }
+a:hover {
+  color: #33b3d9; /* Lightened version of #009fc5 */
 }
 
 /* --- Buttons --- */
@@ -215,54 +143,7 @@ pre {
   top: 0;
 }
 
-/* --- Branding --- */
-
-.branding-container {
-  /* MAZDEVDIR */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  font-family: "Press Start 2P", "Lucida Grande", monospace;
-  font-size: 57px;
-  line-height: 57px;
-  margin: 10px;
-
-  .maz {
-    color: #f45d4c;
-    display: inline-block;
-  }
-
-  .dev {
-    color: #f7a541;
-    display: inline-block;
-  }
-
-  .dir {
-    color: #a1dbb2;
-    display: inline-block;
-  }
-}
-
-/* --- Site header --- */
-.navbar-outline {
-  background-color: var(--bs-body-color);
-  height: 5px;
-}
-
-.main-header-outer {
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.retro-font { 
-  font-family: "Press Start 2P", "Lucida Grande", monospace;
-  font-size: 26px;
-  line-height: 28px;
-}
+/* Note: Branding and main header styles moved to inline CSS in base.html */
 
 .main-header-arrow-container {
   font-size: 14px;
@@ -316,4 +197,195 @@ pre {
 .strike > span:after {
   left: 100%;
   margin-left: 15px;
+}
+
+/* --- Accessibility Improvements --- */
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.sr-only:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
+
+/* Skip navigation links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  z-index: 100000;
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  border: 2px solid var(--brand-color);
+  font-weight: 600;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: var(--bs-body-color);
+  text-decoration: underline;
+}
+
+/* Enhanced focus indicators */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+.btn:focus {
+  outline: 3px solid var(--brand-color);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Ensure focus is visible even with Bootstrap styles */
+.btn:focus {
+  box-shadow: 0 0 0 3px rgba(235, 112, 0, 0.5);
+}
+
+/* High contrast focus for links */
+a:focus {
+  background-color: rgba(235, 112, 0, 0.1);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* Improve color contrast for better readability */
+.post-meta {
+  color: #b8b8b8; /* Improved contrast from original --grey-color */
+}
+
+/* Ensure sufficient color contrast for all text */
+p {
+  color: var(--bs-body-color);
+}
+
+/* Enhanced hover states for better usability */
+a:hover,
+a:focus {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive font scaling for better accessibility */
+@media (max-width: 768px) {
+  .retro-font {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  
+  .branding-container {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+  
+  .skip-link {
+    transition: none;
+  }
+}
+
+/* Improved table accessibility */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--grey-color-dark);
+}
+
+th {
+  background-color: rgba(66, 66, 66, 0.31);
+  font-weight: 600;
+}
+
+/* Form accessibility improvements */
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid var(--grey-color-dark);
+  border-radius: 4px;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  border-color: var(--brand-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(235, 112, 0, 0.3);
+}
+
+/* Ensure decorative elements don't interfere with screen readers */
+.main-header-arrow[aria-hidden="true"] {
+  pointer-events: none;
+}
+
+/* Improve readability of code blocks */
+pre {
+  border: 1px solid var(--grey-color-dark);
+  border-radius: 4px;
+}
+
+code {
+  padding: 2px 4px;
+  background-color: var(--code-background);
+  border-radius: 3px;
+  font-size: 0.9em;
 }

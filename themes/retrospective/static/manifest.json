@@ -1,0 +1,123 @@
+{
+  "name": "Maz Development Directory",
+  "short_name": "MazDev",
+  "description": "Dumping ground for all my experiences as a Software Engineer. I mostly work with Python and Docker, sometimes JS, Elixir and Unity.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#212529",
+  "background_color": "#212529",
+  "lang": "en",
+  "scope": "/",
+  "categories": ["productivity", "education", "developer", "technology"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/Icon_BIG.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/Icon_BIG.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Latest Posts",
+      "short_name": "Latest",
+      "description": "View the latest blog posts",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "16x16 32x32 48x48",
+          "type": "image/x-icon"
+        }
+      ]
+    },
+    {
+      "name": "Archives",
+      "short_name": "Archives",
+      "description": "Browse all blog posts",
+      "url": "/archives.html",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "16x16 32x32 48x48",
+          "type": "image/x-icon"
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "short_name": "Categories",
+      "description": "Browse posts by category",
+      "url": "/categories.html",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "16x16 32x32 48x48",
+          "type": "image/x-icon"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Maz Development Directory - Desktop view"
+    },
+    {
+      "src": "/images/screenshot-narrow.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Maz Development Directory - Mobile view"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+blog",
+      "url": "/blog/%s"
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "text/markdown": [".md"],
+        "text/plain": [".txt"]
+      }
+    }
+  ]
+}

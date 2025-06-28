@@ -1,0 +1,361 @@
+/**
+ * Modern CSS Features & Optimizations
+ * Enhances performance and provides modern styling capabilities
+ */
+
+/* CSS Custom Properties (CSS Variables) for theming and consistency */
+:root {
+  /* Color Palette */
+  --color-primary: #212529;
+  --color-secondary: #6c757d;
+  --color-success: #198754;
+  --color-info: #0dcaf0;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+  --color-light: #f8f9fa;
+  --color-dark: #212529;
+  
+  /* Background Colors */
+  --bg-primary: var(--color-primary);
+  --bg-secondary: var(--color-secondary);
+  --bg-body: var(--color-dark);
+  --bg-surface: #2d3135;
+  --bg-surface-elevated: #343a40;
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #adb5bd;
+  --text-muted: #6c757d;
+  --text-accent: #0dcaf0;
+  
+  /* Border Colors */
+  --border-color: #495057;
+  --border-color-light: #6c757d;
+  --border-color-dark: #343a40;
+  
+  /* Spacing Scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 3rem;
+  --space-xxl: 4.5rem;
+  
+  /* Font Properties */
+  --font-family-primary: 'Roboto', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'Press Start 2P', 'SF Mono', Consolas, monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Animation & Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+  --animation-duration-fast: 200ms;
+  --animation-duration-base: 300ms;
+  --animation-duration-slow: 500ms;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  
+  /* Border Radius */
+  --radius-sm: 0.125rem;
+  --radius-base: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+  
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* CSS Containment for Performance */
+
+/* Layout containment for main content areas */
+.content {
+  contain: layout style;
+}
+
+/* Style containment for article content */
+article {
+  contain: style layout;
+}
+
+/* Layout and style containment for sidebar components */
+.sidebar,
+.widget {
+  contain: layout style;
+}
+
+/* Paint containment for code blocks and syntax highlighting */
+.codehilite,
+.highlight,
+pre code {
+  contain: paint;
+  will-change: transform; /* Hint for GPU acceleration */
+}
+
+/* Layout containment for navigation elements */
+.navbar,
+.nav {
+  contain: layout;
+}
+
+/* Footer containment */
+footer {
+  contain: layout style;
+}
+
+/* CSS Container Queries Support */
+@supports (container-type: inline-size) {
+  .container-query {
+    container-type: inline-size;
+  }
+  
+  @container (min-width: 768px) {
+    .container-query .responsive-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+  }
+}
+
+/* Modern CSS Grid and Flexbox Enhancements */
+.modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  container-type: inline-size;
+}
+
+.modern-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+/* Logical Properties for Better Internationalization */
+.logical-spacing {
+  margin-block: var(--space-lg);
+  margin-inline: var(--space-md);
+  padding-block: var(--space-md);
+  padding-inline: var(--space-sm);
+  border-inline-start: 2px solid var(--color-accent);
+}
+
+/* Modern Focus Styles */
+.modern-focus:focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-base);
+}
+
+/* CSS Aspect Ratio for Media */
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-ratio-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect-ratio-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* CSS Scroll Snap for Better UX */
+.scroll-snap-container {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  display: flex;
+  gap: var(--space-md);
+}
+
+.scroll-snap-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Modern Typography with CSS Custom Properties */
+.text-responsive {
+  font-size: clamp(var(--font-size-sm), 2.5vw, var(--font-size-xl));
+  line-height: var(--line-height-base);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--text-accent), var(--color-info));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* CSS Backdrop Filter Support */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur {
+    backdrop-filter: blur(10px);
+    background-color: rgba(33, 37, 41, 0.8);
+  }
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .backdrop-blur {
+    background-color: rgba(33, 37, 41, 0.95);
+  }
+}
+
+/* CSS Subgrid Support */
+@supports (grid-template-rows: subgrid) {
+  .subgrid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .subgrid-item {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+  }
+}
+
+/* Modern Button Styles with CSS Custom Properties */
+.btn-modern {
+  background: linear-gradient(135deg, var(--color-info), var(--color-primary));
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-lg);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1));
+  transform: translateX(-100%);
+  transition: transform var(--transition-base);
+}
+
+.btn-modern:hover::before {
+  transform: translateX(0);
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* CSS Custom Properties for Dark Mode Support */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-body: #ffffff;
+    --bg-surface: #f8f9fa;
+    --bg-surface-elevated: #ffffff;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: #000000;
+    --text-primary: #000000;
+    --bg-body: #ffffff;
+  }
+}
+
+/* CSS Logical Properties for Better RTL Support */
+.content-flow {
+  margin-block-start: var(--space-lg);
+  margin-block-end: var(--space-lg);
+  padding-inline-start: var(--space-md);
+  padding-inline-end: var(--space-md);
+}
+
+/* Modern CSS Grid with CSS Variables */
+.dynamic-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns, 1), 1fr);
+  gap: var(--grid-gap, var(--space-lg));
+}
+
+/* CSS Environment Variables for Safe Areas (mobile) */
+.safe-area-padding {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Performance optimized animations */
+.optimized-animation {
+  will-change: transform, opacity;
+  transform: translateZ(0); /* Force GPU acceleration */
+}
+
+.fade-in {
+  animation: fadeIn var(--animation-duration-base) ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* CSS Houdini Paint Worklet placeholder */
+@supports (background: paint(example)) {
+  .paint-worklet {
+    background: paint(fancy-border);
+  }
+}

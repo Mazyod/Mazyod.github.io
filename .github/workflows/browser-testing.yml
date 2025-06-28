@@ -1,0 +1,248 @@
+name: Cross-Browser Testing
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  browser-tests:
+    name: Browser Compatibility Tests
+    runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+        
+    - name: Install uv
+      uses: astral-sh/setup-uv@v2
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install Python dependencies
+      run: |
+        uv sync
+        uv sync --group testing
+        
+    - name: Install Node.js dependencies
+      run: npm ci
+      
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps ${{ matrix.browser }}
+      
+    - name: Build site
+      run: uv run invoke build
+      
+    - name: Run browser tests
+      run: npx playwright test --project=${{ matrix.browser }} --reporter=github
+      
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: playwright-results-${{ matrix.browser }}
+        path: test-results/
+        retention-days: 7
+
+  visual-regression:
+    name: Visual Regression Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+        
+    - name: Install uv
+      uses: astral-sh/setup-uv@v2
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        uv sync
+        npm ci
+        npx playwright install --with-deps
+        
+    - name: Build site
+      run: uv run invoke build
+      
+    - name: Run visual regression tests
+      run: npx playwright test tests/browser/visual-regression.spec.js --reporter=github
+      
+    - name: Upload screenshots
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: visual-regression-screenshots
+        path: test-results/
+        retention-days: 7
+
+  accessibility-tests:
+    name: Accessibility Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+        
+    - name: Install uv
+      uses: astral-sh/setup-uv@v2
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        uv sync
+        npm ci
+        npx playwright install --with-deps chromium
+        
+    - name: Build site
+      run: uv run invoke build
+      
+    - name: Run accessibility tests
+      run: npx playwright test tests/browser/accessibility.spec.js --reporter=github
+      
+    - name: Upload accessibility report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: accessibility-report
+        path: test-results/
+        retention-days: 7
+
+  progressive-enhancement:
+    name: Progressive Enhancement Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+        
+    - name: Install uv
+      uses: astral-sh/setup-uv@v2
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        uv sync
+        npm ci
+        npx playwright install --with-deps chromium
+        
+    - name: Build site
+      run: uv run invoke build
+      
+    - name: Run progressive enhancement tests
+      run: npx playwright test tests/browser/progressive-enhancement.spec.js --reporter=github
+
+  mobile-tests:
+    name: Mobile Browser Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+        
+    - name: Install uv
+      uses: astral-sh/setup-uv@v2
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        uv sync
+        npm ci
+        npx playwright install --with-deps chromium webkit
+        
+    - name: Build site
+      run: uv run invoke build
+      
+    - name: Run mobile tests
+      run: npx playwright test --project=mobile-chrome --project=mobile-safari --reporter=github
+
+  generate-report:
+    name: Generate Test Report
+    runs-on: ubuntu-latest
+    needs: [browser-tests, visual-regression, accessibility-tests, progressive-enhancement, mobile-tests]
+    if: always()
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Download all artifacts
+      uses: actions/download-artifact@v3
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Generate combined report
+      run: |
+        mkdir -p combined-results
+        find . -name "*.json" -path "*/playwright-results-*/*" -exec cp {} combined-results/ \;
+        find . -name "*.html" -path "*/playwright-results-*/*" -exec cp {} combined-results/ \;
+        
+    - name: Upload combined report
+      uses: actions/upload-artifact@v3
+      with:
+        name: combined-test-report
+        path: combined-results/
+        retention-days: 30

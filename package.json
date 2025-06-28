@@ -1,0 +1,38 @@
+{
+  "name": "mazyod-blog-testing",
+  "version": "1.0.0",
+  "description": "Cross-browser testing for mazyod.com blog",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:chrome": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:safari": "playwright test --project=webkit",
+    "test:edge": "playwright test --project=edge",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
+    "test:legacy": "playwright test --project=legacy-ie11",
+    "test:accessibility": "playwright test --project=high-contrast --project=reduced-motion",
+    "test:visual": "playwright test tests/browser/visual-regression.spec.js",
+    "test:progressive": "playwright test tests/browser/progressive-enhancement.spec.js",
+    "test:ci": "playwright test --reporter=github",
+    "install:browsers": "playwright install",
+    "install:deps": "playwright install-deps",
+    "generate:report": "playwright show-report",
+    "update:snapshots": "playwright test --update-snapshots"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "keywords": [
+    "testing",
+    "cross-browser",
+    "playwright",
+    "accessibility",
+    "visual-regression"
+  ],
+  "author": "Mazyad Alabduljaleel",
+  "license": "MIT"
+}

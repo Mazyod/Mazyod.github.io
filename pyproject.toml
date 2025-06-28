@@ -19,6 +19,12 @@ dev = [
     "invoke>=2.2.0,<3",
     "ruff>=0.11.0",
 ]
+testing = [
+    "pytest>=7.0.0,<8",
+    "pytest-html>=3.2.0,<4",
+    "axe-selenium-python>=2.1.6,<3",
+    "selenium>=4.15.0,<5",
+]
 
 [tool.uv]
 package = false
