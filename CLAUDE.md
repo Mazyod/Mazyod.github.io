@@ -82,11 +82,34 @@ uv run ruff format
 ## Deployment
 
 The site automatically deploys via GitHub Actions when pushing to the master branch:
-1. Installs Poetry and dependencies  
-2. Runs `make publish` to build production site
-3. Deploys to GitHub Pages from `./output` directory
+1. Installs uv and Python 3.12
+2. Runs `uv sync` to install dependencies  
+3. Runs `uv run make publish` to build production site
+4. Deploys to GitHub Pages from `./output` directory
 
-The GitHub Actions workflow uses Poetry (legacy) but the local development now uses `uv`.
+### Local Workflow Testing
+
+The repository is configured with `act` for local GitHub Actions testing. Install act and Docker, then use:
+
+```bash
+# Install act (macOS)
+brew install act
+
+# Test the deployment workflow (dry run)
+act push --dryrun
+
+# Test the workflow with actual execution (without deployment)
+act push --job deploy
+
+# Test manual workflow trigger
+act workflow_dispatch
+```
+
+**Configuration:**
+- `.actrc` file configures act to use medium Docker image (~500MB) and proper architecture
+- Docker Desktop must be running
+- First run downloads the `catthehacker/ubuntu:act-latest` image
+- Local testing successfully builds the site and validates all steps except actual GitHub Pages deployment
 
 ## Theme Development
 
