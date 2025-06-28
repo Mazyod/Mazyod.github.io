@@ -228,7 +228,7 @@ pre {
 /* Skip navigation links */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -100px;
   left: 6px;
   z-index: 100000;
   color: var(--bs-body-color);
@@ -238,13 +238,27 @@ pre {
   border-radius: 0 0 4px 4px;
   border: 2px solid var(--brand-color);
   font-weight: 600;
-  transition: top 0.3s ease;
+  /* Ensure links are completely hidden when not focused */
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  /* Additional hiding to prevent any visual artifacts */
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
 }
 
 .skip-link:focus {
   top: 0;
   color: var(--bs-body-color);
   text-decoration: underline;
+  /* Make visible and accessible when focused */
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  /* Reset clipping and overflow for visibility */
+  clip: auto;
+  overflow: visible;
 }
 
 /* Enhanced focus indicators */
